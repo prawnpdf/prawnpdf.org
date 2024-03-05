@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: TTFunk::Table::Cmap::Format04
+  
+    &mdash; Documentation by YARD 0.9.35
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::Cmap::Format04";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Table.html" title="TTFunk::Table (class)">Table</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Cmap.html" title="TTFunk::Table::Cmap (class)">Cmap</a></span></span>
+     &raquo; 
+    <span class="title">Format04</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: TTFunk::Table::Cmap::Format04
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/cmap/format04.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Format 4: Segment mapping to delta values.</p>
+
+<p>This module conditionally extends <span class='object_link'><a href="Subtable.html" title="TTFunk::Table::Cmap::Subtable (class)">Subtable</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#code_map-instance_method" title="#code_map (instance method)">#<strong>code_map</strong>  &#x21d2; Hash{Integer =&gt; Integer} </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Code map.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#language-instance_method" title="#language (instance method)">#<strong>language</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Language.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+
+
+  
+    <section id="method-summary-e7i9pm">
+      <h2>
+        Class Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode-class_method" title="encode (class method)">.<strong>encode</strong>(charmap)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encode the encoding record to format 4.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(code)  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get glyph ID for character code.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#supported%3F-instance_method" title="#supported? (instance method)">#<strong>supported?</strong>  &#x21d2; true </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Is this encoding record format supported?.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="code_map-instance_method">
+  
+    #<strong>code_map</strong>  &#x21d2; <tt>Hash{Integer =&gt; Integer}</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Code map.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash{Integer =&gt; Integer}</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cmap/format04.rb, line 16</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-16" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>16</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">code_map</span>
+</pre></td></tr><tr id="line-17" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>17</pre></td><td class="rouge-code"><pre>  <span class="vi">@code_map</span>
+</pre></td></tr><tr id="line-18" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>18</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="language-instance_method">
+  
+    #<strong>language</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Language.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cmap/format04.rb, line 12</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-12" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>12</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">language</span>
+</pre></td></tr><tr id="line-13" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>13</pre></td><td class="rouge-code"><pre>  <span class="vi">@language</span>
+</pre></td></tr><tr id="line-14" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>14</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="encode-class_method">
+  
+    .<strong>encode</strong>(charmap)  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encode the encoding record to format 4.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>charmap</span>
+      
+      
+        <span class='type'>(<tt>Hash{Integer =&gt; Integer}</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a hash mapping character
+codes to glyph IDs from the original font.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:charmap</span></code> (<tt>Hash{Integer =&gt; Hash}</tt>) keys are the characrers in
+<code class="language-ruby highlighter-rouge"><span class="n">charset</span></code>, values are hashes:
+    <ul>
+      <li><code class="language-ruby highlighter-rouge"><span class="ss">:old</span></code> (<tt>Integer</tt>) - glyph ID in the original font.</li>
+      <li><code class="language-ruby highlighter-rouge"><span class="ss">:new</span></code> (<tt>Integer</tt>) - glyph ID in the subset font.
+that maps the characters in charmap to a</li>
+    </ul>
+  </li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:subtable</span></code> (<tt>String</tt>) - serialized encoding record.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:max_glyph_id</span></code> (<tt>Integer</tt>) - maximum glyph ID in the new font.</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cmap/format04.rb, line 30</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-30" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>30</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">charmap</span><span class="p">)</span>
+</pre></td></tr><tr id="line-31" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>31</pre></td><td class="rouge-code"><pre>  <span class="n">end_codes</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></td></tr><tr id="line-32" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>32</pre></td><td class="rouge-code"><pre>  <span class="n">start_codes</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></td></tr><tr id="line-33" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>33</pre></td><td class="rouge-code"><pre>  <span class="n">next_id</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-34" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>34</pre></td><td class="rouge-code"><pre>  <span class="n">last</span> <span class="o">=</span> <span class="n">difference</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-35" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>35</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-36" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>36</pre></td><td class="rouge-code"><pre>  <span class="n">glyph_map</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="o">=&gt;</span> <span class="mi">0</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-37" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>37</pre></td><td class="rouge-code"><pre>  <span class="n">new_map</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-38" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>38</pre></td><td class="rouge-code"><pre>    <span class="n">charmap</span><span class="p">.</span><span class="nf">keys</span><span class="p">.</span><span class="nf">sort</span><span class="p">.</span><span class="nf">each_with_object</span><span class="p">({})</span> <span class="k">do</span> <span class="o">|</span><span class="n">code</span><span class="p">,</span> <span class="n">map</span><span class="o">|</span>
+</pre></td></tr><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre>      <span class="n">old</span> <span class="o">=</span> <span class="n">charmap</span><span class="p">[</span><span class="n">code</span><span class="p">]</span>
+</pre></td></tr><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre>      <span class="n">glyph_map</span><span class="p">[</span><span class="n">old</span><span class="p">]</span> <span class="o">||=</span> <span class="n">next_id</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></td></tr><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre>      <span class="n">map</span><span class="p">[</span><span class="n">code</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">old: </span><span class="n">old</span><span class="p">,</span> <span class="ss">new: </span><span class="n">glyph_map</span><span class="p">[</span><span class="n">old</span><span class="p">]</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-42" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>42</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre>      <span class="n">delta</span> <span class="o">=</span> <span class="n">glyph_map</span><span class="p">[</span><span class="n">old</span><span class="p">]</span> <span class="o">-</span> <span class="n">code</span>
+</pre></td></tr><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre>      <span class="k">if</span> <span class="n">last</span><span class="p">.</span><span class="nf">nil?</span> <span class="o">||</span> <span class="n">delta</span> <span class="o">!=</span> <span class="n">difference</span>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre>        <span class="n">end_codes</span> <span class="o">&lt;&lt;</span> <span class="n">last</span> <span class="k">if</span> <span class="n">last</span>
+</pre></td></tr><tr id="line-46" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>46</pre></td><td class="rouge-code"><pre>        <span class="n">start_codes</span> <span class="o">&lt;&lt;</span> <span class="n">code</span>
+</pre></td></tr><tr id="line-47" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>47</pre></td><td class="rouge-code"><pre>        <span class="n">difference</span> <span class="o">=</span> <span class="n">delta</span>
+</pre></td></tr><tr id="line-48" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>48</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-49" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>49</pre></td><td class="rouge-code"><pre>      <span class="n">last</span> <span class="o">=</span> <span class="n">code</span>
+</pre></td></tr><tr id="line-50" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>50</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre>      <span class="n">map</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-54" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>54</pre></td><td class="rouge-code"><pre>  <span class="n">end_codes</span> <span class="o">&lt;&lt;</span> <span class="n">last</span> <span class="k">if</span> <span class="n">last</span>
+</pre></td></tr><tr id="line-55" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>55</pre></td><td class="rouge-code"><pre>  <span class="n">end_codes</span> <span class="o">&lt;&lt;</span> <span class="mh">0xFFFF</span>
+</pre></td></tr><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre>  <span class="n">start_codes</span> <span class="o">&lt;&lt;</span> <span class="mh">0xFFFF</span>
+</pre></td></tr><tr id="line-57" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>57</pre></td><td class="rouge-code"><pre>  <span class="n">segcount</span> <span class="o">=</span> <span class="n">start_codes</span><span class="p">.</span><span class="nf">length</span>
+</pre></td></tr><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre>  <span class="c1"># build the conversion tables</span>
+</pre></td></tr><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre>  <span class="n">deltas</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></td></tr><tr id="line-61" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>61</pre></td><td class="rouge-code"><pre>  <span class="n">range_offsets</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></td></tr><tr id="line-62" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>62</pre></td><td class="rouge-code"><pre>  <span class="n">glyph_indices</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></td></tr><tr id="line-63" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>63</pre></td><td class="rouge-code"><pre>  <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-64" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>64</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-65" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>65</pre></td><td class="rouge-code"><pre>  <span class="n">start_codes</span><span class="p">.</span><span class="nf">zip</span><span class="p">(</span><span class="n">end_codes</span><span class="p">).</span><span class="nf">each_with_index</span> <span class="k">do</span> <span class="o">|</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">segment</span><span class="o">|</span>
+</pre></td></tr><tr id="line-66" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>66</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mh">0xFFFF</span>
+</pre></td></tr><tr id="line-67" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>67</pre></td><td class="rouge-code"><pre>      <span class="c1"># We want the final 0xFFFF code to map to glyph 0.</span>
+</pre></td></tr><tr id="line-68" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>68</pre></td><td class="rouge-code"><pre>      <span class="c1"># The glyph index is calculated as glyph = charcode + delta,</span>
+</pre></td></tr><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre>      <span class="c1"># which means that delta must be -0xFFFF to map character code</span>
+</pre></td></tr><tr id="line-70" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>70</pre></td><td class="rouge-code"><pre>      <span class="c1"># 0xFFFF to glyph 0.</span>
+</pre></td></tr><tr id="line-71" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>71</pre></td><td class="rouge-code"><pre>      <span class="n">deltas</span> <span class="o">&lt;&lt;</span> <span class="o">-</span><span class="mh">0xFFFF</span>
+</pre></td></tr><tr id="line-72" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>72</pre></td><td class="rouge-code"><pre>      <span class="n">range_offsets</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-73" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>73</pre></td><td class="rouge-code"><pre>      <span class="k">break</span>
+</pre></td></tr><tr id="line-74" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>74</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-75" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>75</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-76" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>76</pre></td><td class="rouge-code"><pre>    <span class="n">start_glyph_id</span> <span class="o">=</span> <span class="n">new_map</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="ss">:new</span><span class="p">]</span>
+</pre></td></tr><tr id="line-77" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>77</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-78" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>78</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">a</span> <span class="o">-</span> <span class="n">start_glyph_id</span> <span class="o">&gt;=</span> <span class="mh">0x8000</span>
+</pre></td></tr><tr id="line-79" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>79</pre></td><td class="rouge-code"><pre>      <span class="n">deltas</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-80" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>80</pre></td><td class="rouge-code"><pre>      <span class="n">range_offsets</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">glyph_indices</span><span class="p">.</span><span class="nf">length</span> <span class="o">+</span> <span class="n">segcount</span> <span class="o">-</span> <span class="n">segment</span><span class="p">))</span>
+</pre></td></tr><tr id="line-81" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>81</pre></td><td class="rouge-code"><pre>      <span class="n">a</span><span class="p">.</span><span class="nf">upto</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">code</span><span class="o">|</span> <span class="n">glyph_indices</span> <span class="o">&lt;&lt;</span> <span class="n">new_map</span><span class="p">[</span><span class="n">code</span><span class="p">][</span><span class="ss">:new</span><span class="p">]</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-82" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>82</pre></td><td class="rouge-code"><pre>    <span class="k">else</span>
+</pre></td></tr><tr id="line-83" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>83</pre></td><td class="rouge-code"><pre>      <span class="n">deltas</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">-</span><span class="n">a</span> <span class="o">+</span> <span class="n">start_glyph_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-84" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>84</pre></td><td class="rouge-code"><pre>      <span class="n">range_offsets</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-87" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>87</pre></td><td class="rouge-code"><pre>    <span class="n">offset</span> <span class="o">+=</span> <span class="mi">2</span>
+</pre></td></tr><tr id="line-88" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>88</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-89" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>89</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-90" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>90</pre></td><td class="rouge-code"><pre>  <span class="c1"># format, length, language</span>
+</pre></td></tr><tr id="line-91" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>91</pre></td><td class="rouge-code"><pre>  <span class="n">subtable</span> <span class="o">=</span> <span class="p">[</span>
+</pre></td></tr><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre>    <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span> <span class="o">+</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">segcount</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">glyph_indices</span><span class="p">.</span><span class="nf">length</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span>
+</pre></td></tr><tr id="line-93" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>93</pre></td><td class="rouge-code"><pre>  <span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'nnn'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-95" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>95</pre></td><td class="rouge-code"><pre>  <span class="n">search_range</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="no">Integer</span><span class="p">(</span><span class="no">Math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="n">segcount</span><span class="p">)</span> <span class="o">/</span> <span class="no">Math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
+</pre></td></tr><tr id="line-96" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>96</pre></td><td class="rouge-code"><pre>  <span class="n">entry_selector</span> <span class="o">=</span> <span class="no">Integer</span><span class="p">(</span><span class="no">Math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="n">search_range</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="no">Math</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></td></tr><tr id="line-97" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>97</pre></td><td class="rouge-code"><pre>  <span class="n">range_shift</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">segcount</span><span class="p">)</span> <span class="o">-</span> <span class="n">search_range</span>
+</pre></td></tr><tr id="line-98" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>98</pre></td><td class="rouge-code"><pre>  <span class="n">subtable</span> <span class="o">&lt;&lt;</span> <span class="p">[</span>
+</pre></td></tr><tr id="line-99" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>99</pre></td><td class="rouge-code"><pre>    <span class="n">segcount</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">search_range</span><span class="p">,</span> <span class="n">entry_selector</span><span class="p">,</span> <span class="n">range_shift</span><span class="p">,</span>
+</pre></td></tr><tr id="line-100" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>100</pre></td><td class="rouge-code"><pre>  <span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'nnnn'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-101" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>101</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-102" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>102</pre></td><td class="rouge-code"><pre>  <span class="n">subtable</span> <span class="o">&lt;&lt;</span> <span class="n">end_codes</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s2">"</span><span class="se">\0\0</span><span class="s2">"</span> <span class="o">&lt;&lt;</span> <span class="n">start_codes</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-103" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>103</pre></td><td class="rouge-code"><pre>  <span class="n">subtable</span> <span class="o">&lt;&lt;</span> <span class="n">deltas</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">range_offsets</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-104" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>104</pre></td><td class="rouge-code"><pre>  <span class="n">subtable</span> <span class="o">&lt;&lt;</span> <span class="n">glyph_indices</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-105" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>105</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-106" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>106</pre></td><td class="rouge-code"><pre>  <span class="p">{</span> <span class="ss">charmap: </span><span class="n">new_map</span><span class="p">,</span> <span class="ss">subtable: </span><span class="n">subtable</span><span class="p">,</span> <span class="ss">max_glyph_id: </span><span class="n">next_id</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-107" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>107</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-instance_method">
+  
+    #<strong>[]</strong>(code)  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get glyph ID for character code.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>code</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>character code.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>glyph ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cmap/format04.rb, line 113</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-113" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>113</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">[]</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+</pre></td></tr><tr id="line-114" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>114</pre></td><td class="rouge-code"><pre>  <span class="vi">@code_map</span><span class="p">[</span><span class="n">code</span><span class="p">]</span> <span class="o">||</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-115" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>115</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="supported?-instance_method">
+  
+    #<strong>supported?</strong>  &#x21d2; <tt>true</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Is this encoding record format supported?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cmap/format04.rb, line 120</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-120" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>120</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">supported?</span>
+</pre></td></tr><tr id="line-121" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>121</pre></td><td class="rouge-code"><pre>  <span class="kp">true</span>
+</pre></td></tr><tr id="line-122" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>122</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb 29 20:15:14 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

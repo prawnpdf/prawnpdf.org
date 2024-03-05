@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TTFunk::Table::Cff::Charset
+  
+    &mdash; Documentation by YARD 0.9.35
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::Cff::Charset";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Table.html" title="TTFunk::Table (class)">Table</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Cff.html" title="TTFunk::Table::Cff (class)">Cff</a></span></span>
+     &raquo; 
+    <span class="title">Charset</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TTFunk::Table::Cff::Charset
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></li>
+          
+            <li class="next">TTFunk::Table::Cff::Charset</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Enumerable</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/cff/charset.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>CFF Charset</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="FIRST_GLYPH_STRING-constant" class="">FIRST_GLYPH_STRING =
+            <div class="docstring">
+  <div class="discussion">
+    <p>First glyph string. This is an implicit glyph present in all charsets.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s1">'.notdef'</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="ARRAY_FORMAT-constant" class="">ARRAY_FORMAT =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Format 0.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">0</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="RANGE_FORMAT_8-constant" class="">RANGE_FORMAT_8 =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Format 1.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">1</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="RANGE_FORMAT_16-constant" class="">RANGE_FORMAT_16 =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Format 2.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">2</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="ISO_ADOBE_CHARSET_ID-constant" class="">ISO_ADOBE_CHARSET_ID =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Predefined ISOAdobe charset ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">0</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="EXPERT_CHARSET_ID-constant" class="">EXPERT_CHARSET_ID =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Predefined Expert charset ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">1</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="EXPERT_SUBSET_CHARSET_ID-constant" class="">EXPERT_SUBSET_CHARSET_ID =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Predefined Expert Subset charset ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">2</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="DEFAULT_CHARSET_ID-constant" class="">DEFAULT_CHARSET_ID =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Default charset ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">ISO_ADOBE_CHARSET_ID</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#entries-instance_method" title="#entries (instance method)">#<strong>entries</strong>  &#x21d2; TTFunk::OneBasedArray&lt;Integer&gt;, Array&lt;Range&lt;Integer&gt;&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encoded entries.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#format-instance_method" title="#format (instance method)">#<strong>format</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encodign format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#items_count-instance_method" title="#items_count (instance method)">#<strong>items_count</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Number of encoded items.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#length-instance_method" title="#length (instance method)">#<strong>length</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Length of encoded charset subtable.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#offset_or_id-instance_method" title="#offset_or_id (instance method)">#<strong>offset_or_id</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Offset or charset ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#top_dict-instance_method" title="#top_dict (instance method)">#<strong>top_dict</strong>  &#x21d2; TTFunk::Table::Cff::TopDict </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Top dict.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../SubTable.html#file-instance_method" title="TTFunk::SubTable#file (method)">#file</a></span>, <span class='object_link'><a href="../../SubTable.html#table_offset-instance_method" title="TTFunk::SubTable#table_offset (method)">#table_offset</a></span></p>
+
+
+
+  
+    <section id="method-summary-e7i9pm">
+      <h2>
+        Class Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#standard_strings-class_method" title="standard_strings (class method)">.<strong>standard_strings</strong>  &#x21d2; TTFunk::OneBasedArray&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Standard strings defined in the spec that do not need to be defined in the CFF.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#strings_for_charset_id-class_method" title="strings_for_charset_id (class method)">.<strong>strings_for_charset_id</strong>(charset_id)  &#x21d2; TTFunk::OneBasedArray&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Strings for charset ID.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(glyph_id)  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get character name for glyph index.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method">
+      
+        <span class="overload">#<strong>each</strong> {|name| ... } &#x21d2; <tt>void</tt></span>
+      
+        <span class="overload">#<strong>each</strong>  &#x21d2; <tt>Enumerator</tt></span>
+      
+      </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Iterate over character names.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode-instance_method" title="#encode (instance method)">#<strong>encode</strong>(charmap)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encode charset.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method">
+      
+        <span class="overload">#<strong>initialize</strong>(top_dict, file, offset = nil, length = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="TTFunk::Table::Cff::Charset (class)">Charset</a></span></tt></span>
+      
+        <span class="overload">#<strong>initialize</strong>(top_dict, file, charset_id)  &#x21d2; <tt><span class='object_link'><a href="" title="TTFunk::Table::Cff::Charset (class)">Charset</a></span></tt></span>
+      
+      </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Charset.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#offset-instance_method" title="#offset (instance method)">#<strong>offset</strong>  &#x21d2; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Charset offset in the file.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../SubTable.html#eot%3F-instance_method" title="TTFunk::SubTable#eot? (method)">#eot?</a></span>, <span class='object_link'><a href="../../SubTable.html#read-instance_method" title="TTFunk::SubTable#read (method)">#read</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    
+      <span class="overload">#<strong>initialize</strong>(top_dict, file, offset = nil, length = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="TTFunk::Table::Cff::Charset (class)">Charset</a></span></tt> </span>
+    
+      <span class="overload">#<strong>initialize</strong>(top_dict, file, charset_id)  &#x21d2; <tt><span class='object_link'><a href="" title="TTFunk::Table::Cff::Charset (class)">Charset</a></span></tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of Charset.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(top_dict, file, offset = nil, length = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="TTFunk::Table::Cff::Charset (class)">Charset</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>top_dict</span>
+      
+      
+        <span class='type'>(<tt>TTFunk::Table:Cff::TopDict</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../File.html" title="TTFunk::File (class)">TTFunk::File</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>offset</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>length</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>initialize</strong>(top_dict, file, charset_id)  &#x21d2; <tt><span class='object_link'><a href="" title="TTFunk::Table::Cff::Charset (class)">Charset</a></span></tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>top_dict</span>
+      
+      
+        <span class='type'>(<tt>TTFunk::Table:Cff::TopDict</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../File.html" title="TTFunk::File (class)">TTFunk::File</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>charset_id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>0, 1, or 2</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 92</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">top_dict</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">offset_or_id</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+</pre></td></tr><tr id="line-93" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>93</pre></td><td class="rouge-code"><pre>  <span class="vi">@top_dict</span> <span class="o">=</span> <span class="n">top_dict</span>
+</pre></td></tr><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre>  <span class="vi">@offset_or_id</span> <span class="o">=</span> <span class="n">offset_or_id</span> <span class="o">||</span> <span class="no">DEFAULT_CHARSET_ID</span>
+</pre></td></tr><tr id="line-95" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>95</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-96" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>96</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">offset</span>
+</pre></td></tr><tr id="line-97" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>97</pre></td><td class="rouge-code"><pre>    <span class="k">super</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+</pre></td></tr><tr id="line-98" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>98</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-99" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>99</pre></td><td class="rouge-code"><pre>    <span class="vi">@items_count</span> <span class="o">=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">strings_for_charset_id</span><span class="p">(</span><span class="n">offset_or_id</span><span class="p">).</span><span class="nf">size</span>
+</pre></td></tr><tr id="line-100" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>100</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-101" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>101</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="entries-instance_method">
+  
+    #<strong>entries</strong>  &#x21d2; <tt><span class='object_link'><a href="../../OneBasedArray.html" title="TTFunk::OneBasedArray (class)">TTFunk::OneBasedArray</a></span>&lt;Integer&gt;</tt>, <tt>Array&lt;Range&lt;Integer&gt;&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encoded entries.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../OneBasedArray.html" title="TTFunk::OneBasedArray (class)">TTFunk::OneBasedArray</a></span>&lt;Integer&gt;</tt>, <tt>Array&lt;Range&lt;Integer&gt;&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 61</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-61" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>61</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">entries</span>
+</pre></td></tr><tr id="line-62" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>62</pre></td><td class="rouge-code"><pre>  <span class="vi">@entries</span>
+</pre></td></tr><tr id="line-63" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>63</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="format-instance_method">
+  
+    #<strong>format</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encodign format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 73</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-73" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>73</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">format</span>
+</pre></td></tr><tr id="line-74" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>74</pre></td><td class="rouge-code"><pre>  <span class="vi">@format</span>
+</pre></td></tr><tr id="line-75" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>75</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="items_count-instance_method">
+  
+    #<strong>items_count</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Number of encoded items.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 77</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-77" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>77</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">items_count</span>
+</pre></td></tr><tr id="line-78" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>78</pre></td><td class="rouge-code"><pre>  <span class="vi">@items_count</span>
+</pre></td></tr><tr id="line-79" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>79</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="length-instance_method">
+  
+    #<strong>length</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Length of encoded charset subtable.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 65</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-65" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>65</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">length</span>
+</pre></td></tr><tr id="line-66" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>66</pre></td><td class="rouge-code"><pre>  <span class="vi">@length</span>
+</pre></td></tr><tr id="line-67" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>67</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="offset_or_id-instance_method">
+  
+    #<strong>offset_or_id</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Offset or charset ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 81</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-81" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>81</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">offset_or_id</span>
+</pre></td></tr><tr id="line-82" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>82</pre></td><td class="rouge-code"><pre>  <span class="vi">@offset_or_id</span>
+</pre></td></tr><tr id="line-83" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>83</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="top_dict-instance_method">
+  
+    #<strong>top_dict</strong>  &#x21d2; <tt><span class='object_link'><a href="TopDict.html" title="TTFunk::Table::Cff::TopDict (class)">TTFunk::Table::Cff::TopDict</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Top dict.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TopDict.html" title="TTFunk::Table::Cff::TopDict (class)">TTFunk::Table::Cff::TopDict</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 69</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">top_dict</span>
+</pre></td></tr><tr id="line-70" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>70</pre></td><td class="rouge-code"><pre>  <span class="vi">@top_dict</span>
+</pre></td></tr><tr id="line-71" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>71</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="standard_strings-class_method">
+  
+    .<strong>standard_strings</strong>  &#x21d2; <tt><span class='object_link'><a href="../../OneBasedArray.html" title="TTFunk::OneBasedArray (class)">TTFunk::OneBasedArray</a></span>&lt;String&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Standard strings defined in the spec that do not need to be defined
+in the CFF.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../OneBasedArray.html" title="TTFunk::OneBasedArray (class)">TTFunk::OneBasedArray</a></span>&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 39</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">standard_strings</span>
+</pre></td></tr><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre>  <span class="no">Charsets</span><span class="o">::</span><span class="no">STANDARD_STRINGS</span>
+</pre></td></tr><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="strings_for_charset_id-class_method">
+  
+    .<strong>strings_for_charset_id</strong>(charset_id)  &#x21d2; <tt><span class='object_link'><a href="../../OneBasedArray.html" title="TTFunk::OneBasedArray (class)">TTFunk::OneBasedArray</a></span>&lt;String&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Strings for charset ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>charset_id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../OneBasedArray.html" title="TTFunk::OneBasedArray (class)">TTFunk::OneBasedArray</a></span>&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 47</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-47" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>47</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">strings_for_charset_id</span><span class="p">(</span><span class="n">charset_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-48" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>48</pre></td><td class="rouge-code"><pre>  <span class="k">case</span> <span class="n">charset_id</span>
+</pre></td></tr><tr id="line-49" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>49</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="no">ISO_ADOBE_CHARSET_ID</span>
+</pre></td></tr><tr id="line-50" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>50</pre></td><td class="rouge-code"><pre>    <span class="no">Charsets</span><span class="o">::</span><span class="no">ISO_ADOBE</span>
+</pre></td></tr><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="no">EXPERT_CHARSET_ID</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>    <span class="no">Charsets</span><span class="o">::</span><span class="no">EXPERT</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="no">EXPERT_SUBSET_CHARSET_ID</span>
+</pre></td></tr><tr id="line-54" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>54</pre></td><td class="rouge-code"><pre>    <span class="no">Charsets</span><span class="o">::</span><span class="no">EXPERT_SUBSET</span>
+</pre></td></tr><tr id="line-55" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>55</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-instance_method">
+  
+    #<strong>[]</strong>(glyph_id)  &#x21d2; <tt>String</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get character name for glyph index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>glyph_id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 121</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-121" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>121</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">[]</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-122" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>122</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="no">FIRST_GLYPH_STRING</span> <span class="k">if</span> <span class="n">glyph_id</span><span class="p">.</span><span class="nf">zero?</span>
+</pre></td></tr><tr id="line-123" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>123</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-124" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>124</pre></td><td class="rouge-code"><pre>  <span class="n">find_string</span><span class="p">(</span><span class="n">sid_for</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">))</span>
+</pre></td></tr><tr id="line-125" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>125</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    
+      <span class="overload">#<strong>each</strong> {|name| ... } &#x21d2; <tt>void</tt> </span>
+    
+      <span class="overload">#<strong>each</strong>  &#x21d2; <tt>Enumerator</tt> </span>
+    
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Iterate over character names.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">Overloads:</p>
+  <ul class="overload">
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>each</strong> {|name| ... } &#x21d2; <tt>void</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      
+      <li class="overload_item">
+        <span class="signature">#<strong>each</strong>  &#x21d2; <tt>Enumerator</tt> </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Enumerator</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 110</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-110" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>110</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">each</span>
+</pre></td></tr><tr id="line-111" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>111</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="n">to_enum</span><span class="p">(</span><span class="n">__method__</span><span class="p">)</span> <span class="k">unless</span> <span class="nb">block_given?</span>
+</pre></td></tr><tr id="line-112" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>112</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-113" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>113</pre></td><td class="rouge-code"><pre>  <span class="c1"># +1 adjusts for the implicit .notdef glyph</span>
+</pre></td></tr><tr id="line-114" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>114</pre></td><td class="rouge-code"><pre>  <span class="p">(</span><span class="n">items_count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nf">times</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="k">yield</span><span class="p">(</span><span class="nb">self</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-115" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>115</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode-instance_method">
+  
+    #<strong>encode</strong>(charmap)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encode charset.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>charmap</span>
+      
+      
+        <span class='type'>(<tt>Hash{Integer =&gt; Hash}</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>keys are the charac codes,
+values are hashes:</p>
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:old</span></code> (<tt>Integer</tt>) - glyph ID in the original font.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:new</span></code> (<tt>Integer</tt>) - glyph ID in the subset font.</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 149</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-149" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>149</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="n">charmap</span><span class="p">)</span>
+</pre></td></tr><tr id="line-150" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>150</pre></td><td class="rouge-code"><pre>  <span class="c1"># no offset means no charset was specified (i.e. we're supposed to</span>
+</pre></td></tr><tr id="line-151" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>151</pre></td><td class="rouge-code"><pre>  <span class="c1"># use a predefined charset) so there's nothing to encode</span>
+</pre></td></tr><tr id="line-152" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>152</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="s1">''</span> <span class="k">unless</span> <span class="n">offset</span>
+</pre></td></tr><tr id="line-153" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>153</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-154" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>154</pre></td><td class="rouge-code"><pre>  <span class="n">sids</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-155" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>155</pre></td><td class="rouge-code"><pre>    <span class="n">charmap</span>
+</pre></td></tr><tr id="line-156" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>156</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">values</span>
+</pre></td></tr><tr id="line-157" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>157</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">mapping</span><span class="o">|</span> <span class="n">mapping</span><span class="p">[</span><span class="ss">:new</span><span class="p">].</span><span class="nf">zero?</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-158" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>158</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">mapping</span><span class="o">|</span> <span class="n">mapping</span><span class="p">[</span><span class="ss">:new</span><span class="p">]</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-159" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>159</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">mapping</span><span class="o">|</span> <span class="n">sid_for</span><span class="p">(</span><span class="n">mapping</span><span class="p">[</span><span class="ss">:old</span><span class="p">])</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-160" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>160</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-161" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>161</pre></td><td class="rouge-code"><pre>  <span class="n">ranges</span> <span class="o">=</span> <span class="no">TTFunk</span><span class="o">::</span><span class="no">BinUtils</span><span class="p">.</span><span class="nf">rangify</span><span class="p">(</span><span class="n">sids</span><span class="p">)</span>
+</pre></td></tr><tr id="line-162" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>162</pre></td><td class="rouge-code"><pre>  <span class="n">range_max</span> <span class="o">=</span> <span class="n">ranges</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:last</span><span class="p">).</span><span class="nf">max</span>
+</pre></td></tr><tr id="line-163" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>163</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-164" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>164</pre></td><td class="rouge-code"><pre>  <span class="n">range_bytes</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-165" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>165</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">range_max</span><span class="p">.</span><span class="nf">positive?</span>
+</pre></td></tr><tr id="line-166" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>166</pre></td><td class="rouge-code"><pre>      <span class="p">(</span><span class="no">Math</span><span class="p">.</span><span class="nf">log2</span><span class="p">(</span><span class="n">range_max</span><span class="p">)</span> <span class="o">/</span> <span class="mi">8</span><span class="p">).</span><span class="nf">floor</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></td></tr><tr id="line-167" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>167</pre></td><td class="rouge-code"><pre>    <span class="k">else</span>
+</pre></td></tr><tr id="line-168" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>168</pre></td><td class="rouge-code"><pre>      <span class="c1"># for cases when there are no sequences at all</span>
+</pre></td></tr><tr id="line-169" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>169</pre></td><td class="rouge-code"><pre>      <span class="no">Float</span><span class="o">::</span><span class="no">INFINITY</span>
+</pre></td></tr><tr id="line-170" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>170</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-171" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>171</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-172" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>172</pre></td><td class="rouge-code"><pre>  <span class="c1"># calculate whether storing the charset as a series of ranges is</span>
+</pre></td></tr><tr id="line-173" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>173</pre></td><td class="rouge-code"><pre>  <span class="c1"># more efficient (i.e. takes up less space) vs storing it as an</span>
+</pre></td></tr><tr id="line-174" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>174</pre></td><td class="rouge-code"><pre>  <span class="c1"># array of SID values</span>
+</pre></td></tr><tr id="line-175" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>175</pre></td><td class="rouge-code"><pre>  <span class="n">total_range_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">ranges</span><span class="p">.</span><span class="nf">size</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">range_bytes</span> <span class="o">*</span> <span class="n">ranges</span><span class="p">.</span><span class="nf">size</span><span class="p">)</span>
+</pre></td></tr><tr id="line-176" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>176</pre></td><td class="rouge-code"><pre>  <span class="n">total_array_size</span> <span class="o">=</span> <span class="n">sids</span><span class="p">.</span><span class="nf">size</span> <span class="o">*</span> <span class="n">element_width</span><span class="p">(</span><span class="ss">:array_format</span><span class="p">)</span>
+</pre></td></tr><tr id="line-177" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>177</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-178" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>178</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">total_array_size</span> <span class="o">&lt;=</span> <span class="n">total_range_size</span>
+</pre></td></tr><tr id="line-179" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>179</pre></td><td class="rouge-code"><pre>    <span class="p">([</span><span class="n">format_int</span><span class="p">(</span><span class="ss">:array_format</span><span class="p">)]</span> <span class="o">+</span> <span class="n">sids</span><span class="p">).</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'Cn*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-180" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>180</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-181" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>181</pre></td><td class="rouge-code"><pre>    <span class="n">fmt</span> <span class="o">=</span> <span class="n">range_bytes</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">?</span> <span class="ss">:range_format8</span> <span class="p">:</span> <span class="ss">:range_format16</span>
+</pre></td></tr><tr id="line-182" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>182</pre></td><td class="rouge-code"><pre>    <span class="n">element_fmt</span> <span class="o">=</span> <span class="n">element_format</span><span class="p">(</span><span class="n">fmt</span><span class="p">)</span>
+</pre></td></tr><tr id="line-183" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>183</pre></td><td class="rouge-code"><pre>    <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">format_int</span><span class="p">(</span><span class="n">fmt</span><span class="p">)].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'C'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-184" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>184</pre></td><td class="rouge-code"><pre>    <span class="n">ranges</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">range</span><span class="o">|</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">range</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">element_fmt</span><span class="p">)</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-185" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>185</pre></td><td class="rouge-code"><pre>    <span class="n">result</span>
+</pre></td></tr><tr id="line-186" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>186</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-187" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>187</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="offset-instance_method">
+  
+    #<strong>offset</strong>  &#x21d2; <tt>Integer</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Charset offset in the file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/charset.rb, line 130</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-130" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>130</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">offset</span>
+</pre></td></tr><tr id="line-131" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>131</pre></td><td class="rouge-code"><pre>  <span class="c1"># Numbers from 0..2 mean charset IDs instead of offsets. IDs are</span>
+</pre></td></tr><tr id="line-132" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>132</pre></td><td class="rouge-code"><pre>  <span class="c1"># basically pre-defined sets of characters.</span>
+</pre></td></tr><tr id="line-133" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>133</pre></td><td class="rouge-code"><pre>  <span class="c1">#</span>
+</pre></td></tr><tr id="line-134" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>134</pre></td><td class="rouge-code"><pre>  <span class="c1"># In the case of an offset, add the CFF table's offset since the</span>
+</pre></td></tr><tr id="line-135" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>135</pre></td><td class="rouge-code"><pre>  <span class="c1"># charset offset is relative to the start of the CFF table. Otherwise</span>
+</pre></td></tr><tr id="line-136" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>136</pre></td><td class="rouge-code"><pre>  <span class="c1"># return nil (no offset).</span>
+</pre></td></tr><tr id="line-137" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>137</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">offset_or_id</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</pre></td></tr><tr id="line-138" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>138</pre></td><td class="rouge-code"><pre>    <span class="n">offset_or_id</span> <span class="o">+</span> <span class="n">top_dict</span><span class="p">.</span><span class="nf">cff_offset</span>
+</pre></td></tr><tr id="line-139" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>139</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-140" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>140</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb 29 20:15:17 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

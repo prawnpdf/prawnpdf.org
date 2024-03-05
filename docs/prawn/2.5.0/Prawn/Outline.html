@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Prawn::Outline
+  
+    &mdash; Prawn Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Prawn::Outline";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Prawn.html" title="Prawn (module)">Prawn</a></span></span>
+     &raquo; 
+    <span class="title">Outline</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Prawn::Outline
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Prawn::Outline</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/prawn/outline.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>The Outline class organizes the outline tree items for the document. Note
+that the <span class='object_link'>#prev</span> and <span class='object_link'>#parent</span> are adjusted while navigating through the
+nested blocks. These attributes along with the presence or absence of blocks
+are the primary means by which the relations for the various
+<code class="language-ruby highlighter-rouge"><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">OutlineItem</span></code>s and the <code class="language-ruby highlighter-rouge"><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">OutlineRoot</span></code> are set.</p>
+
+<p>Some ideas for the organization of this class were gleaned from <code class="language-ruby highlighter-rouge"><span class="n">name_tree</span></code>.
+In particular the way in which the <code class="language-ruby highlighter-rouge"><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">OutlineItem</span></code>s are finally
+rendered into document objects through a hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+
+
+
+
+
+
+
+  
+    <section id="method-summary-o2czp4">
+      <h2>
+        Stable API
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_subsection_to-instance_method" title="#add_subsection_to (instance method)">#<strong>add_subsection_to</strong>(title, position = :last) { ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Inserts an outline section to the outline tree (see <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span>).</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#define-instance_method" title="#define (instance method)">#<strong>define</strong> { ... } &#x21d2; void </a>
+    
+
+    
+      (also: #update)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines/Updates an outline for the document.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(document)  &#x21d2; Outline </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Outline.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#insert_section_after-instance_method" title="#insert_section_after (instance method)">#<strong>insert_section_after</strong>(title) { ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Inserts an outline section to the outline tree (see <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span>).</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#page-instance_method" title="#page (instance method)">#<strong>page</strong>(options = {})  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Adds a page to the outline.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#page_number-instance_method" title="#page_number (instance method)">#<strong>page_number</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the current page number of the document.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#section-instance_method" title="#section (instance method)">#<strong>section</strong>(title, options = {}) { ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Adds an outline section to the outline tree.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(document)  &#x21d2; <tt><span class='object_link'><a href="" title="Prawn::Outline (class)">Outline</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of Outline.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>document</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Document.html" title="Prawn::Document (class)">Prawn::Document</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/outline.rb, line 31</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-31" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>31</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+</pre></td></tr><tr id="line-32" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>32</pre></td><td class="rouge-code"><pre>  <span class="vi">@document</span> <span class="o">=</span> <span class="n">document</span>
+</pre></td></tr><tr id="line-33" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>33</pre></td><td class="rouge-code"><pre>  <span class="vi">@parent</span> <span class="o">=</span> <span class="n">root</span>
+</pre></td></tr><tr id="line-34" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>34</pre></td><td class="rouge-code"><pre>  <span class="vi">@prev</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-35" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>35</pre></td><td class="rouge-code"><pre>  <span class="vi">@items</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-36" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>36</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_subsection_to-instance_method">
+  
+    #<strong>add_subsection_to</strong>(title, position = :last) { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Inserts an outline section to the outline tree (see <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span>).</p>
+
+<p>Although you will probably choose to exclusively use <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span> so that your
+outline tree is contained and easy to manage, this method gives you the
+option to insert sections to the outline tree at any point during document
+generation. This method allows you to add a child subsection to any other
+item at any level in the outline tree. Currently the only way to locate
+the place of entry is with the title for the item. If your title names are
+not unique consider using <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span>.</p>
+
+<p>Consider using this method instead of <span class='object_link'><a href="#update-instance_method" title="Prawn::Outline#update (method)">#update</a></span> if you want to have the
+outline object to be scoped as self (see <span class='object_link'><a href="#insert_section_after-instance_method" title="Prawn::Outline#insert_section_after (method)">#insert_section_after</a></span> example).</p>
+
+<div class="language-ruby highlighter-rouge"><pre><code><span class="n">go_to_page</span> <span class="mi">2</span>
+<span class="n">start_new_page</span>
+<span class="n">text</span> <span class="s2">"Inserted Page"</span>
+<span class="n">outline</span><span class="p">.</span><span class="nf">add_subsection_to</span> <span class="ss">title: </span><span class="s1">'Page 2'</span><span class="p">,</span> <span class="ss">:first</span> <span class="k">do</span>
+  <span class="n">outline</span><span class="p">.</span><span class="nf">page</span> <span class="ss">destination: </span><span class="n">page_number</span><span class="p">,</span> <span class="ss">title: </span><span class="s2">"Inserted Page"</span>
+<span class="k">end</span>
+</code></pre></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>title</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An outline title to add the subsection to.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>position</span>
+      
+      
+        <span class='type'>(<tt>:first</tt>, <tt>:last</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>:last</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>(:last)
+Where the subsection will be placed relative to other child elements. If
+you need to position your subsection in between other elements then
+consider using <span class='object_link'><a href="#insert_section_after-instance_method" title="Prawn::Outline#insert_section_after (method)">#insert_section_after</a></span>.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Uses the same DSL syntax as <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span></p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/outline.rb, line 115</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-115" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>115</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">add_subsection_to</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">position</span> <span class="o">=</span> <span class="ss">:last</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-116" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>116</pre></td><td class="rouge-code"><pre>  <span class="vi">@parent</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">title</span><span class="p">]</span>
+</pre></td></tr><tr id="line-117" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>117</pre></td><td class="rouge-code"><pre>  <span class="k">unless</span> <span class="vi">@parent</span>
+</pre></td></tr><tr id="line-118" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>118</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">Prawn</span><span class="o">::</span><span class="no">Errors</span><span class="o">::</span><span class="no">UnknownOutlineTitle</span><span class="p">,</span>
+</pre></td></tr><tr id="line-119" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>119</pre></td><td class="rouge-code"><pre>      <span class="s2">"</span><span class="se">\n</span><span class="s2"> No outline item with title: '</span><span class="si">#{</span><span class="n">title</span><span class="si">}</span><span class="s2">' exists in the outline tree"</span>
+</pre></td></tr><tr id="line-120" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>120</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-121" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>121</pre></td><td class="rouge-code"><pre>  <span class="vi">@prev</span> <span class="o">=</span> <span class="n">position</span> <span class="o">==</span> <span class="ss">:first</span> <span class="p">?</span> <span class="kp">nil</span> <span class="p">:</span> <span class="vi">@parent</span><span class="p">.</span><span class="nf">data</span><span class="p">.</span><span class="nf">last</span>
+</pre></td></tr><tr id="line-122" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>122</pre></td><td class="rouge-code"><pre>  <span class="n">nxt</span> <span class="o">=</span> <span class="n">position</span> <span class="o">==</span> <span class="ss">:first</span> <span class="p">?</span> <span class="vi">@parent</span><span class="p">.</span><span class="nf">data</span><span class="p">.</span><span class="nf">first</span> <span class="p">:</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-123" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>123</pre></td><td class="rouge-code"><pre>  <span class="n">insert_section</span><span class="p">(</span><span class="n">nxt</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-124" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>124</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="define-instance_method">
+  
+    #<strong>define</strong> { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='update-instance_method'>update</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Defines/Updates an outline for the document.</p>
+
+<p>The outline is an optional nested index that appears on the side of a PDF
+document usually with direct links to pages. The outline DSL is defined by
+nested blocks involving two methods: <span class='object_link'><a href="#section-instance_method" title="Prawn::Outline#section (method)">#section</a></span> and <span class='object_link'><a href="#page-instance_method" title="Prawn::Outline#page (method)">#page</a></span>. Note that one
+can also use <span class='object_link'><a href="#update-instance_method" title="Prawn::Outline#update (method)">#update</a></span> to add more sections to the end of the outline tree
+using the same syntax and scope.</p>
+
+<p>The syntax is best illustrated with an example:</p>
+
+<div class="language-ruby highlighter-rouge"><pre><code><span class="no">Prawn</span><span class="o">::</span><span class="no">Document</span><span class="p">.</span><span class="nf">generate</span><span class="p">(</span><span class="s1">'outlined_document.pdf'</span><span class="p">)</span> <span class="k">do</span>
+  <span class="n">text</span> <span class="s2">"Page 1. This is the first Chapter. "</span>
+  <span class="n">start_new_page</span>
+  <span class="n">text</span> <span class="s2">"Page 2. More in the first Chapter. "</span>
+  <span class="n">start_new_page</span>
+  <span class="n">outline</span><span class="p">.</span><span class="nf">define</span> <span class="k">do</span>
+    <span class="n">section</span> <span class="s1">'Chapter 1'</span><span class="p">,</span> <span class="ss">destination: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">closed: </span><span class="kp">true</span> <span class="k">do</span>
+      <span class="n">page</span> <span class="ss">destination: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">title: </span><span class="s1">'Page 1'</span>
+      <span class="n">page</span> <span class="ss">destination: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">title: </span><span class="s1">'Page 2'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">start_new_page</span> <span class="k">do</span>
+  <span class="n">outline</span><span class="p">.</span><span class="nf">update</span> <span class="k">do</span>
+    <span class="n">section</span> <span class="s1">'Chapter 2'</span><span class="p">,</span> <span class="ss">destination: </span><span class="mi">2</span><span class="p">,</span> <span class="k">do</span>
+      <span class="n">page</span> <span class="ss">destination: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">title: </span><span class="s1">'Page 3'</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/outline.rb, line 80</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-80" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>80</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">define</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-81" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>81</pre></td><td class="rouge-code"><pre>  <span class="nb">instance_eval</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span> <span class="k">if</span> <span class="n">block</span>
+</pre></td></tr><tr id="line-82" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>82</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="insert_section_after-instance_method">
+  
+    #<strong>insert_section_after</strong>(title) { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Inserts an outline section to the outline tree (see <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span>).</p>
+
+<p>Although you will probably choose to exclusively use <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span> so that your
+outline tree is contained and easy to manage, this method gives you the
+option to insert sections to the outline tree at any point during document
+generation. Unlike <span class='object_link'><a href="#add_subsection_to-instance_method" title="Prawn::Outline#add_subsection_to (method)">#add_subsection_to</a></span>, this method allows you to enter
+a section after any other item at any level in the outline tree.
+Currently the only way to locate the place of entry is with the title for
+the item. If your title names are not unique consider using
+<span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">go_to_page</span> <span class="mi">2</span>
+<span class="n">start_new_page</span>
+<span class="n">text</span> <span class="s2">"Inserted Page"</span>
+<span class="n">update_outline</span> <span class="k">do</span>
+  <span class="n">insert_section_after</span> <span class="ss">:title</span> <span class="o">=&gt;</span> <span class="s1">'Page 2'</span> <span class="k">do</span>
+    <span class="n">page</span> <span class="ss">:destination</span> <span class="o">=&gt;</span> <span class="n">page_number</span><span class="p">,</span> <span class="ss">:title</span> <span class="o">=&gt;</span> <span class="s2">"Inserted Page"</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>title</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The title of other section or page to insert new section after.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Uses the same DSL syntax as <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span>.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/outline.rb, line 151</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-151" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>151</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">insert_section_after</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-152" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>152</pre></td><td class="rouge-code"><pre>  <span class="vi">@prev</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">title</span><span class="p">]</span>
+</pre></td></tr><tr id="line-153" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>153</pre></td><td class="rouge-code"><pre>  <span class="k">unless</span> <span class="vi">@prev</span>
+</pre></td></tr><tr id="line-154" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>154</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">Prawn</span><span class="o">::</span><span class="no">Errors</span><span class="o">::</span><span class="no">UnknownOutlineTitle</span><span class="p">,</span>
+</pre></td></tr><tr id="line-155" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>155</pre></td><td class="rouge-code"><pre>      <span class="s2">"</span><span class="se">\n</span><span class="s2"> No outline item with title: '</span><span class="si">#{</span><span class="n">title</span><span class="si">}</span><span class="s2">' exists in the outline tree"</span>
+</pre></td></tr><tr id="line-156" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>156</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-157" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>157</pre></td><td class="rouge-code"><pre>  <span class="vi">@parent</span> <span class="o">=</span> <span class="vi">@prev</span><span class="p">.</span><span class="nf">data</span><span class="p">.</span><span class="nf">parent</span>
+</pre></td></tr><tr id="line-158" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>158</pre></td><td class="rouge-code"><pre>  <span class="n">nxt</span> <span class="o">=</span> <span class="vi">@prev</span><span class="p">.</span><span class="nf">data</span><span class="p">.</span><span class="nf">next</span>
+</pre></td></tr><tr id="line-159" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>159</pre></td><td class="rouge-code"><pre>  <span class="n">insert_section</span><span class="p">(</span><span class="n">nxt</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-160" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>160</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="page-instance_method">
+  
+    #<strong>page</strong>(options = {})  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This method is almost identical to <span class='object_link'><a href="#section-instance_method" title="Prawn::Outline#section (method)">#section</a></span> except that it does not
+accept a block thereby defining the outline item as a leaf on the
+outline tree structure.</p>
+</div>
+  </div>
+
+<p class="note returns_void">This method returns an undefined value.</p><p>Adds a page to the outline.</p>
+
+<p>Although you will probably choose to exclusively use <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span> so that your
+outline tree is contained and easy to manage, this method also gives you
+the option to add pages to the root of outline tree at any point during
+document generation. Note that the page will be added at the top level
+after the other root outline elements. For more flexible placement try
+using <span class='object_link'><a href="#insert_section_after-instance_method" title="Prawn::Outline#insert_section_after (method)">#insert_section_after</a></span> and/or <span class='object_link'><a href="#add_subsection_to-instance_method" title="Prawn::Outline#add_subsection_to (method)">#add_subsection_to</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">outline</span><span class="p">.</span><span class="nf">page</span> <span class="ss">title: </span><span class="s2">"Very Last Page"</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:title</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>REQUIRED.
+The outline text that appears for the page.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:destination</span>
+          <span class="type">(<tt>Integer</tt>, <tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><ul>
+  <li>The page number for a destination link to the top of the page (using
+a <code class="language-ruby highlighter-rouge"><span class="ss">:FIT</span></code> destination).</li>
+  <li>An array with a custom destination (see the <code class="language-ruby highlighter-rouge"><span class="c1">#dest_*</span></code> methods of the
+<code class="language-ruby highlighter-rouge"><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Destination</span></code> module).</li>
+</ul>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:closed</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether the section should show its nested outline elements.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/outline.rb, line 219</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-219" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>219</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">page</span><span class="p">(</span><span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-220" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>220</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="ss">:title</span><span class="p">]</span>
+</pre></td></tr><tr id="line-221" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>221</pre></td><td class="rouge-code"><pre>    <span class="n">title</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:title</span><span class="p">]</span>
+</pre></td></tr><tr id="line-222" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>222</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-223" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>223</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">Prawn</span><span class="o">::</span><span class="no">Errors</span><span class="o">::</span><span class="no">RequiredOption</span><span class="p">,</span>
+</pre></td></tr><tr id="line-224" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>224</pre></td><td class="rouge-code"><pre>      <span class="s2">"</span><span class="se">\n</span><span class="s2">Title is a required option for page"</span>
+</pre></td></tr><tr id="line-225" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>225</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-226" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>226</pre></td><td class="rouge-code"><pre>  <span class="n">add_outline_item</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-227" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>227</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="page_number-instance_method">
+  
+    #<strong>page_number</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the current page number of the document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/outline.rb, line 43</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">page_number</span>
+</pre></td></tr><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre>  <span class="vi">@document</span><span class="p">.</span><span class="nf">page_number</span>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="section-instance_method">
+  
+    #<strong>section</strong>(title, options = {}) { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Adds an outline section to the outline tree.</p>
+
+<p>Although you will probably choose to exclusively use <span class='object_link'><a href="#define-instance_method" title="Prawn::Outline#define (method)">#define</a></span> so that your
+outline tree is contained and easy to manage, this method gives you the
+option to add sections to the outline tree at any point during document
+generation. When not being called from within another <span class='object_link'><a href="#section-instance_method" title="Prawn::Outline#section (method)">#section</a></span> block the
+section will be added at the top level after the other root elements of
+the outline. For more flexible placement try using <span class='object_link'><a href="#insert_section_after-instance_method" title="Prawn::Outline#insert_section_after (method)">#insert_section_after</a></span>
+and/or <span class='object_link'><a href="#add_subsection_to-instance_method" title="Prawn::Outline#add_subsection_to (method)">#add_subsection_to</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">outline</span><span class="p">.</span><span class="nf">section</span> <span class="s1">'Added Section'</span><span class="p">,</span> <span class="ss">destination: </span><span class="mi">3</span> <span class="k">do</span>
+  <span class="n">outline</span><span class="p">.</span><span class="nf">page</span> <span class="ss">destionation: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">title: </span><span class="s1">'Page 3'</span>
+<span class="k">end</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>title</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The outline text that appears for the section.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:destination</span>
+          <span class="type">(<tt>Integer</tt>, <tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><ul>
+  <li>Optional page number for a destination link to the top of the page
+(using a <code class="language-ruby highlighter-rouge"><span class="ss">:FIT</span></code> destination).</li>
+  <li>An array with a custom destination (see the <code class="language-ruby highlighter-rouge"><span class="c1">#dest_*</span></code> methods of the
+<code class="language-ruby highlighter-rouge"><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Destination</span></code> module).</li>
+</ul>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:closed</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether the section should show its nested outline elements.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>More nested subsections and/or page blocks.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/outline.rb, line 188</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-188" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>188</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">section</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{},</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-189" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>189</pre></td><td class="rouge-code"><pre>  <span class="n">add_outline_item</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-190" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>190</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar  1 12:33:16 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

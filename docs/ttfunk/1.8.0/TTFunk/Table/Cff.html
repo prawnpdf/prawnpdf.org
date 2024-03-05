@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TTFunk::Table::Cff
+  
+    &mdash; Documentation by YARD 0.9.36
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::Cff";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">Table</a></span></span>
+     &raquo; 
+    <span class="title">Cff</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TTFunk::Table::Cff
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></li>
+          
+            <li class="next">TTFunk::Table::Cff</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/cff.rb<span class="defines">,<br />
+  lib/ttfunk/table/cff/dict.rb,<br /> lib/ttfunk/table/cff/path.rb,<br /> lib/ttfunk/table/cff/index.rb,<br /> lib/ttfunk/table/cff/header.rb,<br /> lib/ttfunk/table/cff/charset.rb,<br /> lib/ttfunk/table/cff/charsets.rb,<br /> lib/ttfunk/table/cff/encoding.rb,<br /> lib/ttfunk/table/cff/top_dict.rb,<br /> lib/ttfunk/table/cff/encodings.rb,<br /> lib/ttfunk/table/cff/font_dict.rb,<br /> lib/ttfunk/table/cff/top_index.rb,<br /> lib/ttfunk/table/cff/charstring.rb,<br /> lib/ttfunk/table/cff/font_index.rb,<br /> lib/ttfunk/table/cff/subr_index.rb,<br /> lib/ttfunk/table/cff/fd_selector.rb,<br /> lib/ttfunk/table/cff/private_dict.rb,<br /> lib/ttfunk/table/cff/charsets/expert.rb,<br /> lib/ttfunk/table/cff/one_based_index.rb,<br /> lib/ttfunk/table/cff/encodings/expert.rb,<br /> lib/ttfunk/table/cff/charstrings_index.rb,<br /> lib/ttfunk/table/cff/charsets/iso_adobe.rb,<br /> lib/ttfunk/table/cff/encodings/standard.rb,<br /> lib/ttfunk/table/cff/charsets/expert_subset.rb,<br /> lib/ttfunk/table/cff/charsets/standard_strings.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Compact Font Format (<code class="language-ruby highlighter-rouge"><span class="no">CFF</span> </code>) table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Cff/Charsets.html" title="TTFunk::Table::Cff::Charsets (module)">Charsets</a></span>, <span class='object_link'><a href="Cff/Encodings.html" title="TTFunk::Table::Cff::Encodings (module)">Encodings</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Cff/Charset.html" title="TTFunk::Table::Cff::Charset (class)">Charset</a></span>, <span class='object_link'><a href="Cff/Charstring.html" title="TTFunk::Table::Cff::Charstring (class)">Charstring</a></span>, <span class='object_link'><a href="Cff/CharstringsIndex.html" title="TTFunk::Table::Cff::CharstringsIndex (class)">CharstringsIndex</a></span>, <span class='object_link'><a href="Cff/Dict.html" title="TTFunk::Table::Cff::Dict (class)">Dict</a></span>, <span class='object_link'><a href="Cff/Encoding.html" title="TTFunk::Table::Cff::Encoding (class)">Encoding</a></span>, <span class='object_link'><a href="Cff/FdSelector.html" title="TTFunk::Table::Cff::FdSelector (class)">FdSelector</a></span>, <span class='object_link'><a href="Cff/FontDict.html" title="TTFunk::Table::Cff::FontDict (class)">FontDict</a></span>, <span class='object_link'><a href="Cff/FontIndex.html" title="TTFunk::Table::Cff::FontIndex (class)">FontIndex</a></span>, <span class='object_link'><a href="Cff/Header.html" title="TTFunk::Table::Cff::Header (class)">Header</a></span>, <span class='object_link'><a href="Cff/Index.html" title="TTFunk::Table::Cff::Index (class)">Index</a></span>, <span class='object_link'><a href="Cff/OneBasedIndex.html" title="TTFunk::Table::Cff::OneBasedIndex (class)">OneBasedIndex</a></span>, <span class='object_link'><a href="Cff/Path.html" title="TTFunk::Table::Cff::Path (class)">Path</a></span>, <span class='object_link'><a href="Cff/PrivateDict.html" title="TTFunk::Table::Cff::PrivateDict (class)">PrivateDict</a></span>, <span class='object_link'><a href="Cff/SubrIndex.html" title="TTFunk::Table::Cff::SubrIndex (class)">SubrIndex</a></span>, <span class='object_link'><a href="Cff/TopDict.html" title="TTFunk::Table::Cff::TopDict (class)">TopDict</a></span>, <span class='object_link'><a href="Cff/TopIndex.html" title="TTFunk::Table::Cff::TopIndex (class)">TopIndex</a></span>
+    
+  
+</p>
+
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="TAG-constant" class="">TAG =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Table tag. The extra space is important.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s1">'CFF '</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#global_subr_index-instance_method" title="#global_subr_index (instance method)">#<strong>global_subr_index</strong>  &#x21d2; TTFunk::Table::Cff::SubrIndex </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Global subroutine index.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#header-instance_method" title="#header (instance method)">#<strong>header</strong>  &#x21d2; TTFunk::Table::Cff::Header </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Table header.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name_index-instance_method" title="#name_index (instance method)">#<strong>name_index</strong>  &#x21d2; TTFunk::Table::Cff::Index </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Name index.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#string_index-instance_method" title="#string_index (instance method)">#<strong>string_index</strong>  &#x21d2; TTFunk::Table::Cff::OneBasedIndex </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Strings index.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#top_index-instance_method" title="#top_index (instance method)">#<strong>top_index</strong>  &#x21d2; TTFunk::Table::Cff::TopIndex </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Top dict index.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Table.html#file-instance_method" title="TTFunk::Table#file (method)">#file</a></span>, <span class='object_link'><a href="../Table.html#length-instance_method" title="TTFunk::Table#length (method)">#length</a></span>, <span class='object_link'><a href="../Table.html#offset-instance_method" title="TTFunk::Table#offset (method)">#offset</a></span></p>
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode-instance_method" title="#encode (instance method)">#<strong>encode</strong>(subset)  &#x21d2; TTFunk::EncodedString </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encode table.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tag-instance_method" title="#tag (instance method)">#<strong>tag</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Table tag.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Table.html#exists%3F-instance_method" title="TTFunk::Table#exists? (method)">#exists?</a></span>, <span class='object_link'><a href="../Table.html#initialize-instance_method" title="TTFunk::Table#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Table.html#raw-instance_method" title="TTFunk::Table#raw (method)">#raw</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Table.html#initialize-instance_method" title="TTFunk::Table#initialize (method)">TTFunk::Table</a></span></p>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="global_subr_index-instance_method">
+  
+    #<strong>global_subr_index</strong>  &#x21d2; <tt><span class='object_link'><a href="Cff/SubrIndex.html" title="TTFunk::Table::Cff::SubrIndex (class)">TTFunk::Table::Cff::SubrIndex</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Global subroutine index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Cff/SubrIndex.html" title="TTFunk::Table::Cff::SubrIndex (class)">TTFunk::Table::Cff::SubrIndex</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff.rb, line 47</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-47" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>47</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">global_subr_index</span>
+</pre></td></tr><tr id="line-48" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>48</pre></td><td class="rouge-code"><pre>  <span class="vi">@global_subr_index</span>
+</pre></td></tr><tr id="line-49" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>49</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="header-instance_method">
+  
+    #<strong>header</strong>  &#x21d2; <tt><span class='object_link'><a href="Cff/Header.html" title="TTFunk::Table::Cff::Header (class)">TTFunk::Table::Cff::Header</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Table header.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Cff/Header.html" title="TTFunk::Table::Cff::Header (class)">TTFunk::Table::Cff::Header</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff.rb, line 31</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-31" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>31</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">header</span>
+</pre></td></tr><tr id="line-32" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>32</pre></td><td class="rouge-code"><pre>  <span class="vi">@header</span>
+</pre></td></tr><tr id="line-33" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>33</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name_index-instance_method">
+  
+    #<strong>name_index</strong>  &#x21d2; <tt><span class='object_link'><a href="Cff/Index.html" title="TTFunk::Table::Cff::Index (class)">TTFunk::Table::Cff::Index</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Name index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Cff/Index.html" title="TTFunk::Table::Cff::Index (class)">TTFunk::Table::Cff::Index</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff.rb, line 35</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-35" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>35</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">name_index</span>
+</pre></td></tr><tr id="line-36" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>36</pre></td><td class="rouge-code"><pre>  <span class="vi">@name_index</span>
+</pre></td></tr><tr id="line-37" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>37</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="string_index-instance_method">
+  
+    #<strong>string_index</strong>  &#x21d2; <tt><span class='object_link'><a href="Cff/OneBasedIndex.html" title="TTFunk::Table::Cff::OneBasedIndex (class)">TTFunk::Table::Cff::OneBasedIndex</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Strings index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Cff/OneBasedIndex.html" title="TTFunk::Table::Cff::OneBasedIndex (class)">TTFunk::Table::Cff::OneBasedIndex</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff.rb, line 43</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">string_index</span>
+</pre></td></tr><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre>  <span class="vi">@string_index</span>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="top_index-instance_method">
+  
+    #<strong>top_index</strong>  &#x21d2; <tt><span class='object_link'><a href="Cff/TopIndex.html" title="TTFunk::Table::Cff::TopIndex (class)">TTFunk::Table::Cff::TopIndex</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Top dict index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Cff/TopIndex.html" title="TTFunk::Table::Cff::TopIndex (class)">TTFunk::Table::Cff::TopIndex</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff.rb, line 39</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">top_index</span>
+</pre></td></tr><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre>  <span class="vi">@top_index</span>
+</pre></td></tr><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="encode-instance_method">
+  
+    #<strong>encode</strong>(subset)  &#x21d2; <tt><span class='object_link'><a href="../EncodedString.html" title="TTFunk::EncodedString (class)">TTFunk::EncodedString</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encode table.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>subset</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Subset/MacRoman.html" title="TTFunk::Subset::MacRoman (class)">TTFunk::Subset::MacRoman</a></span></tt>, <tt><span class='object_link'><a href="../Subset/Windows1252.html" title="TTFunk::Subset::Windows1252 (class)">TTFunk::Subset::Windows1252</a></span></tt>, <tt><span class='object_link'><a href="../Subset/Unicode.html" title="TTFunk::Subset::Unicode (class)">TTFunk::Subset::Unicode</a></span></tt>, <tt><span class='object_link'><a href="../Subset/Unicode8Bit.html" title="TTFunk::Subset::Unicode8Bit (class)">TTFunk::Subset::Unicode8Bit</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../EncodedString.html" title="TTFunk::EncodedString (class)">TTFunk::EncodedString</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff.rb, line 60</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+</pre></td></tr><tr id="line-61" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>61</pre></td><td class="rouge-code"><pre>  <span class="c1"># Make sure TopDict has an entry for encoding so it could be properly replaced</span>
+</pre></td></tr><tr id="line-62" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>62</pre></td><td class="rouge-code"><pre>  <span class="n">top_index</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="no">TopDict</span><span class="o">::</span><span class="no">OPERATORS</span><span class="p">[</span><span class="ss">:encoding</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-63" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>63</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-64" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>64</pre></td><td class="rouge-code"><pre>  <span class="no">EncodedString</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">result</span><span class="o">|</span>
+</pre></td></tr><tr id="line-65" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>65</pre></td><td class="rouge-code"><pre>    <span class="n">result</span><span class="p">.</span><span class="nf">concat</span><span class="p">(</span>
+</pre></td></tr><tr id="line-66" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>66</pre></td><td class="rouge-code"><pre>      <span class="n">header</span><span class="p">.</span><span class="nf">encode</span><span class="p">,</span>
+</pre></td></tr><tr id="line-67" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>67</pre></td><td class="rouge-code"><pre>      <span class="n">name_index</span><span class="p">.</span><span class="nf">encode</span><span class="p">,</span>
+</pre></td></tr><tr id="line-68" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>68</pre></td><td class="rouge-code"><pre>      <span class="n">top_index</span><span class="p">.</span><span class="nf">encode</span><span class="p">,</span>
+</pre></td></tr><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre>      <span class="n">string_index</span><span class="p">.</span><span class="nf">encode</span><span class="p">,</span>
+</pre></td></tr><tr id="line-70" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>70</pre></td><td class="rouge-code"><pre>      <span class="n">global_subr_index</span><span class="p">.</span><span class="nf">encode</span><span class="p">,</span>
+</pre></td></tr><tr id="line-71" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>71</pre></td><td class="rouge-code"><pre>    <span class="p">)</span>
+</pre></td></tr><tr id="line-72" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>72</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-73" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>73</pre></td><td class="rouge-code"><pre>    <span class="n">charmap</span> <span class="o">=</span> <span class="n">subset</span><span class="p">.</span><span class="nf">new_cmap_table</span><span class="p">[</span><span class="ss">:charmap</span><span class="p">]</span>
+</pre></td></tr><tr id="line-74" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>74</pre></td><td class="rouge-code"><pre>    <span class="n">top_index</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">finalize</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">charmap</span><span class="p">)</span>
+</pre></td></tr><tr id="line-75" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>75</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-76" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>76</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tag-instance_method">
+  
+    #<strong>tag</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Table tag.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff.rb, line 51</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">tag</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>  <span class="no">TAG</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar  1 20:39:41 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

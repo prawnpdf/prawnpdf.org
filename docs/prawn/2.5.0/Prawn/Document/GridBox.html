@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Prawn::Document::GridBox
+  
+    &mdash; Prawn Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Prawn::Document::GridBox";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (G)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Prawn.html" title="Prawn (module)">Prawn</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Document.html" title="Prawn::Document (class)">Document</a></span></span>
+     &raquo; 
+    <span class="title">GridBox</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Prawn::Document::GridBox
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Prawn::Document::GridBox</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/prawn/grid.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>A Box is a class that represents a bounded area of a page.
+A Grid object has methods that allow easy access to the coordinates of
+its corners, which can be plugged into most existing Prawn methods.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+
+
+
+
+
+
+
+  
+    <section id="method-summary-z8oa18">
+      <h2>
+        Experimental API
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bottom-instance_method" title="#bottom (instance method)">#<strong>bottom</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>y-coordinate of the bottom.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bottom_left-instance_method" title="#bottom_left (instance method)">#<strong>bottom_left</strong>  &#x21d2; Array(Float, Float) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>x,y coordinates of bottom left corner.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bottom_right-instance_method" title="#bottom_right (instance method)">#<strong>bottom_right</strong>  &#x21d2; Array(Float, Float) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>x,y coordinates of bottom right corner.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bounding_box-instance_method" title="#bounding_box (instance method)">#<strong>bounding_box</strong> { ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Creates a standard bounding box based on the grid box.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gutter-instance_method" title="#gutter (instance method)">#<strong>gutter</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Width of the gutter.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#height-instance_method" title="#height (instance method)">#<strong>height</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Height of a box.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(pdf, rows, columns)  &#x21d2; GridBox </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of GridBox.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#left-instance_method" title="#left (instance method)">#<strong>left</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>x-coordinate of left side.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Mostly diagnostic method that outputs the name of a box as col_num, row_num.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#right-instance_method" title="#right (instance method)">#<strong>right</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>x-coordinate of right side.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#show-instance_method" title="#show (instance method)">#<strong>show</strong>(grid_color = &#39;CCCCCC&#39;)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Drawn the box.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#top-instance_method" title="#top (instance method)">#<strong>top</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>y-coordinate of the top.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#top_left-instance_method" title="#top_left (instance method)">#<strong>top_left</strong>  &#x21d2; Array(Float, Float) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>x,y coordinates of top left corner.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#top_right-instance_method" title="#top_right (instance method)">#<strong>top_right</strong>  &#x21d2; Array(Float, Float) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>x,y coordinates of top right corner.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#width-instance_method" title="#width (instance method)">#<strong>width</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Width of a box.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(pdf, rows, columns)  &#x21d2; <tt><span class='object_link'><a href="" title="Prawn::Document::GridBox (class)">GridBox</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of GridBox.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 168</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-168" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>168</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">pdf</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span>
+</pre></td></tr><tr id="line-169" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>169</pre></td><td class="rouge-code"><pre>  <span class="vi">@pdf</span> <span class="o">=</span> <span class="n">pdf</span>
+</pre></td></tr><tr id="line-170" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>170</pre></td><td class="rouge-code"><pre>  <span class="vi">@rows</span> <span class="o">=</span> <span class="n">rows</span>
+</pre></td></tr><tr id="line-171" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>171</pre></td><td class="rouge-code"><pre>  <span class="vi">@columns</span> <span class="o">=</span> <span class="n">columns</span>
+</pre></td></tr><tr id="line-172" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>172</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="bottom-instance_method">
+  
+    #<strong>bottom</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>y-coordinate of the bottom.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 232</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-232" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>232</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">bottom</span>
+</pre></td></tr><tr id="line-233" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>233</pre></td><td class="rouge-code"><pre>  <span class="vi">@bottom</span> <span class="o">||=</span> <span class="n">top</span> <span class="o">-</span> <span class="n">height</span>
+</pre></td></tr><tr id="line-234" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>234</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bottom_left-instance_method">
+  
+    #<strong>bottom_left</strong>  &#x21d2; <tt>Array(Float, Float)</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>x,y coordinates of bottom left corner.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array(Float, Float)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 253</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-253" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>253</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">bottom_left</span>
+</pre></td></tr><tr id="line-254" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>254</pre></td><td class="rouge-code"><pre>  <span class="p">[</span><span class="n">left</span><span class="p">,</span> <span class="n">bottom</span><span class="p">]</span>
+</pre></td></tr><tr id="line-255" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>255</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bottom_right-instance_method">
+  
+    #<strong>bottom_right</strong>  &#x21d2; <tt>Array(Float, Float)</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>x,y coordinates of bottom right corner.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array(Float, Float)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 260</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-260" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>260</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">bottom_right</span>
+</pre></td></tr><tr id="line-261" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>261</pre></td><td class="rouge-code"><pre>  <span class="p">[</span><span class="n">right</span><span class="p">,</span> <span class="n">bottom</span><span class="p">]</span>
+</pre></td></tr><tr id="line-262" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>262</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bounding_box-instance_method">
+  
+    #<strong>bounding_box</strong> { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Creates a standard bounding box based on the grid box.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 268</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-268" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>268</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">bounding_box</span><span class="p">(</span><span class="o">&amp;</span><span class="n">blk</span><span class="p">)</span>
+</pre></td></tr><tr id="line-269" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>269</pre></td><td class="rouge-code"><pre>  <span class="n">pdf</span><span class="p">.</span><span class="nf">bounding_box</span><span class="p">(</span><span class="n">top_left</span><span class="p">,</span> <span class="ss">width: </span><span class="n">width</span><span class="p">,</span> <span class="ss">height: </span><span class="n">height</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span><span class="p">)</span>
+</pre></td></tr><tr id="line-270" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>270</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gutter-instance_method">
+  
+    #<strong>gutter</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Width of the gutter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 204</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-204" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>204</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">gutter</span>
+</pre></td></tr><tr id="line-205" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>205</pre></td><td class="rouge-code"><pre>  <span class="no">Float</span><span class="p">(</span><span class="n">grid</span><span class="p">.</span><span class="nf">gutter</span><span class="p">)</span>
+</pre></td></tr><tr id="line-206" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>206</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="height-instance_method">
+  
+    #<strong>height</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Height of a box.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 197</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-197" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>197</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">height</span>
+</pre></td></tr><tr id="line-198" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>198</pre></td><td class="rouge-code"><pre>  <span class="no">Float</span><span class="p">(</span><span class="n">grid</span><span class="p">.</span><span class="nf">row_height</span><span class="p">)</span>
+</pre></td></tr><tr id="line-199" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>199</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="left-instance_method">
+  
+    #<strong>left</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>x-coordinate of left side.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 211</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-211" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>211</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">left</span>
+</pre></td></tr><tr id="line-212" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>212</pre></td><td class="rouge-code"><pre>  <span class="vi">@left</span> <span class="o">||=</span> <span class="p">(</span><span class="n">width</span> <span class="o">+</span> <span class="n">grid</span><span class="p">.</span><span class="nf">column_gutter</span><span class="p">)</span> <span class="o">*</span> <span class="no">Float</span><span class="p">(</span><span class="vi">@columns</span><span class="p">)</span>
+</pre></td></tr><tr id="line-213" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>213</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Mostly diagnostic method that outputs the name of a box as
+col_num, row_num</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 178</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-178" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>178</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">name</span>
+</pre></td></tr><tr id="line-179" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>179</pre></td><td class="rouge-code"><pre>  <span class="s2">"</span><span class="si">#{</span><span class="vi">@rows</span><span class="si">}</span><span class="s2">,</span><span class="si">#{</span><span class="vi">@columns</span><span class="si">}</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-180" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>180</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="right-instance_method">
+  
+    #<strong>right</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>x-coordinate of right side.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 218</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-218" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>218</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">right</span>
+</pre></td></tr><tr id="line-219" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>219</pre></td><td class="rouge-code"><pre>  <span class="vi">@right</span> <span class="o">||=</span> <span class="n">left</span> <span class="o">+</span> <span class="n">width</span>
+</pre></td></tr><tr id="line-220" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>220</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="show-instance_method">
+  
+    #<strong>show</strong>(grid_color = &#39;CCCCCC&#39;)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Drawn the box. Diagnostic method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>grid_color</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Graphics/Color.html" title="Prawn::Graphics::Color (module)">Color</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;CCCCCC&#39;</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 276</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-276" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>276</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">grid_color</span> <span class="o">=</span> <span class="s1">'CCCCCC'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-277" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>277</pre></td><td class="rouge-code"><pre>  <span class="n">bounding_box</span> <span class="k">do</span>
+</pre></td></tr><tr id="line-278" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>278</pre></td><td class="rouge-code"><pre>    <span class="n">original_stroke_color</span> <span class="o">=</span> <span class="n">pdf</span><span class="p">.</span><span class="nf">stroke_color</span>
+</pre></td></tr><tr id="line-279" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>279</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-280" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>280</pre></td><td class="rouge-code"><pre>    <span class="n">pdf</span><span class="p">.</span><span class="nf">stroke_color</span> <span class="o">=</span> <span class="n">grid_color</span>
+</pre></td></tr><tr id="line-281" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>281</pre></td><td class="rouge-code"><pre>    <span class="n">pdf</span><span class="p">.</span><span class="nf">text</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+</pre></td></tr><tr id="line-282" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>282</pre></td><td class="rouge-code"><pre>    <span class="n">pdf</span><span class="p">.</span><span class="nf">stroke_bounds</span>
+</pre></td></tr><tr id="line-283" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>283</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-284" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>284</pre></td><td class="rouge-code"><pre>    <span class="n">pdf</span><span class="p">.</span><span class="nf">stroke_color</span> <span class="o">=</span> <span class="n">original_stroke_color</span>
+</pre></td></tr><tr id="line-285" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>285</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-286" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>286</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="top-instance_method">
+  
+    #<strong>top</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>y-coordinate of the top.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 225</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-225" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>225</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">top</span>
+</pre></td></tr><tr id="line-226" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>226</pre></td><td class="rouge-code"><pre>  <span class="vi">@top</span> <span class="o">||=</span> <span class="n">total_height</span> <span class="o">-</span> <span class="p">((</span><span class="n">height</span> <span class="o">+</span> <span class="n">grid</span><span class="p">.</span><span class="nf">row_gutter</span><span class="p">)</span> <span class="o">*</span> <span class="no">Float</span><span class="p">(</span><span class="vi">@rows</span><span class="p">))</span>
+</pre></td></tr><tr id="line-227" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>227</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="top_left-instance_method">
+  
+    #<strong>top_left</strong>  &#x21d2; <tt>Array(Float, Float)</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>x,y coordinates of top left corner.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array(Float, Float)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 239</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-239" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>239</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">top_left</span>
+</pre></td></tr><tr id="line-240" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>240</pre></td><td class="rouge-code"><pre>  <span class="p">[</span><span class="n">left</span><span class="p">,</span> <span class="n">top</span><span class="p">]</span>
+</pre></td></tr><tr id="line-241" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>241</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="top_right-instance_method">
+  
+    #<strong>top_right</strong>  &#x21d2; <tt>Array(Float, Float)</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>x,y coordinates of top right corner.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array(Float, Float)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 246</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-246" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>246</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">top_right</span>
+</pre></td></tr><tr id="line-247" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>247</pre></td><td class="rouge-code"><pre>  <span class="p">[</span><span class="n">right</span><span class="p">,</span> <span class="n">top</span><span class="p">]</span>
+</pre></td></tr><tr id="line-248" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>248</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="width-instance_method">
+  
+    #<strong>width</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Width of a box.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/grid.rb, line 190</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-190" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>190</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">width</span>
+</pre></td></tr><tr id="line-191" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>191</pre></td><td class="rouge-code"><pre>  <span class="no">Float</span><span class="p">(</span><span class="n">grid</span><span class="p">.</span><span class="nf">column_width</span><span class="p">)</span>
+</pre></td></tr><tr id="line-192" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>192</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar  1 12:33:16 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

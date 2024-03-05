@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TTFunk::Table::Cff::FdSelector
+  
+    &mdash; Documentation by YARD 0.9.35
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::Cff::FdSelector";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Table.html" title="TTFunk::Table (class)">Table</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Cff.html" title="TTFunk::Table::Cff (class)">Cff</a></span></span>
+     &raquo; 
+    <span class="title">FdSelector</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TTFunk::Table::Cff::FdSelector
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></li>
+          
+            <li class="next">TTFunk::Table::Cff::FdSelector</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Enumerable</dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/cff/fd_selector.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>CFF FDSelect.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="ARRAY_FORMAT-constant" class="">ARRAY_FORMAT =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Array format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">0</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="RANGE_FORMAT-constant" class="">RANGE_FORMAT =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Range format.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">3</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="RANGE_ENTRY_SIZE-constant" class="">RANGE_ENTRY_SIZE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Range entry size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">3</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="ARRAY_ENTRY_SIZE-constant" class="">ARRAY_ENTRY_SIZE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Array entry size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">1</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#entries-instance_method" title="#entries (instance method)">#<strong>entries</strong>  &#x21d2; Array&lt;Integer&gt;, Array&lt;Array(Range, Integer)&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Number of entries.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#items_count-instance_method" title="#items_count (instance method)">#<strong>items_count</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Number of encoded items.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#n_glyphs-instance_method" title="#n_glyphs (instance method)">#<strong>n_glyphs</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Number of glyphs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#top_dict-instance_method" title="#top_dict (instance method)">#<strong>top_dict</strong>  &#x21d2; TTFunk::Table::Cff::TopDict </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Top dict.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../SubTable.html#file-instance_method" title="TTFunk::SubTable#file (method)">#file</a></span>, <span class='object_link'><a href="../../SubTable.html#length-instance_method" title="TTFunk::SubTable#length (method)">#length</a></span>, <span class='object_link'><a href="../../SubTable.html#table_offset-instance_method" title="TTFunk::SubTable#table_offset (method)">#table_offset</a></span></p>
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#[]-instance_method" title="#[] (instance method)">#<strong>[]</strong>(glyph_id)  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get font dict index for glyph ID.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">#<strong>each</strong> {|font| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Iterate over font dicts for each glyph ID.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode-instance_method" title="#encode (instance method)">#<strong>encode</strong>(charmap)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encode Font dict selector.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(top_dict, file, offset, length = nil)  &#x21d2; FdSelector </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of FdSelector.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../SubTable.html#eot%3F-instance_method" title="TTFunk::SubTable#eot? (method)">#eot?</a></span>, <span class='object_link'><a href="../../SubTable.html#read-instance_method" title="TTFunk::SubTable#read (method)">#read</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(top_dict, file, offset, length = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="TTFunk::Table::Cff::FdSelector (class)">FdSelector</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of FdSelector.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>top_dict</span>
+      
+      
+        <span class='type'>(<tt>TTFunk::Table:Cff::TopDict</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>file</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../File.html" title="TTFunk::File (class)">TTFunk::File</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>offset</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>length</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/fd_selector.rb, line 43</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">top_dict</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">length</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+</pre></td></tr><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre>  <span class="vi">@top_dict</span> <span class="o">=</span> <span class="n">top_dict</span>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre>  <span class="k">super</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+</pre></td></tr><tr id="line-46" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>46</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="entries-instance_method">
+  
+    #<strong>entries</strong>  &#x21d2; <tt>Array&lt;Integer&gt;</tt>, <tt>Array&lt;Array(Range, Integer)&gt;</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Number of entries.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if format is array.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Array(Range, Integer)&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if format is range.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/fd_selector.rb, line 33</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-33" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>33</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">entries</span>
+</pre></td></tr><tr id="line-34" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>34</pre></td><td class="rouge-code"><pre>  <span class="vi">@entries</span>
+</pre></td></tr><tr id="line-35" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>35</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="items_count-instance_method">
+  
+    #<strong>items_count</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Number of encoded items.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/fd_selector.rb, line 28</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-28" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>28</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">items_count</span>
+</pre></td></tr><tr id="line-29" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>29</pre></td><td class="rouge-code"><pre>  <span class="vi">@items_count</span>
+</pre></td></tr><tr id="line-30" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>30</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="n_glyphs-instance_method">
+  
+    #<strong>n_glyphs</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Number of glyphs.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/fd_selector.rb, line 37</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-37" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>37</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">n_glyphs</span>
+</pre></td></tr><tr id="line-38" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>38</pre></td><td class="rouge-code"><pre>  <span class="vi">@n_glyphs</span>
+</pre></td></tr><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="top_dict-instance_method">
+  
+    #<strong>top_dict</strong>  &#x21d2; <tt><span class='object_link'><a href="TopDict.html" title="TTFunk::Table::Cff::TopDict (class)">TTFunk::Table::Cff::TopDict</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Top dict.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TopDict.html" title="TTFunk::Table::Cff::TopDict (class)">TTFunk::Table::Cff::TopDict</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/fd_selector.rb, line 24</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-24" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>24</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">top_dict</span>
+</pre></td></tr><tr id="line-25" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>25</pre></td><td class="rouge-code"><pre>  <span class="vi">@top_dict</span>
+</pre></td></tr><tr id="line-26" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>26</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="[]-instance_method">
+  
+    #<strong>[]</strong>(glyph_id)  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get font dict index for glyph ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/fd_selector.rb, line 51</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">[]</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>  <span class="k">case</span> <span class="n">format_sym</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="ss">:array_format</span>
+</pre></td></tr><tr id="line-54" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>54</pre></td><td class="rouge-code"><pre>    <span class="n">entries</span><span class="p">[</span><span class="n">glyph_id</span><span class="p">]</span>
+</pre></td></tr><tr id="line-55" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>55</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="ss">:range_format</span>
+</pre></td></tr><tr id="line-57" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>57</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">entry</span> <span class="o">=</span> <span class="n">range_cache</span><span class="p">[</span><span class="n">glyph_id</span><span class="p">])</span>
+</pre></td></tr><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre>      <span class="k">return</span> <span class="n">entry</span>
+</pre></td></tr><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-61" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>61</pre></td><td class="rouge-code"><pre>    <span class="n">range</span><span class="p">,</span> <span class="n">entry</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-62" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>62</pre></td><td class="rouge-code"><pre>      <span class="n">entries</span><span class="p">.</span><span class="nf">bsearch</span> <span class="p">{</span> <span class="o">|</span><span class="n">rng</span><span class="p">,</span> <span class="n">_</span><span class="o">|</span>
+</pre></td></tr><tr id="line-63" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>63</pre></td><td class="rouge-code"><pre>        <span class="k">if</span> <span class="n">rng</span><span class="p">.</span><span class="nf">cover?</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-64" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>64</pre></td><td class="rouge-code"><pre>          <span class="mi">0</span>
+</pre></td></tr><tr id="line-65" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>65</pre></td><td class="rouge-code"><pre>        <span class="k">elsif</span> <span class="n">glyph_id</span> <span class="o">&lt;</span> <span class="n">rng</span><span class="p">.</span><span class="nf">first</span>
+</pre></td></tr><tr id="line-66" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>66</pre></td><td class="rouge-code"><pre>          <span class="o">-</span><span class="mi">1</span>
+</pre></td></tr><tr id="line-67" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>67</pre></td><td class="rouge-code"><pre>        <span class="k">else</span>
+</pre></td></tr><tr id="line-68" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>68</pre></td><td class="rouge-code"><pre>          <span class="mi">1</span>
+</pre></td></tr><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre>        <span class="k">end</span>
+</pre></td></tr><tr id="line-70" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>70</pre></td><td class="rouge-code"><pre>      <span class="p">}</span>
+</pre></td></tr><tr id="line-71" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>71</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-72" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>72</pre></td><td class="rouge-code"><pre>    <span class="n">range</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">range_cache</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">entry</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-73" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>73</pre></td><td class="rouge-code"><pre>    <span class="n">entry</span>
+</pre></td></tr><tr id="line-74" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>74</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-75" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>75</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="each-instance_method">
+  
+    #<strong>each</strong> {|font| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Iterate over font dicts for each glyph ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>font</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>dict index.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/fd_selector.rb, line 81</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-81" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>81</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">each</span>
+</pre></td></tr><tr id="line-82" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>82</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="n">to_enum</span><span class="p">(</span><span class="n">__method__</span><span class="p">)</span> <span class="k">unless</span> <span class="nb">block_given?</span>
+</pre></td></tr><tr id="line-83" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>83</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-84" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>84</pre></td><td class="rouge-code"><pre>  <span class="n">items_count</span><span class="p">.</span><span class="nf">times</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="k">yield</span><span class="p">(</span><span class="nb">self</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode-instance_method">
+  
+    #<strong>encode</strong>(charmap)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encode Font dict selector.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>charmap</span>
+      
+      
+        <span class='type'>(<tt>Hash{Integer =&gt; Hash}</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>keys are the charac codes,
+values are hashes:</p>
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:old</span></code> (<tt>Integer</tt>) - glyph ID in the original font.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:new</span></code> (<tt>Integer</tt>) - glyph ID in the subset font.</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/fd_selector.rb, line 94</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="n">charmap</span><span class="p">)</span>
+</pre></td></tr><tr id="line-95" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>95</pre></td><td class="rouge-code"><pre>  <span class="c1"># get list of [new_gid, fd_index] pairs</span>
+</pre></td></tr><tr id="line-96" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>96</pre></td><td class="rouge-code"><pre>  <span class="n">new_indices</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-97" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>97</pre></td><td class="rouge-code"><pre>    <span class="n">charmap</span>
+</pre></td></tr><tr id="line-98" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>98</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">code</span><span class="p">,</span> <span class="n">mapping</span><span class="o">|</span> <span class="n">mapping</span><span class="p">[</span><span class="ss">:new</span><span class="p">].</span><span class="nf">zero?</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">code</span><span class="p">.</span><span class="nf">zero?</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-99" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>99</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">sort_by</span> <span class="p">{</span> <span class="o">|</span><span class="n">_code</span><span class="p">,</span> <span class="n">mapping</span><span class="o">|</span> <span class="n">mapping</span><span class="p">[</span><span class="ss">:new</span><span class="p">]</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-100" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>100</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="p">(</span><span class="n">_code</span><span class="p">,</span> <span class="n">mapping</span><span class="p">)</span><span class="o">|</span> <span class="p">[</span><span class="n">mapping</span><span class="p">[</span><span class="ss">:new</span><span class="p">],</span> <span class="nb">self</span><span class="p">[</span><span class="n">mapping</span><span class="p">[</span><span class="ss">:old</span><span class="p">]]]</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-101" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>101</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-102" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>102</pre></td><td class="rouge-code"><pre>  <span class="n">ranges</span> <span class="o">=</span> <span class="n">rangify_gids</span><span class="p">(</span><span class="n">new_indices</span><span class="p">)</span>
+</pre></td></tr><tr id="line-103" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>103</pre></td><td class="rouge-code"><pre>  <span class="n">total_range_size</span> <span class="o">=</span> <span class="n">ranges</span><span class="p">.</span><span class="nf">size</span> <span class="o">*</span> <span class="no">RANGE_ENTRY_SIZE</span>
+</pre></td></tr><tr id="line-104" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>104</pre></td><td class="rouge-code"><pre>  <span class="n">total_array_size</span> <span class="o">=</span> <span class="n">new_indices</span><span class="p">.</span><span class="nf">size</span> <span class="o">*</span> <span class="no">ARRAY_ENTRY_SIZE</span>
+</pre></td></tr><tr id="line-105" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>105</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-106" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>106</pre></td><td class="rouge-code"><pre>  <span class="s1">''</span><span class="p">.</span><span class="nf">b</span><span class="p">.</span><span class="nf">tap</span> <span class="k">do</span> <span class="o">|</span><span class="n">result</span><span class="o">|</span>
+</pre></td></tr><tr id="line-107" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>107</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">total_array_size</span> <span class="o">&lt;=</span> <span class="n">total_range_size</span>
+</pre></td></tr><tr id="line-108" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>108</pre></td><td class="rouge-code"><pre>      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="p">[</span><span class="no">ARRAY_FORMAT</span><span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'C'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-109" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>109</pre></td><td class="rouge-code"><pre>      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">new_indices</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:last</span><span class="p">).</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'C*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-110" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>110</pre></td><td class="rouge-code"><pre>    <span class="k">else</span>
+</pre></td></tr><tr id="line-111" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>111</pre></td><td class="rouge-code"><pre>      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="p">[</span><span class="no">RANGE_FORMAT</span><span class="p">,</span> <span class="n">ranges</span><span class="p">.</span><span class="nf">size</span><span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'Cn'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-112" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>112</pre></td><td class="rouge-code"><pre>      <span class="n">ranges</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">range</span><span class="o">|</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">range</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'nC'</span><span class="p">)</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-113" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>113</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-114" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>114</pre></td><td class="rouge-code"><pre>      <span class="c1"># "A sentinel GID follows the last range element and serves to</span>
+</pre></td></tr><tr id="line-115" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>115</pre></td><td class="rouge-code"><pre>      <span class="c1"># delimit the last range in the array. (The sentinel GID is set</span>
+</pre></td></tr><tr id="line-116" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>116</pre></td><td class="rouge-code"><pre>      <span class="c1"># equal to the number of glyphs in the font. That is, its value</span>
+</pre></td></tr><tr id="line-117" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>117</pre></td><td class="rouge-code"><pre>      <span class="c1"># is 1 greater than the last GID in the font)."</span>
+</pre></td></tr><tr id="line-118" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>118</pre></td><td class="rouge-code"><pre>      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="p">[</span><span class="n">new_indices</span><span class="p">.</span><span class="nf">size</span><span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-119" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>119</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-120" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>120</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-121" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>121</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb 29 20:15:17 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: PDF::Core::Page
+  
+    &mdash; Documentation by YARD 0.9.36
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "PDF::Core::Page";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../PDF.html" title="PDF (module)">PDF</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Core.html" title="PDF::Core (module)">Core</a></span></span>
+     &raquo; 
+    <span class="title">Page</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: PDF::Core::Page
+  
+  
+  <span class="private note title">Private</span>
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">PDF::Core::Page</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/pdf/core/page.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This class is part of a private API.</strong>
+  You should avoid using this class if possible, as it may be removed or be changed in the future.
+</p>
+<p>Low-level representation of a PDF page</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="ZERO_INDENTS-constant" class="">ZERO_INDENTS =
+            <div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This constant is part of a private API.</strong>
+  You should avoid using this constant if possible, as it may be removed or be changed in the future.
+</p>
+<p>A convenince constant of no indents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="p">{</span>
+  <span class="ss">left: </span><span class="mi">0</span><span class="p">,</span>
+  <span class="ss">bottom: </span><span class="mi">0</span><span class="p">,</span>
+  <span class="ss">right: </span><span class="mi">0</span><span class="p">,</span>
+  <span class="ss">top: </span><span class="mi">0</span><span class="p">,</span>
+<span class="p">}.</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#art_indents-instance_method" title="#art_indents (instance method)">#<strong>art_indents</strong>  &#x21d2; Hash&lt;[:left, :right, :top, :bottom], Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page art box indents relative to page edges.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bleeds-instance_method" title="#bleeds (instance method)">#<strong>bleeds</strong>  &#x21d2; Hash&lt;[:left, :right, :top, :bottom], Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page bleed box indents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#content-instance_method" title="#content (instance method)">#<strong>content</strong>  &#x21d2; PDF::Core::Reference&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Current content stream.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#crops-instance_method" title="#crops (instance method)">#<strong>crops</strong>  &#x21d2; Hash&lt;[:left, :right, :top, :bottom], Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page crop box indents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dictionary-instance_method" title="#dictionary (instance method)">#<strong>dictionary</strong>  &#x21d2; PDF::Core::Reference&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Current content dictionary.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#document-instance_method" title="#document (instance method)">#<strong>document</strong>  &#x21d2; Prawn::Document </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Owning document.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#margins-instance_method" title="#margins (instance method)">#<strong>margins</strong>  &#x21d2; Hash&lt;[:left, :right, :top, :bottom], Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page margins.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stack-instance_method" title="#stack (instance method)">#<strong>stack</strong>  &#x21d2; GraphicStateStack </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Graphic state stack.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#trims-instance_method" title="#trims (instance method)">#<strong>trims</strong>  &#x21d2; Hash&lt;[:left, :right, :top, :bottom], Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page trim box indents.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#art_box-instance_method" title="#art_box (instance method)">#<strong>art_box</strong>  &#x21d2; Array&lt;Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>A rectangle, expressed in default user space units, defining the extent of the page’s meaningful content (including potential white space) as intended by the page’s creator.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bleed_box-instance_method" title="#bleed_box (instance method)">#<strong>bleed_box</strong>  &#x21d2; Array&lt;Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page bleed box.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#crop_box-instance_method" title="#crop_box (instance method)">#<strong>crop_box</strong>  &#x21d2; Array&lt;Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>A rectangle, expressed in default user space units, defining the visible region of default user space.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dimensions-instance_method" title="#dimensions (instance method)">#<strong>dimensions</strong>  &#x21d2; Array&lt;Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page dimensions.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ext_gstates-instance_method" title="#ext_gstates (instance method)">#<strong>ext_gstates</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Graphic state parameter dictionary.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finalize-instance_method" title="#finalize (instance method)">#<strong>finalize</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Finalize page.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fonts-instance_method" title="#fonts (instance method)">#<strong>fonts</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Fonts dictionary.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#graphic_state-instance_method" title="#graphic_state (instance method)">#<strong>graphic_state</strong>  &#x21d2; PDF::Core::GraphicState </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Current graphic state.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#in_stamp_stream%3F-instance_method" title="#in_stamp_stream? (instance method)">#<strong>in_stamp_stream?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Are we drawing to a stamp right now?.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(document, options = {})  &#x21d2; Page </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Page.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#layout-instance_method" title="#layout (instance method)">#<strong>layout</strong>  &#x21d2; :portrait, :landscape </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page layout.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resources-instance_method" title="#resources (instance method)">#<strong>resources</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page resources dictionary.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#size-instance_method" title="#size (instance method)">#<strong>size</strong>  &#x21d2; Array&lt;Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Page size.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stamp_stream-instance_method" title="#stamp_stream (instance method)">#<strong>stamp_stream</strong>(dictionary) { ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Draw to stamp.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#trim_box-instance_method" title="#trim_box (instance method)">#<strong>trim_box</strong>  &#x21d2; Array&lt;Numeric&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>A rectangle, expressed in default user space units, defining the intended dimensions of the finished page after trimming.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#xobjects-instance_method" title="#xobjects (instance method)">#<strong>xobjects</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>External objects dictionary.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(document, options = {})  &#x21d2; <tt><span class='object_link'><a href="" title="PDF::Core::Page (class)">Page</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Returns a new instance of Page.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>document</span>
+      
+      
+        <span class='type'>(<tt>Prawn::Document</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:margins</span>
+          <span class="type">(<tt>Hash{:left, :right, :top, :bottom =&gt; Number}</tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>{ left: 0</tt>, <tt>right: 0</tt>, <tt>top: 0</tt>, <tt>bottom: 0 }</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Page margins</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:crop</span>
+          <span class="type">(<tt>Hash{:left, :right, :top, :bottom =&gt; Number}</tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>ZERO_INDENTS</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Page crop box</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:bleed</span>
+          <span class="type">(<tt>Hash{:left, :right, :top, :bottom =&gt; Number}</tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>ZERO_INDENTS</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Page bleed box</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:trims</span>
+          <span class="type">(<tt>Hash{:left, :right, :top, :bottom =&gt; Number}</tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>ZERO_INDENTS</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Page trim box</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:art_indents</span>
+          <span class="type">(<tt>Hash{:left, :right, :top, :bottom =&gt; Number}</tt>, <tt>Numeric</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>, nil] (ZERO_INDENTS)
+Page art box indents.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:graphic_state</span>
+          <span class="type">(<tt><span class='object_link'><a href="GraphicState.html" title="PDF::Core::GraphicState (class)">PDF::Core::GraphicState</a></span></tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>nil</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Initial graphic state</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>String</tt>, <tt>Array&lt;Numeric&gt;</tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>&#39;LETTER&#39;</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Page size. A string identifies a named page size defined in
+<span class='object_link'><a href="PageGeometry.html" title="PDF::Core::PageGeometry (module)">PDF::Core::PageGeometry</a></span>. An array must be a two element array specifying width
+and height in points.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:layout</span>
+          <span class="type">(<tt>:portrait</tt>, <tt>:landscape</tt>, <tt>nil</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:portrait</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Page orientation.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 84</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-84" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>84</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre>  <span class="vi">@document</span> <span class="o">=</span> <span class="n">document</span>
+</pre></td></tr><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre>  <span class="vi">@margins</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:margins</span><span class="p">]</span> <span class="o">||</span> <span class="p">{</span>
+</pre></td></tr><tr id="line-87" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>87</pre></td><td class="rouge-code"><pre>    <span class="ss">left: </span><span class="mi">36</span><span class="p">,</span>
+</pre></td></tr><tr id="line-88" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>88</pre></td><td class="rouge-code"><pre>    <span class="ss">right: </span><span class="mi">36</span><span class="p">,</span>
+</pre></td></tr><tr id="line-89" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>89</pre></td><td class="rouge-code"><pre>    <span class="ss">top: </span><span class="mi">36</span><span class="p">,</span>
+</pre></td></tr><tr id="line-90" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>90</pre></td><td class="rouge-code"><pre>    <span class="ss">bottom: </span><span class="mi">36</span><span class="p">,</span>
+</pre></td></tr><tr id="line-91" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>91</pre></td><td class="rouge-code"><pre>  <span class="p">}</span>
+</pre></td></tr><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre>  <span class="vi">@crops</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:crops</span><span class="p">]</span> <span class="o">||</span> <span class="no">ZERO_INDENTS</span>
+</pre></td></tr><tr id="line-93" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>93</pre></td><td class="rouge-code"><pre>  <span class="vi">@bleeds</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:bleeds</span><span class="p">]</span> <span class="o">||</span> <span class="no">ZERO_INDENTS</span>
+</pre></td></tr><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre>  <span class="vi">@trims</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:trims</span><span class="p">]</span> <span class="o">||</span> <span class="no">ZERO_INDENTS</span>
+</pre></td></tr><tr id="line-95" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>95</pre></td><td class="rouge-code"><pre>  <span class="vi">@art_indents</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:art_indents</span><span class="p">]</span> <span class="o">||</span> <span class="no">ZERO_INDENTS</span>
+</pre></td></tr><tr id="line-96" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>96</pre></td><td class="rouge-code"><pre>  <span class="vi">@stack</span> <span class="o">=</span> <span class="no">GraphicStateStack</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="ss">:graphic_state</span><span class="p">])</span>
+</pre></td></tr><tr id="line-97" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>97</pre></td><td class="rouge-code"><pre>  <span class="vi">@size</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:size</span><span class="p">]</span> <span class="o">||</span> <span class="s1">'LETTER'</span>
+</pre></td></tr><tr id="line-98" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>98</pre></td><td class="rouge-code"><pre>  <span class="vi">@layout</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:layout</span><span class="p">]</span> <span class="o">||</span> <span class="ss">:portrait</span>
+</pre></td></tr><tr id="line-99" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>99</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-100" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>100</pre></td><td class="rouge-code"><pre>  <span class="vi">@stamp_stream</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-101" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>101</pre></td><td class="rouge-code"><pre>  <span class="vi">@stamp_dictionary</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-102" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>102</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-103" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>103</pre></td><td class="rouge-code"><pre>  <span class="vi">@content</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="nf">ref</span><span class="p">({})</span>
+</pre></td></tr><tr id="line-104" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>104</pre></td><td class="rouge-code"><pre>  <span class="n">content</span> <span class="o">&lt;&lt;</span> <span class="s1">'q'</span> <span class="o">&lt;&lt;</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-105" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>105</pre></td><td class="rouge-code"><pre>  <span class="vi">@dictionary</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="nf">ref</span><span class="p">(</span>
+</pre></td></tr><tr id="line-106" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>106</pre></td><td class="rouge-code"><pre>    <span class="no">Type</span><span class="p">:</span> <span class="ss">:Page</span><span class="p">,</span>
+</pre></td></tr><tr id="line-107" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>107</pre></td><td class="rouge-code"><pre>    <span class="no">Parent</span><span class="p">:</span> <span class="n">document</span><span class="p">.</span><span class="nf">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">pages</span><span class="p">,</span>
+</pre></td></tr><tr id="line-108" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>108</pre></td><td class="rouge-code"><pre>    <span class="no">MediaBox</span><span class="p">:</span> <span class="n">dimensions</span><span class="p">,</span>
+</pre></td></tr><tr id="line-109" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>109</pre></td><td class="rouge-code"><pre>    <span class="no">CropBox</span><span class="p">:</span> <span class="n">crop_box</span><span class="p">,</span>
+</pre></td></tr><tr id="line-110" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>110</pre></td><td class="rouge-code"><pre>    <span class="no">BleedBox</span><span class="p">:</span> <span class="n">bleed_box</span><span class="p">,</span>
+</pre></td></tr><tr id="line-111" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>111</pre></td><td class="rouge-code"><pre>    <span class="no">TrimBox</span><span class="p">:</span> <span class="n">trim_box</span><span class="p">,</span>
+</pre></td></tr><tr id="line-112" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>112</pre></td><td class="rouge-code"><pre>    <span class="no">ArtBox</span><span class="p">:</span> <span class="n">art_box</span><span class="p">,</span>
+</pre></td></tr><tr id="line-113" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>113</pre></td><td class="rouge-code"><pre>    <span class="no">Contents</span><span class="p">:</span> <span class="n">content</span><span class="p">,</span>
+</pre></td></tr><tr id="line-114" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>114</pre></td><td class="rouge-code"><pre>  <span class="p">)</span>
+</pre></td></tr><tr id="line-115" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>115</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-116" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>116</pre></td><td class="rouge-code"><pre>  <span class="n">resources</span><span class="p">[</span><span class="ss">:ProcSet</span><span class="p">]</span> <span class="o">=</span> <span class="sx">%i[PDF Text ImageB ImageC ImageI]</span>
+</pre></td></tr><tr id="line-117" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>117</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="art_indents=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="art_indents-instance_method">
+  
+    #<strong>art_indents</strong>  &#x21d2; <tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page art box indents relative to page edges.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 14</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-14" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>14</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">art_indents</span>
+</pre></td></tr><tr id="line-15" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>15</pre></td><td class="rouge-code"><pre>  <span class="vi">@art_indents</span>
+</pre></td></tr><tr id="line-16" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>16</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="bleeds=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="bleeds-instance_method">
+  
+    #<strong>bleeds</strong>  &#x21d2; <tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page bleed box indents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 19</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-19" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>19</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">bleeds</span>
+</pre></td></tr><tr id="line-20" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>20</pre></td><td class="rouge-code"><pre>  <span class="vi">@bleeds</span>
+</pre></td></tr><tr id="line-21" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>21</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="content=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="content-instance_method">
+  
+    #<strong>content</strong>  &#x21d2; <tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span>&lt;Hash&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Current content stream. Can be either the page content stream or a stamp
+content stream.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span>&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 182</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-182" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>182</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">content</span>
+</pre></td></tr><tr id="line-183" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>183</pre></td><td class="rouge-code"><pre>  <span class="vi">@stamp_stream</span> <span class="o">||</span> <span class="n">document</span><span class="p">.</span><span class="nf">state</span><span class="p">.</span><span class="nf">store</span><span class="p">[</span><span class="vi">@content</span><span class="p">]</span>
+</pre></td></tr><tr id="line-184" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>184</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="crops=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="crops-instance_method">
+  
+    #<strong>crops</strong>  &#x21d2; <tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page crop box indents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 24</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-24" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>24</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">crops</span>
+</pre></td></tr><tr id="line-25" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>25</pre></td><td class="rouge-code"><pre>  <span class="vi">@crops</span>
+</pre></td></tr><tr id="line-26" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>26</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="dictionary=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="dictionary-instance_method">
+  
+    #<strong>dictionary</strong>  &#x21d2; <tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span>&lt;Hash&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Current content dictionary. Can be either the page dictionary or a stamp
+dictionary.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span>&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 190</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-190" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>190</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">dictionary</span>
+</pre></td></tr><tr id="line-191" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>191</pre></td><td class="rouge-code"><pre>  <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@stamp_dictionary</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@stamp_dictionary</span><span class="p">)</span> <span class="o">||</span>
+</pre></td></tr><tr id="line-192" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>192</pre></td><td class="rouge-code"><pre>    <span class="n">document</span><span class="p">.</span><span class="nf">state</span><span class="p">.</span><span class="nf">store</span><span class="p">[</span><span class="vi">@dictionary</span><span class="p">]</span>
+</pre></td></tr><tr id="line-193" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>193</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="document=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="document-instance_method">
+  
+    #<strong>document</strong>  &#x21d2; <tt>Prawn::Document</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Owning document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Prawn::Document</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 39</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">document</span>
+</pre></td></tr><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre>  <span class="vi">@document</span>
+</pre></td></tr><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="margins=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="margins-instance_method">
+  
+    #<strong>margins</strong>  &#x21d2; <tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page margins.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 34</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-34" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>34</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">margins</span>
+</pre></td></tr><tr id="line-35" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>35</pre></td><td class="rouge-code"><pre>  <span class="vi">@margins</span>
+</pre></td></tr><tr id="line-36" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>36</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="stack=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="stack-instance_method">
+  
+    #<strong>stack</strong>  &#x21d2; <tt><span class='object_link'><a href="GraphicStateStack.html" title="PDF::Core::GraphicStateStack (class)">GraphicStateStack</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Graphic state stack.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="GraphicStateStack.html" title="PDF::Core::GraphicStateStack (class)">GraphicStateStack</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 44</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">stack</span>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre>  <span class="vi">@stack</span>
+</pre></td></tr><tr id="line-46" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>46</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="trims=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="trims-instance_method">
+  
+    #<strong>trims</strong>  &#x21d2; <tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page trim box indents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Hash&lt;[:left, :right, :top, :bottom], Numeric&gt;</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 29</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-29" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>29</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">trims</span>
+</pre></td></tr><tr id="line-30" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>30</pre></td><td class="rouge-code"><pre>  <span class="vi">@trims</span>
+</pre></td></tr><tr id="line-31" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>31</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="art_box-instance_method">
+  
+    #<strong>art_box</strong>  &#x21d2; <tt>Array&lt;Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>A rectangle, expressed in default user space units, defining the extent
+of the page’s meaningful content (including potential white space) as
+intended by the page’s creator.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Numeric&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 275</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-275" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>275</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">art_box</span>
+</pre></td></tr><tr id="line-276" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>276</pre></td><td class="rouge-code"><pre>  <span class="n">left</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="n">dimensions</span>
+</pre></td></tr><tr id="line-277" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>277</pre></td><td class="rouge-code"><pre>  <span class="p">[</span>
+</pre></td></tr><tr id="line-278" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>278</pre></td><td class="rouge-code"><pre>    <span class="n">left</span> <span class="o">+</span> <span class="n">art_indents</span><span class="p">[</span><span class="ss">:left</span><span class="p">],</span>
+</pre></td></tr><tr id="line-279" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>279</pre></td><td class="rouge-code"><pre>    <span class="n">bottom</span> <span class="o">+</span> <span class="n">art_indents</span><span class="p">[</span><span class="ss">:bottom</span><span class="p">],</span>
+</pre></td></tr><tr id="line-280" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>280</pre></td><td class="rouge-code"><pre>    <span class="n">right</span> <span class="o">-</span> <span class="n">art_indents</span><span class="p">[</span><span class="ss">:right</span><span class="p">],</span>
+</pre></td></tr><tr id="line-281" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>281</pre></td><td class="rouge-code"><pre>    <span class="n">top</span> <span class="o">-</span> <span class="n">art_indents</span><span class="p">[</span><span class="ss">:top</span><span class="p">],</span>
+</pre></td></tr><tr id="line-282" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>282</pre></td><td class="rouge-code"><pre>  <span class="p">]</span>
+</pre></td></tr><tr id="line-283" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>283</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bleed_box-instance_method">
+  
+    #<strong>bleed_box</strong>  &#x21d2; <tt>Array&lt;Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page bleed box. A rectangle, expressed in default user space units,
+defining the region to which the contents of the page should be clipped
+when output in a production environment.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Numeric&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 290</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-290" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>290</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">bleed_box</span>
+</pre></td></tr><tr id="line-291" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>291</pre></td><td class="rouge-code"><pre>  <span class="n">left</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="n">dimensions</span>
+</pre></td></tr><tr id="line-292" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>292</pre></td><td class="rouge-code"><pre>  <span class="p">[</span>
+</pre></td></tr><tr id="line-293" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>293</pre></td><td class="rouge-code"><pre>    <span class="n">left</span> <span class="o">+</span> <span class="n">bleeds</span><span class="p">[</span><span class="ss">:left</span><span class="p">],</span>
+</pre></td></tr><tr id="line-294" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>294</pre></td><td class="rouge-code"><pre>    <span class="n">bottom</span> <span class="o">+</span> <span class="n">bleeds</span><span class="p">[</span><span class="ss">:bottom</span><span class="p">],</span>
+</pre></td></tr><tr id="line-295" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>295</pre></td><td class="rouge-code"><pre>    <span class="n">right</span> <span class="o">-</span> <span class="n">bleeds</span><span class="p">[</span><span class="ss">:right</span><span class="p">],</span>
+</pre></td></tr><tr id="line-296" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>296</pre></td><td class="rouge-code"><pre>    <span class="n">top</span> <span class="o">-</span> <span class="n">bleeds</span><span class="p">[</span><span class="ss">:top</span><span class="p">],</span>
+</pre></td></tr><tr id="line-297" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>297</pre></td><td class="rouge-code"><pre>  <span class="p">]</span>
+</pre></td></tr><tr id="line-298" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>298</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="crop_box-instance_method">
+  
+    #<strong>crop_box</strong>  &#x21d2; <tt>Array&lt;Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>A rectangle, expressed in default user space units, defining the visible
+region of default user space. When the page is displayed or printed, its
+contents are to be clipped (cropped) to this rectangle and then imposed
+on the output medium in some implementation-defined manner.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Numeric&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 306</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-306" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>306</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">crop_box</span>
+</pre></td></tr><tr id="line-307" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>307</pre></td><td class="rouge-code"><pre>  <span class="n">left</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="n">dimensions</span>
+</pre></td></tr><tr id="line-308" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>308</pre></td><td class="rouge-code"><pre>  <span class="p">[</span>
+</pre></td></tr><tr id="line-309" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>309</pre></td><td class="rouge-code"><pre>    <span class="n">left</span> <span class="o">+</span> <span class="n">crops</span><span class="p">[</span><span class="ss">:left</span><span class="p">],</span>
+</pre></td></tr><tr id="line-310" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>310</pre></td><td class="rouge-code"><pre>    <span class="n">bottom</span> <span class="o">+</span> <span class="n">crops</span><span class="p">[</span><span class="ss">:bottom</span><span class="p">],</span>
+</pre></td></tr><tr id="line-311" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>311</pre></td><td class="rouge-code"><pre>    <span class="n">right</span> <span class="o">-</span> <span class="n">crops</span><span class="p">[</span><span class="ss">:right</span><span class="p">],</span>
+</pre></td></tr><tr id="line-312" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>312</pre></td><td class="rouge-code"><pre>    <span class="n">top</span> <span class="o">-</span> <span class="n">crops</span><span class="p">[</span><span class="ss">:top</span><span class="p">],</span>
+</pre></td></tr><tr id="line-313" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>313</pre></td><td class="rouge-code"><pre>  <span class="p">]</span>
+</pre></td></tr><tr id="line-314" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>314</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dimensions-instance_method">
+  
+    #<strong>dimensions</strong>  &#x21d2; <tt>Array&lt;Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page dimensions.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Numeric&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 255</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-255" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>255</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">dimensions</span>
+</pre></td></tr><tr id="line-256" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>256</pre></td><td class="rouge-code"><pre>  <span class="n">coords</span> <span class="o">=</span> <span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">PageGeometry</span><span class="o">::</span><span class="no">SIZES</span><span class="p">[</span><span class="n">size</span><span class="p">]</span> <span class="o">||</span> <span class="n">size</span>
+</pre></td></tr><tr id="line-257" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>257</pre></td><td class="rouge-code"><pre>  <span class="n">coords</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-258" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>258</pre></td><td class="rouge-code"><pre>    <span class="k">case</span> <span class="n">layout</span>
+</pre></td></tr><tr id="line-259" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>259</pre></td><td class="rouge-code"><pre>    <span class="k">when</span> <span class="ss">:portrait</span>
+</pre></td></tr><tr id="line-260" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>260</pre></td><td class="rouge-code"><pre>      <span class="n">coords</span>
+</pre></td></tr><tr id="line-261" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>261</pre></td><td class="rouge-code"><pre>    <span class="k">when</span> <span class="ss">:landscape</span>
+</pre></td></tr><tr id="line-262" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>262</pre></td><td class="rouge-code"><pre>      <span class="n">coords</span><span class="p">.</span><span class="nf">reverse</span>
+</pre></td></tr><tr id="line-263" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>263</pre></td><td class="rouge-code"><pre>    <span class="k">else</span>
+</pre></td></tr><tr id="line-264" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>264</pre></td><td class="rouge-code"><pre>      <span class="k">raise</span> <span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Errors</span><span class="o">::</span><span class="no">InvalidPageLayout</span><span class="p">,</span>
+</pre></td></tr><tr id="line-265" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>265</pre></td><td class="rouge-code"><pre>        <span class="s1">'Layout must be either :portrait or :landscape'</span>
+</pre></td></tr><tr id="line-266" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>266</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-267" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>267</pre></td><td class="rouge-code"><pre>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">].</span><span class="nf">concat</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+</pre></td></tr><tr id="line-268" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>268</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ext_gstates-instance_method">
+  
+    #<strong>ext_gstates</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Graphic state parameter dictionary.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 231</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-231" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>231</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">ext_gstates</span>
+</pre></td></tr><tr id="line-232" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>232</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">resources</span><span class="p">[</span><span class="ss">:ExtGState</span><span class="p">]</span>
+</pre></td></tr><tr id="line-233" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>233</pre></td><td class="rouge-code"><pre>    <span class="n">document</span><span class="p">.</span><span class="nf">deref</span><span class="p">(</span><span class="n">resources</span><span class="p">[</span><span class="ss">:ExtGState</span><span class="p">])</span>
+</pre></td></tr><tr id="line-234" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>234</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-235" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>235</pre></td><td class="rouge-code"><pre>    <span class="n">resources</span><span class="p">[</span><span class="ss">:ExtGState</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-236" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>236</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-237" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>237</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="finalize-instance_method">
+  
+    #<strong>finalize</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Finalize page.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 242</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-242" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>242</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">finalize</span>
+</pre></td></tr><tr id="line-243" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>243</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">dictionary</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:Contents</span><span class="p">].</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Array</span><span class="p">)</span>
+</pre></td></tr><tr id="line-244" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>244</pre></td><td class="rouge-code"><pre>    <span class="n">dictionary</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:Contents</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">stream</span><span class="o">|</span>
+</pre></td></tr><tr id="line-245" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>245</pre></td><td class="rouge-code"><pre>      <span class="n">stream</span><span class="p">.</span><span class="nf">stream</span><span class="p">.</span><span class="nf">compress!</span> <span class="k">if</span> <span class="n">document</span><span class="p">.</span><span class="nf">compression_enabled?</span>
+</pre></td></tr><tr id="line-246" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>246</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-247" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>247</pre></td><td class="rouge-code"><pre>  <span class="k">elsif</span> <span class="n">document</span><span class="p">.</span><span class="nf">compression_enabled?</span>
+</pre></td></tr><tr id="line-248" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>248</pre></td><td class="rouge-code"><pre>    <span class="n">content</span><span class="p">.</span><span class="nf">stream</span><span class="p">.</span><span class="nf">compress!</span>
+</pre></td></tr><tr id="line-249" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>249</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-250" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>250</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fonts-instance_method">
+  
+    #<strong>fonts</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Fonts dictionary.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 209</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-209" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>209</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">fonts</span>
+</pre></td></tr><tr id="line-210" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>210</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">resources</span><span class="p">[</span><span class="ss">:Font</span><span class="p">]</span>
+</pre></td></tr><tr id="line-211" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>211</pre></td><td class="rouge-code"><pre>    <span class="n">document</span><span class="p">.</span><span class="nf">deref</span><span class="p">(</span><span class="n">resources</span><span class="p">[</span><span class="ss">:Font</span><span class="p">])</span>
+</pre></td></tr><tr id="line-212" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>212</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-213" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>213</pre></td><td class="rouge-code"><pre>    <span class="n">resources</span><span class="p">[</span><span class="ss">:Font</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-214" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>214</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-215" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>215</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="graphic_state-instance_method">
+  
+    #<strong>graphic_state</strong>  &#x21d2; <tt><span class='object_link'><a href="GraphicState.html" title="PDF::Core::GraphicState (class)">PDF::Core::GraphicState</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Current graphic state.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="GraphicState.html" title="PDF::Core::GraphicState (class)">PDF::Core::GraphicState</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 122</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-122" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>122</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">graphic_state</span>
+</pre></td></tr><tr id="line-123" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>123</pre></td><td class="rouge-code"><pre>  <span class="n">stack</span><span class="p">.</span><span class="nf">current_state</span>
+</pre></td></tr><tr id="line-124" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>124</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="in_stamp_stream?-instance_method">
+  
+    #<strong>in_stamp_stream?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Are we drawing to a stamp right now?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 152</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-152" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>152</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">in_stamp_stream?</span>
+</pre></td></tr><tr id="line-153" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>153</pre></td><td class="rouge-code"><pre>  <span class="o">!</span><span class="vi">@stamp_stream</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-154" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>154</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="layout-instance_method">
+  
+    #<strong>layout</strong>  &#x21d2; <tt>:portrait</tt>, <tt>:landscape</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page layout.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:portrait</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if page is talled than wider</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:landscape</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 130</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-130" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>130</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">layout</span>
+</pre></td></tr><tr id="line-131" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>131</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="vi">@layout</span> <span class="k">if</span> <span class="k">defined?</span><span class="p">(</span><span class="vi">@layout</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@layout</span>
+</pre></td></tr><tr id="line-132" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>132</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-133" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>133</pre></td><td class="rouge-code"><pre>  <span class="n">mb</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:MediaBox</span><span class="p">]</span>
+</pre></td></tr><tr id="line-134" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>134</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">mb</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">mb</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></td></tr><tr id="line-135" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>135</pre></td><td class="rouge-code"><pre>    <span class="ss">:portrait</span>
+</pre></td></tr><tr id="line-136" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>136</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-137" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>137</pre></td><td class="rouge-code"><pre>    <span class="ss">:landscape</span>
+</pre></td></tr><tr id="line-138" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>138</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-139" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>139</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="resources-instance_method">
+  
+    #<strong>resources</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page resources dictionary.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 198</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-198" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>198</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">resources</span>
+</pre></td></tr><tr id="line-199" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>199</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">dictionary</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:Resources</span><span class="p">]</span>
+</pre></td></tr><tr id="line-200" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>200</pre></td><td class="rouge-code"><pre>    <span class="n">document</span><span class="p">.</span><span class="nf">deref</span><span class="p">(</span><span class="n">dictionary</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:Resources</span><span class="p">])</span>
+</pre></td></tr><tr id="line-201" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>201</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-202" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>202</pre></td><td class="rouge-code"><pre>    <span class="n">dictionary</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:Resources</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-203" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>203</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-204" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>204</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="size-instance_method">
+  
+    #<strong>size</strong>  &#x21d2; <tt>Array&lt;Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>Page size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Numeric&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a two-element array containing width and height
+of the page.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 145</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-145" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>145</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">size</span>
+</pre></td></tr><tr id="line-146" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>146</pre></td><td class="rouge-code"><pre>  <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@size</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@size</span><span class="p">)</span> <span class="o">||</span> <span class="n">dimensions</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></td></tr><tr id="line-147" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>147</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stamp_stream-instance_method">
+  
+    #<strong>stamp_stream</strong>(dictionary) { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Draw to stamp.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>dictionary</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span>&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>stamp dictionary</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>outputs to the stamp</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 161</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-161" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>161</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">stamp_stream</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+</pre></td></tr><tr id="line-162" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>162</pre></td><td class="rouge-code"><pre>  <span class="vi">@stamp_dictionary</span> <span class="o">=</span> <span class="n">dictionary</span>
+</pre></td></tr><tr id="line-163" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>163</pre></td><td class="rouge-code"><pre>  <span class="vi">@stamp_stream</span> <span class="o">=</span> <span class="vi">@stamp_dictionary</span><span class="p">.</span><span class="nf">stream</span>
+</pre></td></tr><tr id="line-164" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>164</pre></td><td class="rouge-code"><pre>  <span class="n">graphic_stack_size</span> <span class="o">=</span> <span class="n">stack</span><span class="p">.</span><span class="nf">stack</span><span class="p">.</span><span class="nf">size</span>
+</pre></td></tr><tr id="line-165" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>165</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-166" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>166</pre></td><td class="rouge-code"><pre>  <span class="n">document</span><span class="p">.</span><span class="nf">save_graphics_state</span>
+</pre></td></tr><tr id="line-167" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>167</pre></td><td class="rouge-code"><pre>  <span class="n">document</span><span class="p">.</span><span class="nf">__send__</span><span class="p">(</span><span class="ss">:freeze_stamp_graphics</span><span class="p">)</span>
+</pre></td></tr><tr id="line-168" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>168</pre></td><td class="rouge-code"><pre>  <span class="k">yield</span> <span class="k">if</span> <span class="nb">block_given?</span>
+</pre></td></tr><tr id="line-169" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>169</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-170" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>170</pre></td><td class="rouge-code"><pre>  <span class="k">until</span> <span class="n">graphic_stack_size</span> <span class="o">==</span> <span class="n">stack</span><span class="p">.</span><span class="nf">stack</span><span class="p">.</span><span class="nf">size</span>
+</pre></td></tr><tr id="line-171" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>171</pre></td><td class="rouge-code"><pre>    <span class="n">document</span><span class="p">.</span><span class="nf">restore_graphics_state</span>
+</pre></td></tr><tr id="line-172" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>172</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-173" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>173</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-174" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>174</pre></td><td class="rouge-code"><pre>  <span class="vi">@stamp_stream</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-175" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>175</pre></td><td class="rouge-code"><pre>  <span class="vi">@stamp_dictionary</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-176" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>176</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="trim_box-instance_method">
+  
+    #<strong>trim_box</strong>  &#x21d2; <tt>Array&lt;Numeric&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>A rectangle, expressed in default user space units, defining the
+intended dimensions of the finished page after trimming.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Numeric&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 320</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-320" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>320</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">trim_box</span>
+</pre></td></tr><tr id="line-321" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>321</pre></td><td class="rouge-code"><pre>  <span class="n">left</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="n">dimensions</span>
+</pre></td></tr><tr id="line-322" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>322</pre></td><td class="rouge-code"><pre>  <span class="p">[</span>
+</pre></td></tr><tr id="line-323" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>323</pre></td><td class="rouge-code"><pre>    <span class="n">left</span> <span class="o">+</span> <span class="n">trims</span><span class="p">[</span><span class="ss">:left</span><span class="p">],</span>
+</pre></td></tr><tr id="line-324" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>324</pre></td><td class="rouge-code"><pre>    <span class="n">bottom</span> <span class="o">+</span> <span class="n">trims</span><span class="p">[</span><span class="ss">:bottom</span><span class="p">],</span>
+</pre></td></tr><tr id="line-325" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>325</pre></td><td class="rouge-code"><pre>    <span class="n">right</span> <span class="o">-</span> <span class="n">trims</span><span class="p">[</span><span class="ss">:right</span><span class="p">],</span>
+</pre></td></tr><tr id="line-326" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>326</pre></td><td class="rouge-code"><pre>    <span class="n">top</span> <span class="o">-</span> <span class="n">trims</span><span class="p">[</span><span class="ss">:top</span><span class="p">],</span>
+</pre></td></tr><tr id="line-327" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>327</pre></td><td class="rouge-code"><pre>  <span class="p">]</span>
+</pre></td></tr><tr id="line-328" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>328</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="xobjects-instance_method">
+  
+    #<strong>xobjects</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p>External objects dictionary.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/page.rb, line 220</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-220" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>220</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">xobjects</span>
+</pre></td></tr><tr id="line-221" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>221</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">resources</span><span class="p">[</span><span class="ss">:XObject</span><span class="p">]</span>
+</pre></td></tr><tr id="line-222" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>222</pre></td><td class="rouge-code"><pre>    <span class="n">document</span><span class="p">.</span><span class="nf">deref</span><span class="p">(</span><span class="n">resources</span><span class="p">[</span><span class="ss">:XObject</span><span class="p">])</span>
+</pre></td></tr><tr id="line-223" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>223</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-224" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>224</pre></td><td class="rouge-code"><pre>    <span class="n">resources</span><span class="p">[</span><span class="ss">:XObject</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-225" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>225</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-226" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>226</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Mar  4 20:54:14 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

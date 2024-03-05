@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Exception: PDF::Core::FilterList::NotFilter
+  
+    &mdash; Documentation by YARD 0.9.36
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "PDF::Core::FilterList::NotFilter";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (N)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../PDF.html" title="PDF (module)">PDF</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Core.html" title="PDF::Core (module)">Core</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../FilterList.html" title="PDF::Core::FilterList (class)">FilterList</a></span></span>
+     &raquo; 
+    <span class="title">NotFilter</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Exception: PDF::Core::FilterList::NotFilter
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">StandardError</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">StandardError</li>
+          
+            <li class="next">PDF::Core::FilterList::NotFilter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/pdf/core/filter_list.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>An exception one can expect when adding something to filter list that
+can not be interpreted as a filter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="DEFAULT_MESSAGE-constant" class="">DEFAULT_MESSAGE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Generic default error message</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s1">'Can not interpret input as a filter'</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="MESSAGE_WITH_FILTER-constant" class="">MESSAGE_WITH_FILTER =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Error message template with more details</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s1">'Can not interpret input as a filter: %&lt;filter&gt;s'</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(message = DEFAULT_MESSAGE, filter: nil)  &#x21d2; NotFilter </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of NotFilter.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(message = DEFAULT_MESSAGE, filter: nil)  &#x21d2; <tt><span class='object_link'><a href="" title="PDF::Core::FilterList::NotFilter (class)">NotFilter</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of NotFilter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/filter_list.rb, line 16</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-16" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>16</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">message</span> <span class="o">=</span> <span class="no">DEFAULT_MESSAGE</span><span class="p">,</span> <span class="ss">filter: </span><span class="kp">nil</span><span class="p">)</span>
+</pre></td></tr><tr id="line-17" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>17</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">filter</span>
+</pre></td></tr><tr id="line-18" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>18</pre></td><td class="rouge-code"><pre>    <span class="k">super</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="no">MESSAGE_WITH_FILTER</span><span class="p">,</span> <span class="ss">filter: </span><span class="n">filter</span><span class="p">))</span>
+</pre></td></tr><tr id="line-19" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>19</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-20" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>20</pre></td><td class="rouge-code"><pre>    <span class="k">super</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></td></tr><tr id="line-21" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>21</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-22" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>22</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Mar  4 20:54:15 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

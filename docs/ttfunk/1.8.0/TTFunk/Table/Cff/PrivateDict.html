@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TTFunk::Table::Cff::PrivateDict
+  
+    &mdash; Documentation by YARD 0.9.35
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::Cff::PrivateDict";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Table.html" title="TTFunk::Table (class)">Table</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Cff.html" title="TTFunk::Table::Cff (class)">Cff</a></span></span>
+     &raquo; 
+    <span class="title">PrivateDict</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TTFunk::Table::Cff::PrivateDict
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Dict.html" title="TTFunk::Table::Cff::Dict (class)">Dict</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="Dict.html" title="TTFunk::Table::Cff::Dict (class)">Dict</a></span></li>
+          
+            <li class="next">TTFunk::Table::Cff::PrivateDict</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/cff/private_dict.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>CFF Private dict.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="DEFAULT_WIDTH_X_DEFAULT-constant" class="">DEFAULT_WIDTH_X_DEFAULT =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Default value of Default Width X.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">0</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="DEFAULT_WIDTH_X_NOMINAL-constant" class="">DEFAULT_WIDTH_X_NOMINAL =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Default value of Nominal Width X.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">0</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="PLACEHOLDER_LENGTH-constant" class="">PLACEHOLDER_LENGTH =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Length of placeholders.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">5</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="OPERATORS-constant" class="">OPERATORS =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Operators we care about in this dict.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="p">{</span>
+  <span class="ss">subrs: </span><span class="mi">19</span><span class="p">,</span>
+  <span class="ss">default_width_x: </span><span class="mi">20</span><span class="p">,</span>
+  <span class="ss">nominal_width_x: </span><span class="mi">21</span><span class="p">,</span>
+<span class="p">}.</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="OPERATOR_CODES-constant" class="">OPERATOR_CODES =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Inverse operator mapping.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">OPERATORS</span><span class="p">.</span><span class="nf">invert</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants inherited
+     from <span class='object_link'><a href="Dict.html" title="TTFunk::Table::Cff::Dict (class)">Dict</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Dict.html#MAX_OPERANDS-constant" title="TTFunk::Table::Cff::Dict::MAX_OPERANDS (constant)">Dict::MAX_OPERANDS</a></span>, <span class='object_link'><a href="Dict.html#OPERAND_BZERO-constant" title="TTFunk::Table::Cff::Dict::OPERAND_BZERO (constant)">Dict::OPERAND_BZERO</a></span>, <span class='object_link'><a href="Dict.html#OPERATOR_BZERO-constant" title="TTFunk::Table::Cff::Dict::OPERATOR_BZERO (constant)">Dict::OPERATOR_BZERO</a></span>, <span class='object_link'><a href="Dict.html#VALID_SCI_EXPONENT_RE-constant" title="TTFunk::Table::Cff::Dict::VALID_SCI_EXPONENT_RE (constant)">Dict::VALID_SCI_EXPONENT_RE</a></span>, <span class='object_link'><a href="Dict.html#VALID_SCI_SIGNIFICAND_RE-constant" title="TTFunk::Table::Cff::Dict::VALID_SCI_SIGNIFICAND_RE (constant)">Dict::VALID_SCI_SIGNIFICAND_RE</a></span>, <span class='object_link'><a href="Dict.html#WIDE_OPERATOR_ADJUSTMENT-constant" title="TTFunk::Table::Cff::Dict::WIDE_OPERATOR_ADJUSTMENT (constant)">Dict::WIDE_OPERATOR_ADJUSTMENT</a></span>, <span class='object_link'><a href="Dict.html#WIDE_OPERATOR_BZERO-constant" title="TTFunk::Table::Cff::Dict::WIDE_OPERATOR_BZERO (constant)">Dict::WIDE_OPERATOR_BZERO</a></span></p>
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../SubTable.html#file-instance_method" title="TTFunk::SubTable#file (method)">#file</a></span>, <span class='object_link'><a href="../../SubTable.html#length-instance_method" title="TTFunk::SubTable#length (method)">#length</a></span>, <span class='object_link'><a href="../../SubTable.html#table_offset-instance_method" title="TTFunk::SubTable#table_offset (method)">#table_offset</a></span></p>
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_width_x-instance_method" title="#default_width_x (instance method)">#<strong>default_width_x</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Default Width X.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode-instance_method" title="#encode (instance method)">#<strong>encode</strong>  &#x21d2; TTFunk::EncodedString </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encode dict.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finalize-instance_method" title="#finalize (instance method)">#<strong>finalize</strong>(private_dict_data)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Finalize dict.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nominal_width_x-instance_method" title="#nominal_width_x (instance method)">#<strong>nominal_width_x</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Nominal Width X.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#subr_index-instance_method" title="#subr_index (instance method)">#<strong>subr_index</strong>  &#x21d2; TTFunk::Table::Cff::SubrIndex<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Subroutine index.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Dict.html" title="TTFunk::Table::Cff::Dict (class)">Dict</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Dict.html#[]-instance_method" title="TTFunk::Table::Cff::Dict#[] (method)">#[]</a></span>, <span class='object_link'><a href="Dict.html#[]=-instance_method" title="TTFunk::Table::Cff::Dict#[]= (method)">#[]=</a></span>, <span class='object_link'><a href="Dict.html#each-instance_method" title="TTFunk::Table::Cff::Dict#each (method)">#each</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../../SubTable.html" title="TTFunk::SubTable (class)">SubTable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../SubTable.html#eot%3F-instance_method" title="TTFunk::SubTable#eot? (method)">#eot?</a></span>, <span class='object_link'><a href="../../SubTable.html#initialize-instance_method" title="TTFunk::SubTable#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../../SubTable.html#read-instance_method" title="TTFunk::SubTable#read (method)">#read</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../../SubTable.html#initialize-instance_method" title="TTFunk::SubTable#initialize (method)">TTFunk::SubTable</a></span></p>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="default_width_x-instance_method">
+  
+    #<strong>default_width_x</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Default Width X.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/private_dict.rb, line 75</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-75" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>75</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">default_width_x</span>
+</pre></td></tr><tr id="line-76" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>76</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="nb">self</span><span class="p">[</span><span class="no">OPERATORS</span><span class="p">[</span><span class="ss">:default_width_x</span><span class="p">]])</span>
+</pre></td></tr><tr id="line-77" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>77</pre></td><td class="rouge-code"><pre>    <span class="n">width</span><span class="p">.</span><span class="nf">first</span>
+</pre></td></tr><tr id="line-78" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>78</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-79" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>79</pre></td><td class="rouge-code"><pre>    <span class="no">DEFAULT_WIDTH_X_DEFAULT</span>
+</pre></td></tr><tr id="line-80" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>80</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-81" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>81</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode-instance_method">
+  
+    #<strong>encode</strong>  &#x21d2; <tt><span class='object_link'><a href="../../EncodedString.html" title="TTFunk::EncodedString (class)">TTFunk::EncodedString</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encode dict.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../EncodedString.html" title="TTFunk::EncodedString (class)">TTFunk::EncodedString</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/private_dict.rb, line 30</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-30" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>30</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">encode</span>
+</pre></td></tr><tr id="line-31" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>31</pre></td><td class="rouge-code"><pre>  <span class="c1"># TODO: use mapping to determine which subroutines are still used.</span>
+</pre></td></tr><tr id="line-32" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>32</pre></td><td class="rouge-code"><pre>  <span class="c1"># For now, just encode them all.</span>
+</pre></td></tr><tr id="line-33" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>33</pre></td><td class="rouge-code"><pre>  <span class="no">EncodedString</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">result</span><span class="o">|</span>
+</pre></td></tr><tr id="line-34" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>34</pre></td><td class="rouge-code"><pre>    <span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">operator</span><span class="p">,</span> <span class="n">operands</span><span class="o">|</span>
+</pre></td></tr><tr id="line-35" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>35</pre></td><td class="rouge-code"><pre>      <span class="k">case</span> <span class="no">OPERATOR_CODES</span><span class="p">[</span><span class="n">operator</span><span class="p">]</span>
+</pre></td></tr><tr id="line-36" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>36</pre></td><td class="rouge-code"><pre>      <span class="k">when</span> <span class="ss">:subrs</span>
+</pre></td></tr><tr id="line-37" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>37</pre></td><td class="rouge-code"><pre>        <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">encode_subrs</span>
+</pre></td></tr><tr id="line-38" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>38</pre></td><td class="rouge-code"><pre>      <span class="k">else</span>
+</pre></td></tr><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre>        <span class="n">operands</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">operand</span><span class="o">|</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">encode_operand</span><span class="p">(</span><span class="n">operand</span><span class="p">)</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-42" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>42</pre></td><td class="rouge-code"><pre>      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">encode_operator</span><span class="p">(</span><span class="n">operator</span><span class="p">)</span>
+</pre></td></tr><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="finalize-instance_method">
+  
+    #<strong>finalize</strong>(private_dict_data)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Finalize dict.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>private_dict_data</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../EncodedString.html" title="TTFunk::EncodedString (class)">TTFunk::EncodedString</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/private_dict.rb, line 51</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">finalize</span><span class="p">(</span><span class="n">private_dict_data</span><span class="p">)</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="k">unless</span> <span class="n">subr_index</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-54" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>54</pre></td><td class="rouge-code"><pre>  <span class="n">encoded_subr_index</span> <span class="o">=</span> <span class="n">subr_index</span><span class="p">.</span><span class="nf">encode</span>
+</pre></td></tr><tr id="line-55" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>55</pre></td><td class="rouge-code"><pre>  <span class="n">encoded_offset</span> <span class="o">=</span> <span class="n">encode_integer32</span><span class="p">(</span><span class="n">private_dict_data</span><span class="p">.</span><span class="nf">length</span><span class="p">)</span>
+</pre></td></tr><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-57" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>57</pre></td><td class="rouge-code"><pre>  <span class="n">private_dict_data</span><span class="p">.</span><span class="nf">resolve_placeholder</span><span class="p">(</span><span class="ss">:"subrs_</span><span class="si">#{</span><span class="vi">@table_offset</span><span class="si">}</span><span class="ss">"</span><span class="p">,</span> <span class="n">encoded_offset</span><span class="p">)</span>
+</pre></td></tr><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre>  <span class="n">private_dict_data</span> <span class="o">&lt;&lt;</span> <span class="n">encoded_subr_index</span>
+</pre></td></tr><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nominal_width_x-instance_method">
+  
+    #<strong>nominal_width_x</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Nominal Width X.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/private_dict.rb, line 86</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">nominal_width_x</span>
+</pre></td></tr><tr id="line-87" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>87</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="nb">self</span><span class="p">[</span><span class="no">OPERATORS</span><span class="p">[</span><span class="ss">:nominal_width_x</span><span class="p">]])</span>
+</pre></td></tr><tr id="line-88" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>88</pre></td><td class="rouge-code"><pre>    <span class="n">width</span><span class="p">.</span><span class="nf">first</span>
+</pre></td></tr><tr id="line-89" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>89</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-90" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>90</pre></td><td class="rouge-code"><pre>    <span class="no">DEFAULT_WIDTH_X_NOMINAL</span>
+</pre></td></tr><tr id="line-91" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>91</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="subr_index-instance_method">
+  
+    #<strong>subr_index</strong>  &#x21d2; <tt><span class='object_link'><a href="SubrIndex.html" title="TTFunk::Table::Cff::SubrIndex (class)">TTFunk::Table::Cff::SubrIndex</a></span></tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Subroutine index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="SubrIndex.html" title="TTFunk::Table::Cff::SubrIndex (class)">TTFunk::Table::Cff::SubrIndex</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/cff/private_dict.rb, line 65</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-65" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>65</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">subr_index</span>
+</pre></td></tr><tr id="line-66" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>66</pre></td><td class="rouge-code"><pre>  <span class="vi">@subr_index</span> <span class="o">||=</span>
+</pre></td></tr><tr id="line-67" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>67</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="p">(</span><span class="n">subr_offset</span> <span class="o">=</span> <span class="nb">self</span><span class="p">[</span><span class="no">OPERATORS</span><span class="p">[</span><span class="ss">:subrs</span><span class="p">]])</span>
+</pre></td></tr><tr id="line-68" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>68</pre></td><td class="rouge-code"><pre>      <span class="no">SubrIndex</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">table_offset</span> <span class="o">+</span> <span class="n">subr_offset</span><span class="p">.</span><span class="nf">first</span><span class="p">)</span>
+</pre></td></tr><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-70" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>70</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb 29 20:15:18 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

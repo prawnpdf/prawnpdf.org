@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TTFunk::Table::Glyf::Compound
+  
+    &mdash; Documentation by YARD 0.9.35
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::Glyf::Compound";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Table.html" title="TTFunk::Table (class)">Table</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Glyf.html" title="TTFunk::Table::Glyf (class)">Glyf</a></span></span>
+     &raquo; 
+    <span class="title">Compound</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TTFunk::Table::Glyf::Compound
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">TTFunk::Table::Glyf::Compound</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="../../Reader.html" title="TTFunk::Reader (module)">Reader</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/glyf/compound.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Composite TrueType glyph.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Compound/Component.html" title="TTFunk::Table::Glyf::Compound::Component (class)">Component</a></span>
+    
+  
+</p>
+
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="ARG_1_AND_2_ARE_WORDS-constant" class="">ARG_1_AND_2_ARE_WORDS =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Flags bit 0: arg1 and arg2 are words.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mh">0x0001</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="WE_HAVE_A_SCALE-constant" class="">WE_HAVE_A_SCALE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Flags bit 3: there is a simple scale for the component.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mh">0x0008</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="MORE_COMPONENTS-constant" class="">MORE_COMPONENTS =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Flags bit 5: at least one more glyph after this one.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mh">0x0020</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="WE_HAVE_AN_X_AND_Y_SCALE-constant" class="">WE_HAVE_AN_X_AND_Y_SCALE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Flags bit 6: the x direction will use a different scale from the
+y direction.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mh">0x0040</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="WE_HAVE_A_TWO_BY_TWO-constant" class="">WE_HAVE_A_TWO_BY_TWO =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Flags bit 7: there is a 2 by 2 transformation that will be used to
+scale the component.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mh">0x0080</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="WE_HAVE_INSTRUCTIONS-constant" class="">WE_HAVE_INSTRUCTIONS =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Flags bit 8: following the last component are instructions for the
+composite character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mh">0x0100</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#glyph_ids-instance_method" title="#glyph_ids (instance method)">#<strong>glyph_ids</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>IDs of compound glyphs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#id-instance_method" title="#id (instance method)">#<strong>id</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Glyph ID.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#number_of_contours-instance_method" title="#number_of_contours (instance method)">#<strong>number_of_contours</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Number of contours in this glyph.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#raw-instance_method" title="#raw (instance method)">#<strong>raw</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Binary serialization of this glyph.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#x_max-instance_method" title="#x_max (instance method)">#<strong>x_max</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Maximum x for coordinate.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#x_min-instance_method" title="#x_min (instance method)">#<strong>x_min</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Minimum x for coordinate.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_max-instance_method" title="#y_max (instance method)">#<strong>y_max</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Maximum y for coordinate.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_min-instance_method" title="#y_min (instance method)">#<strong>y_min</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Minimum y for coordinate.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compound%3F-instance_method" title="#compound? (instance method)">#<strong>compound?</strong>  &#x21d2; true </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Is this a composite glyph?.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(id, raw)  &#x21d2; Compound </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Compound.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#recode-instance_method" title="#recode (instance method)">#<strong>recode</strong>(mapping)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Recode glyph.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(id, raw)  &#x21d2; <tt><span class='object_link'><a href="" title="TTFunk::Table::Glyf::Compound (class)">Compound</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of Compound.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>glyph ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>raw</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 85</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">raw</span><span class="p">)</span>
+</pre></td></tr><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre>  <span class="vi">@id</span> <span class="o">=</span> <span class="nb">id</span>
+</pre></td></tr><tr id="line-87" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>87</pre></td><td class="rouge-code"><pre>  <span class="vi">@raw</span> <span class="o">=</span> <span class="n">raw</span>
+</pre></td></tr><tr id="line-88" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>88</pre></td><td class="rouge-code"><pre>  <span class="n">io</span> <span class="o">=</span> <span class="no">StringIO</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+</pre></td></tr><tr id="line-89" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>89</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-90" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>90</pre></td><td class="rouge-code"><pre>  <span class="vi">@number_of_contours</span><span class="p">,</span> <span class="vi">@x_min</span><span class="p">,</span> <span class="vi">@y_min</span><span class="p">,</span> <span class="vi">@x_max</span><span class="p">,</span> <span class="vi">@y_max</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-91" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>91</pre></td><td class="rouge-code"><pre>    <span class="n">io</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="nf">unpack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">).</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+</pre></td></tr><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre>      <span class="no">BinUtils</span><span class="p">.</span><span class="nf">twos_comp_to_int</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="ss">bit_width: </span><span class="mi">16</span><span class="p">)</span>
+</pre></td></tr><tr id="line-93" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>93</pre></td><td class="rouge-code"><pre>    <span class="p">}</span>
+</pre></td></tr><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-95" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>95</pre></td><td class="rouge-code"><pre>  <span class="c1"># Because TTFunk only cares about glyphs insofar as they (1) provide</span>
+</pre></td></tr><tr id="line-96" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>96</pre></td><td class="rouge-code"><pre>  <span class="c1"># a bounding box for each glyph, and (2) can be rewritten into a</span>
+</pre></td></tr><tr id="line-97" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>97</pre></td><td class="rouge-code"><pre>  <span class="c1"># font subset, we don't really care about the rest of the glyph data</span>
+</pre></td></tr><tr id="line-98" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>98</pre></td><td class="rouge-code"><pre>  <span class="c1"># except as a whole. Thus, we don't actually decompose the glyph</span>
+</pre></td></tr><tr id="line-99" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>99</pre></td><td class="rouge-code"><pre>  <span class="c1"># into it's parts--all we really care about are the locations within</span>
+</pre></td></tr><tr id="line-100" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>100</pre></td><td class="rouge-code"><pre>  <span class="c1"># the raw string where the component glyph ids are stored, so that</span>
+</pre></td></tr><tr id="line-101" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>101</pre></td><td class="rouge-code"><pre>  <span class="c1"># when we rewrite this glyph into a subset we can rewrite the</span>
+</pre></td></tr><tr id="line-102" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>102</pre></td><td class="rouge-code"><pre>  <span class="c1"># component glyph-ids so they are correct for the subset.</span>
+</pre></td></tr><tr id="line-103" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>103</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-104" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>104</pre></td><td class="rouge-code"><pre>  <span class="vi">@glyph_ids</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></td></tr><tr id="line-105" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>105</pre></td><td class="rouge-code"><pre>  <span class="vi">@glyph_id_offsets</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></td></tr><tr id="line-106" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>106</pre></td><td class="rouge-code"><pre>  <span class="n">offset</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># 2 bytes for each of num-contours, min x/y, max x/y</span>
+</pre></td></tr><tr id="line-107" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>107</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-108" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>108</pre></td><td class="rouge-code"><pre>  <span class="kp">loop</span> <span class="k">do</span>
+</pre></td></tr><tr id="line-109" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>109</pre></td><td class="rouge-code"><pre>    <span class="n">flags</span><span class="p">,</span> <span class="n">glyph_id</span> <span class="o">=</span> <span class="vi">@raw</span><span class="p">[</span><span class="n">offset</span><span class="p">,</span> <span class="mi">4</span><span class="p">].</span><span class="nf">unpack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-110" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>110</pre></td><td class="rouge-code"><pre>    <span class="vi">@glyph_ids</span> <span class="o">&lt;&lt;</span> <span class="n">glyph_id</span>
+</pre></td></tr><tr id="line-111" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>111</pre></td><td class="rouge-code"><pre>    <span class="vi">@glyph_id_offsets</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">offset</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+</pre></td></tr><tr id="line-112" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>112</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-113" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>113</pre></td><td class="rouge-code"><pre>    <span class="k">break</span> <span class="k">if</span> <span class="p">(</span><span class="n">flags</span> <span class="o">&amp;</span> <span class="no">MORE_COMPONENTS</span><span class="p">).</span><span class="nf">zero?</span>
+</pre></td></tr><tr id="line-114" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>114</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-115" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>115</pre></td><td class="rouge-code"><pre>    <span class="n">offset</span> <span class="o">+=</span> <span class="mi">4</span>
+</pre></td></tr><tr id="line-116" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>116</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-117" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>117</pre></td><td class="rouge-code"><pre>    <span class="n">offset</span> <span class="o">+=</span>
+</pre></td></tr><tr id="line-118" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>118</pre></td><td class="rouge-code"><pre>      <span class="k">if</span> <span class="p">(</span><span class="n">flags</span> <span class="o">&amp;</span> <span class="no">ARG_1_AND_2_ARE_WORDS</span><span class="p">).</span><span class="nf">zero?</span>
+</pre></td></tr><tr id="line-119" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>119</pre></td><td class="rouge-code"><pre>        <span class="mi">2</span>
+</pre></td></tr><tr id="line-120" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>120</pre></td><td class="rouge-code"><pre>      <span class="k">else</span>
+</pre></td></tr><tr id="line-121" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>121</pre></td><td class="rouge-code"><pre>        <span class="mi">4</span>
+</pre></td></tr><tr id="line-122" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>122</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-123" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>123</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-124" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>124</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">flags</span> <span class="o">&amp;</span> <span class="no">WE_HAVE_A_TWO_BY_TWO</span> <span class="o">!=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-125" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>125</pre></td><td class="rouge-code"><pre>      <span class="n">offset</span> <span class="o">+=</span> <span class="mi">8</span>
+</pre></td></tr><tr id="line-126" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>126</pre></td><td class="rouge-code"><pre>    <span class="k">elsif</span> <span class="n">flags</span> <span class="o">&amp;</span> <span class="no">WE_HAVE_AN_X_AND_Y_SCALE</span> <span class="o">!=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-127" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>127</pre></td><td class="rouge-code"><pre>      <span class="n">offset</span> <span class="o">+=</span> <span class="mi">4</span>
+</pre></td></tr><tr id="line-128" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>128</pre></td><td class="rouge-code"><pre>    <span class="k">elsif</span> <span class="n">flags</span> <span class="o">&amp;</span> <span class="no">WE_HAVE_A_SCALE</span> <span class="o">!=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-129" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>129</pre></td><td class="rouge-code"><pre>      <span class="n">offset</span> <span class="o">+=</span> <span class="mi">2</span>
+</pre></td></tr><tr id="line-130" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>130</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-131" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>131</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-132" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>132</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="glyph_ids-instance_method">
+  
+    #<strong>glyph_ids</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>IDs of compound glyphs.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 62</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-62" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>62</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">glyph_ids</span>
+</pre></td></tr><tr id="line-63" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>63</pre></td><td class="rouge-code"><pre>  <span class="vi">@glyph_ids</span>
+</pre></td></tr><tr id="line-64" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>64</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="id-instance_method">
+  
+    #<strong>id</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Glyph ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 35</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-35" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>35</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">id</span>
+</pre></td></tr><tr id="line-36" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>36</pre></td><td class="rouge-code"><pre>  <span class="vi">@id</span>
+</pre></td></tr><tr id="line-37" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>37</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="number_of_contours-instance_method">
+  
+    #<strong>number_of_contours</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Number of contours in this glyph.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 43</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">number_of_contours</span>
+</pre></td></tr><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre>  <span class="vi">@number_of_contours</span>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="raw-instance_method">
+  
+    #<strong>raw</strong>  &#x21d2; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Binary serialization of this glyph.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 39</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">raw</span>
+</pre></td></tr><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre>  <span class="vi">@raw</span>
+</pre></td></tr><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="x_max-instance_method">
+  
+    #<strong>x_max</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Maximum x for coordinate.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 55</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-55" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>55</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">x_max</span>
+</pre></td></tr><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre>  <span class="vi">@x_max</span>
+</pre></td></tr><tr id="line-57" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>57</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="x_min-instance_method">
+  
+    #<strong>x_min</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Minimum x for coordinate.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 47</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-47" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>47</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">x_min</span>
+</pre></td></tr><tr id="line-48" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>48</pre></td><td class="rouge-code"><pre>  <span class="vi">@x_min</span>
+</pre></td></tr><tr id="line-49" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>49</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_max-instance_method">
+  
+    #<strong>y_max</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Maximum y for coordinate.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 59</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_max</span>
+</pre></td></tr><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_max</span>
+</pre></td></tr><tr id="line-61" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>61</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_min-instance_method">
+  
+    #<strong>y_min</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Minimum y for coordinate.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 51</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_min</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_min</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="compound?-instance_method">
+  
+    #<strong>compound?</strong>  &#x21d2; <tt>true</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Is this a composite glyph?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 136</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-136" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>136</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">compound?</span>
+</pre></td></tr><tr id="line-137" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>137</pre></td><td class="rouge-code"><pre>  <span class="kp">true</span>
+</pre></td></tr><tr id="line-138" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>138</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="recode-instance_method">
+  
+    #<strong>recode</strong>(mapping)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Recode glyph.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mapping</span>
+      
+      
+        <span class='type'>(<tt>Hash{Integer =&gt; Integer}</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a hash mapping old glyph IDs
+to new glyph IDs.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf/compound.rb, line 145</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-145" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>145</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">recode</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>
+</pre></td></tr><tr id="line-146" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>146</pre></td><td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">=</span> <span class="n">raw</span><span class="p">.</span><span class="nf">dup</span>
+</pre></td></tr><tr id="line-147" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>147</pre></td><td class="rouge-code"><pre>  <span class="n">new_ids</span> <span class="o">=</span> <span class="n">glyph_ids</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="nb">id</span><span class="o">|</span> <span class="n">mapping</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-148" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>148</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-149" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>149</pre></td><td class="rouge-code"><pre>  <span class="n">new_ids</span><span class="p">.</span><span class="nf">zip</span><span class="p">(</span><span class="vi">@glyph_id_offsets</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">new_id</span><span class="p">,</span> <span class="n">offset</span><span class="o">|</span>
+</pre></td></tr><tr id="line-150" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>150</pre></td><td class="rouge-code"><pre>    <span class="n">result</span><span class="p">[</span><span class="n">offset</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">new_id</span><span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-151" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>151</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-152" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>152</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-153" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>153</pre></td><td class="rouge-code"><pre>  <span class="n">result</span>
+</pre></td></tr><tr id="line-154" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>154</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb 29 20:15:17 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

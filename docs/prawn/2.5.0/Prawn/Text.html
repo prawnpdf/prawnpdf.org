@@ -1,0 +1,2944 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: Prawn::Text
+  
+    &mdash; Prawn Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Prawn::Text";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Prawn.html" title="Prawn (module)">Prawn</a></span></span>
+     &raquo; 
+    <span class="title">Text</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: Prawn::Text
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd>PDF::Core::Text, <span class='object_link'><a href="Text/Formatted.html" title="Prawn::Text::Formatted (module)">Formatted</a></span></dd>
+  </dl>
+  
+  
+
+  
+  <dl>
+    <dt>Included in:</dt>
+    <dd><span class='object_link'><a href="Document.html" title="Prawn::Document (class)">Document</a></span></dd>
+  </dl>
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/prawn/text.rb<span class="defines">,<br />
+  lib/prawn/text/box.rb,<br /> lib/prawn/text/formatted.rb,<br /> lib/prawn/text/formatted/box.rb,<br /> lib/prawn/text/formatted/wrap.rb,<br /> lib/prawn/text/formatted/parser.rb,<br /> lib/prawn/text/formatted/arranger.rb,<br /> lib/prawn/text/formatted/fragment.rb,<br /> lib/prawn/text/formatted/line_wrap.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>rubocop: disable Style/Documentation</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Text/Formatted.html" title="Prawn::Text::Formatted (module)">Formatted</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Text/Box.html" title="Prawn::Text::Box (class)">Box</a></span>
+    
+  
+</p>
+
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="NBSP-constant" class="">NBSP =
+            <div class="docstring">
+  <div class="discussion">
+    <p>No-Break Space</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s2">"</span><span class="se">\u</span><span class="s2">00A0"</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="ZWSP-constant" class="">ZWSP =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Zero Width Space (indicate word boundaries without a space)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s2">"</span><span class="se">\u</span><span class="s2">200B"</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="SHY-constant" class="">SHY =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Soft Hyphen (invisible, except when causing a line break)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s2">"</span><span class="se">\u</span><span class="s2">00AD"</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+
+
+
+
+  
+    <section id="method-summary-o2czp4">
+      <h2>
+        Stable API
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#draw_text-instance_method" title="#draw_text (instance method)">#<strong>draw_text</strong>(text, options)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Draws text on the page, beginning at the point specified by the <code class="language-ruby highlighter-rouge"><span class="ss">:at</span></code> option the string is assumed to be pre-formatted to properly fit the page.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#draw_text!-instance_method" title="#draw_text! (instance method)">#<strong>draw_text!</strong>(text, options)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Low level text placement method.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#formatted_text-instance_method" title="#formatted_text (instance method)">#<strong>formatted_text</strong>(array, options = {})  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Draws formatted text to the page.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#formatted_text_box-instance_method" title="#formatted_text_box (instance method)">#<strong>formatted_text_box</strong>(array, options = {})  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+    <span class="note title not_defined_here">
+      included
+      from <span class='object_link'><a href="Text/Formatted.html#formatted_text_box-instance_method" title="Prawn::Text::Formatted#formatted_text_box (method)">Formatted</a></span>
+    </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Draws the requested formatted text into a box.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#height_of-instance_method" title="#height_of (instance method)">#<strong>height_of</strong>(string, options = {})  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets height of text in PDF points.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#height_of_formatted-instance_method" title="#height_of_formatted (instance method)">#<strong>height_of_formatted</strong>(array, options = {})  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets height of formatted text in PDF points.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text-instance_method" title="#text (instance method)">#<strong>text</strong>(string, options = {})  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Draws text on the page.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text_box-instance_method" title="#text_box (instance method)">#<strong>text_box</strong>(string, options = {})  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Draws the requested text into a box.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="draw_text-instance_method">
+  
+    #<strong>draw_text</strong>(text, options)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Draws text on the page, beginning at the point specified by the <code class="language-ruby highlighter-rouge"><span class="ss">:at</span></code>
+option the string is assumed to be pre-formatted to properly fit the page.</p>
+
+<div class="language-ruby highlighter-rouge"><pre><code><span class="n">pdf</span><span class="p">.</span><span class="nf">draw_text</span> <span class="s2">"Hello World"</span><span class="p">,</span> <span class="ss">at: </span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">draw_text</span> <span class="s2">"Goodbye World"</span><span class="p">,</span> <span class="ss">at: </span><span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">],</span> <span class="ss">size: </span><span class="mi">16</span>
+</code></pre></div>
+
+<p>If your font contains kerning pair data that Prawn can parse, the
+text will be kerned by default. You can disable kerning by including
+a <code class="language-ruby highlighter-rouge"><span class="kp">false</span></code> <code class="language-ruby highlighter-rouge"><span class="ss">:kerning</span></code> option. If you want to disable kerning on an
+entire document, set <code class="language-ruby highlighter-rouge"><span class="n">default_kerning</span> <span class="o">=</span> <span class="kp">false</span></code> for that document</p>
+
+<h4 id="text-positioning-details">Text Positioning Details</h4>
+
+<p>Prawn will position your text by the left-most edge of its baseline, and
+flow along a single line. (This means that <code class="language-ruby highlighter-rouge"><span class="ss">:align</span></code> will not work)</p>
+
+<h4 id="rotation">Rotation</h4>
+
+<p>Text can be rotated before it is placed on the canvas by specifying the
+<code class="language-ruby highlighter-rouge"><span class="ss">:rotate</span></code> option with a given angle. Rotation occurs counter-clockwise.</p>
+
+<h4 id="encoding">Encoding</h4>
+
+<p>Note that strings passed to this function should be encoded as UTF-8. If
+you get unexpected characters appearing in your rendered document, check
+this.</p>
+
+<p>If the current font is a built-in one, although the string must be encoded
+as UTF-8, only characters that are available in WinAnsi are allowed.</p>
+
+<p>If an empty box is rendered to your PDF instead of the character you
+wanted it usually means the current font doesn’t include that character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:at</span>
+          <span class="type">(<tt>Array(Number</tt>, <tt>Number)</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p><strong>Required</strong>.
+The position at which to start the text.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of default_kerning?</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether or not to use kerning (if it is available with the current
+font).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current font size</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The font size to use.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current style</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The style to use. The requested style must be part of the current font
+family.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:rotate</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The angle to which to rotate text.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="ss">:at</span></code> option is omitted or `:align&lt;/tt&gt; option is included.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/text.rb, line 345</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-345" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>345</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">draw_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-346" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>346</pre></td><td class="rouge-code"><pre>  <span class="n">options</span> <span class="o">=</span> <span class="n">inspect_options_for_draw_text</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="nf">dup</span><span class="p">)</span>
+</pre></td></tr><tr id="line-347" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>347</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-348" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>348</pre></td><td class="rouge-code"><pre>  <span class="c1"># dup because normalize_encoding changes the string</span>
+</pre></td></tr><tr id="line-349" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>349</pre></td><td class="rouge-code"><pre>  <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">dup</span>
+</pre></td></tr><tr id="line-350" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>350</pre></td><td class="rouge-code"><pre>  <span class="n">save_font</span> <span class="k">do</span>
+</pre></td></tr><tr id="line-351" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>351</pre></td><td class="rouge-code"><pre>    <span class="n">process_text_options</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-352" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>352</pre></td><td class="rouge-code"><pre>    <span class="n">text</span> <span class="o">=</span> <span class="n">font</span><span class="p">.</span><span class="nf">normalize_encoding</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></td></tr><tr id="line-353" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>353</pre></td><td class="rouge-code"><pre>    <span class="n">font_size</span><span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="ss">:size</span><span class="p">])</span> <span class="p">{</span> <span class="n">draw_text!</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-354" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>354</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-355" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>355</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="draw_text!-instance_method">
+  
+    #<strong>draw_text!</strong>(text, options)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Low level text placement method.</p>
+
+<p>All font and size alterations should already be set.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:at</span>
+          <span class="type">(<tt>Array(Number</tt>, <tt>Number)</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The position at which to start the text.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether or not to use kerning (if it is available with the current
+font).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The font size to use.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The style to use. The requested style must be part of the current font
+family.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:rotate</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The angle to which to rotate text.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/text.rb, line 375</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-375" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>375</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">draw_text!</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-376" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>376</pre></td><td class="rouge-code"><pre>  <span class="k">unless</span> <span class="n">font</span><span class="p">.</span><span class="nf">unicode?</span> <span class="o">||</span> <span class="n">font</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">hide_m17n_warning</span> <span class="o">||</span> <span class="n">text</span><span class="p">.</span><span class="nf">ascii_only?</span>
+</pre></td></tr><tr id="line-377" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>377</pre></td><td class="rouge-code"><pre>    <span class="nb">warn</span><span class="p">(</span>
+</pre></td></tr><tr id="line-378" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>378</pre></td><td class="rouge-code"><pre>      <span class="s2">"PDF's built-in fonts have very limited support for "</span> <span class="p">\</span>
+</pre></td></tr><tr id="line-379" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>379</pre></td><td class="rouge-code"><pre>        <span class="s2">"internationalized text.</span><span class="se">\n</span><span class="s2">If you need full UTF-8 support, "</span> <span class="p">\</span>
+</pre></td></tr><tr id="line-380" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>380</pre></td><td class="rouge-code"><pre>        <span class="s2">"consider using an external font instead.</span><span class="se">\n\n</span><span class="s2">To disable this "</span> <span class="p">\</span>
+</pre></td></tr><tr id="line-381" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>381</pre></td><td class="rouge-code"><pre>        <span class="s2">"warning, add the following line to your code:</span><span class="se">\n</span><span class="s2">"</span> <span class="p">\</span>
+</pre></td></tr><tr id="line-382" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>382</pre></td><td class="rouge-code"><pre>        <span class="s2">"Prawn::Fonts::AFM.hide_m17n_warning = true</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
+</pre></td></tr><tr id="line-383" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>383</pre></td><td class="rouge-code"><pre>    <span class="p">)</span>
+</pre></td></tr><tr id="line-384" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>384</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-385" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>385</pre></td><td class="rouge-code"><pre>    <span class="n">font</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">hide_m17n_warning</span> <span class="o">=</span> <span class="kp">true</span>
+</pre></td></tr><tr id="line-386" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>386</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-387" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>387</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-388" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>388</pre></td><td class="rouge-code"><pre>  <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">map_to_absolute</span><span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="ss">:at</span><span class="p">])</span>
+</pre></td></tr><tr id="line-389" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>389</pre></td><td class="rouge-code"><pre>  <span class="n">add_text_content</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-390" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>390</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="formatted_text-instance_method">
+  
+    #<strong>formatted_text</strong>(array, options = {})  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Draws formatted text to the page.</p>
+
+<p>Formatted text is an array of hashes, where each hash defines text and
+format information.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">text</span><span class="p">([{</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">"hello"</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">"world"</span><span class="p">,</span>
+        <span class="ss">:size</span> <span class="o">=&gt;</span> <span class="mi">24</span><span class="p">,</span>
+        <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="ss">:bold</span><span class="p">,</span> <span class="ss">:italic</span><span class="p">]</span> <span class="p">}])</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>array</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>array of text fragments. See
+<span class='object_link'><a href="Text/Formatted.html#formatted_text_box-instance_method" title="Prawn::Text::Formatted#formatted_text_box (method)">Prawn::Text::Formatted#formatted_text_box</a></span> for more information on the
+structure of this array.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>option</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:inline_format</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>, then the string parameter is interpreted as a HTML-esque
+string that recognizes the following tags (assuming the default text
+formatter is used):</p>
+<ul>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;b&gt;&lt;/b&gt;</span></code> — bold style.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;i&gt;&lt;/i&gt;</span></code> — italic style.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;u&gt;&lt;/u&gt;</span></code> — underline.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;strikethrough&gt;&lt;/strikethrough&gt;</span></code> — strikethrough.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;sub&gt;&lt;/sub&gt;</span></code> — subscript.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;sup&gt;&lt;/sup&gt;</span></code> — superscript.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;font&gt;&lt;/font&gt;</span></code> — with the following attributes
+(using double or single quotes):
+    <ul>
+      <li><code class="language-html highlighter-rouge">name="Helvetica"</code> — the font. The font name must
+be an AFM font with the desired faces or must be a font that is
+already registered using <span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>.</li>
+      <li><code class="language-html highlighter-rouge">size="24"</code> — attribute for setting size.</li>
+      <li><code class="language-html highlighter-rouge">character_spacing="2.5"</code> — character spacing.</li>
+    </ul>
+  </li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;color&gt;&lt;/color&gt;</span></code> — text color
+    <ul>
+      <li><code class="language-html highlighter-rouge">rgb="ffffff"</code> or <code class="language-html highlighter-rouge">rgb="#ffffff"</code>
+— RGB color</li>
+      <li><code class="language-html highlighter-rouge">c="100" m="100" y="100" k="100"</code> — CMYK color</li>
+    </ul>
+  </li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;link&gt;&lt;/link&gt;</span></code> - link, with the following
+attributes:
+    <ul>
+      <li><code class="language-html highlighter-rouge">href="http://example.com"</code> — an external link.
+Note that you must explicitly underline and color using the
+appropriate tags if you which to draw attention to the link.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.default_kerning?</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether or not to use kerning (if it is available with the current
+font).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current ofnt size</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The font size to use.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:color</span>
+          <span class="type">(<tt>Color</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:character_spacing</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>0</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The amount of space to add to or remove from the default character
+spacing.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current style</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The style to use. The requested style must be part of the current font
+family.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:indent_paragraphs</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The amount to indent the first line of each paragraph. Omit this option
+if you do not want indenting.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:direction</span>
+          <span class="type">(<tt>:ltr</tt>, <tt>:rtl</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.text_direction</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Direction of the text.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:fallback_fonts</span>
+          <span class="type">(<tt>Array&lt;String&gt;</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>An array of font names. Each name must be the name of an AFM font or the
+name that was used to register a family of TTF fonts (see
+<span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>). If present, then each glyph will be
+rendered using the first font that includes the glyph, starting with the
+current font and then moving through <code class="language-ruby highlighter-rouge"><span class="ss">:fallback_fonts</span></code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:valign</span>
+          <span class="type">(<tt>:top</tt>, <tt>:center</tt>, <tt>:bottom</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:top</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Vertical alignment within the bounding box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:leading</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Number</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>(value of document.default_leading)
+Additional space between lines.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:final_gap</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>, then the space between each line is included below the last
+line; otherwise, <span class='object_link'><a href="Document.html#y-instance_method" title="Prawn::Document#y (method)">Document#y</a></span> is placed just below the descender of the
+last line printed.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mode</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:fill</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The text rendering mode to use. Use this to specify if the text should
+render with the fill color, stroke color or both.</p>
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill</span></code> - fill text (default)</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke</span></code> - stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke</span></code> - fill, then stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:invisible</span></code> - invisible text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_clip</span></code> - fill text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke_clip</span></code> - stroke text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke_clip</span></code> - fill then stroke text, then add to path for
+clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:clip</span></code> - add text to path for clipping</li>
+</ul>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if <code class="language-ruby highlighter-rouge"><span class="ss">:at</span></code> option included</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Prawn::Errrors::CannotFit</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if not wide enough to print any text</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>for a list of valid text rendering modes.</li>
+    
+  </ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/text.rb, line 263</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-263" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>263</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">formatted_text</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-264" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>264</pre></td><td class="rouge-code"><pre>  <span class="n">options</span> <span class="o">=</span> <span class="n">inspect_options_for_text</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="nf">dup</span><span class="p">)</span>
+</pre></td></tr><tr id="line-265" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>265</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-266" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>266</pre></td><td class="rouge-code"><pre>  <span class="n">color</span> <span class="o">=</span> <span class="n">options</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="ss">:color</span><span class="p">)</span>
+</pre></td></tr><tr id="line-267" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>267</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">color</span>
+</pre></td></tr><tr id="line-268" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>268</pre></td><td class="rouge-code"><pre>    <span class="n">array</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-269" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>269</pre></td><td class="rouge-code"><pre>      <span class="n">array</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">fragment</span><span class="o">|</span>
+</pre></td></tr><tr id="line-270" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>270</pre></td><td class="rouge-code"><pre>        <span class="n">fragment</span><span class="p">[</span><span class="ss">:color</span><span class="p">]</span> <span class="p">?</span> <span class="n">fragment</span> <span class="p">:</span> <span class="n">fragment</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="ss">color: </span><span class="n">color</span><span class="p">)</span>
+</pre></td></tr><tr id="line-271" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>271</pre></td><td class="rouge-code"><pre>      <span class="p">}</span>
+</pre></td></tr><tr id="line-272" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>272</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-273" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>273</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-274" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>274</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="vi">@indent_paragraphs</span>
+</pre></td></tr><tr id="line-275" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>275</pre></td><td class="rouge-code"><pre>    <span class="n">text_formatter</span><span class="p">.</span><span class="nf">array_paragraphs</span><span class="p">(</span><span class="n">array</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">paragraph</span><span class="o">|</span>
+</pre></td></tr><tr id="line-276" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>276</pre></td><td class="rouge-code"><pre>      <span class="n">remaining_text</span> <span class="o">=</span> <span class="n">draw_indented_formatted_line</span><span class="p">(</span><span class="n">paragraph</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-277" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>277</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-278" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>278</pre></td><td class="rouge-code"><pre>      <span class="k">if</span> <span class="vi">@no_text_printed</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="vi">@all_text_printed</span>
+</pre></td></tr><tr id="line-279" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>279</pre></td><td class="rouge-code"><pre>        <span class="vi">@bounding_box</span><span class="p">.</span><span class="nf">move_past_bottom</span>
+</pre></td></tr><tr id="line-280" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>280</pre></td><td class="rouge-code"><pre>        <span class="n">remaining_text</span> <span class="o">=</span> <span class="n">draw_indented_formatted_line</span><span class="p">(</span><span class="n">paragraph</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-281" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>281</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-282" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>282</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-283" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>283</pre></td><td class="rouge-code"><pre>      <span class="k">unless</span> <span class="vi">@all_text_printed</span>
+</pre></td></tr><tr id="line-284" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>284</pre></td><td class="rouge-code"><pre>        <span class="n">remaining_text</span> <span class="o">=</span> <span class="n">fill_formatted_text_box</span><span class="p">(</span><span class="n">remaining_text</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-285" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>285</pre></td><td class="rouge-code"><pre>        <span class="n">draw_remaining_formatted_text_on_new_pages</span><span class="p">(</span><span class="n">remaining_text</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-286" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>286</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-287" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>287</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-288" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>288</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-289" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>289</pre></td><td class="rouge-code"><pre>    <span class="n">remaining_text</span> <span class="o">=</span> <span class="n">fill_formatted_text_box</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-290" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>290</pre></td><td class="rouge-code"><pre>    <span class="n">draw_remaining_formatted_text_on_new_pages</span><span class="p">(</span><span class="n">remaining_text</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-291" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>291</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-292" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>292</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="formatted_text_box-instance_method">
+  
+    #<strong>formatted_text_box</strong>(array, options = {})  &#x21d2; <tt>Array&lt;Hash&gt;</tt> 
+  
+
+  
+
+  
+    <span class="not_defined_here">
+      Originally defined in module
+        <span class='object_link'><a href="Text/Formatted.html#formatted_text_box-instance_method" title="Prawn::Text::Formatted#formatted_text_box (method)">Formatted</a></span>
+    </span>
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Draws the requested formatted text into a box.</p>
+
+<p>When the text overflows the rectangle shrink to fit or truncate the
+text. Text boxes are independent of the document y position.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">formatted_text_box</span><span class="p">([{</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">"hello"</span> <span class="p">},</span>
+                    <span class="p">{</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">"world"</span><span class="p">,</span>
+                      <span class="ss">:size</span> <span class="o">=&gt;</span> <span class="mi">24</span><span class="p">,</span>
+                      <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="ss">:bold</span><span class="p">,</span> <span class="ss">:italic</span><span class="p">]</span> <span class="p">}])</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>array</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash{Symbol =&gt; any}&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Formatted text is an array of hashes, where each hash defines text and
+format information. The following hash options are supported:</p>
+
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:text</span></code> — the text to format according to the other hash options.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:styles</span></code> — an array of styles to apply to this text. Available
+styles include <code class="language-ruby highlighter-rouge"><span class="ss">:bold</span></code>, <code class="language-ruby highlighter-rouge"><span class="ss">:italic</span></code>, <code class="language-ruby highlighter-rouge"><span class="ss">:underline</span></code>, <code class="language-ruby highlighter-rouge"><span class="ss">:strikethrough</span></code>,
+<code class="language-ruby highlighter-rouge"><span class="ss">:subscript</span></code>, and <code class="language-ruby highlighter-rouge"><span class="ss">:superscript</span></code>.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:size</span></code> —a number denoting the font size to apply to this text.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:character_spacing</span></code> — a number denoting how much to increase or
+decrease the default spacing between characters.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:font</span></code> — the name of a font. The name must be an AFM font with
+the desired faces or must be a font that is already registered using
+<span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:color</span></code> — anything compatible with
+<span class='object_link'><a href="Graphics/Color.html#fill_color-instance_method" title="Prawn::Graphics::Color#fill_color (method)">Graphics::Color#fill_color</a></span> and
+<span class='object_link'><a href="Graphics/Color.html#stroke_color-instance_method" title="Prawn::Graphics::Color#stroke_color (method)">Graphics::Color#stroke_color</a></span>.</li>
+  <li>:link` — a URL to which to create a link. A clickable link will be
+created to that URL. Note that you must explicitly underline and
+color using the appropriate tags if you which to draw attention to
+the link.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:anchor</span></code> — a destination that has already been or will be
+registered using
+<code class="language-plain">PDF::Core::Destinations#add_dest</code>. A clickable
+link will be created to that destination. Note that you must
+explicitly underline and color using the appropriate tags if you
+which to draw attention to the link.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:local</span></code> — a file or application to be opened locally. A clickable
+link will be created to the provided local file or application. If
+the file is another PDF, it will be opened in a new window. Note
+that you must explicitly underline and color using the appropriate
+options if you which to draw attention to the link.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:draw_text_callback</span></code> — if provided, this Proc will be called
+instead of <span class='object_link'><a href="#draw_text!-instance_method" title="Prawn::Text#draw_text! (method)">Prawn::Text#draw_text!</a></span> once per fragment for every low-level
+addition of text to the page.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:callback</span></code> — an object (or array of such objects) with two
+methods: <code class="language-plain">#render_behind</code> and
+<code class="language-plain">#render_in_front</code>, which are called immediately
+prior to and immediately after rendering the text fragment and which
+are passed the fragment as an argument.</li>
+</ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Accepts the same options as <span class='object_link'><a href="Text/Box.html" title="Prawn::Text::Box (class)">Box</a></span>.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A formatted text array representing any text that did not print under
+the current settings.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>Prawn::Text::Formatted::Arranger::BadFontFamily</span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If no font family is defined for the current font.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Errors.html#CannotFit-constant" title="Prawn::Errors::CannotFit (constant)">Prawn::Errors::CannotFit</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If not wide enough to print any text.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="height_of-instance_method">
+  
+    #<strong>height_of</strong>(string, options = {})  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This method takes the same options as <span class='object_link'><a href="#text-instance_method" title="Prawn::Text#text (method)">#text</a></span>, <em>except</em>
+<code class="language-ruby highlighter-rouge"><span class="ss">:indent_paragraphs</span></code>.</p>
+</div>
+  </div>
+
+<p class="note returns_void">This method returns an undefined value.</p><p>Gets height of text in PDF points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">text_height</span> <span class="o">=</span> <span class="n">height_of</span><span class="p">(</span><span class="s2">"hello</span><span class="se">\n</span><span class="s2">world"</span><span class="p">)</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>option</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:inline_format</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>, then the string parameter is interpreted as a HTML-esque
+string that recognizes the following tags (assuming the default text
+formatter is used):</p>
+<ul>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;b&gt;&lt;/b&gt;</span></code> — bold style.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;i&gt;&lt;/i&gt;</span></code> — italic style.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;u&gt;&lt;/u&gt;</span></code> — underline.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;strikethrough&gt;&lt;/strikethrough&gt;</span></code> — strikethrough.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;sub&gt;&lt;/sub&gt;</span></code> — subscript.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;sup&gt;&lt;/sup&gt;</span></code> — superscript.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;font&gt;&lt;/font&gt;</span></code> — with the following attributes
+(using double or single quotes):
+    <ul>
+      <li><code class="language-html highlighter-rouge">name="Helvetica"</code> — the font. The font name must
+be an AFM font with the desired faces or must be a font that is
+already registered using <span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>.</li>
+      <li><code class="language-html highlighter-rouge">size="24"</code> — attribute for setting size.</li>
+      <li><code class="language-html highlighter-rouge">character_spacing="2.5"</code> — character spacing.</li>
+    </ul>
+  </li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;color&gt;&lt;/color&gt;</span></code> — text color
+    <ul>
+      <li><code class="language-html highlighter-rouge">rgb="ffffff"</code> or <code class="language-html highlighter-rouge">rgb="#ffffff"</code>
+— RGB color</li>
+      <li><code class="language-html highlighter-rouge">c="100" m="100" y="100" k="100"</code> — CMYK color</li>
+    </ul>
+  </li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;link&gt;&lt;/link&gt;</span></code> - link, with the following
+attributes:
+    <ul>
+      <li><code class="language-html highlighter-rouge">href="http://example.com"</code> — an external link.
+Note that you must explicitly underline and color using the
+appropriate tags if you which to draw attention to the link.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.default_kerning?</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether or not to use kerning (if it is available with the current
+font).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current ofnt size</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The font size to use.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:color</span>
+          <span class="type">(<tt>Color</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:character_spacing</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>0</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The amount of space to add to or remove from the default character
+spacing.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current style</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The style to use. The requested style must be part of the current font
+family.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:direction</span>
+          <span class="type">(<tt>:ltr</tt>, <tt>:rtl</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.text_direction</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Direction of the text.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:fallback_fonts</span>
+          <span class="type">(<tt>Array&lt;String&gt;</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>An array of font names. Each name must be the name of an AFM font or the
+name that was used to register a family of TTF fonts (see
+<span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>). If present, then each glyph will be
+rendered using the first font that includes the glyph, starting with the
+current font and then moving through <code class="language-ruby highlighter-rouge"><span class="ss">:fallback_fonts</span></code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:valign</span>
+          <span class="type">(<tt>:top</tt>, <tt>:center</tt>, <tt>:bottom</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:top</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Vertical alignment within the bounding box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:leading</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Number</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>(value of document.default_leading)
+Additional space between lines.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:final_gap</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>, then the space between each line is included below the last
+line; otherwise, <span class='object_link'><a href="Document.html#y-instance_method" title="Prawn::Document#y (method)">Document#y</a></span> is placed just below the descender of the
+last line printed.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mode</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:fill</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The text rendering mode to use. Use this to specify if the text should
+render with the fill color, stroke color or both.</p>
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill</span></code> - fill text (default)</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke</span></code> - stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke</span></code> - fill, then stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:invisible</span></code> - invisible text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_clip</span></code> - fill text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke_clip</span></code> - stroke text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke_clip</span></code> - fill then stroke text, then add to path for
+clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:clip</span></code> - add text to path for clipping</li>
+</ul>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if <code class="language-ruby highlighter-rouge"><span class="ss">:at</span></code> option included</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Prawn::Errrors::CannotFit</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if not wide enough to print any text</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if <code class="language-ruby highlighter-rouge"><span class="ss">:indent_paragraphs</span></code> option included.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>for a list of valid text rendering modes.</li>
+    
+      <li><span class='object_link'><a href="#height_of_formatted-instance_method" title="Prawn::Text#height_of_formatted (method)">#height_of_formatted</a></span></li>
+    
+  </ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/text.rb, line 480</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-480" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>480</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">height_of</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-481" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>481</pre></td><td class="rouge-code"><pre>  <span class="n">height_of_formatted</span><span class="p">([{</span> <span class="ss">text: </span><span class="n">string</span> <span class="p">}],</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-482" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>482</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="height_of_formatted-instance_method">
+  
+    #<strong>height_of_formatted</strong>(array, options = {})  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This method takes the same options as <span class='object_link'><a href="#text-instance_method" title="Prawn::Text#text (method)">#text</a></span>, <em>except</em>
+<code class="language-ruby highlighter-rouge"><span class="ss">:indent_paragraphs</span></code>.</p>
+</div>
+  </div>
+
+<p class="note returns_void">This method returns an undefined value.</p><p>Gets height of formatted text in PDF points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">height_of_formatted</span><span class="p">([{</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">"hello"</span> <span class="p">},</span>
+                     <span class="p">{</span> <span class="ss">:text</span> <span class="o">=&gt;</span> <span class="s2">"world"</span><span class="p">,</span>
+                       <span class="ss">:size</span> <span class="o">=&gt;</span> <span class="mi">24</span><span class="p">,</span>
+                       <span class="ss">:styles</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="ss">:bold</span><span class="p">,</span> <span class="ss">:italic</span><span class="p">]</span> <span class="p">}])</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>array</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>text fragments.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>option</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:inline_format</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>, then the string parameter is interpreted as a HTML-esque
+string that recognizes the following tags (assuming the default text
+formatter is used):</p>
+<ul>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;b&gt;&lt;/b&gt;</span></code> — bold style.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;i&gt;&lt;/i&gt;</span></code> — italic style.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;u&gt;&lt;/u&gt;</span></code> — underline.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;strikethrough&gt;&lt;/strikethrough&gt;</span></code> — strikethrough.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;sub&gt;&lt;/sub&gt;</span></code> — subscript.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;sup&gt;&lt;/sup&gt;</span></code> — superscript.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;font&gt;&lt;/font&gt;</span></code> — with the following attributes
+(using double or single quotes):
+    <ul>
+      <li><code class="language-html highlighter-rouge">name="Helvetica"</code> — the font. The font name must
+be an AFM font with the desired faces or must be a font that is
+already registered using <span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>.</li>
+      <li><code class="language-html highlighter-rouge">size="24"</code> — attribute for setting size.</li>
+      <li><code class="language-html highlighter-rouge">character_spacing="2.5"</code> — character spacing.</li>
+    </ul>
+  </li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;color&gt;&lt;/color&gt;</span></code> — text color
+    <ul>
+      <li><code class="language-html highlighter-rouge">rgb="ffffff"</code> or <code class="language-html highlighter-rouge">rgb="#ffffff"</code>
+— RGB color</li>
+      <li><code class="language-html highlighter-rouge">c="100" m="100" y="100" k="100"</code> — CMYK color</li>
+    </ul>
+  </li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;link&gt;&lt;/link&gt;</span></code> - link, with the following
+attributes:
+    <ul>
+      <li><code class="language-html highlighter-rouge">href="http://example.com"</code> — an external link.
+Note that you must explicitly underline and color using the
+appropriate tags if you which to draw attention to the link.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.default_kerning?</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether or not to use kerning (if it is available with the current
+font).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current ofnt size</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The font size to use.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:color</span>
+          <span class="type">(<tt>Color</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:character_spacing</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>0</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The amount of space to add to or remove from the default character
+spacing.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current style</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The style to use. The requested style must be part of the current font
+family.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:direction</span>
+          <span class="type">(<tt>:ltr</tt>, <tt>:rtl</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.text_direction</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Direction of the text.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:fallback_fonts</span>
+          <span class="type">(<tt>Array&lt;String&gt;</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>An array of font names. Each name must be the name of an AFM font or the
+name that was used to register a family of TTF fonts (see
+<span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>). If present, then each glyph will be
+rendered using the first font that includes the glyph, starting with the
+current font and then moving through <code class="language-ruby highlighter-rouge"><span class="ss">:fallback_fonts</span></code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:valign</span>
+          <span class="type">(<tt>:top</tt>, <tt>:center</tt>, <tt>:bottom</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:top</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Vertical alignment within the bounding box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:leading</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Number</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>(value of document.default_leading)
+Additional space between lines.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:final_gap</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>, then the space between each line is included below the last
+line; otherwise, <span class='object_link'><a href="Document.html#y-instance_method" title="Prawn::Document#y (method)">Document#y</a></span> is placed just below the descender of the
+last line printed.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mode</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:fill</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The text rendering mode to use. Use this to specify if the text should
+render with the fill color, stroke color or both.</p>
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill</span></code> - fill text (default)</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke</span></code> - stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke</span></code> - fill, then stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:invisible</span></code> - invisible text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_clip</span></code> - fill text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke_clip</span></code> - stroke text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke_clip</span></code> - fill then stroke text, then add to path for
+clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:clip</span></code> - add text to path for clipping</li>
+</ul>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if <code class="language-ruby highlighter-rouge"><span class="ss">:at</span></code> option included</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Prawn::Errrors::CannotFit</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if not wide enough to print any text</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if <code class="language-ruby highlighter-rouge"><span class="ss">:indent_paragraphs</span></code> option included.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>for a list of valid text rendering modes.</li>
+    
+      <li><span class='object_link'><a href="#height_of-instance_method" title="Prawn::Text#height_of (method)">#height_of</a></span></li>
+    
+  </ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/text.rb, line 575</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-575" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>575</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">height_of_formatted</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-576" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>576</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="ss">:indent_paragraphs</span><span class="p">]</span>
+</pre></td></tr><tr id="line-577" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>577</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">NotImplementedError</span><span class="p">,</span>
+</pre></td></tr><tr id="line-578" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>578</pre></td><td class="rouge-code"><pre>      <span class="s1">':indent_paragraphs option not available with height_of'</span>
+</pre></td></tr><tr id="line-579" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>579</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-580" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>580</pre></td><td class="rouge-code"><pre>  <span class="n">process_final_gap_option</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-581" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>581</pre></td><td class="rouge-code"><pre>  <span class="n">box</span> <span class="o">=</span> <span class="no">Text</span><span class="o">::</span><span class="no">Formatted</span><span class="o">::</span><span class="no">Box</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+</pre></td></tr><tr id="line-582" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>582</pre></td><td class="rouge-code"><pre>    <span class="n">array</span><span class="p">,</span>
+</pre></td></tr><tr id="line-583" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>583</pre></td><td class="rouge-code"><pre>    <span class="n">options</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="ss">height: </span><span class="mi">100_000_000</span><span class="p">,</span> <span class="ss">document: </span><span class="nb">self</span><span class="p">),</span>
+</pre></td></tr><tr id="line-584" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>584</pre></td><td class="rouge-code"><pre>  <span class="p">)</span>
+</pre></td></tr><tr id="line-585" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>585</pre></td><td class="rouge-code"><pre>  <span class="n">box</span><span class="p">.</span><span class="nf">render</span><span class="p">(</span><span class="ss">dry_run: </span><span class="kp">true</span><span class="p">)</span>
+</pre></td></tr><tr id="line-586" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>586</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-587" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>587</pre></td><td class="rouge-code"><pre>  <span class="n">height</span> <span class="o">=</span> <span class="n">box</span><span class="p">.</span><span class="nf">height</span>
+</pre></td></tr><tr id="line-588" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>588</pre></td><td class="rouge-code"><pre>  <span class="n">height</span> <span class="o">+=</span> <span class="n">box</span><span class="p">.</span><span class="nf">line_gap</span> <span class="o">+</span> <span class="n">box</span><span class="p">.</span><span class="nf">leading</span> <span class="k">if</span> <span class="vi">@final_gap</span>
+</pre></td></tr><tr id="line-589" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>589</pre></td><td class="rouge-code"><pre>  <span class="n">height</span>
+</pre></td></tr><tr id="line-590" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>590</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="text-instance_method">
+  
+    #<strong>text</strong>(string, options = {})  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Draws text on the page.</p>
+
+<p>If you want text to flow onto a new page or between columns, this is the
+method to use. If, instead, you want to place bounded text outside of the
+flow of a document (for captions, labels, charts, etc.), use <span class='object_link'><a href="Text/Box.html" title="Prawn::Text::Box (class)">Box</a></span>
+or its convenience method <span class='object_link'><a href="#text_box-instance_method" title="Prawn::Text#text_box (method)">#text_box</a></span>.</p>
+
+<p>Prawn attempts to wrap the text to fit within your current bounding box
+(or <code class="language-ruby highlighter-rouge"><span class="n">margin_box</span></code> if no bounding box is being used).  Text will flow onto
+the next page when it reaches the bottom of the bounding box. Text wrap in
+Prawn does not re-flow line breaks, so if you want fully automated text
+wrapping, be sure to remove newlines before attempting to draw your
+string.</p>
+
+<h4 id="examples">Examples</h4>
+
+<div class="language-ruby highlighter-rouge"><pre><code><span class="n">pdf</span><span class="p">.</span><span class="nf">text</span> <span class="s2">"Will be wrapped when it hits the edge of your bounding box"</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span> <span class="s2">"This will be centered"</span><span class="p">,</span> <span class="ss">align: :center</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span> <span class="s2">"This will be right aligned"</span><span class="p">,</span> <span class="ss">align: :right</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span> <span class="s2">"This &lt;i&gt;includes &lt;b&gt;inline&lt;/b&gt;&lt;/i&gt; &lt;font size='24'&gt;formatting&lt;/font&gt;"</span><span class="p">,</span> <span class="ss">inline_format: </span><span class="kp">true</span>
+</code></pre></div>
+
+<p>If your font contains kerning pair data that Prawn can parse, the text
+will be kerned by default. You can disable kerning by including a <code class="language-ruby highlighter-rouge"><span class="kp">false</span></code>
+<code class="language-ruby highlighter-rouge"><span class="ss">:kerning</span></code> option. If you want to disable kerning on an entire document,
+set <code class="language-ruby highlighter-rouge"><span class="n">default_kerning</span> <span class="o">=</span> <span class="kp">false</span></code> for that document.</p>
+
+<h4 id="text-positioning-details">Text Positioning Details</h4>
+
+<p>The text is positioned at <code class="language-ruby highlighter-rouge"><span class="n">font</span><span class="p">.</span><span class="nf">ascender</span></code> below the baseline, making it
+easy to use this method within bounding boxes and spans.</p>
+
+<h4 id="encoding">Encoding</h4>
+
+<p>Note that strings passed to this function should be encoded as UTF-8. If
+you get unexpected characters appearing in your rendered document, check
+this.</p>
+
+<p>If the current font is a built-in one, although the string must be encoded
+as UTF-8, only characters that are available in WinAnsi are allowed.</p>
+
+<p>If an empty box is rendered to your PDF instead of the character you
+wanted it usually means the current font doesn’t include that character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>option</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:inline_format</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>, then the string parameter is interpreted as a HTML-esque
+string that recognizes the following tags (assuming the default text
+formatter is used):</p>
+<ul>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;b&gt;&lt;/b&gt;</span></code> — bold style.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;i&gt;&lt;/i&gt;</span></code> — italic style.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;u&gt;&lt;/u&gt;</span></code> — underline.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;strikethrough&gt;&lt;/strikethrough&gt;</span></code> — strikethrough.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;sub&gt;&lt;/sub&gt;</span></code> — subscript.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;sup&gt;&lt;/sup&gt;</span></code> — superscript.</li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;font&gt;&lt;/font&gt;</span></code> — with the following attributes
+(using double or single quotes):
+    <ul>
+      <li><code class="language-html highlighter-rouge">name="Helvetica"</code> — the font. The font name must
+be an AFM font with the desired faces or must be a font that is
+already registered using <span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>.</li>
+      <li><code class="language-html highlighter-rouge">size="24"</code> — attribute for setting size.</li>
+      <li><code class="language-html highlighter-rouge">character_spacing="2.5"</code> — character spacing.</li>
+    </ul>
+  </li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;color&gt;&lt;/color&gt;</span></code> — text color
+    <ul>
+      <li><code class="language-html highlighter-rouge">rgb="ffffff"</code> or <code class="language-html highlighter-rouge">rgb="#ffffff"</code>
+— RGB color</li>
+      <li><code class="language-html highlighter-rouge">c="100" m="100" y="100" k="100"</code> — CMYK color</li>
+    </ul>
+  </li>
+  <li><code class="language-html highlighter-rouge"><span class="nt">&lt;link&gt;&lt;/link&gt;</span></code> - link, with the following
+attributes:
+    <ul>
+      <li><code class="language-html highlighter-rouge">href="http://example.com"</code> — an external link.
+Note that you must explicitly underline and color using the
+appropriate tags if you which to draw attention to the link.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.default_kerning?</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether or not to use kerning (if it is available with the current
+font).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current ofnt size</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The font size to use.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:color</span>
+          <span class="type">(<tt>Color</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:character_spacing</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>0</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The amount of space to add to or remove from the default character
+spacing.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current style</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The style to use. The requested style must be part of the current font
+family.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:indent_paragraphs</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The amount to indent the first line of each paragraph. Omit this option
+if you do not want indenting.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:direction</span>
+          <span class="type">(<tt>:ltr</tt>, <tt>:rtl</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.text_direction</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Direction of the text.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:fallback_fonts</span>
+          <span class="type">(<tt>Array&lt;String&gt;</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>An array of font names. Each name must be the name of an AFM font or the
+name that was used to register a family of TTF fonts (see
+<span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>). If present, then each glyph will be
+rendered using the first font that includes the glyph, starting with the
+current font and then moving through <code class="language-ruby highlighter-rouge"><span class="ss">:fallback_fonts</span></code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:valign</span>
+          <span class="type">(<tt>:top</tt>, <tt>:center</tt>, <tt>:bottom</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:top</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Vertical alignment within the bounding box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:leading</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>Number</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>(value of document.default_leading)
+Additional space between lines.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:final_gap</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>, then the space between each line is included below the last
+line; otherwise, <span class='object_link'><a href="Document.html#y-instance_method" title="Prawn::Document#y (method)">Document#y</a></span> is placed just below the descender of the
+last line printed.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mode</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:fill</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The text rendering mode to use. Use this to specify if the text should
+render with the fill color, stroke color or both.</p>
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill</span></code> - fill text (default)</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke</span></code> - stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke</span></code> - fill, then stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:invisible</span></code> - invisible text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_clip</span></code> - fill text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke_clip</span></code> - stroke text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke_clip</span></code> - fill then stroke text, then add to path for
+clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:clip</span></code> - add text to path for clipping</li>
+</ul>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if <code class="language-ruby highlighter-rouge"><span class="ss">:at</span></code> option included</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Prawn::Errrors::CannotFit</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if not wide enough to print any text</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>for a list of valid text rendering modes.</li>
+    
+  </ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/text.rb, line 151</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-151" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>151</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">text</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-152" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>152</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="kp">false</span> <span class="k">if</span> <span class="n">string</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-153" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>153</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-154" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>154</pre></td><td class="rouge-code"><pre>  <span class="c1"># we modify the options. don't change the user's hash</span>
+</pre></td></tr><tr id="line-155" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>155</pre></td><td class="rouge-code"><pre>  <span class="n">options</span> <span class="o">=</span> <span class="n">options</span><span class="p">.</span><span class="nf">dup</span>
+</pre></td></tr><tr id="line-156" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>156</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-157" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>157</pre></td><td class="rouge-code"><pre>  <span class="nb">p</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:inline_format</span><span class="p">]</span>
+</pre></td></tr><tr id="line-158" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>158</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="nb">p</span>
+</pre></td></tr><tr id="line-159" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>159</pre></td><td class="rouge-code"><pre>    <span class="nb">p</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">unless</span> <span class="nb">p</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Array</span><span class="p">)</span>
+</pre></td></tr><tr id="line-160" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>160</pre></td><td class="rouge-code"><pre>    <span class="n">options</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="ss">:inline_format</span><span class="p">)</span>
+</pre></td></tr><tr id="line-161" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>161</pre></td><td class="rouge-code"><pre>    <span class="n">array</span> <span class="o">=</span> <span class="n">text_formatter</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="o">*</span><span class="nb">p</span><span class="p">)</span>
+</pre></td></tr><tr id="line-162" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>162</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-163" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>163</pre></td><td class="rouge-code"><pre>    <span class="n">array</span> <span class="o">=</span> <span class="p">[{</span> <span class="ss">text: </span><span class="n">string</span> <span class="p">}]</span>
+</pre></td></tr><tr id="line-164" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>164</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-165" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>165</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-166" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>166</pre></td><td class="rouge-code"><pre>  <span class="n">formatted_text</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-167" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>167</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="text_box-instance_method">
+  
+    #<strong>text_box</strong>(string, options = {})  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Draws the requested text into a box.</p>
+
+<p>When the text overflows the rectangle, you shrink to fit, or truncate the
+text. Text boxes are independent of the document y position.</p>
+
+<h4 id="encoding">Encoding</h4>
+
+<p>Note that strings passed to this function should be encoded as UTF-8. If
+you get unexpected characters appearing in your rendered document, check
+this.</p>
+
+<p>If the current font is a built-in one, although the string must be encoded
+as UTF-8, only characters that are available in WinAnsi are allowed.</p>
+
+<p>If an empty box is rendered to your PDF instead of the character you
+wanted it usually means the current font doesn’t include that character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>option</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.default_kerning?</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether or not to use kerning (if it is available with the current
+font).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>current font size</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The font size to use.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:character_spacing</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>0</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The amount of space to add to or remove from the default character
+spacing.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:disable_wrap_by_char</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Whether or not to prevent mid-word breaks when text does not fit in box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mode</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:fill</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The text rendering mode. See documentation for
+Document#text_rendering_mode for a list of valid options.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:width</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>bounds.right - at[0]</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The width of the box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:height</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>default_height()</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The height of the box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:direction</span>
+          <span class="type">(<tt>:ltr</tt>, <tt>:rtl</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.text_direction</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Direction of the text (left-to-right or right-to-left).</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:fallback_fonts</span>
+          <span class="type">(<tt>Array&lt;String&gt;</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>An array of font names. Each name must be the name of an AFM font or the
+name that was used to register a family of external fonts (see
+<span class='object_link'><a href="Document.html#font_families-instance_method" title="Prawn::Document#font_families (method)">Document#font_families</a></span>). If present, then each glyph will be
+rendered using the first font that includes the glyph, starting with the
+current font and then moving through <code class="language-ruby highlighter-rouge"><span class="ss">:fallback_fonts</span></code>.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:align</span>
+          <span class="type">(<tt>:left</tt>, <tt>:center</tt>, <tt>:right</tt>, <tt>:justify</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:left if direction is :ltr</tt>, <tt>:right if direction is :rtl</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Alignment within the bounding box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:valign</span>
+          <span class="type">(<tt>:top</tt>, <tt>:center</tt>, <tt>:bottom</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:top</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Vertical alignment within the bounding box.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:rotate</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The angle to rotate the text.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:rotate_around</span>
+          <span class="type">(<tt>Object</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>[:center, :upper_left, :upper_right, :lower_right, :lower_left]
+(:upper_left)
+The point around which to rotate the text.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:leading</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>value of document.default_leading</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Additional space between lines.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:single_line</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>If true, then only the first line will be drawn.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:overflow</span>
+          <span class="type">(<tt>:truncate</tt>, <tt>:shrink_to_fit</tt>, <tt>:expand</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:truncate</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>This controls the behavior when the amount of text exceeds the available
+space.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:min_font_size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>5</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>The minimum font size to use when <code class="language-ruby highlighter-rouge"><span class="ss">:overflow</span></code> is set to <code class="language-ruby highlighter-rouge"><span class="ss">:shrink_to_fit</span></code>
+(that is the font size will not be reduced to less than this value, even
+if it means that some text will be cut off).</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Any text that did not print under the current settings.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Errors.html#CannotFit-constant" title="Prawn::Errors::CannotFit (constant)">Prawn::Errors::CannotFit</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>If not wide enough to print any text.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/text/box.rb, line 83</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-83" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>83</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">text_box</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-84" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>84</pre></td><td class="rouge-code"><pre>  <span class="n">options</span> <span class="o">=</span> <span class="n">options</span><span class="p">.</span><span class="nf">dup</span>
+</pre></td></tr><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre>  <span class="n">options</span><span class="p">[</span><span class="ss">:document</span><span class="p">]</span> <span class="o">=</span> <span class="nb">self</span>
+</pre></td></tr><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-87" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>87</pre></td><td class="rouge-code"><pre>  <span class="n">box</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-88" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>88</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="ss">:inline_format</span><span class="p">]</span>
+</pre></td></tr><tr id="line-89" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>89</pre></td><td class="rouge-code"><pre>      <span class="nb">p</span> <span class="o">=</span> <span class="n">options</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="ss">:inline_format</span><span class="p">)</span>
+</pre></td></tr><tr id="line-90" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>90</pre></td><td class="rouge-code"><pre>      <span class="nb">p</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">unless</span> <span class="nb">p</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Array</span><span class="p">)</span>
+</pre></td></tr><tr id="line-91" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>91</pre></td><td class="rouge-code"><pre>      <span class="n">array</span> <span class="o">=</span> <span class="n">text_formatter</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="o">*</span><span class="nb">p</span><span class="p">)</span>
+</pre></td></tr><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre>      <span class="no">Text</span><span class="o">::</span><span class="no">Formatted</span><span class="o">::</span><span class="no">Box</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-93" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>93</pre></td><td class="rouge-code"><pre>    <span class="k">else</span>
+</pre></td></tr><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre>      <span class="no">Text</span><span class="o">::</span><span class="no">Box</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-95" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>95</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-96" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>96</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-97" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>97</pre></td><td class="rouge-code"><pre>  <span class="n">box</span><span class="p">.</span><span class="nf">render</span>
+</pre></td></tr><tr id="line-98" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>98</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar  1 12:33:13 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

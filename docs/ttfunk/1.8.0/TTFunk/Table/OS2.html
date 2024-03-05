@@ -1,0 +1,3340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TTFunk::Table::OS2
+  
+    &mdash; Documentation by YARD 0.9.35
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::OS2";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (O)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">Table</a></span></span>
+     &raquo; 
+    <span class="title">OS2</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TTFunk::Table::OS2
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></li>
+          
+            <li class="next">TTFunk::Table::OS2</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/os2.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>OS/2 and Windows Metrics (<code class="language-ruby highlighter-rouge"><span class="no">OS</span><span class="o">/</span><span class="mi">2</span></code>) table</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="CODE_PAGE_BITS-constant" class="">CODE_PAGE_BITS =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Code page bits.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="p">{</span>
+  <span class="mi">1252</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="mi">1250</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="mi">1251</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="mi">1253</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="mi">1254</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="mi">1255</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="mi">1256</span> <span class="o">=&gt;</span> <span class="mi">6</span><span class="p">,</span>
+  <span class="mi">1257</span> <span class="o">=&gt;</span> <span class="mi">7</span><span class="p">,</span>
+  <span class="mi">1258</span> <span class="o">=&gt;</span> <span class="mi">8</span><span class="p">,</span>
+  <span class="mi">874</span> <span class="o">=&gt;</span> <span class="mi">16</span><span class="p">,</span>
+  <span class="mi">932</span> <span class="o">=&gt;</span> <span class="mi">17</span><span class="p">,</span>
+  <span class="mi">936</span> <span class="o">=&gt;</span> <span class="mi">18</span><span class="p">,</span>
+  <span class="mi">949</span> <span class="o">=&gt;</span> <span class="mi">19</span><span class="p">,</span>
+  <span class="mi">950</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+  <span class="mi">1361</span> <span class="o">=&gt;</span> <span class="mi">21</span><span class="p">,</span>
+  <span class="mi">10_000</span> <span class="o">=&gt;</span> <span class="mi">29</span><span class="p">,</span>
+  <span class="mi">869</span> <span class="o">=&gt;</span> <span class="mi">48</span><span class="p">,</span>
+  <span class="mi">866</span> <span class="o">=&gt;</span> <span class="mi">49</span><span class="p">,</span>
+  <span class="mi">865</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">,</span>
+  <span class="mi">864</span> <span class="o">=&gt;</span> <span class="mi">51</span><span class="p">,</span>
+  <span class="mi">863</span> <span class="o">=&gt;</span> <span class="mi">52</span><span class="p">,</span>
+  <span class="mi">862</span> <span class="o">=&gt;</span> <span class="mi">53</span><span class="p">,</span>
+  <span class="mi">861</span> <span class="o">=&gt;</span> <span class="mi">54</span><span class="p">,</span>
+  <span class="mi">860</span> <span class="o">=&gt;</span> <span class="mi">55</span><span class="p">,</span>
+  <span class="mi">857</span> <span class="o">=&gt;</span> <span class="mi">56</span><span class="p">,</span>
+  <span class="mi">855</span> <span class="o">=&gt;</span> <span class="mi">57</span><span class="p">,</span>
+  <span class="mi">852</span> <span class="o">=&gt;</span> <span class="mi">58</span><span class="p">,</span>
+  <span class="mi">775</span> <span class="o">=&gt;</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="mi">737</span> <span class="o">=&gt;</span> <span class="mi">60</span><span class="p">,</span>
+  <span class="mi">708</span> <span class="o">=&gt;</span> <span class="mi">61</span><span class="p">,</span>
+  <span class="mi">850</span> <span class="o">=&gt;</span> <span class="mi">62</span><span class="p">,</span>
+  <span class="mi">437</span> <span class="o">=&gt;</span> <span class="mi">63</span><span class="p">,</span>
+<span class="p">}.</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="UNICODE_BLOCKS-constant" class="">UNICODE_BLOCKS =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Unicode blocks.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="p">{</span>
+  <span class="p">(</span><span class="mh">0x0000</span><span class="o">..</span><span class="mh">0x007F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0080</span><span class="o">..</span><span class="mh">0x00FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0100</span><span class="o">..</span><span class="mh">0x017F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0180</span><span class="o">..</span><span class="mh">0x024F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0250</span><span class="o">..</span><span class="mh">0x02AF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1D00</span><span class="o">..</span><span class="mh">0x1D7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1D80</span><span class="o">..</span><span class="mh">0x1DBF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x02B0</span><span class="o">..</span><span class="mh">0x02FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA700</span><span class="o">..</span><span class="mh">0xA71F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0300</span><span class="o">..</span><span class="mh">0x036F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">6</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1DC0</span><span class="o">..</span><span class="mh">0x1DFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">6</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0370</span><span class="o">..</span><span class="mh">0x03FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">7</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2C80</span><span class="o">..</span><span class="mh">0x2CFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">8</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0400</span><span class="o">..</span><span class="mh">0x04FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0500</span><span class="o">..</span><span class="mh">0x052F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2DE0</span><span class="o">..</span><span class="mh">0x2DFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA640</span><span class="o">..</span><span class="mh">0xA69F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">9</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0530</span><span class="o">..</span><span class="mh">0x058F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0590</span><span class="o">..</span><span class="mh">0x05FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">11</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA500</span><span class="o">..</span><span class="mh">0xA63F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">12</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0600</span><span class="o">..</span><span class="mh">0x06FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">13</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0750</span><span class="o">..</span><span class="mh">0x077F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">13</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x07C0</span><span class="o">..</span><span class="mh">0x07FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">14</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0900</span><span class="o">..</span><span class="mh">0x097F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">15</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0980</span><span class="o">..</span><span class="mh">0x09FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">16</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0A00</span><span class="o">..</span><span class="mh">0x0A7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">17</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0A80</span><span class="o">..</span><span class="mh">0x0AFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">18</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0B00</span><span class="o">..</span><span class="mh">0x0B7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">19</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0B80</span><span class="o">..</span><span class="mh">0x0BFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0C00</span><span class="o">..</span><span class="mh">0x0C7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">21</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0C80</span><span class="o">..</span><span class="mh">0x0CFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">22</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0D00</span><span class="o">..</span><span class="mh">0x0D7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">23</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0E00</span><span class="o">..</span><span class="mh">0x0E7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">24</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0E80</span><span class="o">..</span><span class="mh">0x0EFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">25</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10A0</span><span class="o">..</span><span class="mh">0x10FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">26</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2D00</span><span class="o">..</span><span class="mh">0x2D2F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">26</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1B00</span><span class="o">..</span><span class="mh">0x1B7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">27</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1100</span><span class="o">..</span><span class="mh">0x11FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">28</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1E00</span><span class="o">..</span><span class="mh">0x1EFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">29</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2C60</span><span class="o">..</span><span class="mh">0x2C7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">29</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA720</span><span class="o">..</span><span class="mh">0xA7FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">29</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1F00</span><span class="o">..</span><span class="mh">0x1FFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2000</span><span class="o">..</span><span class="mh">0x206F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">31</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2E00</span><span class="o">..</span><span class="mh">0x2E7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">31</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2070</span><span class="o">..</span><span class="mh">0x209F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">32</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x20A0</span><span class="o">..</span><span class="mh">0x20CF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">33</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x20D0</span><span class="o">..</span><span class="mh">0x20FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">34</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2100</span><span class="o">..</span><span class="mh">0x214F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">35</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2150</span><span class="o">..</span><span class="mh">0x218F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">36</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2190</span><span class="o">..</span><span class="mh">0x21FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">37</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x27F0</span><span class="o">..</span><span class="mh">0x27FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">37</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2900</span><span class="o">..</span><span class="mh">0x297F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">37</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2B00</span><span class="o">..</span><span class="mh">0x2BFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">37</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2200</span><span class="o">..</span><span class="mh">0x22FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">38</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2A00</span><span class="o">..</span><span class="mh">0x2AFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">38</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x27C0</span><span class="o">..</span><span class="mh">0x27EF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">38</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2980</span><span class="o">..</span><span class="mh">0x29FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">38</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2300</span><span class="o">..</span><span class="mh">0x23FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">39</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2400</span><span class="o">..</span><span class="mh">0x243F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">40</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2440</span><span class="o">..</span><span class="mh">0x245F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">41</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2460</span><span class="o">..</span><span class="mh">0x24FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2500</span><span class="o">..</span><span class="mh">0x257F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">43</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2580</span><span class="o">..</span><span class="mh">0x259F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">44</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x25A0</span><span class="o">..</span><span class="mh">0x25FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">45</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2600</span><span class="o">..</span><span class="mh">0x26FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">46</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2700</span><span class="o">..</span><span class="mh">0x27BF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">47</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x3000</span><span class="o">..</span><span class="mh">0x303F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">48</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x3040</span><span class="o">..</span><span class="mh">0x309F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">49</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x30A0</span><span class="o">..</span><span class="mh">0x30FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x31F0</span><span class="o">..</span><span class="mh">0x31FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">50</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x3100</span><span class="o">..</span><span class="mh">0x312F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">51</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x31A0</span><span class="o">..</span><span class="mh">0x31BF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">51</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x3130</span><span class="o">..</span><span class="mh">0x318F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">52</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA840</span><span class="o">..</span><span class="mh">0xA87F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">53</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x3200</span><span class="o">..</span><span class="mh">0x32FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">54</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x3300</span><span class="o">..</span><span class="mh">0x33FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">55</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xAC00</span><span class="o">..</span><span class="mh">0xD7AF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">56</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xD800</span><span class="o">..</span><span class="mh">0xDFFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">57</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10900</span><span class="o">..</span><span class="mh">0x1091F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">58</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x4E00</span><span class="o">..</span><span class="mh">0x9FFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2E80</span><span class="o">..</span><span class="mh">0x2EFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2F00</span><span class="o">..</span><span class="mh">0x2FDF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2FF0</span><span class="o">..</span><span class="mh">0x2FFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x3400</span><span class="o">..</span><span class="mh">0x4DBF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x20000</span><span class="o">..</span><span class="mh">0x2A6DF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x3190</span><span class="o">..</span><span class="mh">0x319F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">59</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xE000</span><span class="o">..</span><span class="mh">0xF8FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">60</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x31C0</span><span class="o">..</span><span class="mh">0x31EF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">61</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xF900</span><span class="o">..</span><span class="mh">0xFAFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">61</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2F800</span><span class="o">..</span><span class="mh">0x2FA1F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">61</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFB00</span><span class="o">..</span><span class="mh">0xFB4F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">62</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFB50</span><span class="o">..</span><span class="mh">0xFDFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">63</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFE20</span><span class="o">..</span><span class="mh">0xFE2F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">64</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFE10</span><span class="o">..</span><span class="mh">0xFE1F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">65</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFE30</span><span class="o">..</span><span class="mh">0xFE4F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">65</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFE50</span><span class="o">..</span><span class="mh">0xFE6F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">66</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFE70</span><span class="o">..</span><span class="mh">0xFEFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">67</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFF00</span><span class="o">..</span><span class="mh">0xFFEF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">68</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFFF0</span><span class="o">..</span><span class="mh">0xFFFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">69</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0F00</span><span class="o">..</span><span class="mh">0x0FFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">70</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0700</span><span class="o">..</span><span class="mh">0x074F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">71</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0780</span><span class="o">..</span><span class="mh">0x07BF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">72</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x0D80</span><span class="o">..</span><span class="mh">0x0DFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">73</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1000</span><span class="o">..</span><span class="mh">0x109F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">74</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1200</span><span class="o">..</span><span class="mh">0x137F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">75</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1380</span><span class="o">..</span><span class="mh">0x139F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">75</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2D80</span><span class="o">..</span><span class="mh">0x2DDF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">75</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x13A0</span><span class="o">..</span><span class="mh">0x13FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">76</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1400</span><span class="o">..</span><span class="mh">0x167F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">77</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1680</span><span class="o">..</span><span class="mh">0x169F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">78</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x16A0</span><span class="o">..</span><span class="mh">0x16FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">79</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1780</span><span class="o">..</span><span class="mh">0x17FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">80</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x19E0</span><span class="o">..</span><span class="mh">0x19FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">80</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1800</span><span class="o">..</span><span class="mh">0x18AF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">81</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2800</span><span class="o">..</span><span class="mh">0x28FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">82</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA000</span><span class="o">..</span><span class="mh">0xA48F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">83</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA490</span><span class="o">..</span><span class="mh">0xA4CF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">83</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1700</span><span class="o">..</span><span class="mh">0x171F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">84</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1720</span><span class="o">..</span><span class="mh">0x173F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">84</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1740</span><span class="o">..</span><span class="mh">0x175F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">84</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1760</span><span class="o">..</span><span class="mh">0x177F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">84</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10300</span><span class="o">..</span><span class="mh">0x1032F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">85</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10330</span><span class="o">..</span><span class="mh">0x1034F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">86</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10400</span><span class="o">..</span><span class="mh">0x1044F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">87</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1D000</span><span class="o">..</span><span class="mh">0x1D0FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">88</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1D100</span><span class="o">..</span><span class="mh">0x1D1FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">88</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1D200</span><span class="o">..</span><span class="mh">0x1D24F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">88</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1D400</span><span class="o">..</span><span class="mh">0x1D7FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">89</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xF0000</span><span class="o">..</span><span class="mh">0xFFFFD</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">90</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x100000</span><span class="o">..</span><span class="mh">0x10FFFD</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">90</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xFE00</span><span class="o">..</span><span class="mh">0xFE0F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">91</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xE0100</span><span class="o">..</span><span class="mh">0xE01EF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">91</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xE0000</span><span class="o">..</span><span class="mh">0xE007F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">92</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1900</span><span class="o">..</span><span class="mh">0x194F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">93</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1950</span><span class="o">..</span><span class="mh">0x197F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">94</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1980</span><span class="o">..</span><span class="mh">0x19DF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">95</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1A00</span><span class="o">..</span><span class="mh">0x1A1F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">96</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2C00</span><span class="o">..</span><span class="mh">0x2C5F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">97</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x2D30</span><span class="o">..</span><span class="mh">0x2D7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">98</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x4DC0</span><span class="o">..</span><span class="mh">0x4DFF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">99</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA800</span><span class="o">..</span><span class="mh">0xA82F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10000</span><span class="o">..</span><span class="mh">0x1007F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">101</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10080</span><span class="o">..</span><span class="mh">0x100FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">101</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10100</span><span class="o">..</span><span class="mh">0x1013F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">101</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10140</span><span class="o">..</span><span class="mh">0x1018F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">102</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10380</span><span class="o">..</span><span class="mh">0x1039F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">103</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x103A0</span><span class="o">..</span><span class="mh">0x103DF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">104</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10450</span><span class="o">..</span><span class="mh">0x1047F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">105</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10480</span><span class="o">..</span><span class="mh">0x104AF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">106</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10800</span><span class="o">..</span><span class="mh">0x1083F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">107</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10A00</span><span class="o">..</span><span class="mh">0x10A5F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">108</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1D300</span><span class="o">..</span><span class="mh">0x1D35F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">109</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x12000</span><span class="o">..</span><span class="mh">0x123FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">110</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x12400</span><span class="o">..</span><span class="mh">0x1247F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">110</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1D360</span><span class="o">..</span><span class="mh">0x1D37F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">111</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1B80</span><span class="o">..</span><span class="mh">0x1BBF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">112</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1C00</span><span class="o">..</span><span class="mh">0x1C4F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">113</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1C50</span><span class="o">..</span><span class="mh">0x1C7F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">114</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA880</span><span class="o">..</span><span class="mh">0xA8DF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">115</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA900</span><span class="o">..</span><span class="mh">0xA92F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">116</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xA930</span><span class="o">..</span><span class="mh">0xA95F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">117</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0xAA00</span><span class="o">..</span><span class="mh">0xAA5F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">118</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10190</span><span class="o">..</span><span class="mh">0x101CF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">119</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x101D0</span><span class="o">..</span><span class="mh">0x101FF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">120</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x102A0</span><span class="o">..</span><span class="mh">0x102DF</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">121</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10280</span><span class="o">..</span><span class="mh">0x1029F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">121</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x10920</span><span class="o">..</span><span class="mh">0x1093F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">121</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1F030</span><span class="o">..</span><span class="mh">0x1F09F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">122</span><span class="p">,</span>
+  <span class="p">(</span><span class="mh">0x1F000</span><span class="o">..</span><span class="mh">0x1F02F</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">122</span><span class="p">,</span>
+<span class="p">}.</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="UNICODE_MAX-constant" class="">UNICODE_MAX =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Indicates that font supports supplementary characters.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mh">0xFFFF</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="UNICODE_RANGES-constant" class="">UNICODE_RANGES =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Unicode block ranges.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">UNICODE_BLOCKS</span><span class="p">.</span><span class="nf">keys</span><span class="p">.</span><span class="nf">sort_by</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:max</span><span class="p">).</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="LOWERCASE_START-constant" class="">LOWERCASE_START =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Start chracter for average character width calculation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s1">'a'</span><span class="p">.</span><span class="nf">ord</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="LOWERCASE_END-constant" class="">LOWERCASE_END =
+            <div class="docstring">
+  <div class="discussion">
+    <p>End chracter for average character width calculation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s1">'z'</span><span class="p">.</span><span class="nf">ord</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="LOWERCASE_COUNT-constant" class="">LOWERCASE_COUNT =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Number of chracters for average character width calculation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="p">(</span><span class="no">LOWERCASE_END</span> <span class="o">-</span> <span class="no">LOWERCASE_START</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="CODEPOINT_SPACE-constant" class="">CODEPOINT_SPACE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Space character code point.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">32</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="SPACE_GLYPH_MISSING_ERROR-constant" class="">SPACE_GLYPH_MISSING_ERROR =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Error message for missing space character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="s2">"Space glyph (0x</span><span class="si">#{</span><span class="no">CODEPOINT_SPACE</span><span class="p">.</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="si">}</span><span class="s2">) must be included in the font"</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="WEIGHT_SPACE-constant" class="">WEIGHT_SPACE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Used to calculate the xAvgCharWidth field.
+From https://docs.microsoft.com/en-us/typography/opentype/spec/os2:</p>
+
+<p>“When first defined, the specification was biased toward Basic Latin
+characters, and it was thought that the xAvgCharWidth value could be
+used to estimate the average length of lines of text. A formula for
+calculating xAvgCharWidth was provided using frequency-of-use
+weighting factors for lowercase letters a - z.”</p>
+
+<p>The array below contains 26 weight values which correspond to the
+26 letters in the Latin alphabet. Each weight is the relative
+frequency of that letter in the English language.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="mi">166</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="WEIGHT_LOWERCASE-constant" class="">WEIGHT_LOWERCASE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>chracter weights for average character width calculation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="p">[</span>
+  <span class="mi">64</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>
+  <span class="mi">56</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>
+<span class="p">].</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ascent-instance_method" title="#ascent (instance method)">#<strong>ascent</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The typographic ascender for this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ave_char_width-instance_method" title="#ave_char_width (instance method)">#<strong>ave_char_width</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Average weighted escapement.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#break_char-instance_method" title="#break_char (instance method)">#<strong>break_char</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The Unicode code point, in UTF-16 encoding, of a character that can be used as a default break character.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cap_height-instance_method" title="#cap_height (instance method)">#<strong>cap_height</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The distance between the baseline and the approximate height of uppercase letters.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#char_range-instance_method" title="#char_range (instance method)">#<strong>char_range</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Unicode Character Range.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#code_page_range-instance_method" title="#code_page_range (instance method)">#<strong>code_page_range</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Code Page Character Range.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_char-instance_method" title="#default_char (instance method)">#<strong>default_char</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The Unicode code point, in UTF-16 encoding, of a character that can be used for a default glyph if a requested character is not supported in the font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#descent-instance_method" title="#descent (instance method)">#<strong>descent</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The typographic descender for this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#family_class-instance_method" title="#family_class (instance method)">#<strong>family_class</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Font-family class and subclass.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#first_char_index-instance_method" title="#first_char_index (instance method)">#<strong>first_char_index</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The minimum Unicode index (character code) in this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_char_index-instance_method" title="#last_char_index (instance method)">#<strong>last_char_index</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The maximum Unicode index (character code) in this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#line_gap-instance_method" title="#line_gap (instance method)">#<strong>line_gap</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The typographic line gap for this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#max_context-instance_method" title="#max_context (instance method)">#<strong>max_context</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The maximum length of a target glyph context for any feature in this font.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#panose-instance_method" title="#panose (instance method)">#<strong>panose</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>PANOSE classification number.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#selection-instance_method" title="#selection (instance method)">#<strong>selection</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Font selection flags.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#type-instance_method" title="#type (instance method)">#<strong>type</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Type flags.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#vendor_id-instance_method" title="#vendor_id (instance method)">#<strong>vendor_id</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Font Vendor Identification.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#version-instance_method" title="#version (instance method)">#<strong>version</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Table version.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#weight_class-instance_method" title="#weight_class (instance method)">#<strong>weight_class</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Weight class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#width_class-instance_method" title="#width_class (instance method)">#<strong>width_class</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Width class.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#win_ascent-instance_method" title="#win_ascent (instance method)">#<strong>win_ascent</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The “Windows ascender” metric.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#win_descent-instance_method" title="#win_descent (instance method)">#<strong>win_descent</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The “Windows descender” metric.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#x_height-instance_method" title="#x_height (instance method)">#<strong>x_height</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The distance between the baseline and the approximate height of non-ascending lowercase letters.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_strikeout_position-instance_method" title="#y_strikeout_position (instance method)">#<strong>y_strikeout_position</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Strikeout position.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_strikeout_size-instance_method" title="#y_strikeout_size (instance method)">#<strong>y_strikeout_size</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Strikeout size.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_subscript_x_offset-instance_method" title="#y_subscript_x_offset (instance method)">#<strong>y_subscript_x_offset</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Subscript x offset.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_subscript_x_size-instance_method" title="#y_subscript_x_size (instance method)">#<strong>y_subscript_x_size</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Subscript horizontal font size.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_subscript_y_offset-instance_method" title="#y_subscript_y_offset (instance method)">#<strong>y_subscript_y_offset</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Subscript y offset.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_subscript_y_size-instance_method" title="#y_subscript_y_size (instance method)">#<strong>y_subscript_y_size</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Subscript vertical font size.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_superscript_x_offset-instance_method" title="#y_superscript_x_offset (instance method)">#<strong>y_superscript_x_offset</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Superscript x offset.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_superscript_x_size-instance_method" title="#y_superscript_x_size (instance method)">#<strong>y_superscript_x_size</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Superscript horizontal font size.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_superscript_y_offset-instance_method" title="#y_superscript_y_offset (instance method)">#<strong>y_superscript_y_offset</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Superscript y offset.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y_superscript_y_size-instance_method" title="#y_superscript_y_size (instance method)">#<strong>y_superscript_y_size</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Superscript vertical font size.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Table.html#file-instance_method" title="TTFunk::Table#file (method)">#file</a></span>, <span class='object_link'><a href="../Table.html#length-instance_method" title="TTFunk::Table#length (method)">#length</a></span>, <span class='object_link'><a href="../Table.html#offset-instance_method" title="TTFunk::Table#offset (method)">#offset</a></span></p>
+
+
+
+  
+    <section id="method-summary-e7i9pm">
+      <h2>
+        Class Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode-class_method" title="encode (class method)">.<strong>encode</strong>(os2, subset)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encode table.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tag-instance_method" title="#tag (instance method)">#<strong>tag</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Table tag.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Table.html#exists%3F-instance_method" title="TTFunk::Table#exists? (method)">#exists?</a></span>, <span class='object_link'><a href="../Table.html#initialize-instance_method" title="TTFunk::Table#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Table.html#raw-instance_method" title="TTFunk::Table#raw (method)">#raw</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Table.html#initialize-instance_method" title="TTFunk::Table#initialize (method)">TTFunk::Table</a></span></p>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="ascent-instance_method">
+  
+    #<strong>ascent</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The typographic ascender for this font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 100</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-100" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>100</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">ascent</span>
+</pre></td></tr><tr id="line-101" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>101</pre></td><td class="rouge-code"><pre>  <span class="vi">@ascent</span>
+</pre></td></tr><tr id="line-102" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>102</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ave_char_width-instance_method">
+  
+    #<strong>ave_char_width</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Average weighted escapement.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 16</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-16" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>16</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">ave_char_width</span>
+</pre></td></tr><tr id="line-17" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>17</pre></td><td class="rouge-code"><pre>  <span class="vi">@ave_char_width</span>
+</pre></td></tr><tr id="line-18" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>18</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="break_char-instance_method">
+  
+    #<strong>break_char</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The Unicode code point, in UTF-16 encoding, of a character that can be
+used as a default break character.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 141</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-141" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>141</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">break_char</span>
+</pre></td></tr><tr id="line-142" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>142</pre></td><td class="rouge-code"><pre>  <span class="vi">@break_char</span>
+</pre></td></tr><tr id="line-143" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>143</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="cap_height-instance_method">
+  
+    #<strong>cap_height</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The distance between the baseline and the approximate height of
+uppercase letters.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 130</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-130" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>130</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">cap_height</span>
+</pre></td></tr><tr id="line-131" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>131</pre></td><td class="rouge-code"><pre>  <span class="vi">@cap_height</span>
+</pre></td></tr><tr id="line-132" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>132</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="char_range-instance_method">
+  
+    #<strong>char_range</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Unicode Character Range.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 80</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-80" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>80</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">char_range</span>
+</pre></td></tr><tr id="line-81" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>81</pre></td><td class="rouge-code"><pre>  <span class="vi">@char_range</span>
+</pre></td></tr><tr id="line-82" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>82</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="code_page_range-instance_method">
+  
+    #<strong>code_page_range</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Code Page Character Range.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 120</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-120" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>120</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">code_page_range</span>
+</pre></td></tr><tr id="line-121" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>121</pre></td><td class="rouge-code"><pre>  <span class="vi">@code_page_range</span>
+</pre></td></tr><tr id="line-122" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>122</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="default_char-instance_method">
+  
+    #<strong>default_char</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The Unicode code point, in UTF-16 encoding, of a character that can be
+used for a default glyph if a requested character is not supported in
+the font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 136</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-136" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>136</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">default_char</span>
+</pre></td></tr><tr id="line-137" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>137</pre></td><td class="rouge-code"><pre>  <span class="vi">@default_char</span>
+</pre></td></tr><tr id="line-138" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>138</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="descent-instance_method">
+  
+    #<strong>descent</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The typographic descender for this font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 104</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-104" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>104</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">descent</span>
+</pre></td></tr><tr id="line-105" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>105</pre></td><td class="rouge-code"><pre>  <span class="vi">@descent</span>
+</pre></td></tr><tr id="line-106" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>106</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="family_class-instance_method">
+  
+    #<strong>family_class</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Font-family class and subclass.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 72</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-72" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>72</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">family_class</span>
+</pre></td></tr><tr id="line-73" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>73</pre></td><td class="rouge-code"><pre>  <span class="vi">@family_class</span>
+</pre></td></tr><tr id="line-74" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>74</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="first_char_index-instance_method">
+  
+    #<strong>first_char_index</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The minimum Unicode index (character code) in this font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 92</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">first_char_index</span>
+</pre></td></tr><tr id="line-93" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>93</pre></td><td class="rouge-code"><pre>  <span class="vi">@first_char_index</span>
+</pre></td></tr><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="last_char_index-instance_method">
+  
+    #<strong>last_char_index</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The maximum Unicode index (character code) in this font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 96</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-96" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>96</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">last_char_index</span>
+</pre></td></tr><tr id="line-97" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>97</pre></td><td class="rouge-code"><pre>  <span class="vi">@last_char_index</span>
+</pre></td></tr><tr id="line-98" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>98</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="line_gap-instance_method">
+  
+    #<strong>line_gap</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The typographic line gap for this font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 108</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-108" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>108</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">line_gap</span>
+</pre></td></tr><tr id="line-109" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>109</pre></td><td class="rouge-code"><pre>  <span class="vi">@line_gap</span>
+</pre></td></tr><tr id="line-110" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>110</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="max_context-instance_method">
+  
+    #<strong>max_context</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The maximum length of a target glyph context for any feature in this
+font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 146</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-146" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>146</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">max_context</span>
+</pre></td></tr><tr id="line-147" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>147</pre></td><td class="rouge-code"><pre>  <span class="vi">@max_context</span>
+</pre></td></tr><tr id="line-148" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>148</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="panose-instance_method">
+  
+    #<strong>panose</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>PANOSE classification number.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 76</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-76" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>76</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">panose</span>
+</pre></td></tr><tr id="line-77" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>77</pre></td><td class="rouge-code"><pre>  <span class="vi">@panose</span>
+</pre></td></tr><tr id="line-78" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>78</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="selection-instance_method">
+  
+    #<strong>selection</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Font selection flags.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 88</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-88" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>88</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">selection</span>
+</pre></td></tr><tr id="line-89" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>89</pre></td><td class="rouge-code"><pre>  <span class="vi">@selection</span>
+</pre></td></tr><tr id="line-90" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>90</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="type-instance_method">
+  
+    #<strong>type</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Type flags.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 28</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-28" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>28</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">type</span>
+</pre></td></tr><tr id="line-29" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>29</pre></td><td class="rouge-code"><pre>  <span class="vi">@type</span>
+</pre></td></tr><tr id="line-30" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>30</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="vendor_id-instance_method">
+  
+    #<strong>vendor_id</strong>  &#x21d2; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Font Vendor Identification.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 84</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-84" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>84</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">vendor_id</span>
+</pre></td></tr><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre>  <span class="vi">@vendor_id</span>
+</pre></td></tr><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="version-instance_method">
+  
+    #<strong>version</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Table version.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 12</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-12" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>12</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">version</span>
+</pre></td></tr><tr id="line-13" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>13</pre></td><td class="rouge-code"><pre>  <span class="vi">@version</span>
+</pre></td></tr><tr id="line-14" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>14</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="weight_class-instance_method">
+  
+    #<strong>weight_class</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Weight class.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 20</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-20" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>20</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">weight_class</span>
+</pre></td></tr><tr id="line-21" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>21</pre></td><td class="rouge-code"><pre>  <span class="vi">@weight_class</span>
+</pre></td></tr><tr id="line-22" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>22</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="width_class-instance_method">
+  
+    #<strong>width_class</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Width class.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 24</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-24" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>24</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">width_class</span>
+</pre></td></tr><tr id="line-25" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>25</pre></td><td class="rouge-code"><pre>  <span class="vi">@width_class</span>
+</pre></td></tr><tr id="line-26" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>26</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="win_ascent-instance_method">
+  
+    #<strong>win_ascent</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The “Windows ascender” metric.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 112</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-112" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>112</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">win_ascent</span>
+</pre></td></tr><tr id="line-113" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>113</pre></td><td class="rouge-code"><pre>  <span class="vi">@win_ascent</span>
+</pre></td></tr><tr id="line-114" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>114</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="win_descent-instance_method">
+  
+    #<strong>win_descent</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The “Windows descender” metric.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 116</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-116" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>116</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">win_descent</span>
+</pre></td></tr><tr id="line-117" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>117</pre></td><td class="rouge-code"><pre>  <span class="vi">@win_descent</span>
+</pre></td></tr><tr id="line-118" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>118</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="x_height-instance_method">
+  
+    #<strong>x_height</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The distance between the baseline and the approximate height of
+non-ascending lowercase letters.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 125</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-125" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>125</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">x_height</span>
+</pre></td></tr><tr id="line-126" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>126</pre></td><td class="rouge-code"><pre>  <span class="vi">@x_height</span>
+</pre></td></tr><tr id="line-127" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>127</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_strikeout_position-instance_method">
+  
+    #<strong>y_strikeout_position</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Strikeout position.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 68</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-68" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>68</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_strikeout_position</span>
+</pre></td></tr><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_strikeout_position</span>
+</pre></td></tr><tr id="line-70" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>70</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_strikeout_size-instance_method">
+  
+    #<strong>y_strikeout_size</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Strikeout size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 64</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-64" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>64</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_strikeout_size</span>
+</pre></td></tr><tr id="line-65" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>65</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_strikeout_size</span>
+</pre></td></tr><tr id="line-66" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>66</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_subscript_x_offset-instance_method">
+  
+    #<strong>y_subscript_x_offset</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Subscript x offset.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 40</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_subscript_x_offset</span>
+</pre></td></tr><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_subscript_x_offset</span>
+</pre></td></tr><tr id="line-42" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>42</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_subscript_x_size-instance_method">
+  
+    #<strong>y_subscript_x_size</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Subscript horizontal font size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 32</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-32" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>32</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_subscript_x_size</span>
+</pre></td></tr><tr id="line-33" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>33</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_subscript_x_size</span>
+</pre></td></tr><tr id="line-34" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>34</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_subscript_y_offset-instance_method">
+  
+    #<strong>y_subscript_y_offset</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Subscript y offset.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 44</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_subscript_y_offset</span>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_subscript_y_offset</span>
+</pre></td></tr><tr id="line-46" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>46</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_subscript_y_size-instance_method">
+  
+    #<strong>y_subscript_y_size</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Subscript vertical font size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 36</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-36" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>36</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_subscript_y_size</span>
+</pre></td></tr><tr id="line-37" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>37</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_subscript_y_size</span>
+</pre></td></tr><tr id="line-38" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>38</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_superscript_x_offset-instance_method">
+  
+    #<strong>y_superscript_x_offset</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Superscript x offset.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 56</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_superscript_x_offset</span>
+</pre></td></tr><tr id="line-57" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>57</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_superscript_x_offset</span>
+</pre></td></tr><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_superscript_x_size-instance_method">
+  
+    #<strong>y_superscript_x_size</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Superscript horizontal font size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 48</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-48" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>48</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_superscript_x_size</span>
+</pre></td></tr><tr id="line-49" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>49</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_superscript_x_size</span>
+</pre></td></tr><tr id="line-50" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>50</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_superscript_y_offset-instance_method">
+  
+    #<strong>y_superscript_y_offset</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Superscript y offset.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 60</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_superscript_y_offset</span>
+</pre></td></tr><tr id="line-61" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>61</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_superscript_y_offset</span>
+</pre></td></tr><tr id="line-62" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>62</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y_superscript_y_size-instance_method">
+  
+    #<strong>y_superscript_y_size</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Superscript vertical font size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 52</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">y_superscript_y_size</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre>  <span class="vi">@y_superscript_y_size</span>
+</pre></td></tr><tr id="line-54" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>54</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="encode-class_method">
+  
+    .<strong>encode</strong>(os2, subset)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encode table.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>os2</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="TTFunk::Table::OS2 (class)">TTFunk::Table::OS2</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>subset</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Subset/MacRoman.html" title="TTFunk::Subset::MacRoman (class)">TTFunk::Subset::MacRoman</a></span></tt>, <tt><span class='object_link'><a href="../Subset/Windows1252.html" title="TTFunk::Subset::Windows1252 (class)">TTFunk::Subset::Windows1252</a></span></tt>, <tt><span class='object_link'><a href="../Subset/Unicode.html" title="TTFunk::Subset::Unicode (class)">TTFunk::Subset::Unicode</a></span></tt>, <tt><span class='object_link'><a href="../Subset/Unicode8Bit.html" title="TTFunk::Subset::Unicode8Bit (class)">TTFunk::Subset::Unicode8Bit</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 411</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-411" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>411</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="n">os2</span><span class="p">,</span> <span class="n">subset</span><span class="p">)</span>
+</pre></td></tr><tr id="line-412" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>412</pre></td><td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">=</span> <span class="s1">''</span><span class="p">.</span><span class="nf">b</span>
+</pre></td></tr><tr id="line-413" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>413</pre></td><td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="p">[</span>
+</pre></td></tr><tr id="line-414" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>414</pre></td><td class="rouge-code"><pre>    <span class="n">os2</span><span class="p">.</span><span class="nf">version</span><span class="p">,</span> <span class="n">avg_char_width_for</span><span class="p">(</span><span class="n">os2</span><span class="p">,</span> <span class="n">subset</span><span class="p">),</span> <span class="n">os2</span><span class="p">.</span><span class="nf">weight_class</span><span class="p">,</span>
+</pre></td></tr><tr id="line-415" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>415</pre></td><td class="rouge-code"><pre>    <span class="n">os2</span><span class="p">.</span><span class="nf">width_class</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">type</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">y_subscript_x_size</span><span class="p">,</span>
+</pre></td></tr><tr id="line-416" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>416</pre></td><td class="rouge-code"><pre>    <span class="n">os2</span><span class="p">.</span><span class="nf">y_subscript_y_size</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">y_subscript_x_offset</span><span class="p">,</span>
+</pre></td></tr><tr id="line-417" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>417</pre></td><td class="rouge-code"><pre>    <span class="n">os2</span><span class="p">.</span><span class="nf">y_subscript_y_offset</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">y_superscript_x_size</span><span class="p">,</span>
+</pre></td></tr><tr id="line-418" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>418</pre></td><td class="rouge-code"><pre>    <span class="n">os2</span><span class="p">.</span><span class="nf">y_superscript_y_size</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">y_superscript_x_offset</span><span class="p">,</span>
+</pre></td></tr><tr id="line-419" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>419</pre></td><td class="rouge-code"><pre>    <span class="n">os2</span><span class="p">.</span><span class="nf">y_superscript_y_offset</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">y_strikeout_size</span><span class="p">,</span>
+</pre></td></tr><tr id="line-420" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>420</pre></td><td class="rouge-code"><pre>    <span class="n">os2</span><span class="p">.</span><span class="nf">y_strikeout_position</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">family_class</span><span class="p">,</span>
+</pre></td></tr><tr id="line-421" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>421</pre></td><td class="rouge-code"><pre>  <span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-422" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>422</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-423" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>423</pre></td><td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">os2</span><span class="p">.</span><span class="nf">panose</span>
+</pre></td></tr><tr id="line-424" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>424</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-425" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>425</pre></td><td class="rouge-code"><pre>  <span class="n">new_char_range</span> <span class="o">=</span> <span class="n">unicode_blocks_for</span><span class="p">(</span><span class="n">os2</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">char_range</span><span class="p">,</span> <span class="n">subset</span><span class="p">)</span>
+</pre></td></tr><tr id="line-426" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>426</pre></td><td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="no">BinUtils</span>
+</pre></td></tr><tr id="line-427" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>427</pre></td><td class="rouge-code"><pre>    <span class="p">.</span><span class="nf">slice_int</span><span class="p">(</span>
+</pre></td></tr><tr id="line-428" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>428</pre></td><td class="rouge-code"><pre>      <span class="n">new_char_range</span><span class="p">.</span><span class="nf">value</span><span class="p">,</span>
+</pre></td></tr><tr id="line-429" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>429</pre></td><td class="rouge-code"><pre>      <span class="ss">bit_width: </span><span class="mi">32</span><span class="p">,</span>
+</pre></td></tr><tr id="line-430" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>430</pre></td><td class="rouge-code"><pre>      <span class="ss">slice_count: </span><span class="mi">4</span><span class="p">,</span>
+</pre></td></tr><tr id="line-431" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>431</pre></td><td class="rouge-code"><pre>    <span class="p">)</span>
+</pre></td></tr><tr id="line-432" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>432</pre></td><td class="rouge-code"><pre>    <span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'N*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-433" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>433</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-434" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>434</pre></td><td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">os2</span><span class="p">.</span><span class="nf">vendor_id</span>
+</pre></td></tr><tr id="line-435" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>435</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-436" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>436</pre></td><td class="rouge-code"><pre>  <span class="n">new_cmap_table</span> <span class="o">=</span> <span class="n">subset</span><span class="p">.</span><span class="nf">new_cmap_table</span><span class="p">[</span><span class="ss">:charmap</span><span class="p">]</span>
+</pre></td></tr><tr id="line-437" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>437</pre></td><td class="rouge-code"><pre>  <span class="n">code_points</span> <span class="o">=</span> <span class="n">new_cmap_table</span>
+</pre></td></tr><tr id="line-438" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>438</pre></td><td class="rouge-code"><pre>    <span class="p">.</span><span class="nf">keys</span>
+</pre></td></tr><tr id="line-439" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>439</pre></td><td class="rouge-code"><pre>    <span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">k</span><span class="o">|</span> <span class="p">(</span><span class="n">new_cmap_table</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="ss">:new</span><span class="p">]).</span><span class="nf">positive?</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-440" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>440</pre></td><td class="rouge-code"><pre>    <span class="p">.</span><span class="nf">sort</span>
+</pre></td></tr><tr id="line-441" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>441</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-442" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>442</pre></td><td class="rouge-code"><pre>  <span class="c1"># "This value depends on which character sets the font supports.</span>
+</pre></td></tr><tr id="line-443" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>443</pre></td><td class="rouge-code"><pre>  <span class="c1"># This field cannot represent supplementary character values</span>
+</pre></td></tr><tr id="line-444" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>444</pre></td><td class="rouge-code"><pre>  <span class="c1"># (codepoints greater than 0xFFFF). Fonts that support</span>
+</pre></td></tr><tr id="line-445" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>445</pre></td><td class="rouge-code"><pre>  <span class="c1"># supplementary characters should set the value in this field</span>
+</pre></td></tr><tr id="line-446" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>446</pre></td><td class="rouge-code"><pre>  <span class="c1"># to 0xFFFF."</span>
+</pre></td></tr><tr id="line-447" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>447</pre></td><td class="rouge-code"><pre>  <span class="n">first_char_index</span> <span class="o">=</span> <span class="p">[</span><span class="n">code_points</span><span class="p">.</span><span class="nf">first</span> <span class="o">||</span> <span class="mi">0</span><span class="p">,</span> <span class="no">UNICODE_MAX</span><span class="p">].</span><span class="nf">min</span>
+</pre></td></tr><tr id="line-448" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>448</pre></td><td class="rouge-code"><pre>  <span class="n">last_char_index</span> <span class="o">=</span> <span class="p">[</span><span class="n">code_points</span><span class="p">.</span><span class="nf">last</span> <span class="o">||</span> <span class="mi">0</span><span class="p">,</span> <span class="no">UNICODE_MAX</span><span class="p">].</span><span class="nf">min</span>
+</pre></td></tr><tr id="line-449" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>449</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-450" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>450</pre></td><td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="p">[</span>
+</pre></td></tr><tr id="line-451" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>451</pre></td><td class="rouge-code"><pre>    <span class="n">os2</span><span class="p">.</span><span class="nf">selection</span><span class="p">,</span> <span class="n">first_char_index</span><span class="p">,</span> <span class="n">last_char_index</span><span class="p">,</span>
+</pre></td></tr><tr id="line-452" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>452</pre></td><td class="rouge-code"><pre>  <span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-453" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>453</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-454" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>454</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">os2</span><span class="p">.</span><span class="nf">version</span><span class="p">.</span><span class="nf">positive?</span>
+</pre></td></tr><tr id="line-455" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>455</pre></td><td class="rouge-code"><pre>    <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="p">[</span>
+</pre></td></tr><tr id="line-456" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>456</pre></td><td class="rouge-code"><pre>      <span class="n">os2</span><span class="p">.</span><span class="nf">ascent</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">descent</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">line_gap</span><span class="p">,</span>
+</pre></td></tr><tr id="line-457" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>457</pre></td><td class="rouge-code"><pre>      <span class="n">os2</span><span class="p">.</span><span class="nf">win_ascent</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">win_descent</span><span class="p">,</span>
+</pre></td></tr><tr id="line-458" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>458</pre></td><td class="rouge-code"><pre>    <span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-459" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>459</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-460" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>460</pre></td><td class="rouge-code"><pre>    <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="no">BinUtils</span>
+</pre></td></tr><tr id="line-461" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>461</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">slice_int</span><span class="p">(</span>
+</pre></td></tr><tr id="line-462" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>462</pre></td><td class="rouge-code"><pre>        <span class="n">code_pages_for</span><span class="p">(</span><span class="n">subset</span><span class="p">).</span><span class="nf">value</span><span class="p">,</span>
+</pre></td></tr><tr id="line-463" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>463</pre></td><td class="rouge-code"><pre>        <span class="ss">bit_width: </span><span class="mi">32</span><span class="p">,</span>
+</pre></td></tr><tr id="line-464" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>464</pre></td><td class="rouge-code"><pre>        <span class="ss">slice_count: </span><span class="mi">2</span><span class="p">,</span>
+</pre></td></tr><tr id="line-465" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>465</pre></td><td class="rouge-code"><pre>      <span class="p">)</span>
+</pre></td></tr><tr id="line-466" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>466</pre></td><td class="rouge-code"><pre>      <span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'N*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-467" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>467</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-468" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>468</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">os2</span><span class="p">.</span><span class="nf">version</span> <span class="o">&gt;</span> <span class="mi">1</span>
+</pre></td></tr><tr id="line-469" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>469</pre></td><td class="rouge-code"><pre>      <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="p">[</span>
+</pre></td></tr><tr id="line-470" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>470</pre></td><td class="rouge-code"><pre>        <span class="n">os2</span><span class="p">.</span><span class="nf">x_height</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">cap_height</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">default_char</span><span class="p">,</span>
+</pre></td></tr><tr id="line-471" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>471</pre></td><td class="rouge-code"><pre>        <span class="n">os2</span><span class="p">.</span><span class="nf">break_char</span><span class="p">,</span> <span class="n">os2</span><span class="p">.</span><span class="nf">max_context</span><span class="p">,</span>
+</pre></td></tr><tr id="line-472" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>472</pre></td><td class="rouge-code"><pre>      <span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'n*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-473" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>473</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-474" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>474</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-475" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>475</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-476" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>476</pre></td><td class="rouge-code"><pre>  <span class="n">result</span>
+</pre></td></tr><tr id="line-477" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>477</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="tag-instance_method">
+  
+    #<strong>tag</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Table tag.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/os2.rb, line 400</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-400" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>400</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">tag</span>
+</pre></td></tr><tr id="line-401" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>401</pre></td><td class="rouge-code"><pre>  <span class="s1">'OS/2'</span>
+</pre></td></tr><tr id="line-402" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>402</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb 29 20:15:15 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

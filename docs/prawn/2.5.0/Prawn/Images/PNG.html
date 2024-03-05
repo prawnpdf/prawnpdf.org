@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Prawn::Images::PNG
+  
+    &mdash; Prawn Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Prawn::Images::PNG";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Prawn.html" title="Prawn (module)">Prawn</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Images.html" title="Prawn::Images (module)">Images</a></span></span>
+     &raquo; 
+    <span class="title">PNG</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Prawn::Images::PNG
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Image.html" title="Prawn::Images::Image (class)">Image</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Image.html" title="Prawn::Images::Image (class)">Image</a></span></li>
+          
+            <li class="next">Prawn::Images::PNG</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/prawn/images/png.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>A convenience class that wraps the logic for extracting the parts of a PNG
+image that we need to embed them in a PDF.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+
+
+
+  <section id="attribute-summary-1s8jsp8">
+    <h2>Extension API <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#alpha_channel-instance_method" title="#alpha_channel (instance method)">#<strong>alpha_channel</strong>  &#x21d2; String<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Extracted alpha-channel.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bits-instance_method" title="#bits (instance method)">#<strong>bits</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Bits per sample or per palette index.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#color_type-instance_method" title="#color_type (instance method)">#<strong>color_type</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Color type.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compression_method-instance_method" title="#compression_method (instance method)">#<strong>compression_method</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Compression method.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#filter_method-instance_method" title="#filter_method (instance method)">#<strong>filter_method</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Filter method.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#height-instance_method" title="#height (instance method)">#<strong>height</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Image height in pixels.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#img_data-instance_method" title="#img_data (instance method)">#<strong>img_data</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Image data.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#interlace_method-instance_method" title="#interlace_method (instance method)">#<strong>interlace_method</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Interlace method.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#palette-instance_method" title="#palette (instance method)">#<strong>palette</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Palette data.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scaled_height-instance_method" title="#scaled_height (instance method)">#<strong>scaled_height</strong>  &#x21d2; Number </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Scaled height of the image in PDF points.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scaled_width-instance_method" title="#scaled_width (instance method)">#<strong>scaled_width</strong>  &#x21d2; Number </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Scaled width of the image in PDF points.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#transparency-instance_method" title="#transparency (instance method)">#<strong>transparency</strong>  &#x21d2; Hash{Symbol =&gt; String} </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Transparency data.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#width-instance_method" title="#width (instance method)">#<strong>width</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Image width in pixels.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+
+
+  
+    <section id="method-summary-1s8jsp8">
+      <h2>
+        Extension API
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_render%3F-class_method" title="can_render? (class method)">.<strong>can_render?</strong>(image_blob)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Can this image handler process this image?.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#alpha_channel%3F-instance_method" title="#alpha_channel? (instance method)">#<strong>alpha_channel?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Is there an alpha-channel in this image?.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_pdf_object-instance_method" title="#build_pdf_object (instance method)">#<strong>build_pdf_object</strong>(document)  &#x21d2; PDF::Core::Reference </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Build a PDF object representing this image in <code class="language-ruby highlighter-rouge"><span class="n">document</span></code>, and return a Reference to it.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#colors-instance_method" title="#colors (instance method)">#<strong>colors</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Number of color components to each pixel.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(data)  &#x21d2; PNG </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Process a new PNG image.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#min_pdf_version-instance_method" title="#min_pdf_version (instance method)">#<strong>min_pdf_version</strong>  &#x21d2; Float </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the minimum PDF version required to support this image.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(data)  &#x21d2; <tt><span class='object_link'><a href="" title="Prawn::Images::PNG (class)">PNG</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Process a new PNG image</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A binary string of PNG data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 75</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-75" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>75</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></td></tr><tr id="line-76" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>76</pre></td><td class="rouge-code"><pre>  <span class="k">super</span><span class="p">()</span>
+</pre></td></tr><tr id="line-77" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>77</pre></td><td class="rouge-code"><pre>  <span class="n">data</span> <span class="o">=</span> <span class="no">StringIO</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="nf">dup</span><span class="p">)</span>
+</pre></td></tr><tr id="line-78" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>78</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-79" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>79</pre></td><td class="rouge-code"><pre>  <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># Skip the default header</span>
+</pre></td></tr><tr id="line-80" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>80</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-81" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>81</pre></td><td class="rouge-code"><pre>  <span class="vi">@palette</span> <span class="o">=</span> <span class="o">+</span><span class="s1">''</span>
+</pre></td></tr><tr id="line-82" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>82</pre></td><td class="rouge-code"><pre>  <span class="vi">@img_data</span> <span class="o">=</span> <span class="o">+</span><span class="s1">''</span>
+</pre></td></tr><tr id="line-83" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>83</pre></td><td class="rouge-code"><pre>  <span class="vi">@transparency</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-84" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>84</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre>  <span class="kp">loop</span> <span class="k">do</span>
+</pre></td></tr><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre>    <span class="n">chunk_size</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="nf">unpack1</span><span class="p">(</span><span class="s1">'N'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-87" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>87</pre></td><td class="rouge-code"><pre>    <span class="n">section</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></td></tr><tr id="line-88" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>88</pre></td><td class="rouge-code"><pre>    <span class="k">case</span> <span class="n">section</span>
+</pre></td></tr><tr id="line-89" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>89</pre></td><td class="rouge-code"><pre>    <span class="k">when</span> <span class="s1">'IHDR'</span>
+</pre></td></tr><tr id="line-90" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>90</pre></td><td class="rouge-code"><pre>      <span class="c1"># we can grab other interesting values from here (like width,</span>
+</pre></td></tr><tr id="line-91" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>91</pre></td><td class="rouge-code"><pre>      <span class="c1"># height, etc)</span>
+</pre></td></tr><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre>      <span class="n">values</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">).</span><span class="nf">unpack</span><span class="p">(</span><span class="s1">'NNCCCCC'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-93" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>93</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre>      <span class="vi">@width</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></td></tr><tr id="line-95" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>95</pre></td><td class="rouge-code"><pre>      <span class="vi">@height</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></td></tr><tr id="line-96" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>96</pre></td><td class="rouge-code"><pre>      <span class="vi">@bits</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></td></tr><tr id="line-97" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>97</pre></td><td class="rouge-code"><pre>      <span class="vi">@color_type</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></td></tr><tr id="line-98" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>98</pre></td><td class="rouge-code"><pre>      <span class="vi">@compression_method</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></td></tr><tr id="line-99" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>99</pre></td><td class="rouge-code"><pre>      <span class="vi">@filter_method</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</pre></td></tr><tr id="line-100" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>100</pre></td><td class="rouge-code"><pre>      <span class="vi">@interlace_method</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+</pre></td></tr><tr id="line-101" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>101</pre></td><td class="rouge-code"><pre>    <span class="k">when</span> <span class="s1">'PLTE'</span>
+</pre></td></tr><tr id="line-102" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>102</pre></td><td class="rouge-code"><pre>      <span class="vi">@palette</span> <span class="o">&lt;&lt;</span> <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">)</span>
+</pre></td></tr><tr id="line-103" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>103</pre></td><td class="rouge-code"><pre>    <span class="k">when</span> <span class="s1">'IDAT'</span>
+</pre></td></tr><tr id="line-104" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>104</pre></td><td class="rouge-code"><pre>      <span class="vi">@img_data</span> <span class="o">&lt;&lt;</span> <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">)</span>
+</pre></td></tr><tr id="line-105" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>105</pre></td><td class="rouge-code"><pre>    <span class="k">when</span> <span class="s1">'tRNS'</span>
+</pre></td></tr><tr id="line-106" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>106</pre></td><td class="rouge-code"><pre>      <span class="c1"># This chunk can only occur once and it must occur after the</span>
+</pre></td></tr><tr id="line-107" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>107</pre></td><td class="rouge-code"><pre>      <span class="c1"># PLTE chunk and before the IDAT chunk</span>
+</pre></td></tr><tr id="line-108" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>108</pre></td><td class="rouge-code"><pre>      <span class="vi">@transparency</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-109" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>109</pre></td><td class="rouge-code"><pre>      <span class="k">case</span> <span class="vi">@color_type</span>
+</pre></td></tr><tr id="line-110" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>110</pre></td><td class="rouge-code"><pre>      <span class="k">when</span> <span class="mi">3</span>
+</pre></td></tr><tr id="line-111" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>111</pre></td><td class="rouge-code"><pre>        <span class="vi">@transparency</span><span class="p">[</span><span class="ss">:palette</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">).</span><span class="nf">unpack</span><span class="p">(</span><span class="s1">'C*'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-112" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>112</pre></td><td class="rouge-code"><pre>      <span class="k">when</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-113" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>113</pre></td><td class="rouge-code"><pre>        <span class="c1"># Greyscale. Corresponding to entries in the PLTE chunk.</span>
+</pre></td></tr><tr id="line-114" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>114</pre></td><td class="rouge-code"><pre>        <span class="c1"># Grey is two bytes, range 0 .. (2 ^ bit-depth) - 1</span>
+</pre></td></tr><tr id="line-115" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>115</pre></td><td class="rouge-code"><pre>        <span class="n">grayval</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">).</span><span class="nf">unpack1</span><span class="p">(</span><span class="s1">'n'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-116" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>116</pre></td><td class="rouge-code"><pre>        <span class="vi">@transparency</span><span class="p">[</span><span class="ss">:grayscale</span><span class="p">]</span> <span class="o">=</span> <span class="n">grayval</span>
+</pre></td></tr><tr id="line-117" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>117</pre></td><td class="rouge-code"><pre>      <span class="k">when</span> <span class="mi">2</span>
+</pre></td></tr><tr id="line-118" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>118</pre></td><td class="rouge-code"><pre>        <span class="c1"># True colour with proper alpha channel.</span>
+</pre></td></tr><tr id="line-119" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>119</pre></td><td class="rouge-code"><pre>        <span class="vi">@transparency</span><span class="p">[</span><span class="ss">:rgb</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">).</span><span class="nf">unpack</span><span class="p">(</span><span class="s1">'nnn'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-120" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>120</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-121" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>121</pre></td><td class="rouge-code"><pre>    <span class="k">when</span> <span class="s1">'IEND'</span>
+</pre></td></tr><tr id="line-122" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>122</pre></td><td class="rouge-code"><pre>      <span class="c1"># we've got everything we need, exit the loop</span>
+</pre></td></tr><tr id="line-123" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>123</pre></td><td class="rouge-code"><pre>      <span class="k">break</span>
+</pre></td></tr><tr id="line-124" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>124</pre></td><td class="rouge-code"><pre>    <span class="k">else</span>
+</pre></td></tr><tr id="line-125" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>125</pre></td><td class="rouge-code"><pre>      <span class="c1"># unknown (or un-important) section, skip over it</span>
+</pre></td></tr><tr id="line-126" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>126</pre></td><td class="rouge-code"><pre>      <span class="n">data</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="nf">pos</span> <span class="o">+</span> <span class="n">chunk_size</span><span class="p">)</span>
+</pre></td></tr><tr id="line-127" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>127</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-128" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>128</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-129" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>129</pre></td><td class="rouge-code"><pre>    <span class="n">data</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1"># Skip the CRC</span>
+</pre></td></tr><tr id="line-130" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>130</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-131" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>131</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-132" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>132</pre></td><td class="rouge-code"><pre>  <span class="vi">@img_data</span> <span class="o">=</span> <span class="no">Zlib</span><span class="o">::</span><span class="no">Inflate</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="vi">@img_data</span><span class="p">)</span>
+</pre></td></tr><tr id="line-133" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>133</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="alpha_channel-instance_method">
+  
+    #<strong>alpha_channel</strong>  &#x21d2; <tt>String</tt><sup>?</sup>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Extracted alpha-channel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 54</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-54" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>54</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">alpha_channel</span>
+</pre></td></tr><tr id="line-55" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>55</pre></td><td class="rouge-code"><pre>  <span class="vi">@alpha_channel</span>
+</pre></td></tr><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="bits-instance_method">
+  
+    #<strong>bits</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Bits per sample or per palette index.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 34</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-34" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>34</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">bits</span>
+</pre></td></tr><tr id="line-35" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>35</pre></td><td class="rouge-code"><pre>  <span class="vi">@bits</span>
+</pre></td></tr><tr id="line-36" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>36</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="color_type-instance_method">
+  
+    #<strong>color_type</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Color type.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 38</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-38" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>38</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">color_type</span>
+</pre></td></tr><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre>  <span class="vi">@color_type</span>
+</pre></td></tr><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="compression_method-instance_method">
+  
+    #<strong>compression_method</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Compression method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 42</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-42" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>42</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">compression_method</span>
+</pre></td></tr><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre>  <span class="vi">@compression_method</span>
+</pre></td></tr><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="filter_method-instance_method">
+  
+    #<strong>filter_method</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Filter method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 46</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-46" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>46</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">filter_method</span>
+</pre></td></tr><tr id="line-47" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>47</pre></td><td class="rouge-code"><pre>  <span class="vi">@filter_method</span>
+</pre></td></tr><tr id="line-48" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>48</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="height-instance_method">
+  
+    #<strong>height</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Image height in pixels.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 30</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-30" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>30</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">height</span>
+</pre></td></tr><tr id="line-31" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>31</pre></td><td class="rouge-code"><pre>  <span class="vi">@height</span>
+</pre></td></tr><tr id="line-32" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>32</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="img_data-instance_method">
+  
+    #<strong>img_data</strong>  &#x21d2; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Image data.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 18</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-18" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>18</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">img_data</span>
+</pre></td></tr><tr id="line-19" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>19</pre></td><td class="rouge-code"><pre>  <span class="vi">@img_data</span>
+</pre></td></tr><tr id="line-20" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>20</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="interlace_method-instance_method">
+  
+    #<strong>interlace_method</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Interlace method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 50</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-50" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>50</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">interlace_method</span>
+</pre></td></tr><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre>  <span class="vi">@interlace_method</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="palette-instance_method">
+  
+    #<strong>palette</strong>  &#x21d2; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Palette data.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 14</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-14" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>14</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">palette</span>
+</pre></td></tr><tr id="line-15" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>15</pre></td><td class="rouge-code"><pre>  <span class="vi">@palette</span>
+</pre></td></tr><tr id="line-16" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>16</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="scaled_height=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="scaled_height-instance_method">
+  
+    #<strong>scaled_height</strong>  &#x21d2; <tt>Number</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Scaled height of the image in PDF points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 62</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-62" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>62</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">scaled_height</span>
+</pre></td></tr><tr id="line-63" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>63</pre></td><td class="rouge-code"><pre>  <span class="vi">@scaled_height</span>
+</pre></td></tr><tr id="line-64" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>64</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id="scaled_width=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="scaled_width-instance_method">
+  
+    #<strong>scaled_width</strong>  &#x21d2; <tt>Number</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Scaled width of the image in PDF points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 58</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">scaled_width</span>
+</pre></td></tr><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre>  <span class="vi">@scaled_width</span>
+</pre></td></tr><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="transparency-instance_method">
+  
+    #<strong>transparency</strong>  &#x21d2; <tt>Hash{Symbol =&gt; String}</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Transparency data.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; String}</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 22</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-22" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>22</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">transparency</span>
+</pre></td></tr><tr id="line-23" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>23</pre></td><td class="rouge-code"><pre>  <span class="vi">@transparency</span>
+</pre></td></tr><tr id="line-24" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>24</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="width-instance_method">
+  
+    #<strong>width</strong>  &#x21d2; <tt>Integer</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Image width in pixels.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 26</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-26" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>26</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">width</span>
+</pre></td></tr><tr id="line-27" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>27</pre></td><td class="rouge-code"><pre>  <span class="vi">@width</span>
+</pre></td></tr><tr id="line-28" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>28</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="can_render?-class_method">
+  
+    .<strong>can_render?</strong>(image_blob)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Can this image handler process this image?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>image_blob</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 68</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-68" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>68</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">can_render?</span><span class="p">(</span><span class="n">image_blob</span><span class="p">)</span>
+</pre></td></tr><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre>  <span class="n">image_blob</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">].</span><span class="nf">unpack</span><span class="p">(</span><span class="s1">'C*'</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">137</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</pre></td></tr><tr id="line-70" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>70</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="alpha_channel?-instance_method">
+  
+    #<strong>alpha_channel?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Is there an alpha-channel in this image?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 165</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-165" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>165</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">alpha_channel?</span>
+</pre></td></tr><tr id="line-166" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>166</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">color_type</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">||</span> <span class="n">color_type</span> <span class="o">==</span> <span class="mi">6</span>
+</pre></td></tr><tr id="line-167" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>167</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="vi">@transparency</span><span class="p">.</span><span class="nf">any?</span> <span class="k">if</span> <span class="n">color_type</span> <span class="o">==</span> <span class="mi">3</span>
+</pre></td></tr><tr id="line-168" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>168</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-169" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>169</pre></td><td class="rouge-code"><pre>  <span class="kp">false</span>
+</pre></td></tr><tr id="line-170" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>170</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_pdf_object-instance_method">
+  
+    #<strong>build_pdf_object</strong>(document)  &#x21d2; <tt><span class='object_link'>PDF::Core::Reference</span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Build a PDF object representing this image in <code class="language-ruby highlighter-rouge"><span class="n">document</span></code>, and return
+a Reference to it.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>document</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Document.html" title="Prawn::Document (class)">Prawn::Document</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'>PDF::Core::Reference</span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 177</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-177" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>177</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">build_pdf_object</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+</pre></td></tr><tr id="line-178" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>178</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">compression_method</span> <span class="o">!=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-179" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>179</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">Errors</span><span class="o">::</span><span class="no">UnsupportedImageType</span><span class="p">,</span>
+</pre></td></tr><tr id="line-180" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>180</pre></td><td class="rouge-code"><pre>      <span class="s1">'PNG uses an unsupported compression method'</span>
+</pre></td></tr><tr id="line-181" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>181</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-182" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>182</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-183" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>183</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">filter_method</span> <span class="o">!=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-184" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>184</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">Errors</span><span class="o">::</span><span class="no">UnsupportedImageType</span><span class="p">,</span>
+</pre></td></tr><tr id="line-185" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>185</pre></td><td class="rouge-code"><pre>      <span class="s1">'PNG uses an unsupported filter method'</span>
+</pre></td></tr><tr id="line-186" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>186</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-187" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>187</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-188" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>188</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">interlace_method</span> <span class="o">!=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-189" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>189</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">Errors</span><span class="o">::</span><span class="no">UnsupportedImageType</span><span class="p">,</span>
+</pre></td></tr><tr id="line-190" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>190</pre></td><td class="rouge-code"><pre>      <span class="s1">'PNG uses unsupported interlace method'</span>
+</pre></td></tr><tr id="line-191" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>191</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-192" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>192</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-193" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>193</pre></td><td class="rouge-code"><pre>  <span class="c1"># some PNG types store the colour and alpha channel data together,</span>
+</pre></td></tr><tr id="line-194" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>194</pre></td><td class="rouge-code"><pre>  <span class="c1"># which the PDF spec doesn't like, so split it out.</span>
+</pre></td></tr><tr id="line-195" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>195</pre></td><td class="rouge-code"><pre>  <span class="n">split_alpha_channel!</span>
+</pre></td></tr><tr id="line-196" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>196</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-197" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>197</pre></td><td class="rouge-code"><pre>  <span class="k">case</span> <span class="n">colors</span>
+</pre></td></tr><tr id="line-198" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>198</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="mi">1</span>
+</pre></td></tr><tr id="line-199" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>199</pre></td><td class="rouge-code"><pre>    <span class="n">color</span> <span class="o">=</span> <span class="ss">:DeviceGray</span>
+</pre></td></tr><tr id="line-200" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>200</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="mi">3</span>
+</pre></td></tr><tr id="line-201" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>201</pre></td><td class="rouge-code"><pre>    <span class="n">color</span> <span class="o">=</span> <span class="ss">:DeviceRGB</span>
+</pre></td></tr><tr id="line-202" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>202</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-203" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>203</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">Errors</span><span class="o">::</span><span class="no">UnsupportedImageType</span><span class="p">,</span>
+</pre></td></tr><tr id="line-204" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>204</pre></td><td class="rouge-code"><pre>      <span class="s2">"PNG uses an unsupported number of colors (</span><span class="si">#{</span><span class="n">png</span><span class="p">.</span><span class="nf">colors</span><span class="si">}</span><span class="s2">)"</span>
+</pre></td></tr><tr id="line-205" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>205</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-206" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>206</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-207" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>207</pre></td><td class="rouge-code"><pre>  <span class="c1"># build the image dict</span>
+</pre></td></tr><tr id="line-208" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>208</pre></td><td class="rouge-code"><pre>  <span class="n">obj</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="nf">ref!</span><span class="p">(</span>
+</pre></td></tr><tr id="line-209" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>209</pre></td><td class="rouge-code"><pre>    <span class="no">Type</span><span class="p">:</span> <span class="ss">:XObject</span><span class="p">,</span>
+</pre></td></tr><tr id="line-210" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>210</pre></td><td class="rouge-code"><pre>    <span class="no">Subtype</span><span class="p">:</span> <span class="ss">:Image</span><span class="p">,</span>
+</pre></td></tr><tr id="line-211" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>211</pre></td><td class="rouge-code"><pre>    <span class="no">Height</span><span class="p">:</span> <span class="n">height</span><span class="p">,</span>
+</pre></td></tr><tr id="line-212" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>212</pre></td><td class="rouge-code"><pre>    <span class="no">Width</span><span class="p">:</span> <span class="n">width</span><span class="p">,</span>
+</pre></td></tr><tr id="line-213" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>213</pre></td><td class="rouge-code"><pre>    <span class="no">BitsPerComponent</span><span class="p">:</span> <span class="n">bits</span><span class="p">,</span>
+</pre></td></tr><tr id="line-214" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>214</pre></td><td class="rouge-code"><pre>  <span class="p">)</span>
+</pre></td></tr><tr id="line-215" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>215</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-216" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>216</pre></td><td class="rouge-code"><pre>  <span class="c1"># append the actual image data to the object as a stream</span>
+</pre></td></tr><tr id="line-217" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>217</pre></td><td class="rouge-code"><pre>  <span class="n">obj</span> <span class="o">&lt;&lt;</span> <span class="n">img_data</span>
+</pre></td></tr><tr id="line-218" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>218</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-219" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>219</pre></td><td class="rouge-code"><pre>  <span class="n">obj</span><span class="p">.</span><span class="nf">stream</span><span class="p">.</span><span class="nf">filters</span> <span class="o">&lt;&lt;</span> <span class="p">{</span>
+</pre></td></tr><tr id="line-220" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>220</pre></td><td class="rouge-code"><pre>    <span class="no">FlateDecode</span><span class="p">:</span> <span class="p">{</span>
+</pre></td></tr><tr id="line-221" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>221</pre></td><td class="rouge-code"><pre>      <span class="no">Predictor</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+</pre></td></tr><tr id="line-222" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>222</pre></td><td class="rouge-code"><pre>      <span class="no">Colors</span><span class="p">:</span> <span class="n">colors</span><span class="p">,</span>
+</pre></td></tr><tr id="line-223" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>223</pre></td><td class="rouge-code"><pre>      <span class="no">BitsPerComponent</span><span class="p">:</span> <span class="n">bits</span><span class="p">,</span>
+</pre></td></tr><tr id="line-224" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>224</pre></td><td class="rouge-code"><pre>      <span class="no">Columns</span><span class="p">:</span> <span class="n">width</span><span class="p">,</span>
+</pre></td></tr><tr id="line-225" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>225</pre></td><td class="rouge-code"><pre>    <span class="p">},</span>
+</pre></td></tr><tr id="line-226" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>226</pre></td><td class="rouge-code"><pre>  <span class="p">}</span>
+</pre></td></tr><tr id="line-227" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>227</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-228" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>228</pre></td><td class="rouge-code"><pre>  <span class="c1"># sort out the colours of the image</span>
+</pre></td></tr><tr id="line-229" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>229</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">palette</span><span class="p">.</span><span class="nf">empty?</span>
+</pre></td></tr><tr id="line-230" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>230</pre></td><td class="rouge-code"><pre>    <span class="n">obj</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:ColorSpace</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span>
+</pre></td></tr><tr id="line-231" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>231</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-232" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>232</pre></td><td class="rouge-code"><pre>    <span class="c1"># embed the colour palette in the PDF as a object stream</span>
+</pre></td></tr><tr id="line-233" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>233</pre></td><td class="rouge-code"><pre>    <span class="n">palette_obj</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="nf">ref!</span><span class="p">({})</span>
+</pre></td></tr><tr id="line-234" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>234</pre></td><td class="rouge-code"><pre>    <span class="n">palette_obj</span> <span class="o">&lt;&lt;</span> <span class="n">palette</span>
+</pre></td></tr><tr id="line-235" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>235</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-236" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>236</pre></td><td class="rouge-code"><pre>    <span class="c1"># build the color space array for the image</span>
+</pre></td></tr><tr id="line-237" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>237</pre></td><td class="rouge-code"><pre>    <span class="n">obj</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:ColorSpace</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+</pre></td></tr><tr id="line-238" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>238</pre></td><td class="rouge-code"><pre>      <span class="ss">:Indexed</span><span class="p">,</span>
+</pre></td></tr><tr id="line-239" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>239</pre></td><td class="rouge-code"><pre>      <span class="ss">:DeviceRGB</span><span class="p">,</span>
+</pre></td></tr><tr id="line-240" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>240</pre></td><td class="rouge-code"><pre>      <span class="p">(</span><span class="n">palette</span><span class="p">.</span><span class="nf">size</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+</pre></td></tr><tr id="line-241" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>241</pre></td><td class="rouge-code"><pre>      <span class="n">palette_obj</span><span class="p">,</span>
+</pre></td></tr><tr id="line-242" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>242</pre></td><td class="rouge-code"><pre>    <span class="p">]</span>
+</pre></td></tr><tr id="line-243" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>243</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-244" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>244</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-245" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>245</pre></td><td class="rouge-code"><pre>  <span class="c1"># *************************************</span>
+</pre></td></tr><tr id="line-246" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>246</pre></td><td class="rouge-code"><pre>  <span class="c1"># add transparency data if necessary</span>
+</pre></td></tr><tr id="line-247" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>247</pre></td><td class="rouge-code"><pre>  <span class="c1"># *************************************</span>
+</pre></td></tr><tr id="line-248" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>248</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-249" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>249</pre></td><td class="rouge-code"><pre>  <span class="c1"># For PNG color types 0, 2 and 3, the transparency data is stored in</span>
+</pre></td></tr><tr id="line-250" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>250</pre></td><td class="rouge-code"><pre>  <span class="c1"># a dedicated PNG chunk, and is exposed via the transparency attribute</span>
+</pre></td></tr><tr id="line-251" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>251</pre></td><td class="rouge-code"><pre>  <span class="c1"># of the PNG class.</span>
+</pre></td></tr><tr id="line-252" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>252</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">transparency</span><span class="p">[</span><span class="ss">:grayscale</span><span class="p">]</span>
+</pre></td></tr><tr id="line-253" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>253</pre></td><td class="rouge-code"><pre>    <span class="c1"># Use Color Key Masking (spec section 4.8.5)</span>
+</pre></td></tr><tr id="line-254" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>254</pre></td><td class="rouge-code"><pre>    <span class="c1"># - An array with N elements, where N is two times the number of color</span>
+</pre></td></tr><tr id="line-255" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>255</pre></td><td class="rouge-code"><pre>    <span class="c1">#   components.</span>
+</pre></td></tr><tr id="line-256" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>256</pre></td><td class="rouge-code"><pre>    <span class="n">val</span> <span class="o">=</span> <span class="n">transparency</span><span class="p">[</span><span class="ss">:grayscale</span><span class="p">]</span>
+</pre></td></tr><tr id="line-257" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>257</pre></td><td class="rouge-code"><pre>    <span class="n">obj</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:Mask</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">val</span><span class="p">,</span> <span class="n">val</span><span class="p">]</span>
+</pre></td></tr><tr id="line-258" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>258</pre></td><td class="rouge-code"><pre>  <span class="k">elsif</span> <span class="n">transparency</span><span class="p">[</span><span class="ss">:rgb</span><span class="p">]</span>
+</pre></td></tr><tr id="line-259" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>259</pre></td><td class="rouge-code"><pre>    <span class="c1"># Use Color Key Masking (spec section 4.8.5)</span>
+</pre></td></tr><tr id="line-260" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>260</pre></td><td class="rouge-code"><pre>    <span class="c1"># - An array with N elements, where N is two times the number of color</span>
+</pre></td></tr><tr id="line-261" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>261</pre></td><td class="rouge-code"><pre>    <span class="c1">#   components.</span>
+</pre></td></tr><tr id="line-262" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>262</pre></td><td class="rouge-code"><pre>    <span class="n">rgb</span> <span class="o">=</span> <span class="n">transparency</span><span class="p">[</span><span class="ss">:rgb</span><span class="p">]</span>
+</pre></td></tr><tr id="line-263" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>263</pre></td><td class="rouge-code"><pre>    <span class="n">obj</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:Mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">rgb</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span> <span class="p">}.</span><span class="nf">flatten</span>
+</pre></td></tr><tr id="line-264" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>264</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-265" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>265</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-266" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>266</pre></td><td class="rouge-code"><pre>  <span class="c1"># For PNG color types 4 and 6, the transparency data is stored as</span>
+</pre></td></tr><tr id="line-267" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>267</pre></td><td class="rouge-code"><pre>  <span class="c1"># a alpha channel mixed in with the main image data. The PNG class</span>
+</pre></td></tr><tr id="line-268" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>268</pre></td><td class="rouge-code"><pre>  <span class="c1"># separates it out for us and makes it available via the alpha_channel</span>
+</pre></td></tr><tr id="line-269" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>269</pre></td><td class="rouge-code"><pre>  <span class="c1"># attribute</span>
+</pre></td></tr><tr id="line-270" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>270</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">alpha_channel?</span>
+</pre></td></tr><tr id="line-271" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>271</pre></td><td class="rouge-code"><pre>    <span class="n">smask_obj</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="nf">ref!</span><span class="p">(</span>
+</pre></td></tr><tr id="line-272" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>272</pre></td><td class="rouge-code"><pre>      <span class="no">Type</span><span class="p">:</span> <span class="ss">:XObject</span><span class="p">,</span>
+</pre></td></tr><tr id="line-273" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>273</pre></td><td class="rouge-code"><pre>      <span class="no">Subtype</span><span class="p">:</span> <span class="ss">:Image</span><span class="p">,</span>
+</pre></td></tr><tr id="line-274" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>274</pre></td><td class="rouge-code"><pre>      <span class="no">Height</span><span class="p">:</span> <span class="n">height</span><span class="p">,</span>
+</pre></td></tr><tr id="line-275" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>275</pre></td><td class="rouge-code"><pre>      <span class="no">Width</span><span class="p">:</span> <span class="n">width</span><span class="p">,</span>
+</pre></td></tr><tr id="line-276" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>276</pre></td><td class="rouge-code"><pre>      <span class="no">BitsPerComponent</span><span class="p">:</span> <span class="n">bits</span><span class="p">,</span>
+</pre></td></tr><tr id="line-277" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>277</pre></td><td class="rouge-code"><pre>      <span class="no">ColorSpace</span><span class="p">:</span> <span class="ss">:DeviceGray</span><span class="p">,</span>
+</pre></td></tr><tr id="line-278" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>278</pre></td><td class="rouge-code"><pre>      <span class="no">Decode</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</pre></td></tr><tr id="line-279" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>279</pre></td><td class="rouge-code"><pre>    <span class="p">)</span>
+</pre></td></tr><tr id="line-280" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>280</pre></td><td class="rouge-code"><pre>    <span class="n">smask_obj</span><span class="p">.</span><span class="nf">stream</span> <span class="o">&lt;&lt;</span> <span class="n">alpha_channel</span>
+</pre></td></tr><tr id="line-281" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>281</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-282" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>282</pre></td><td class="rouge-code"><pre>    <span class="n">smask_obj</span><span class="p">.</span><span class="nf">stream</span><span class="p">.</span><span class="nf">filters</span> <span class="o">&lt;&lt;</span> <span class="p">{</span>
+</pre></td></tr><tr id="line-283" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>283</pre></td><td class="rouge-code"><pre>      <span class="no">FlateDecode</span><span class="p">:</span> <span class="p">{</span>
+</pre></td></tr><tr id="line-284" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>284</pre></td><td class="rouge-code"><pre>        <span class="no">Predictor</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+</pre></td></tr><tr id="line-285" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>285</pre></td><td class="rouge-code"><pre>        <span class="no">Colors</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</pre></td></tr><tr id="line-286" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>286</pre></td><td class="rouge-code"><pre>        <span class="no">BitsPerComponent</span><span class="p">:</span> <span class="n">bits</span><span class="p">,</span>
+</pre></td></tr><tr id="line-287" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>287</pre></td><td class="rouge-code"><pre>        <span class="no">Columns</span><span class="p">:</span> <span class="n">width</span><span class="p">,</span>
+</pre></td></tr><tr id="line-288" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>288</pre></td><td class="rouge-code"><pre>      <span class="p">},</span>
+</pre></td></tr><tr id="line-289" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>289</pre></td><td class="rouge-code"><pre>    <span class="p">}</span>
+</pre></td></tr><tr id="line-290" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>290</pre></td><td class="rouge-code"><pre>    <span class="n">obj</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:SMask</span><span class="p">]</span> <span class="o">=</span> <span class="n">smask_obj</span>
+</pre></td></tr><tr id="line-291" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>291</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-292" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>292</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-293" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>293</pre></td><td class="rouge-code"><pre>  <span class="n">obj</span>
+</pre></td></tr><tr id="line-294" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>294</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="colors-instance_method">
+  
+    #<strong>colors</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Number of color components to each pixel.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 138</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-138" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>138</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">colors</span>
+</pre></td></tr><tr id="line-139" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>139</pre></td><td class="rouge-code"><pre>  <span class="k">case</span> <span class="n">color_type</span>
+</pre></td></tr><tr id="line-140" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>140</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span>
+</pre></td></tr><tr id="line-141" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>141</pre></td><td class="rouge-code"><pre>    <span class="mi">1</span>
+</pre></td></tr><tr id="line-142" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>142</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span>
+</pre></td></tr><tr id="line-143" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>143</pre></td><td class="rouge-code"><pre>    <span class="mi">3</span>
+</pre></td></tr><tr id="line-144" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>144</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-145" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>145</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="min_pdf_version-instance_method">
+  
+    #<strong>min_pdf_version</strong>  &#x21d2; <tt>Float</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the minimum PDF version required to support this image.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/images/png.rb, line 299</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-299" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>299</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">min_pdf_version</span>
+</pre></td></tr><tr id="line-300" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>300</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">bits</span> <span class="o">&gt;</span> <span class="mi">8</span>
+</pre></td></tr><tr id="line-301" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>301</pre></td><td class="rouge-code"><pre>    <span class="c1"># 16-bit color only supported in 1.5+ (ISO 32000-1:2008 8.9.5.1)</span>
+</pre></td></tr><tr id="line-302" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>302</pre></td><td class="rouge-code"><pre>    <span class="mf">1.5</span>
+</pre></td></tr><tr id="line-303" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>303</pre></td><td class="rouge-code"><pre>  <span class="k">elsif</span> <span class="n">alpha_channel?</span>
+</pre></td></tr><tr id="line-304" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>304</pre></td><td class="rouge-code"><pre>    <span class="c1"># Need transparency for SMask</span>
+</pre></td></tr><tr id="line-305" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>305</pre></td><td class="rouge-code"><pre>    <span class="mf">1.4</span>
+</pre></td></tr><tr id="line-306" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>306</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-307" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>307</pre></td><td class="rouge-code"><pre>    <span class="mf">1.0</span>
+</pre></td></tr><tr id="line-308" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>308</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-309" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>309</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar  1 12:33:17 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

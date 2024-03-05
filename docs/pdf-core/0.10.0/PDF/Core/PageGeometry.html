@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: PDF::Core::PageGeometry
+  
+    &mdash; Documentation by YARD 0.9.36
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "PDF::Core::PageGeometry";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../PDF.html" title="PDF (module)">PDF</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Core.html" title="PDF::Core (module)">Core</a></span></span>
+     &raquo; 
+    <span class="title">PageGeometry</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: PDF::Core::PageGeometry
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/pdf/core/page_geometry.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Dimensions pulled from PDF::Writer, rubyforge.org/projects/ruby-pdf</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="SIZES-constant" class="">SIZES =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Named page sizes.</p>
+
+<p>All of these dimensions are in PDF Points (1/72 inch).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="p">{</span>
+  <span class="s1">'4A0'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">4767.87</span><span class="p">,</span> <span class="mf">6740.79</span><span class="p">],</span>
+  <span class="s1">'2A0'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">3370.39</span><span class="p">,</span> <span class="mf">4767.87</span><span class="p">],</span>
+  <span class="s1">'A0'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">2383.94</span><span class="p">,</span> <span class="mf">3370.39</span><span class="p">],</span>
+  <span class="s1">'A1'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1683.78</span><span class="p">,</span> <span class="mf">2383.94</span><span class="p">],</span>
+  <span class="s1">'A2'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1190.55</span><span class="p">,</span> <span class="mf">1683.78</span><span class="p">],</span>
+  <span class="s1">'A3'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">841.89</span><span class="p">,</span> <span class="mf">1190.55</span><span class="p">],</span>
+  <span class="s1">'A4'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">595.28</span><span class="p">,</span> <span class="mf">841.89</span><span class="p">],</span>
+  <span class="s1">'A5'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">419.53</span><span class="p">,</span> <span class="mf">595.28</span><span class="p">],</span>
+  <span class="s1">'A6'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">297.64</span><span class="p">,</span> <span class="mf">419.53</span><span class="p">],</span>
+  <span class="s1">'A7'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">209.76</span><span class="p">,</span> <span class="mf">297.64</span><span class="p">],</span>
+  <span class="s1">'A8'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">147.40</span><span class="p">,</span> <span class="mf">209.76</span><span class="p">],</span>
+  <span class="s1">'A9'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">104.88</span><span class="p">,</span> <span class="mf">147.40</span><span class="p">],</span>
+  <span class="s1">'A10'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">73.70</span><span class="p">,</span> <span class="mf">104.88</span><span class="p">],</span>
+  <span class="s1">'B0'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">2834.65</span><span class="p">,</span> <span class="mf">4008.19</span><span class="p">],</span>
+  <span class="s1">'B1'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">2004.09</span><span class="p">,</span> <span class="mf">2834.65</span><span class="p">],</span>
+  <span class="s1">'B2'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1417.32</span><span class="p">,</span> <span class="mf">2004.09</span><span class="p">],</span>
+  <span class="s1">'B3'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1000.63</span><span class="p">,</span> <span class="mf">1417.32</span><span class="p">],</span>
+  <span class="s1">'B4'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">708.66</span><span class="p">,</span> <span class="mf">1000.63</span><span class="p">],</span>
+  <span class="s1">'B5'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">498.90</span><span class="p">,</span> <span class="mf">708.66</span><span class="p">],</span>
+  <span class="s1">'B6'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">354.33</span><span class="p">,</span> <span class="mf">498.90</span><span class="p">],</span>
+  <span class="s1">'B7'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">249.45</span><span class="p">,</span> <span class="mf">354.33</span><span class="p">],</span>
+  <span class="s1">'B8'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">175.75</span><span class="p">,</span> <span class="mf">249.45</span><span class="p">],</span>
+  <span class="s1">'B9'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">124.72</span><span class="p">,</span> <span class="mf">175.75</span><span class="p">],</span>
+  <span class="s1">'B10'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">87.87</span><span class="p">,</span> <span class="mf">124.72</span><span class="p">],</span>
+  <span class="s1">'C0'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">2599.37</span><span class="p">,</span> <span class="mf">3676.54</span><span class="p">],</span>
+  <span class="s1">'C1'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1836.85</span><span class="p">,</span> <span class="mf">2599.37</span><span class="p">],</span>
+  <span class="s1">'C2'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1298.27</span><span class="p">,</span> <span class="mf">1836.85</span><span class="p">],</span>
+  <span class="s1">'C3'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">918.43</span><span class="p">,</span> <span class="mf">1298.27</span><span class="p">],</span>
+  <span class="s1">'C4'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">649.13</span><span class="p">,</span> <span class="mf">918.43</span><span class="p">],</span>
+  <span class="s1">'C5'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">459.21</span><span class="p">,</span> <span class="mf">649.13</span><span class="p">],</span>
+  <span class="s1">'C6'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">323.15</span><span class="p">,</span> <span class="mf">459.21</span><span class="p">],</span>
+  <span class="s1">'C7'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">229.61</span><span class="p">,</span> <span class="mf">323.15</span><span class="p">],</span>
+  <span class="s1">'C8'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">161.57</span><span class="p">,</span> <span class="mf">229.61</span><span class="p">],</span>
+  <span class="s1">'C9'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">113.39</span><span class="p">,</span> <span class="mf">161.57</span><span class="p">],</span>
+  <span class="s1">'C10'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">79.37</span><span class="p">,</span> <span class="mf">113.39</span><span class="p">],</span>
+  <span class="s1">'RA0'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">2437.80</span><span class="p">,</span> <span class="mf">3458.27</span><span class="p">],</span>
+  <span class="s1">'RA1'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1729.13</span><span class="p">,</span> <span class="mf">2437.80</span><span class="p">],</span>
+  <span class="s1">'RA2'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1218.90</span><span class="p">,</span> <span class="mf">1729.13</span><span class="p">],</span>
+  <span class="s1">'RA3'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">864.57</span><span class="p">,</span> <span class="mf">1218.90</span><span class="p">],</span>
+  <span class="s1">'RA4'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">609.45</span><span class="p">,</span> <span class="mf">864.57</span><span class="p">],</span>
+  <span class="s1">'SRA0'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">2551.18</span><span class="p">,</span> <span class="mf">3628.35</span><span class="p">],</span>
+  <span class="s1">'SRA1'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1814.17</span><span class="p">,</span> <span class="mf">2551.18</span><span class="p">],</span>
+  <span class="s1">'SRA2'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">1275.59</span><span class="p">,</span> <span class="mf">1814.17</span><span class="p">],</span>
+  <span class="s1">'SRA3'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">907.09</span><span class="p">,</span> <span class="mf">1275.59</span><span class="p">],</span>
+  <span class="s1">'SRA4'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">637.80</span><span class="p">,</span> <span class="mf">907.09</span><span class="p">],</span>
+  <span class="s1">'EXECUTIVE'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">521.86</span><span class="p">,</span> <span class="mf">756.00</span><span class="p">],</span>
+  <span class="s1">'FOLIO'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">612.00</span><span class="p">,</span> <span class="mf">936.00</span><span class="p">],</span>
+  <span class="s1">'LEGAL'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">612.00</span><span class="p">,</span> <span class="mf">1008.00</span><span class="p">],</span>
+  <span class="s1">'LETTER'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">612.00</span><span class="p">,</span> <span class="mf">792.00</span><span class="p">],</span>
+  <span class="s1">'TABLOID'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mf">792.00</span><span class="p">,</span> <span class="mf">1224.00</span><span class="p">],</span>
+<span class="p">}.</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Mar  4 20:54:13 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

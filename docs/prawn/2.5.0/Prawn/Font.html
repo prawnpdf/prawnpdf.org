@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Prawn::Font
+  
+    &mdash; Prawn Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Prawn::Font";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Prawn.html" title="Prawn (module)">Prawn</a></span></span>
+     &raquo; 
+    <span class="title">Font</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Prawn::Font
+  <span class="abstract note title">Abstract</span>
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Prawn::Font</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/prawn/font.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This class is abstract.</strong>
+  <div class='inline'>
+</div>
+</div>
+<p>Provides font information and helper functions.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Fonts/AFM.html" title="Prawn::Fonts::AFM (class)">Prawn::Fonts::AFM</a></span>, <span class='object_link'><a href="Fonts/TTF.html" title="Prawn::Fonts::TTF (class)">Prawn::Fonts::TTF</a></span></p>
+</div>
+
+
+  
+    <section id="constant-summary-z8oa18">
+      <h2>
+        Experimental API
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="AFM-constant" class="deprecated">AFM =
+            <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+</div></div>
+
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">Prawn</span><span class="o">::</span><span class="no">Fonts</span><span class="o">::</span><span class="no">AFM</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="TTF-constant" class="deprecated">TTF =
+            <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+</div></div>
+
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">Fonts</span><span class="o">::</span><span class="no">TTF</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="DFont-constant" class="deprecated">DFont =
+            <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+</div></div>
+
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">Fonts</span><span class="o">::</span><span class="no">DFont</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="TTC-constant" class="deprecated">TTC =
+            <div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+</div></div>
+
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">Fonts</span><span class="o">::</span><span class="no">TTC</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+  <section id="attribute-summary-z8oa18">
+    <h2>Experimental API <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#family-instance_method" title="#family (instance method)">#<strong>family</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The font family.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">#<strong>name</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The font name.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#options-instance_method" title="#options (instance method)">#<strong>options</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The options hash used to initialize the font.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+
+
+  
+    <section id="method-summary-z8oa18">
+      <h2>
+        Experimental API
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load-class_method" title="load (class method)">.<strong>load</strong>(document, src, options = {})  &#x21d2; Prawn::Fonts::Font </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Shortcut interface for constructing a font object.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_to_current_page-instance_method" title="#add_to_current_page (instance method)">#<strong>add_to_current_page</strong>(subset)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Registers the given subset of the current font with the current PDF page.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ascender-instance_method" title="#ascender (instance method)">#<strong>ascender</strong>  &#x21d2; Number </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The size of the font ascender in PDF points.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#descender-instance_method" title="#descender (instance method)">#<strong>descender</strong>  &#x21d2; Number </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The size of the font descender in PDF points.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eql%3F-instance_method" title="#eql? (instance method)">#<strong>eql?</strong>(other)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Compliments the <span class='object_link'><a href="#hash-instance_method" title="Prawn::Font#hash (method)">#hash</a></span> implementation.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hash-instance_method" title="#hash (instance method)">#<strong>hash</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Return a hash (as in <code class="language-ruby highlighter-rouge"><span class="no">Object</span><span class="c1">#hash</span></code>) for the font.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#height-instance_method" title="#height (instance method)">#<strong>height</strong>  &#x21d2; Number </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets height of current font in PDF points at current font size.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#height_at-instance_method" title="#height_at (instance method)">#<strong>height_at</strong>(size)  &#x21d2; Number </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Gets height of font in PDF points at the given font size.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">#<strong>inspect</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a string containing a human-readable representation of this font.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#line_gap-instance_method" title="#line_gap (instance method)">#<strong>line_gap</strong>  &#x21d2; Number </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The size of the recommended gap between lines of text in PDF points.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#normalize_encoding-instance_method" title="#normalize_encoding (instance method)">#<strong>normalize_encoding</strong>(string)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  <span class="abstract note title">abstract</span>
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Normalizes the encoding of the string to an encoding supported by the font.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#normalize_encoding!-instance_method" title="#normalize_encoding! (instance method)">#<strong>normalize_encoding!</strong>(str)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="family-instance_method">
+  
+    #<strong>family</strong>  &#x21d2; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The font family.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 359</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-359" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>359</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">family</span>
+</pre></td></tr><tr id="line-360" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>360</pre></td><td class="rouge-code"><pre>  <span class="vi">@family</span>
+</pre></td></tr><tr id="line-361" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>361</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    #<strong>name</strong>  &#x21d2; <tt>String</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The font name.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 355</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-355" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>355</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">name</span>
+</pre></td></tr><tr id="line-356" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>356</pre></td><td class="rouge-code"><pre>  <span class="vi">@name</span>
+</pre></td></tr><tr id="line-357" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>357</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="options-instance_method">
+  
+    #<strong>options</strong>  &#x21d2; <tt>Hash</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The options hash used to initialize the font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 363</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-363" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>363</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">options</span>
+</pre></td></tr><tr id="line-364" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>364</pre></td><td class="rouge-code"><pre>  <span class="vi">@options</span>
+</pre></td></tr><tr id="line-365" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>365</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="load-class_method">
+  
+    .<strong>load</strong>(document, src, options = {})  &#x21d2; <tt>Prawn::Fonts::Font</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Shortcut interface for constructing a font object. Filenames of the form
+<code class="language-ruby highlighter-rouge"><span class="o">*</span><span class="p">.</span><span class="nf">ttf</span></code> will call <span class='object_link'><a href="Fonts/TTF.html#initialize-instance_method" title="Prawn::Fonts::TTF#initialize (method)">TTF.new</a></span>, <code class="language-ruby highlighter-rouge"><span class="o">*</span><span class="p">.</span><span class="nf">otf</span></code> calls
+<span class='object_link'><a href="Fonts/TTF.html#initialize-instance_method" title="Prawn::Fonts::TTF#initialize (method)">OTF.new</a></span>, <code class="language-ruby highlighter-rouge"><span class="o">*</span><span class="p">.</span><span class="nf">dfont</span></code> calls <span class='object_link'><a href="Fonts/TTF.html#initialize-instance_method" title="Prawn::Fonts::TTF#initialize (method)">DFont.new</a></span>, <code class="language-ruby highlighter-rouge"><span class="o">*</span><span class="p">.</span><span class="nf">ttc</span></code> goes to <span class='object_link'><a href="Fonts/TTF.html#initialize-instance_method" title="Prawn::Fonts::TTF#initialize (method)">TTC.new</a></span>, and anything
+else will be passed through to <span class='object_link'><a href="Fonts/AFM.html#initialize-instance_method" title="Prawn::Fonts::AFM#initialize (method)">AFM.new</a></span>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>document</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Document.html" title="Prawn::Document (class)">Prawn::Document</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>owning document</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>src</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>font file path</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:family</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Prawn::Fonts::Font</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 377</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-377" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>377</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-378" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>378</pre></td><td class="rouge-code"><pre>  <span class="k">case</span> <span class="n">font_format</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-379" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>379</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="s1">'ttf'</span> <span class="k">then</span> <span class="no">TTF</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-380" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>380</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="s1">'otf'</span> <span class="k">then</span> <span class="no">Fonts</span><span class="o">::</span><span class="no">OTF</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-381" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>381</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="s1">'dfont'</span> <span class="k">then</span> <span class="no">DFont</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-382" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>382</pre></td><td class="rouge-code"><pre>  <span class="k">when</span> <span class="s1">'ttc'</span> <span class="k">then</span> <span class="no">TTC</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-383" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>383</pre></td><td class="rouge-code"><pre>  <span class="k">else</span> <span class="no">AFM</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-384" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>384</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-385" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>385</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_to_current_page-instance_method">
+  
+    #<strong>add_to_current_page</strong>(subset)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Registers the given subset of the current font with the current PDF
+page. This is safe to call multiple times for a given font and subset,
+as it will only add the font the first time it is called.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>subset</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 496</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-496" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>496</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">add_to_current_page</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+</pre></td></tr><tr id="line-497" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>497</pre></td><td class="rouge-code"><pre>  <span class="vi">@references</span><span class="p">[</span><span class="n">subset</span><span class="p">]</span> <span class="o">||=</span> <span class="n">register</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+</pre></td></tr><tr id="line-498" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>498</pre></td><td class="rouge-code"><pre>  <span class="vi">@document</span><span class="p">.</span><span class="nf">state</span><span class="p">.</span><span class="nf">page</span><span class="p">.</span><span class="nf">fonts</span><span class="p">[</span><span class="n">identifier_for</span><span class="p">(</span><span class="n">subset</span><span class="p">)]</span> <span class="o">=</span> <span class="vi">@references</span><span class="p">[</span><span class="n">subset</span><span class="p">]</span>
+</pre></td></tr><tr id="line-499" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>499</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ascender-instance_method">
+  
+    #<strong>ascender</strong>  &#x21d2; <tt>Number</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The size of the font ascender in PDF points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 430</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-430" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>430</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">ascender</span>
+</pre></td></tr><tr id="line-431" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>431</pre></td><td class="rouge-code"><pre>  <span class="vi">@ascender</span> <span class="o">/</span> <span class="mf">1000.0</span> <span class="o">*</span> <span class="n">size</span>
+</pre></td></tr><tr id="line-432" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>432</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="descender-instance_method">
+  
+    #<strong>descender</strong>  &#x21d2; <tt>Number</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The size of the font descender in PDF points.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 437</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-437" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>437</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">descender</span>
+</pre></td></tr><tr id="line-438" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>438</pre></td><td class="rouge-code"><pre>  <span class="o">-</span><span class="vi">@descender</span> <span class="o">/</span> <span class="mf">1000.0</span> <span class="o">*</span> <span class="n">size</span>
+</pre></td></tr><tr id="line-439" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>439</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eql?-instance_method">
+  
+    #<strong>eql?</strong>(other)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Compliments the <span class='object_link'><a href="#hash-instance_method" title="Prawn::Font#hash (method)">#hash</a></span> implementation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>other</span>
+      
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 532</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-532" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>532</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">eql?</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+</pre></td></tr><tr id="line-533" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>533</pre></td><td class="rouge-code"><pre>  <span class="nb">self</span><span class="p">.</span><span class="nf">class</span> <span class="o">==</span> <span class="n">other</span><span class="p">.</span><span class="nf">class</span> <span class="o">&amp;&amp;</span> <span class="nb">name</span> <span class="o">==</span> <span class="n">other</span><span class="p">.</span><span class="nf">name</span> <span class="o">&amp;&amp;</span>
+</pre></td></tr><tr id="line-534" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>534</pre></td><td class="rouge-code"><pre>    <span class="n">family</span> <span class="o">==</span> <span class="n">other</span><span class="p">.</span><span class="nf">family</span> <span class="o">&amp;&amp;</span> <span class="n">size</span> <span class="o">==</span> <span class="n">other</span><span class="p">.</span><span class="nf">size</span>
+</pre></td></tr><tr id="line-535" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>535</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hash-instance_method">
+  
+    #<strong>hash</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Return a hash (as in <code class="language-ruby highlighter-rouge"><span class="no">Object</span><span class="c1">#hash</span></code>) for the font. This is required since
+font objects are used as keys in hashes that cache certain values.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 524</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-524" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>524</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">hash</span>
+</pre></td></tr><tr id="line-525" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>525</pre></td><td class="rouge-code"><pre>  <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="nf">class</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">family</span><span class="p">].</span><span class="nf">hash</span>
+</pre></td></tr><tr id="line-526" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>526</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="height-instance_method">
+  
+    #<strong>height</strong>  &#x21d2; <tt>Number</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Gets height of current font in PDF points at current font size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 486</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-486" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>486</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">height</span>
+</pre></td></tr><tr id="line-487" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>487</pre></td><td class="rouge-code"><pre>  <span class="n">height_at</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+</pre></td></tr><tr id="line-488" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>488</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="height_at-instance_method">
+  
+    #<strong>height_at</strong>(size)  &#x21d2; <tt>Number</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Gets height of font in PDF points at the given font size.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>size</span>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 478</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-478" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>478</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">height_at</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+</pre></td></tr><tr id="line-479" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>479</pre></td><td class="rouge-code"><pre>  <span class="vi">@normalized_height</span> <span class="o">||=</span> <span class="p">(</span><span class="vi">@ascender</span> <span class="o">-</span> <span class="vi">@descender</span> <span class="o">+</span> <span class="vi">@line_gap</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1000.0</span>
+</pre></td></tr><tr id="line-480" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>480</pre></td><td class="rouge-code"><pre>  <span class="vi">@normalized_height</span> <span class="o">*</span> <span class="n">size</span>
+</pre></td></tr><tr id="line-481" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>481</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    #<strong>inspect</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a string containing a human-readable representation of this font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 516</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-516" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>516</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">inspect</span>
+</pre></td></tr><tr id="line-517" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>517</pre></td><td class="rouge-code"><pre>  <span class="s2">"</span><span class="si">#{</span><span class="nb">self</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">&lt; </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="n">size</span><span class="si">}</span><span class="s2"> &gt;"</span>
+</pre></td></tr><tr id="line-518" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>518</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="line_gap-instance_method">
+  
+    #<strong>line_gap</strong>  &#x21d2; <tt>Number</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The size of the recommended gap between lines of text in PDF points</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 444</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-444" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>444</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">line_gap</span>
+</pre></td></tr><tr id="line-445" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>445</pre></td><td class="rouge-code"><pre>  <span class="vi">@line_gap</span> <span class="o">/</span> <span class="mf">1000.0</span> <span class="o">*</span> <span class="n">size</span>
+</pre></td></tr><tr id="line-446" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>446</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="normalize_encoding-instance_method">
+  
+    #<strong>normalize_encoding</strong>(string)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note abstract">
+  <strong>This method is abstract.</strong>
+  <div class='inline'>
+</div>
+</div>
+<p>Normalizes the encoding of the string to an encoding supported by the
+font. The string is expected to be UTF-8 going in. It will be re-encoded
+and the new string will be returned.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 456</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-456" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>456</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">normalize_encoding</span><span class="p">(</span><span class="n">_string</span><span class="p">)</span>
+</pre></td></tr><tr id="line-457" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>457</pre></td><td class="rouge-code"><pre>  <span class="k">raise</span> <span class="no">NotImplementedError</span><span class="p">,</span>
+</pre></td></tr><tr id="line-458" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>458</pre></td><td class="rouge-code"><pre>    <span class="s1">'subclasses of Prawn::Font must implement #normalize_encoding'</span>
+</pre></td></tr><tr id="line-459" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>459</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="normalize_encoding!-instance_method">
+  
+    #<strong>normalize_encoding!</strong>(str)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+</div></div>
+
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This method doesn’t mutate its argument any more.</p>
+</div>
+  </div>
+
+<p>Destructive version of <span class='object_link'><a href="#normalize_encoding-instance_method" title="Prawn::Font#normalize_encoding (method)">#normalize_encoding</a></span>; normalizes the encoding of a
+string in place.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/font.rb, line 469</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-469" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>469</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">normalize_encoding!</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+</pre></td></tr><tr id="line-470" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>470</pre></td><td class="rouge-code"><pre>  <span class="nb">warn</span><span class="p">(</span><span class="s1">'Font#normalize_encoding! is deprecated. Please use non-mutating version Font#normalize_encoding instead.'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-471" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>471</pre></td><td class="rouge-code"><pre>  <span class="n">str</span><span class="p">.</span><span class="nf">dup</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="n">normalize_encoding</span><span class="p">(</span><span class="n">str</span><span class="p">))</span>
+</pre></td></tr><tr id="line-472" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>472</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar  1 12:33:16 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

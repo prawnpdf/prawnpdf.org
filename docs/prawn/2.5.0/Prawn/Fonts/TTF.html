@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Prawn::Fonts::TTF
+  
+    &mdash; Prawn Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Prawn::Fonts::TTF";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Prawn.html" title="Prawn (module)">Prawn</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Fonts.html" title="Prawn::Fonts (module)">Fonts</a></span></span>
+     &raquo; 
+    <span class="title">TTF</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Prawn::Fonts::TTF
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Font.html" title="Prawn::Font (class)">Prawn::Font</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Font.html" title="Prawn::Font (class)">Prawn::Font</a></span></li>
+          
+            <li class="next">Prawn::Fonts::TTF</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/prawn/fonts/ttf.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>You shouldn’t use this class directly.</p>
+</div>
+  </div>
+
+<p>TrueType font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="DFont.html" title="Prawn::Fonts::DFont (class)">DFont</a></span>, <span class='object_link'><a href="OTF.html" title="Prawn::Fonts::OTF (class)">OTF</a></span>, <span class='object_link'><a href="TTC.html" title="Prawn::Fonts::TTC (class)">TTC</a></span></p>
+</div>
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="TTF/Error.html" title="Prawn::Fonts::TTF::Error (class)">Error</a></span>, <span class='object_link'><a href="TTF/NoPostscriptName.html" title="Prawn::Fonts::TTF::NoPostscriptName (class)">NoPostscriptName</a></span>, <span class='object_link'><a href="TTF/NoUnicodeCMap.html" title="Prawn::Fonts::TTF::NoUnicodeCMap (class)">NoUnicodeCMap</a></span>
+    
+  
+</p>
+
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#subsets-instance_method" title="#subsets (instance method)">#<strong>subsets</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute subsets.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ttf-instance_method" title="#ttf (instance method)">#<strong>ttf</strong>  &#x21d2; TTFunk::File </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>TTFunk font.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#basename-instance_method" title="#basename (instance method)">#<strong>basename</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Base name of the font.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bbox-instance_method" title="#bbox (instance method)">#<strong>bbox</strong>  &#x21d2; Array(Number, Number, Number, Number) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The font bbox.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#character_count-instance_method" title="#character_count (instance method)">#<strong>character_count</strong>(str)  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the number of characters in <code class="language-ruby highlighter-rouge"><span class="n">str</span></code> (a UTF-8-encoded string).</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compute_width_of-instance_method" title="#compute_width_of (instance method)">#<strong>compute_width_of</strong>(string, options = {})  &#x21d2; Number </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Compute width of a string at the specified size, optionally with kerning applied.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode_text-instance_method" title="#encode_text (instance method)">#<strong>encode_text</strong>(text, options = {})  &#x21d2; Array&lt;Array(0, (String, Array)&gt;] </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Perform any changes to the string that need to happen before it is rendered to the canvas.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#glyph_present%3F-instance_method" title="#glyph_present? (instance method)">#<strong>glyph_present?</strong>(char)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Does this font has a glyph for the character?.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_kerning_data%3F-instance_method" title="#has_kerning_data? (instance method)">#<strong>has_kerning_data?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Does this font contain kerning data.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(document, name, options = {})  &#x21d2; TTF </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of TTF.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#normalize_encoding-instance_method" title="#normalize_encoding (instance method)">#<strong>normalize_encoding</strong>(text)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Normlize text to a compatible encoding.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_utf8-instance_method" title="#to_utf8 (instance method)">#<strong>to_utf8</strong>(text)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encode text to UTF-8.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unicode%3F-instance_method" title="#unicode? (instance method)">#<strong>unicode?</strong>  &#x21d2; true </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Does this font support Unicode?.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(document, name, options = {})  &#x21d2; <tt><span class='object_link'><a href="../Font.html#TTF-constant" title="Prawn::Font::TTF (constant)">TTF</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of TTF.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>document</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Document.html" title="Prawn::Document (class)">Prawn::Document</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>font file path</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:family</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 134</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-134" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>134</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">document</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-135" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>135</pre></td><td class="rouge-code"><pre>  <span class="k">super</span>
+</pre></td></tr><tr id="line-136" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>136</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-137" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>137</pre></td><td class="rouge-code"><pre>  <span class="vi">@ttf</span> <span class="o">=</span> <span class="n">read_ttf_file</span>
+</pre></td></tr><tr id="line-138" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>138</pre></td><td class="rouge-code"><pre>  <span class="vi">@subsets</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-139" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>139</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">full_font_embedding</span>
+</pre></td></tr><tr id="line-140" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>140</pre></td><td class="rouge-code"><pre>      <span class="no">FullFontSubsetsCollection</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="vi">@ttf</span><span class="p">)</span>
+</pre></td></tr><tr id="line-141" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>141</pre></td><td class="rouge-code"><pre>    <span class="k">else</span>
+</pre></td></tr><tr id="line-142" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>142</pre></td><td class="rouge-code"><pre>      <span class="no">TTFunk</span><span class="o">::</span><span class="no">SubsetCollection</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="vi">@ttf</span><span class="p">)</span>
+</pre></td></tr><tr id="line-143" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>143</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-144" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>144</pre></td><td class="rouge-code"><pre>  <span class="vi">@italic_angle</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-145" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>145</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-146" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>146</pre></td><td class="rouge-code"><pre>  <span class="vi">@attributes</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-147" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>147</pre></td><td class="rouge-code"><pre>  <span class="vi">@bounding_boxes</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-148" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>148</pre></td><td class="rouge-code"><pre>  <span class="vi">@char_widths</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-149" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>149</pre></td><td class="rouge-code"><pre>  <span class="vi">@has_kerning_data</span> <span class="o">=</span> <span class="vi">@ttf</span><span class="p">.</span><span class="nf">kerning</span><span class="p">.</span><span class="nf">exists?</span> <span class="o">&amp;&amp;</span> <span class="vi">@ttf</span><span class="p">.</span><span class="nf">kerning</span><span class="p">.</span><span class="nf">tables</span><span class="p">.</span><span class="nf">any?</span>
+</pre></td></tr><tr id="line-150" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>150</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-151" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>151</pre></td><td class="rouge-code"><pre>  <span class="vi">@ascender</span> <span class="o">=</span> <span class="no">Integer</span><span class="p">(</span><span class="vi">@ttf</span><span class="p">.</span><span class="nf">ascent</span> <span class="o">*</span> <span class="n">scale_factor</span><span class="p">)</span>
+</pre></td></tr><tr id="line-152" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>152</pre></td><td class="rouge-code"><pre>  <span class="vi">@descender</span> <span class="o">=</span> <span class="no">Integer</span><span class="p">(</span><span class="vi">@ttf</span><span class="p">.</span><span class="nf">descent</span> <span class="o">*</span> <span class="n">scale_factor</span><span class="p">)</span>
+</pre></td></tr><tr id="line-153" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>153</pre></td><td class="rouge-code"><pre>  <span class="vi">@line_gap</span> <span class="o">=</span> <span class="no">Integer</span><span class="p">(</span><span class="vi">@ttf</span><span class="p">.</span><span class="nf">line_gap</span> <span class="o">*</span> <span class="n">scale_factor</span><span class="p">)</span>
+</pre></td></tr><tr id="line-154" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>154</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="subsets-instance_method">
+  
+    #<strong>subsets</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute subsets.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 58</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">subsets</span>
+</pre></td></tr><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre>  <span class="vi">@subsets</span>
+</pre></td></tr><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="ttf-instance_method">
+  
+    #<strong>ttf</strong>  &#x21d2; <tt>TTFunk::File</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>TTFunk font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>TTFunk::File</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 57</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-57" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>57</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">ttf</span>
+</pre></td></tr><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre>  <span class="vi">@ttf</span>
+</pre></td></tr><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="basename-instance_method">
+  
+    #<strong>basename</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Base name of the font.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 240</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-240" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>240</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">basename</span>
+</pre></td></tr><tr id="line-241" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>241</pre></td><td class="rouge-code"><pre>  <span class="vi">@basename</span> <span class="o">||=</span> <span class="vi">@ttf</span><span class="p">.</span><span class="nf">name</span><span class="p">.</span><span class="nf">postscript_name</span>
+</pre></td></tr><tr id="line-242" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>242</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bbox-instance_method">
+  
+    #<strong>bbox</strong>  &#x21d2; <tt>Array(Number, Number, Number, Number)</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The font bbox.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array(Number, Number, Number, Number)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 184</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-184" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>184</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">bbox</span>
+</pre></td></tr><tr id="line-185" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>185</pre></td><td class="rouge-code"><pre>  <span class="vi">@bbox</span> <span class="o">||=</span> <span class="vi">@ttf</span><span class="p">.</span><span class="nf">bbox</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="no">Integer</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="n">scale_factor</span><span class="p">)</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-186" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>186</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="character_count-instance_method">
+  
+    #<strong>character_count</strong>(str)  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the number of characters in <code class="language-ruby highlighter-rouge"><span class="n">str</span></code> (a UTF-8-encoded string).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 354</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-354" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>354</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">character_count</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+</pre></td></tr><tr id="line-355" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>355</pre></td><td class="rouge-code"><pre>  <span class="n">str</span><span class="p">.</span><span class="nf">length</span>
+</pre></td></tr><tr id="line-356" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>356</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compute_width_of-instance_method">
+  
+    #<strong>compute_width_of</strong>(string, options = {})  &#x21d2; <tt>Number</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Compute width of a string at the specified size, optionally with kerning
+applied.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>string</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p><em>must</em> be encoded as UTF-8</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Number</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Number</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 164</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-164" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>164</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">compute_width_of</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-165" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>165</pre></td><td class="rouge-code"><pre>  <span class="n">scale</span> <span class="o">=</span> <span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="ss">:size</span><span class="p">]</span> <span class="o">||</span> <span class="n">size</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1000.0</span>
+</pre></td></tr><tr id="line-166" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>166</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="ss">:kerning</span><span class="p">]</span>
+</pre></td></tr><tr id="line-167" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>167</pre></td><td class="rouge-code"><pre>    <span class="n">kern</span><span class="p">(</span><span class="n">string</span><span class="p">).</span><span class="nf">reduce</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="p">,</span> <span class="n">r</span><span class="o">|</span>
+</pre></td></tr><tr id="line-168" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>168</pre></td><td class="rouge-code"><pre>      <span class="k">if</span> <span class="n">r</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Numeric</span><span class="p">)</span>
+</pre></td></tr><tr id="line-169" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>169</pre></td><td class="rouge-code"><pre>        <span class="n">s</span> <span class="o">-</span> <span class="n">r</span>
+</pre></td></tr><tr id="line-170" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>170</pre></td><td class="rouge-code"><pre>      <span class="k">else</span>
+</pre></td></tr><tr id="line-171" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>171</pre></td><td class="rouge-code"><pre>        <span class="n">r</span><span class="p">.</span><span class="nf">reduce</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">e</span><span class="o">|</span> <span class="n">a</span> <span class="o">+</span> <span class="n">character_width_by_code</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-172" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>172</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-173" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>173</pre></td><td class="rouge-code"><pre>    <span class="p">}</span> <span class="o">*</span> <span class="n">scale</span>
+</pre></td></tr><tr id="line-174" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>174</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-175" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>175</pre></td><td class="rouge-code"><pre>    <span class="n">string</span><span class="p">.</span><span class="nf">codepoints</span><span class="p">.</span><span class="nf">reduce</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="p">,</span> <span class="n">r</span><span class="o">|</span>
+</pre></td></tr><tr id="line-176" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>176</pre></td><td class="rouge-code"><pre>      <span class="n">s</span> <span class="o">+</span> <span class="n">character_width_by_code</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></td></tr><tr id="line-177" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>177</pre></td><td class="rouge-code"><pre>    <span class="p">}</span> <span class="o">*</span> <span class="n">scale</span>
+</pre></td></tr><tr id="line-178" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>178</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-179" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>179</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="encode_text-instance_method">
+  
+    #<strong>encode_text</strong>(text, options = {})  &#x21d2; <tt>Array&lt;Array(0, (String, Array)&gt;]</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Perform any changes to the string that need to happen before it is
+rendered to the canvas. Returns an array of subset “chunks”, where the
+even-numbered indices are the font subset number, and the following
+entry element is either a string or an array (for kerned text).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>must be in UTF-8 encoding</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash{Symbol =&gt; any}</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Array(0, (String, Array)&gt;]</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Array&lt;Array(0, (String, Array)&gt;]</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 204</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-204" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>204</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">encode_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-205" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>205</pre></td><td class="rouge-code"><pre>  <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="nf">chomp</span>
+</pre></td></tr><tr id="line-206" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>206</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-207" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>207</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="ss">:kerning</span><span class="p">]</span>
+</pre></td></tr><tr id="line-208" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>208</pre></td><td class="rouge-code"><pre>    <span class="n">last_subset</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-209" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>209</pre></td><td class="rouge-code"><pre>    <span class="n">kern</span><span class="p">(</span><span class="n">text</span><span class="p">).</span><span class="nf">reduce</span><span class="p">([])</span> <span class="k">do</span> <span class="o">|</span><span class="n">result</span><span class="p">,</span> <span class="n">element</span><span class="o">|</span>
+</pre></td></tr><tr id="line-210" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>210</pre></td><td class="rouge-code"><pre>      <span class="k">if</span> <span class="n">element</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Numeric</span><span class="p">)</span>
+</pre></td></tr><tr id="line-211" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>211</pre></td><td class="rouge-code"><pre>        <span class="k">unless</span> <span class="n">result</span><span class="p">.</span><span class="nf">last</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Array</span><span class="p">)</span>
+</pre></td></tr><tr id="line-212" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>212</pre></td><td class="rouge-code"><pre>          <span class="n">result</span><span class="p">.</span><span class="nf">last</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">result</span><span class="p">.</span><span class="nf">last</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+</pre></td></tr><tr id="line-213" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>213</pre></td><td class="rouge-code"><pre>        <span class="k">end</span>
+</pre></td></tr><tr id="line-214" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>214</pre></td><td class="rouge-code"><pre>        <span class="n">result</span><span class="p">.</span><span class="nf">last</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">element</span>
+</pre></td></tr><tr id="line-215" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>215</pre></td><td class="rouge-code"><pre>        <span class="n">result</span>
+</pre></td></tr><tr id="line-216" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>216</pre></td><td class="rouge-code"><pre>      <span class="k">else</span>
+</pre></td></tr><tr id="line-217" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>217</pre></td><td class="rouge-code"><pre>        <span class="n">encoded</span> <span class="o">=</span> <span class="vi">@subsets</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre></td></tr><tr id="line-218" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>218</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-219" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>219</pre></td><td class="rouge-code"><pre>        <span class="k">if</span> <span class="n">encoded</span><span class="p">.</span><span class="nf">first</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">last_subset</span>
+</pre></td></tr><tr id="line-220" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>220</pre></td><td class="rouge-code"><pre>          <span class="n">result</span><span class="p">.</span><span class="nf">last</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">encoded</span><span class="p">.</span><span class="nf">first</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></td></tr><tr id="line-221" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>221</pre></td><td class="rouge-code"><pre>          <span class="n">encoded</span><span class="p">.</span><span class="nf">shift</span>
+</pre></td></tr><tr id="line-222" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>222</pre></td><td class="rouge-code"><pre>        <span class="k">end</span>
+</pre></td></tr><tr id="line-223" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>223</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-224" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>224</pre></td><td class="rouge-code"><pre>        <span class="k">if</span> <span class="n">encoded</span><span class="p">.</span><span class="nf">any?</span>
+</pre></td></tr><tr id="line-225" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>225</pre></td><td class="rouge-code"><pre>          <span class="n">last_subset</span> <span class="o">=</span> <span class="n">encoded</span><span class="p">.</span><span class="nf">last</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></td></tr><tr id="line-226" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>226</pre></td><td class="rouge-code"><pre>          <span class="n">result</span> <span class="o">+</span> <span class="n">encoded</span>
+</pre></td></tr><tr id="line-227" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>227</pre></td><td class="rouge-code"><pre>        <span class="k">else</span>
+</pre></td></tr><tr id="line-228" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>228</pre></td><td class="rouge-code"><pre>          <span class="n">result</span>
+</pre></td></tr><tr id="line-229" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>229</pre></td><td class="rouge-code"><pre>        <span class="k">end</span>
+</pre></td></tr><tr id="line-230" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>230</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-231" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>231</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-232" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>232</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-233" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>233</pre></td><td class="rouge-code"><pre>    <span class="vi">@subsets</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">text</span><span class="p">.</span><span class="nf">unpack</span><span class="p">(</span><span class="s1">'U*'</span><span class="p">))</span>
+</pre></td></tr><tr id="line-234" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>234</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-235" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>235</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="glyph_present?-instance_method">
+  
+    #<strong>glyph_present?</strong>(char)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Does this font has a glyph for the character?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>char</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 345</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-345" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>345</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">glyph_present?</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+</pre></td></tr><tr id="line-346" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>346</pre></td><td class="rouge-code"><pre>  <span class="n">code</span> <span class="o">=</span> <span class="n">char</span><span class="p">.</span><span class="nf">codepoints</span><span class="p">.</span><span class="nf">first</span>
+</pre></td></tr><tr id="line-347" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>347</pre></td><td class="rouge-code"><pre>  <span class="n">cmap</span><span class="p">[</span><span class="n">code</span><span class="p">].</span><span class="nf">positive?</span>
+</pre></td></tr><tr id="line-348" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>348</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_kerning_data?-instance_method">
+  
+    #<strong>has_kerning_data?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Does this font contain kerning data.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 191</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-191" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>191</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">has_kerning_data?</span> <span class="c1"># rubocop: disable Naming/PredicateName</span>
+</pre></td></tr><tr id="line-192" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>192</pre></td><td class="rouge-code"><pre>  <span class="vi">@has_kerning_data</span>
+</pre></td></tr><tr id="line-193" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>193</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="normalize_encoding-instance_method">
+  
+    #<strong>normalize_encoding</strong>(text)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Normlize text to a compatible encoding.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 325</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-325" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>325</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">normalize_encoding</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></td></tr><tr id="line-326" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>326</pre></td><td class="rouge-code"><pre>  <span class="n">text</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="o">::</span><span class="no">Encoding</span><span class="o">::</span><span class="no">UTF_8</span><span class="p">)</span>
+</pre></td></tr><tr id="line-327" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>327</pre></td><td class="rouge-code"><pre><span class="k">rescue</span> <span class="no">StandardError</span>
+</pre></td></tr><tr id="line-328" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>328</pre></td><td class="rouge-code"><pre>  <span class="k">raise</span> <span class="no">Prawn</span><span class="o">::</span><span class="no">Errors</span><span class="o">::</span><span class="no">IncompatibleStringEncoding</span><span class="p">,</span>
+</pre></td></tr><tr id="line-329" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>329</pre></td><td class="rouge-code"><pre>    <span class="s2">"Encoding </span><span class="si">#{</span><span class="n">text</span><span class="p">.</span><span class="nf">encoding</span><span class="si">}</span><span class="s2"> can not be transparently converted to UTF-8. "</span> <span class="p">\</span>
+</pre></td></tr><tr id="line-330" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>330</pre></td><td class="rouge-code"><pre>      <span class="s1">'Please ensure the encoding of the string you are attempting to use is set correctly'</span>
+</pre></td></tr><tr id="line-331" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>331</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_utf8-instance_method">
+  
+    #<strong>to_utf8</strong>(text)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encode text to UTF-8.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 337</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-337" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>337</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">to_utf8</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></td></tr><tr id="line-338" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>338</pre></td><td class="rouge-code"><pre>  <span class="n">text</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s1">'UTF-8'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-339" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>339</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unicode?-instance_method">
+  
+    #<strong>unicode?</strong>  &#x21d2; <tt>true</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Does this font support Unicode?</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/prawn/fonts/ttf.rb, line 63</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-63" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>63</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">unicode?</span>
+</pre></td></tr><tr id="line-64" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>64</pre></td><td class="rouge-code"><pre>  <span class="kp">true</span>
+</pre></td></tr><tr id="line-65" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>65</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Mar  1 12:33:16 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

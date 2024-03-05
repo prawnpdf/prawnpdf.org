@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: PDF::Core::Text
+  
+    &mdash; Documentation by YARD 0.9.36
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "PDF::Core::Text";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../PDF.html" title="PDF (module)">PDF</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Core.html" title="PDF::Core (module)">Core</a></span></span>
+     &raquo; 
+    <span class="title">Text</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: PDF::Core::Text
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/pdf/core/text.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Low-level text rendering.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Text/BadFontFamily.html" title="PDF::Core::Text::BadFontFamily (class)">BadFontFamily</a></span>
+    
+  
+</p>
+
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="VALID_OPTIONS-constant" class="">VALID_OPTIONS =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Valid options of text drawing.
+These should be used as a base. Extensions may build on this list</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="sx">%i[kerning size style]</span><span class="p">.</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="MODES-constant" class="">MODES =
+            <div class="docstring">
+  <div class="discussion">
+    <p>text rendering modes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="p">{</span>
+  <span class="ss">fill: </span><span class="mi">0</span><span class="p">,</span>
+  <span class="ss">stroke: </span><span class="mi">1</span><span class="p">,</span>
+  <span class="ss">fill_stroke: </span><span class="mi">2</span><span class="p">,</span>
+  <span class="ss">invisible: </span><span class="mi">3</span><span class="p">,</span>
+  <span class="ss">fill_clip: </span><span class="mi">4</span><span class="p">,</span>
+  <span class="ss">stroke_clip: </span><span class="mi">5</span><span class="p">,</span>
+  <span class="ss">fill_stroke_clip: </span><span class="mi">6</span><span class="p">,</span>
+  <span class="ss">clip: </span><span class="mi">7</span><span class="p">,</span>
+<span class="p">}.</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public deprecated">
+  <span class="summary_signature">
+    
+      <a href="#skip_encoding-instance_method" title="#skip_encoding (instance method)">#<strong>skip_encoding</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  <span class="deprecated note title">deprecated</span>
+  
+
+  
+    <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_text_content-instance_method" title="#add_text_content (instance method)">#<strong>add_text_content</strong>(text, x, y, options)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Add a text object to content stream.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#character_spacing-instance_method" title="#character_spacing (instance method)">#<strong>character_spacing</strong>(amount = nil) { ... } &#x21d2; Numeric, void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Increases or decreases the space between characters.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_kerning-instance_method" title="#default_kerning (instance method)">#<strong>default_kerning</strong>(value)  &#x21d2; void </a>
+    
+
+    
+      (also: #default_kerning=)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Call with a boolean to set the document-wide kerning setting.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_kerning%3F-instance_method" title="#default_kerning? (instance method)">#<strong>default_kerning?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Retrieve the current default kerning setting.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#default_leading-instance_method" title="#default_leading (instance method)">#<strong>default_leading</strong>(number = nil)  &#x21d2; Numeric </a>
+    
+
+    
+      (also: #default_leading=)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Call with no argument to retrieve the current default leading.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fallback_fonts-instance_method" title="#fallback_fonts (instance method)">#<strong>fallback_fonts</strong>(fallback_fonts = nil)  &#x21d2; Array&lt;String&gt; </a>
+    
+
+    
+      (also: #fallback_fonts=)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Call with no argument to retrieve the current fallback fonts.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#forget_text_rendering_mode!-instance_method" title="#forget_text_rendering_mode! (instance method)">#<strong>forget_text_rendering_mode!</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Forget previously set text rendering mode.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#horizontal_text_scaling-instance_method" title="#horizontal_text_scaling (instance method)">#<strong>horizontal_text_scaling</strong>(amount = nil) { ... } &#x21d2; Numeric, void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Set the horizontal scaling.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_text_options-instance_method" title="#process_text_options (instance method)">#<strong>process_text_options</strong>(options)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Low level call to set the current font style and extract text options from an options hash.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rise-instance_method" title="#rise (instance method)">#<strong>rise</strong>(amount = nil) { ... } &#x21d2; Numeric, void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Move the baseline up or down from its default location.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text_direction-instance_method" title="#text_direction (instance method)">#<strong>text_direction</strong>(direction = nil)  &#x21d2; :ltr, :rtl </a>
+    
+
+    
+      (also: #text_direction=)
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Call with no argument to retrieve the current text direction.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text_rendering_mode-instance_method" title="#text_rendering_mode (instance method)">#<strong>text_rendering_mode</strong>(mode = nil) { ... } &#x21d2; Symbol, void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Call with no argument to retrieve the current text rendering mode.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#word_spacing-instance_method" title="#word_spacing (instance method)">#<strong>word_spacing</strong>(amount = nil) { ... } &#x21d2; Numeric, void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Increases or decreases the space between words.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="skip_encoding-instance_method">
+  
+    #<strong>skip_encoding</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <div class="note deprecated"><strong>Deprecated.</strong> <div class='inline'>
+</div></div>
+
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 37</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-37" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>37</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">skip_encoding</span>
+</pre></td></tr><tr id="line-38" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>38</pre></td><td class="rouge-code"><pre>  <span class="vi">@skip_encoding</span>
+</pre></td></tr><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_text_content-instance_method">
+  
+    #<strong>add_text_content</strong>(text, x, y, options)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Add a text object to content stream.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>x</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>horizontal position of the text origin on the page</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>y</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>vertical position of the text origin on the page</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:rotate</span>
+          <span class="type">(<tt>Numeric</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>text rotation angle in degrees</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 332</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-332" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>332</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">add_text_content</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-333" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>333</pre></td><td class="rouge-code"><pre>  <span class="n">chunks</span> <span class="o">=</span> <span class="n">font</span><span class="p">.</span><span class="nf">encode_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-334" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>334</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-335" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>335</pre></td><td class="rouge-code"><pre>  <span class="n">add_content</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">BT"</span><span class="p">)</span>
+</pre></td></tr><tr id="line-336" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>336</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-337" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>337</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="ss">:rotate</span><span class="p">]</span>
+</pre></td></tr><tr id="line-338" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>338</pre></td><td class="rouge-code"><pre>    <span class="n">rad</span> <span class="o">=</span> <span class="no">Float</span><span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="ss">:rotate</span><span class="p">])</span> <span class="o">*</span> <span class="no">Math</span><span class="o">::</span><span class="no">PI</span> <span class="o">/</span> <span class="mi">180</span>
+</pre></td></tr><tr id="line-339" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>339</pre></td><td class="rouge-code"><pre>    <span class="n">array</span> <span class="o">=</span> <span class="p">[</span>
+</pre></td></tr><tr id="line-340" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>340</pre></td><td class="rouge-code"><pre>      <span class="no">Math</span><span class="p">.</span><span class="nf">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span>
+</pre></td></tr><tr id="line-341" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>341</pre></td><td class="rouge-code"><pre>      <span class="no">Math</span><span class="p">.</span><span class="nf">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span>
+</pre></td></tr><tr id="line-342" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>342</pre></td><td class="rouge-code"><pre>      <span class="o">-</span><span class="no">Math</span><span class="p">.</span><span class="nf">sin</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span>
+</pre></td></tr><tr id="line-343" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>343</pre></td><td class="rouge-code"><pre>      <span class="no">Math</span><span class="p">.</span><span class="nf">cos</span><span class="p">(</span><span class="n">rad</span><span class="p">),</span>
+</pre></td></tr><tr id="line-344" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>344</pre></td><td class="rouge-code"><pre>      <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>
+</pre></td></tr><tr id="line-345" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>345</pre></td><td class="rouge-code"><pre>    <span class="p">]</span>
+</pre></td></tr><tr id="line-346" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>346</pre></td><td class="rouge-code"><pre>    <span class="n">add_content</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">real_params</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="si">}</span><span class="s2"> Tm"</span><span class="p">)</span>
+</pre></td></tr><tr id="line-347" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>347</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-348" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>348</pre></td><td class="rouge-code"><pre>    <span class="n">add_content</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">real</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">real</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2"> Td"</span><span class="p">)</span>
+</pre></td></tr><tr id="line-349" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>349</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-350" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>350</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-351" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>351</pre></td><td class="rouge-code"><pre>  <span class="n">chunks</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="p">(</span><span class="n">subset</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span><span class="o">|</span>
+</pre></td></tr><tr id="line-352" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>352</pre></td><td class="rouge-code"><pre>    <span class="n">font</span><span class="p">.</span><span class="nf">add_to_current_page</span><span class="p">(</span><span class="n">subset</span><span class="p">)</span>
+</pre></td></tr><tr id="line-353" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>353</pre></td><td class="rouge-code"><pre>    <span class="n">add_content</span><span class="p">(</span>
+</pre></td></tr><tr id="line-354" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>354</pre></td><td class="rouge-code"><pre>      <span class="p">[</span>
+</pre></td></tr><tr id="line-355" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>355</pre></td><td class="rouge-code"><pre>        <span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">pdf_object</span><span class="p">(</span><span class="n">font</span><span class="p">.</span><span class="nf">identifier_for</span><span class="p">(</span><span class="n">subset</span><span class="p">),</span> <span class="kp">true</span><span class="p">),</span>
+</pre></td></tr><tr id="line-356" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>356</pre></td><td class="rouge-code"><pre>        <span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">pdf_object</span><span class="p">(</span><span class="n">font_size</span><span class="p">,</span> <span class="kp">true</span><span class="p">),</span>
+</pre></td></tr><tr id="line-357" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>357</pre></td><td class="rouge-code"><pre>        <span class="s1">'Tf'</span><span class="p">,</span>
+</pre></td></tr><tr id="line-358" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>358</pre></td><td class="rouge-code"><pre>      <span class="p">].</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">),</span>
+</pre></td></tr><tr id="line-359" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>359</pre></td><td class="rouge-code"><pre>    <span class="p">)</span>
+</pre></td></tr><tr id="line-360" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>360</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-361" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>361</pre></td><td class="rouge-code"><pre>    <span class="n">operation</span> <span class="o">=</span> <span class="n">options</span><span class="p">[</span><span class="ss">:kerning</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">string</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Array</span><span class="p">)</span> <span class="p">?</span> <span class="s1">'TJ'</span> <span class="p">:</span> <span class="s1">'Tj'</span>
+</pre></td></tr><tr id="line-362" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>362</pre></td><td class="rouge-code"><pre>    <span class="n">add_content</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">pdf_object</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="kp">true</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">operation</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></td></tr><tr id="line-363" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>363</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-364" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>364</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-365" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>365</pre></td><td class="rouge-code"><pre>  <span class="n">add_content</span><span class="p">(</span><span class="s2">"ET</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+</pre></td></tr><tr id="line-366" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>366</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="character_spacing-instance_method">
+  
+    #<strong>character_spacing</strong>(amount = nil) { ... } &#x21d2; <tt>Numeric</tt>, <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Increases or decreases the space between characters.
+For horizontal text, a positive value will increase the space.
+For vertical text, a positive value will decrease the space.</p>
+
+<p>Call with no arguments to retrieve current character spacing.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>amount</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Temporarily set character spacing</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if called without amount</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>void</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 254</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-254" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>254</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">character_spacing</span><span class="p">(</span><span class="n">amount</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-255" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>255</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">amount</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-256" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>256</pre></td><td class="rouge-code"><pre>    <span class="k">return</span> <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@character_spacing</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@character_spacing</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-257" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>257</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-258" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>258</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-259" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>259</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">character_spacing</span> <span class="o">==</span> <span class="n">amount</span>
+</pre></td></tr><tr id="line-260" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>260</pre></td><td class="rouge-code"><pre>    <span class="k">yield</span>
+</pre></td></tr><tr id="line-261" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>261</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-262" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>262</pre></td><td class="rouge-code"><pre>    <span class="n">wrap_and_restore_character_spacing</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-263" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>263</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-264" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>264</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_kerning-instance_method">
+  
+    #<strong>default_kerning</strong>(value)  &#x21d2; <tt>void</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='default_kerning=-instance_method'>default_kerning=</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Call with a boolean to set the document-wide kerning setting. This can
+be overridden using the :kerning text option when drawing text or a text
+box.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">pdf</span><span class="p">.</span><span class="nf">default_kerning</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">)</span>                <span class="c1"># text is not kerned</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">,</span> <span class="ss">kerning: </span><span class="kp">true</span><span class="p">)</span> <span class="c1"># text is kerned</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 84</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-84" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>84</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">default_kerning</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></td></tr><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre>  <span class="vi">@default_kerning</span> <span class="o">=</span> <span class="n">value</span>
+</pre></td></tr><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_kerning?-instance_method">
+  
+    #<strong>default_kerning?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Retrieve the current default kerning setting.</p>
+
+<p>Defaults to <code class="language-ruby highlighter-rouge"><span class="kp">true</span></code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 67</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-67" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>67</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">default_kerning?</span>
+</pre></td></tr><tr id="line-68" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>68</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="kp">true</span> <span class="k">unless</span> <span class="k">defined?</span><span class="p">(</span><span class="vi">@default_kerning</span><span class="p">)</span>
+</pre></td></tr><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-70" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>70</pre></td><td class="rouge-code"><pre>  <span class="vi">@default_kerning</span>
+</pre></td></tr><tr id="line-71" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>71</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="default_leading-instance_method">
+  
+    #<strong>default_leading</strong>(number = nil)  &#x21d2; <tt>Numeric</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='default_leading=-instance_method'>default_leading=</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Call with no argument to retrieve the current default leading.</p>
+
+<p>Call with a number to set the document-wide text leading. This can be
+overridden using the :leading text option when drawing text or a text
+box.</p>
+
+<p>Defaults to 0.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">pdf</span><span class="p">.</span><span class="nf">default_leading</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">)</span>             <span class="c1"># a leading of 7 is used</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">,</span> <span class="ss">leading: </span><span class="mi">0</span><span class="p">)</span> <span class="c1"># a leading of 0 is used</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>number</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 105</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-105" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>105</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">default_leading</span><span class="p">(</span><span class="n">number</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+</pre></td></tr><tr id="line-106" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>106</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">number</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-107" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>107</pre></td><td class="rouge-code"><pre>    <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@default_leading</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@default_leading</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-108" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>108</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-109" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>109</pre></td><td class="rouge-code"><pre>    <span class="vi">@default_leading</span> <span class="o">=</span> <span class="n">number</span>
+</pre></td></tr><tr id="line-110" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>110</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-111" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>111</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fallback_fonts-instance_method">
+  
+    #<strong>fallback_fonts</strong>(fallback_fonts = nil)  &#x21d2; <tt>Array&lt;String&gt;</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='fallback_fonts=-instance_method'>fallback_fonts=</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Call with no argument to retrieve the current fallback fonts.</p>
+
+<p>Call with an array of font names. Each name must be the name of an AFM
+font or the name that was used to register a family of TTF fonts (see
+Prawn::Document#font_families). If present, then each glyph will be
+rendered using the first font that includes the glyph, starting with the
+current font and then moving through :fallback_fonts from left to right.</p>
+
+<p>Call with an empty array to turn off fallback fonts.</p>
+
+<p>Side effects:</p>
+
+<ul>
+  <li>Increased overhead when fallback fonts are declared as each glyph is
+checked to see whether it exists in the current font</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">file</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="no">Prawn</span><span class="o">::</span><span class="no">DATADIR</span><span class="si">}</span><span class="s2">/fonts/gkai00mp.ttf"</span>
+<span class="n">font_families</span><span class="p">[</span><span class="s1">'Kai'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="ss">normal: </span><span class="p">{</span> <span class="ss">file: </span><span class="n">file</span><span class="p">,</span> <span class="ss">font: </span><span class="s1">'Kai'</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">file</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="no">Prawn</span><span class="o">::</span><span class="no">DATADIR</span><span class="si">}</span><span class="s2">/fonts/Action Man.dfont"</span>
+<span class="n">font_families</span><span class="p">[</span><span class="s1">'Action Man'</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="ss">normal: </span><span class="p">{</span> <span class="ss">file: </span><span class="n">file</span><span class="p">,</span> <span class="ss">font: </span><span class="s1">'ActionMan'</span> <span class="p">},</span>
+<span class="p">}</span>
+<span class="n">fallback_fonts</span> <span class="p">[</span><span class="s1">'Times-Roman'</span><span class="p">,</span> <span class="s1">'Kai'</span><span class="p">]</span>
+<span class="n">font</span> <span class="s1">'Action Man'</span>
+<span class="n">text</span> <span class="s1">'hello ƒ 你好'</span>
+<span class="c1"># hello prints in Action Man</span>
+<span class="c1"># ƒ prints in Times-Roman</span>
+<span class="c1"># 你好 prints in Kai</span>
+
+<span class="n">fallback_fonts</span> <span class="p">[]</span> <span class="c1"># clears document-wide fallback fonts</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>fallback_fonts</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 184</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-184" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>184</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">fallback_fonts</span><span class="p">(</span><span class="n">fallback_fonts</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+</pre></td></tr><tr id="line-185" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>185</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">fallback_fonts</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-186" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>186</pre></td><td class="rouge-code"><pre>    <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@fallback_fonts</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@fallback_fonts</span><span class="p">)</span> <span class="o">||</span> <span class="p">[]</span>
+</pre></td></tr><tr id="line-187" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>187</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-188" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>188</pre></td><td class="rouge-code"><pre>    <span class="vi">@fallback_fonts</span> <span class="o">=</span> <span class="n">fallback_fonts</span>
+</pre></td></tr><tr id="line-189" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>189</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-190" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>190</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="forget_text_rendering_mode!-instance_method">
+  
+    #<strong>forget_text_rendering_mode!</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Forget previously set text rendering mode.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 240</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-240" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>240</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">forget_text_rendering_mode!</span>
+</pre></td></tr><tr id="line-241" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>241</pre></td><td class="rouge-code"><pre>  <span class="vi">@text_rendering_mode</span> <span class="o">=</span> <span class="ss">:unknown</span>
+</pre></td></tr><tr id="line-242" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>242</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="horizontal_text_scaling-instance_method">
+  
+    #<strong>horizontal_text_scaling</strong>(amount = nil) { ... } &#x21d2; <tt>Numeric</tt>, <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Set the horizontal scaling.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>amount</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>the percentage of the normal width.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Temporarili set text scaling</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if called with no arguments</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>void</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 292</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-292" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>292</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">horizontal_text_scaling</span><span class="p">(</span><span class="n">amount</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-293" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>293</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">amount</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-294" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>294</pre></td><td class="rouge-code"><pre>    <span class="k">return</span> <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@horizontal_text_scaling</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@horizontal_text_scaling</span><span class="p">)</span> <span class="o">||</span> <span class="mi">100</span>
+</pre></td></tr><tr id="line-295" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>295</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-296" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>296</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-297" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>297</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">horizontal_text_scaling</span> <span class="o">==</span> <span class="n">amount</span>
+</pre></td></tr><tr id="line-298" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>298</pre></td><td class="rouge-code"><pre>    <span class="k">yield</span>
+</pre></td></tr><tr id="line-299" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>299</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-300" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>300</pre></td><td class="rouge-code"><pre>    <span class="n">wrap_and_restore_horizontal_text_scaling</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-301" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>301</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-302" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>302</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="process_text_options-instance_method">
+  
+    #<strong>process_text_options</strong>(options)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Low level call to set the current font style and extract text options
+from an options hash. Should be called from within a save_font block</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:style</span>
+          <span class="type">(<tt>Symbol</tt>, <tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:kerning</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>Numeric</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 47</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-47" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>47</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">process_text_options</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-48" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>48</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">options</span><span class="p">[</span><span class="ss">:style</span><span class="p">]</span>
+</pre></td></tr><tr id="line-49" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>49</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">BadFontFamily</span> <span class="k">unless</span> <span class="n">font</span><span class="p">.</span><span class="nf">family</span>
+</pre></td></tr><tr id="line-50" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>50</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre>    <span class="n">font</span><span class="p">(</span><span class="n">font</span><span class="p">.</span><span class="nf">family</span><span class="p">,</span> <span class="ss">style: </span><span class="n">options</span><span class="p">[</span><span class="ss">:style</span><span class="p">])</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-54" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>54</pre></td><td class="rouge-code"><pre>  <span class="c1"># must compare against false to keep kerning on as default</span>
+</pre></td></tr><tr id="line-55" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>55</pre></td><td class="rouge-code"><pre>  <span class="k">unless</span> <span class="n">options</span><span class="p">[</span><span class="ss">:kerning</span><span class="p">]</span> <span class="o">==</span> <span class="kp">false</span>
+</pre></td></tr><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre>    <span class="n">options</span><span class="p">[</span><span class="ss">:kerning</span><span class="p">]</span> <span class="o">=</span> <span class="n">font</span><span class="p">.</span><span class="nf">has_kerning_data?</span>
+</pre></td></tr><tr id="line-57" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>57</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre>  <span class="n">options</span><span class="p">[</span><span class="ss">:size</span><span class="p">]</span> <span class="o">||=</span> <span class="n">font_size</span>
+</pre></td></tr><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="rise-instance_method">
+  
+    #<strong>rise</strong>(amount = nil) { ... } &#x21d2; <tt>Numeric</tt>, <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Move the baseline up or down from its default location.
+Positive values move the baseline up, negative values move it down, and
+a zero value resets the baseline to its default location.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>amount</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Temporarily set text rise</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if called with no arguments</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>void</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 312</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-312" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>312</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">rise</span><span class="p">(</span><span class="n">amount</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-313" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>313</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">amount</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-314" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>314</pre></td><td class="rouge-code"><pre>    <span class="k">return</span> <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@rise</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@rise</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-315" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>315</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-316" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>316</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-317" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>317</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">rise</span> <span class="o">==</span> <span class="n">amount</span>
+</pre></td></tr><tr id="line-318" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>318</pre></td><td class="rouge-code"><pre>    <span class="k">yield</span>
+</pre></td></tr><tr id="line-319" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>319</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-320" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>320</pre></td><td class="rouge-code"><pre>    <span class="n">wrap_and_restore_rise</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-321" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>321</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-322" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>322</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="text_direction-instance_method">
+  
+    #<strong>text_direction</strong>(direction = nil)  &#x21d2; <tt>:ltr</tt>, <tt>:rtl</tt> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='text_direction=-instance_method'>text_direction=</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Call with no argument to retrieve the current text direction.</p>
+
+<p>Call with a symbol to set the document-wide text direction. This can be
+overridden using the :direction text option when drawing text or a text
+box.</p>
+
+<p>Valid directions are:</p>
+
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:ltr</span></code> – left-to-right (default)</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:rtl</span></code> – right-to-left</li>
+</ul>
+
+<p>Side effects:</p>
+
+<ul>
+  <li>When printing left-to-right, the default text alignment is <code class="language-ruby highlighter-rouge"><span class="ss">:left</span></code></li>
+  <li>When printing right-to-left, the default text alignment is <code class="language-ruby highlighter-rouge"><span class="ss">:right</span></code></li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">pdf</span><span class="p">.</span><span class="nf">text_direction</span> <span class="o">=</span> <span class="ss">:rtl</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">)</span>                  <span class="c1"># prints 'dlrow olleh'</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">text</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">,</span> <span class="ss">direction: :ltr</span><span class="p">)</span> <span class="c1"># prints 'hello world'</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>direction</span>
+      
+      
+        <span class='type'>(<tt>:ltr</tt>, <tt>:rtl</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:ltr</tt>)</span>
+      
+      
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>:rtl</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 139</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-139" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>139</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">text_direction</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+</pre></td></tr><tr id="line-140" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>140</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">direction</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-141" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>141</pre></td><td class="rouge-code"><pre>    <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@text_direction</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@text_direction</span><span class="p">)</span> <span class="o">||</span> <span class="ss">:ltr</span>
+</pre></td></tr><tr id="line-142" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>142</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-143" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>143</pre></td><td class="rouge-code"><pre>    <span class="vi">@text_direction</span> <span class="o">=</span> <span class="n">direction</span>
+</pre></td></tr><tr id="line-144" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>144</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-145" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>145</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="text_rendering_mode-instance_method">
+  
+    #<strong>text_rendering_mode</strong>(mode = nil) { ... } &#x21d2; <tt>Symbol</tt>, <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Call with no argument to retrieve the current text rendering mode.</p>
+
+<p>Call with a symbol and block to temporarily change the current
+text rendering mode.</p>
+
+<p>Valid modes are:</p>
+
+<ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill</span></code>             - fill text (default)</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke</span></code>           - stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke</span></code>      - fill, then stroke text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:invisible</span></code>        - invisible text</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_clip</span></code>        - fill text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:stroke_clip</span></code>      - stroke text then add to path for clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:fill_stroke_clip</span></code> - fill then stroke text, then add to path for
+                      clipping</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:clip</span></code>             - add text to path for clipping</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">pdf</span><span class="p">.</span><span class="nf">text_rendering_mode</span><span class="p">(</span><span class="ss">:stroke</span><span class="p">)</span> <span class="k">do</span>
+  <span class="n">pdf</span><span class="p">.</span><span class="nf">text</span><span class="p">(</span><span class="s1">'Outlined Text'</span><span class="p">)</span>
+<span class="k">end</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mode</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Temporariliy set text rendering mode</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if called withouth mode</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>void</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 220</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-220" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>220</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">text_rendering_mode</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-221" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>221</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">mode</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-222" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>222</pre></td><td class="rouge-code"><pre>    <span class="k">return</span> <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@text_rendering_mode</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@text_rendering_mode</span><span class="p">)</span> <span class="o">||</span> <span class="ss">:fill</span>
+</pre></td></tr><tr id="line-223" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>223</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-224" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>224</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-225" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>225</pre></td><td class="rouge-code"><pre>  <span class="k">unless</span> <span class="no">MODES</span><span class="p">.</span><span class="nf">key?</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+</pre></td></tr><tr id="line-226" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>226</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">ArgumentError</span><span class="p">,</span>
+</pre></td></tr><tr id="line-227" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>227</pre></td><td class="rouge-code"><pre>      <span class="s2">"mode must be between one of </span><span class="si">#{</span><span class="no">MODES</span><span class="p">.</span><span class="nf">keys</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">', '</span><span class="p">)</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">mode</span><span class="si">}</span><span class="s2">)"</span>
+</pre></td></tr><tr id="line-228" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>228</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-229" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>229</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-230" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>230</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">text_rendering_mode</span> <span class="o">==</span> <span class="n">mode</span>
+</pre></td></tr><tr id="line-231" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>231</pre></td><td class="rouge-code"><pre>    <span class="k">yield</span>
+</pre></td></tr><tr id="line-232" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>232</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-233" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>233</pre></td><td class="rouge-code"><pre>    <span class="n">wrap_and_restore_text_rendering_mode</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-234" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>234</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-235" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>235</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="word_spacing-instance_method">
+  
+    #<strong>word_spacing</strong>(amount = nil) { ... } &#x21d2; <tt>Numeric</tt>, <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Increases or decreases the space between words.
+For horizontal text, a positive value will increase the space.
+For vertical text, a positive value will decrease the space.</p>
+
+<p>Call with no arguments to retrieve current word spacing.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>amount</span>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Temporarily set word spacing</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Numeric</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>if called without amount</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>void</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/text.rb, line 276</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-276" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>276</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">word_spacing</span><span class="p">(</span><span class="n">amount</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-277" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>277</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="p">(</span><span class="k">defined?</span><span class="p">(</span><span class="vi">@word_spacing</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@word_spacing</span><span class="p">)</span> <span class="o">||</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">amount</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-278" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>278</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-279" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>279</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">word_spacing</span> <span class="o">==</span> <span class="n">amount</span>
+</pre></td></tr><tr id="line-280" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>280</pre></td><td class="rouge-code"><pre>    <span class="k">yield</span>
+</pre></td></tr><tr id="line-281" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>281</pre></td><td class="rouge-code"><pre>  <span class="k">else</span>
+</pre></td></tr><tr id="line-282" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>282</pre></td><td class="rouge-code"><pre>    <span class="n">wrap_and_restore_word_spacing</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-283" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>283</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-284" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>284</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Mar  4 20:54:13 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

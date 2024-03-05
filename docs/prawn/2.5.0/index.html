@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Prawn Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1 id="prawn-fast-nimble-pdf-generation-for-ruby">Prawn: Fast, Nimble PDF Generation For Ruby</h1>
+
+<p><a href="http://badge.fury.io/rb/prawn"><img src="https://badge.fury.io/rb/prawn.svg" alt="Gem Version" /></a>
+<a href="https://github.com/prawnpdf/prawn/actions?query=branch%3Amaster"><img src="https://github.com/prawnpdf/prawn/workflows/CI/badge.svg" alt="Build Status" /></a>
+<a href="https://codeclimate.com/github/prawnpdf/prawn"><img src="https://codeclimate.com/github/prawnpdf/prawn/badges/gpa.svg" alt="Code Climate" /></a>
+<img src="https://img.shields.io/badge/maintained-yes-brightgreen.svg" alt="Maintained: yes" /></p>
+
+<p>Prawn is a pure Ruby PDF generation library that provides a lot of great
+functionality while trying to remain simple and reasonably performant. Here are
+some of the important features we provide:</p>
+
+<ul>
+  <li>Vector drawing support, including lines, polygons, curves, ellipses, etc.</li>
+  <li>Extensive text rendering support, including flowing text and limited inline
+formatting options.</li>
+  <li>Support for both PDF builtin fonts as well as embedded TrueType fonts</li>
+  <li>A variety of low level tools for basic layout needs, including a simple grid
+system</li>
+  <li>PNG and JPG image embedding, with flexible scaling options</li>
+  <li>Security features including encryption and password protection</li>
+  <li>Tools for rendering repeatable content (i.e headers, footers, and page
+numbers)</li>
+  <li>Comprehensive internationalization features, including full support for UTF-8
+based fonts, right-to-left text rendering, fallback font support, and extension
+points for customizable text wrapping.</li>
+  <li>Support for PDF outlines for document navigation</li>
+  <li>Low level PDF features, allowing users to create custom extensions by dropping
+down all the way to the PDF object tree layer. (Mostly useful to those with
+knowledge of the PDF specification)</li>
+  <li>Lots of other stuff!</li>
+</ul>
+
+<h2 id="should-you-use-prawn">Should You Use Prawn?</h2>
+
+<p>If you are looking for a highly flexible PDF document generation system, Prawn
+might be the tool for you. It is not a reporting tool or a publishing toolchain,
+though it could be fairly easily used to build those things.</p>
+
+<p>One thing Prawn is not, and will never be, is an HTML to PDF generator. For
+those needs, consider looking into FlyingSaucer via JRuby, or one of the WebKit
+based tools, like Wicked or PDFKit. We do have basic support for inline styling
+but it is limited to a very small subset of functionality and is not suitable
+for rendering rich HTML documents.</p>
+
+<h2 id="supported-ruby-versions-and-implementations">Supported Ruby Versions and Implementations</h2>
+
+<p>Because Prawn is pure Ruby and all of its runtime dependencies are maintained by
+us, it should work pretty much anywhere. We officially support all Ruby versions
+suported by Ruby Core Team and JRuby versions of matching Ruby version. However
+we will accept patches to fix problems on other Ruby platforms if they aren’t
+too invasive.</p>
+
+<h2 id="installing-prawn">Installing Prawn</h2>
+
+<p>Prawn is distributed via RubyGems, and can be installed the usual way that you
+install gems: by simply typing <code class="language-ruby highlighter-rouge"><span class="n">gem</span> <span class="n">install</span> <span class="n">prawn</span></code> on the command line.</p>
+
+<p>You can also install from git if you’d like, the <em>master</em> branch contains the
+latest developments. We’re trying to keep <code class="language-ruby highlighter-rouge"><span class="n">master</span></code> branch in working order but
+you may encounter some rough edges and fresh bugs along with bugfixes. We
+encourage you to try <code class="language-ruby highlighter-rouge"><span class="n">master</span></code> branch with your application.</p>
+
+<h2 id="hello-world">Hello World!</h2>
+
+<p>If the following code runs and produces a working PDF file, you’ve successfully
+installed Prawn.</p>
+
+<div class="language-ruby highlighter-rouge"><pre><code><span class="nb">require</span> <span class="s2">"prawn"</span>
+
+<span class="no">Prawn</span><span class="o">::</span><span class="no">Document</span><span class="p">.</span><span class="nf">generate</span><span class="p">(</span><span class="s2">"hello.pdf"</span><span class="p">)</span> <span class="k">do</span>
+  <span class="n">text</span> <span class="s2">"Hello World!"</span>
+<span class="k">end</span>
+</code></pre></div>
+
+<p>Of course, you’ll probably want to do more interesting things than that…</p>
+
+<h2 id="manual">Manual</h2>
+
+<p>The manual is a series of examples that demonstrate use of the wide range of
+features Prawn provides. You can get a generated version of the latest released
+Prawn version on the <a href="https://prawnpdf.org/">Prawn website</a>. The examples
+themselves can be found in the <code class="language-ruby highlighter-rouge"><span class="n">manual</span></code> directory in this repository.</p>
+
+<p>Please note that while the manual is a great introduction and guide to Prawn
+it’s not exhaustive. Please refer to API docs for more complete information on
+what Prawn provides and how to use it.</p>
+
+<p>To build the manual, here’s what you need to do:</p>
+
+<ol>
+  <li>Clone the repository</li>
+  <li>Run <code class="language-ruby highlighter-rouge"><span class="n">gem</span> <span class="n">install</span> <span class="o">-</span><span class="n">g</span></code></li>
+  <li>Run <code class="language-ruby highlighter-rouge"><span class="n">rake</span> <span class="n">manual</span></code>, which will generate <em>manual.pdf</em> in the project root</li>
+</ol>
+
+<h2 id="release-policies">Release Policies</h2>
+
+<p>We’re trying to not break things unnecessarily but we don’t formally follow
+Semantic Versioning. The reason is that we release a number of experimental
+APIs. We don’t make any promises on their stability. You can assume the stable
+portion of the API follows Semantic Versioning.</p>
+
+<p>Also note that bug fixes can change behaviour. We don’t consider that to be
+a breaking change for the purposes of versioning. Please test your applications
+after updating Prawn.</p>
+
+<p>Be sure to read the release notes in
+<a href="https://github.com/prawnpdf/prawn/blob/master/CHANGELOG.md">CHANGELOG.md</a> each
+time we cut a new release, and lock your gems accordingly.</p>
+
+<h2 id="support">Support</h2>
+
+<p>The easiest way to get help with Prawn is to post a message to our
+<a href="https://github.com/orgs/prawnpdf/discussions">Discussions</a>.</p>
+
+<p>Feel free to post any Prawn related question there, our community is very
+responsive and will be happy to help you figure out how to use Prawn, or help
+you determine whether it’s the right tool for the task you are working on.</p>
+
+<p>Please make your posts as specific as possible, including code samples and
+output where relevant. Do not post any information that should not be shared
+publicly, and be sure to reduce your example code as much as possible so that
+those who are responding to your question can more easily see what the issue
+might be.</p>
+
+<h2 id="code-of-conduct">Code of Conduct</h2>
+
+<p>Prawn adheres to the <a href="CODE_OF_CONDUCT.md">Contributor Covenant</a>. Unacceptable
+behavior can be reported to conduct@prawnpdf.org which is monitored by the core
+team.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>If you’ve found a bug or want to submit a patch, please enter a ticket into our
+<a href="http://github.com/prawnpdf/prawn/issues">GitHub tracker</a>.</p>
+
+<p>We strongly encourage bug reports to come with failing tests or at least a
+reduced example that demonstrates the problem. Similarly, patches should include
+tests, API documentation, and an update to the manual where relevant. Feel free
+to send a pull request early though, if you just want some feedback or a code
+review before preparing your code to be merged.</p>
+
+<p>If you are unsure about whether or not you’ve found a bug, or want to check to
+see whether we’d be interested in the feature you want to add before you start
+working on it, feel free to post to our mailing list.</p>
+
+<p>You can run our test suite in a few different ways:</p>
+
+<ol>
+  <li>Running <code class="language-ruby highlighter-rouge"><span class="n">rake</span></code> will run the entire test suite excluding any unresolved issues</li>
+  <li>Running <code class="language-ruby highlighter-rouge"><span class="n">rspec</span></code> will run the entire test suite including unresolved issues</li>
+  <li>Running <code class="language-ruby highlighter-rouge"><span class="n">rspec</span> <span class="o">-</span><span class="n">t</span> <span class="n">unresolved</span></code> will run <em>only</em> unresolved issues</li>
+  <li>Running <code class="language-ruby highlighter-rouge"><span class="n">rspec</span> <span class="o">-</span><span class="n">t</span> <span class="n">issue</span><span class="ss">:NUMBER</span></code> will run the tests for a specific issue</li>
+</ol>
+
+<p>These filters make it possible for us to add failing test cases for bugs that
+are currently being researched or worked on, without breaking the typical full
+suite run.</p>
+
+<h2 id="maintenance-team">Maintenance team</h2>
+
+<p>Prawn has always been heavily dependent on community contributions, with dozens
+of people contributing code over the years. In that sense, the lines have
+blurred to the point where we no longer have a strong distinction between core
+developers and contributors.</p>
+
+<p>That said, there are a few folks who have been responsible for cutting releases,
+merging important pull requests, and making major decisions about the overall
+direction of the project.</p>
+
+<h3 id="current-maintainers">Current maintainers</h3>
+
+<p>These are the folks to contact if you have a maintenance-related issue with
+Prawn:</p>
+
+<ul>
+  <li>Alexander Mankuta (<a href="https://github.com/PointlessOne">PointlessOne</a>)</li>
+</ul>
+
+<h3 id="inactive-maintainers">Inactive maintainers</h3>
+
+<p>These folks have helped out in a maintenance role in the past, but are no longer
+actively involved in the project:</p>
+
+<ul>
+  <li>Gregory Brown (<a href="https://github.com/practicingruby">practicingruby</a>)</li>
+  <li>Brad Ediger (<a href="https://github.com/bradediger">bradediger</a>)</li>
+  <li>James Healy (<a href="https://github.com/yob">yob</a>)</li>
+  <li>Daniel Nelson (<a href="https://github.com/Bluejade">Bluejade</a>)</li>
+  <li>Jonathan Greenberg (<a href="https://github.com/jonsgreen">jonsgreen</a>)</li>
+  <li>Jamis Buck (<a href="https://github.com/jamis">jamis</a>)</li>
+  <li>Evan Sharp (<a href="https://github.com/PacketMonkey">PacketMonkey</a>)</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>Prawn is released under a slightly modified form of the License of Ruby,
+allowing you to choose between Matz’s terms, the GPLv2, or GPLv3. For details,
+please see the LICENSE, GPLv2, and GPLv3 files.</p>
+
+<p>If you contribute to Prawn, you will retain your own copyright but must agree to
+license your code under the same terms as the project itself.</p>
+
+<h2 id="history">History</h2>
+
+<p>Prawn was originally developed by <a href="https://practicingdeveloper.com/">Gregory
+Brown</a>, under the auspices of the Ruby
+Mendicant Project, a grassroots initiative in which the Ruby community
+collectively provided funding so that Gregory could take several months off from
+work to focus on this project.</p>
+
+<p>Over the last several years, we’ve received code contributions from dozens of
+people, which is amazing considering the low-level nature of this project. You
+can find the full list of folks who have at least one patch accepted to Prawn on
+GitHub <a href="https://github.com/prawnpdf/prawn/contributors">Contributors</a> page.</p>
+
+<p>After a long period of inactivity, Prawn reached its 1.0 milestone in 2014
+thanks to some modest funding provided to Gregory by Madriska, Inc. (Brad
+Ediger’s company).</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Tue Mar  5 12:42:39 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

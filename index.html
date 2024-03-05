@@ -1,6 +1,219 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=/api-docs/2.3.0">
+    <meta charset="UTF-8">
+    <title>Prawn PDF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html {
+        background: linear-gradient(to bottom, #02004f, #000016) black;
+      }
+
+      html, body {
+        min-block-size: 100dvh;
+        height: max-content;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: white;
+        contain: layout;
+      }
+
+      header {
+        padding-block: 4em;
+        text-align: center;
+      }
+
+      h1 {
+        margin-block: 2em;
+      }
+
+      main {
+        display: grid;
+        grid-template-areas: ". ttfunk prawn pdf-core .";
+        grid-template-columns: 1fr min-content min-content min-content 1fr;
+        grid-column-gap: 2em;
+      }
+
+      main article {
+        inline-size: 12em;
+        padding: 1em;;
+        box-sizing: border-box;
+        border: 0.3ch solid white;
+        border-radius: 0.5em;
+        background: rgb(255 255 255 / 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        transition: transform 0.4s, filter 0.4s;
+      }
+
+      main article > ul {
+        padding: 0;
+      }
+      main article > ul li {
+        display: block;
+        margin-block: 0.4em;
+      }
+
+      :any-link { color: aqua }
+      :visited { color: #cfc8f9 }
+
+      #prawn { grid-area: prawn }
+      #ttfunk { grid-area: ttfunk }
+      #pdf-core { grid-area: pdf-core }
+
+      @media (min-width: 44em) {
+        #ttfunk {
+          transform: perspective(20em) rotateY(-15deg) translateZ(-3em);
+        }
+        #ttfunk:hover {
+          transform: perspective(20em) translateZ(1em);
+        }
+
+        #prawn {
+          transform: perspective(20em);
+        }
+        #prawn:hover {
+          transform: perspective(20em) translateZ(1em);
+        }
+
+        #pdf-core {
+          transform: perspective(20em) rotateY(15deg) translateZ(-3em);
+        }
+        #pdf-core:hover {
+          transform: perspective(20em) translateZ(1em);
+        }
+
+        main:has(#pdf-core:hover) {
+          #ttfunk{
+            transform: perspective(20em) rotateY(-10deg) translateX(-0.3em) translateZ(-3em);
+            filter: brightness(60%);
+          }
+          #prawn {
+            transform: perspective(20em) rotateY(5deg) translateX(-0.3em) translateZ(-1em);
+            filter: brightness(60%);
+          }
+        }
+
+        main:has(#ttfunk:hover) {
+          #pdf-core{
+            transform: perspective(20em) rotateY(10deg) translateX(0.3em) translateZ(-3em);
+            filter: brightness(60%);
+          }
+          #prawn {
+            transform: perspective(20em) rotateY(-5deg) translateX(0.3em) translateZ(-1em);
+            filter: brightness(60%);
+          }
+        }
+
+        main:has(#prawn:hover) {
+          #ttfunk{
+            transform: perspective(20em) rotateY(-10deg) translateX(-0.3em) translateZ(-3em);
+            filter: brightness(60%);
+          }
+          #pdf-core {
+            transform: perspective(20em) rotateY(10deg) translateX(0.3em) translateZ(-3em);
+            filter: brightness(60%);
+          }
+        }
+      }
+
+      @media (max-width: 44em) {
+        main {
+          display: block;
+        }
+
+        #prawn, #ttfunk, #pdf-core {
+          margin: 2em;
+          inline-size: auto;
+          transform: none;
+
+          &:hover {
+            transform: none;
+          }
+        }
+      }
+
+      body::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        min-height: 100%;
+
+        background:
+          radial-gradient(circle 3px at calc(30% + sin(var(--wobble) * 2) * 15px) calc(100vh * (1 - var(--raise3))), transparent, rgb(214 235 255) 100%, transparent 101%),
+          radial-gradient(circle 3px at calc(55% + sin(var(--wobble) * 3) * 15px) calc(100vh * (1.2 - var(--raise3) * 1.5)), transparent, rgb(214 235 255) 100%, transparent 101%),
+          radial-gradient(circle 5px at calc(15% + sin(var(--wobble) * 4) * 10px) calc(100vh * (1 - var(--raise1))), transparent 0%, rgb(214 235 255) 100%, transparent 101%),
+          radial-gradient(circle 5px at calc(80% + sin(var(--wobble) * 5) * 10px) calc(100vh * (1.3 - var(--raise1) * 1.5)), transparent 0%, rgb(214 235 255) 100%, transparent 101%),
+          radial-gradient(circle 7px at calc(40% + sin(var(--wobble) * 6) * 7px) calc(100vh * (1 - var(--raise2))), transparent 0%, rgb(214 235 255) 100%, transparent 101%),
+          radial-gradient(circle 7px at calc(60% + sin(var(--wobble) * 7) * 5px) calc(100vh * (1.3 - var(--raise2) * 1.5)), transparent 0%, rgb(214 235 255) 100%, transparent 101%),
+          repeating-conic-gradient(from calc(var(--raise2) * 0.05turn) at 50% -40%, rgb(255 255 255 / 0.15) 0%, transparent, rgb(255 255 255 / 0.15) 1%),
+          repeating-conic-gradient(from calc(var(--raise1) * -0.05turn) at calc(50% + 100px) -30%, rgb(255 255 255 / 0.2) 0%, transparent 1.25%, rgb(255 255 255 / 0.2) 2.5%)
+        ;
+        mask-image: radial-gradient(ellipse at top, rgb(0 0 0 / 100%), transparent);
+      }
+    </style>
+    <script>
+      const wobblePeriod = 5_000; // 5s
+      const raise1Period = 10_000; // 10s
+      const raise2Period = 6_000; // 6s
+      const raise3Period = 15_000; // 15s
+
+      let stylesheet = document.createElement('style');
+      document.head.prepend(stylesheet);
+
+      function frame(timestamp) {
+        let wobble = Math.PI * 2 * (timestamp % wobblePeriod) / wobblePeriod;
+        let raise1 = (timestamp % raise1Period) / raise1Period;
+        let raise2 = (timestamp % raise2Period) / raise2Period;
+        let raise3 = (timestamp % raise3Period) / raise3Period;
+
+        stylesheet.textContent = `:root { --wobble: ${wobble}; --raise1: ${raise1}; --raise2: ${raise2}; --raise3: ${raise3}; }`;
+
+        window.requestAnimationFrame(frame);
+      };
+
+      document.addEventListener('DOMContentLoaded', function() { frame(0); });
+    </script>
   </head>
+  <body>
+    <header>
+      <img src="{% link /images/prawn.png %}" width="141" height="142" alt="Prawn logo">
+      <h1>Prawn PDF</h1>
+    </header>
+    <main>
+      <article id="prawn">
+        <h2>Prawn</h2>
+        <p>Latest version: <a href="https://rubygems.org/gems/prawn">{% gem_version prawn %}</a></p>
+        <ul>
+          <li><a href="/docs/prawn/{% gem_version prawn %}/">Documentation</a></li>
+          <li><a href="/docs/prawn/{% gem_version prawn %}/manual.pdf">Manual</a></li>
+        </ul>
+      </article>
+      <article id="ttfunk">
+        <h2>TTFunk</h2>
+        <p>Latest version: <a href="https://rubygems.org/gems/ttfunk">{% gem_version ttfunk %}</a></p>
+        <ul>
+          <li><a href="/docs/ttfunk/{% gem_version ttfunk %}/">Documentation</a></li>
+        </ul>
+      </article>
+      <article id="pdf-core">
+        <h2>PDF::Core</h2>
+        <p>Latest version: <a href="https://rubygems.org/gems/pdf-core">{% gem_version pdf-core %}</a></p>
+        <ul>
+          <li>
+            <a href="/docs/pdf-core/{% gem_version pdf-core %}/">Documentation</a>
+          </li>
+        </ul>
+      </article>
+    </main>
+  </body>
 </html>
+

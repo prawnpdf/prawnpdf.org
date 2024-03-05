@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: TTFunk::Table::Glyf
+  
+    &mdash; Documentation by YARD 0.9.35
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::Glyf";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (G)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">Table</a></span></span>
+     &raquo; 
+    <span class="title">Glyf</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: TTFunk::Table::Glyf
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></li>
+          
+            <li class="next">TTFunk::Table::Glyf</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/glyf.rb<span class="defines">,<br />
+  lib/ttfunk/table/glyf/simple.rb,<br /> lib/ttfunk/table/glyf/compound.rb,<br /> lib/ttfunk/table/glyf/path_based.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Glyph Data (<code class="language-ruby highlighter-rouge"><span class="n">glyf</span></code>) table.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Glyf/Compound.html" title="TTFunk::Table::Glyf::Compound (class)">Compound</a></span>, <span class='object_link'><a href="Glyf/PathBased.html" title="TTFunk::Table::Glyf::PathBased (class)">PathBased</a></span>, <span class='object_link'><a href="Glyf/Simple.html" title="TTFunk::Table::Glyf::Simple (class)">Simple</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Table.html#file-instance_method" title="TTFunk::Table#file (method)">#file</a></span>, <span class='object_link'><a href="../Table.html#length-instance_method" title="TTFunk::Table#length (method)">#length</a></span>, <span class='object_link'><a href="../Table.html#offset-instance_method" title="TTFunk::Table#offset (method)">#offset</a></span></p>
+
+
+
+  
+    <section id="method-summary-e7i9pm">
+      <h2>
+        Class Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#encode-class_method" title="encode (class method)">.<strong>encode</strong>(glyphs, new_to_old, old_to_new)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Encode table.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#for-instance_method" title="#for (instance method)">#<strong>for</strong>(glyph_id)  &#x21d2; TTFunk::Table::Glyf::Simple, ... </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Get glyph by ID.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Table.html" title="TTFunk::Table (class)">TTFunk::Table</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Table.html#exists%3F-instance_method" title="TTFunk::Table#exists? (method)">#exists?</a></span>, <span class='object_link'><a href="../Table.html#initialize-instance_method" title="TTFunk::Table#initialize (method)">#initialize</a></span>, <span class='object_link'><a href="../Table.html#raw-instance_method" title="TTFunk::Table#raw (method)">#raw</a></span>, <span class='object_link'><a href="../Table.html#tag-instance_method" title="TTFunk::Table#tag (method)">#tag</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <p class="notice">This class inherits a constructor from <span class='object_link'><a href="../Table.html#initialize-instance_method" title="TTFunk::Table#initialize (method)">TTFunk::Table</a></span></p>
+  
+</div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="encode-class_method">
+  
+    .<strong>encode</strong>(glyphs, new_to_old, old_to_new)  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Encode table.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>glyphs</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a hash mapping (old) glyph-ids to glyph objects</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>new_to_old</span>
+      
+      
+        <span class='type'>(<tt>Hash{Integer =&gt; Integer}</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a hash mapping new glyph
+IDs to glyph IDs in the original font.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>old_to_new</span>
+      
+      
+        <span class='type'>(<tt>Hash{Integer =&gt; Integer}</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a hash mapping old glyph
+IDs to new glyph IDs.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:table</span></code> (<tt>String</tt>) - encoded table.</li>
+  <li><code class="language-ruby highlighter-rouge"><span class="ss">:offsets</span></code> (<tt>Array&lt;Integer&gt;</tt>) - glyph offsets in the table.</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf.rb, line 19</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-19" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>19</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">glyphs</span><span class="p">,</span> <span class="n">new_to_old</span><span class="p">,</span> <span class="n">old_to_new</span><span class="p">)</span>
+</pre></td></tr><tr id="line-20" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>20</pre></td><td class="rouge-code"><pre>  <span class="n">result</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">table: </span><span class="o">+</span><span class="s1">''</span><span class="p">,</span> <span class="ss">offsets: </span><span class="p">[]</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-21" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>21</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-22" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>22</pre></td><td class="rouge-code"><pre>  <span class="n">new_to_old</span><span class="p">.</span><span class="nf">keys</span><span class="p">.</span><span class="nf">sort</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">new_id</span><span class="o">|</span>
+</pre></td></tr><tr id="line-23" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>23</pre></td><td class="rouge-code"><pre>    <span class="n">glyph</span> <span class="o">=</span> <span class="n">glyphs</span><span class="p">[</span><span class="n">new_to_old</span><span class="p">[</span><span class="n">new_id</span><span class="p">]]</span>
+</pre></td></tr><tr id="line-24" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>24</pre></td><td class="rouge-code"><pre>    <span class="n">result</span><span class="p">[</span><span class="ss">:offsets</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">result</span><span class="p">[</span><span class="ss">:table</span><span class="p">].</span><span class="nf">length</span>
+</pre></td></tr><tr id="line-25" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>25</pre></td><td class="rouge-code"><pre>    <span class="n">result</span><span class="p">[</span><span class="ss">:table</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">glyph</span><span class="p">.</span><span class="nf">recode</span><span class="p">(</span><span class="n">old_to_new</span><span class="p">)</span> <span class="k">if</span> <span class="n">glyph</span>
+</pre></td></tr><tr id="line-26" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>26</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-27" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>27</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-28" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>28</pre></td><td class="rouge-code"><pre>  <span class="c1"># include an offset at the end of the table, for use in computing the</span>
+</pre></td></tr><tr id="line-29" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>29</pre></td><td class="rouge-code"><pre>  <span class="c1"># size of the last glyph</span>
+</pre></td></tr><tr id="line-30" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>30</pre></td><td class="rouge-code"><pre>  <span class="n">result</span><span class="p">[</span><span class="ss">:offsets</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">result</span><span class="p">[</span><span class="ss">:table</span><span class="p">].</span><span class="nf">length</span>
+</pre></td></tr><tr id="line-31" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>31</pre></td><td class="rouge-code"><pre>  <span class="n">result</span>
+</pre></td></tr><tr id="line-32" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>32</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="for-instance_method">
+  
+    #<strong>for</strong>(glyph_id)  &#x21d2; <tt><span class='object_link'><a href="Glyf/Simple.html" title="TTFunk::Table::Glyf::Simple (class)">TTFunk::Table::Glyf::Simple</a></span></tt>, ... 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Get glyph by ID.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>glyph_id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Glyf/Simple.html" title="TTFunk::Table::Glyf::Simple (class)">TTFunk::Table::Glyf::Simple</a></span></tt>, <tt><span class='object_link'><a href="Glyf/Compound.html" title="TTFunk::Table::Glyf::Compound (class)">TTFunk::Table::Glyf::Compound</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/ttfunk/table/glyf.rb, line 39</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-39" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>39</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">for</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-40" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>40</pre></td><td class="rouge-code"><pre>  <span class="k">return</span> <span class="vi">@cache</span><span class="p">[</span><span class="n">glyph_id</span><span class="p">]</span> <span class="k">if</span> <span class="vi">@cache</span><span class="p">.</span><span class="nf">key?</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-42" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>42</pre></td><td class="rouge-code"><pre>  <span class="n">index</span> <span class="o">=</span> <span class="n">file</span><span class="p">.</span><span class="nf">glyph_locations</span><span class="p">.</span><span class="nf">index_of</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre>  <span class="n">size</span> <span class="o">=</span> <span class="n">file</span><span class="p">.</span><span class="nf">glyph_locations</span><span class="p">.</span><span class="nf">size_of</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">)</span>
+</pre></td></tr><tr id="line-44" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>44</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-45" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>45</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">size</span><span class="p">.</span><span class="nf">zero?</span> <span class="c1"># blank glyph, e.g. space character</span>
+</pre></td></tr><tr id="line-46" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>46</pre></td><td class="rouge-code"><pre>    <span class="vi">@cache</span><span class="p">[</span><span class="n">glyph_id</span><span class="p">]</span> <span class="o">=</span> <span class="kp">nil</span>
+</pre></td></tr><tr id="line-47" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>47</pre></td><td class="rouge-code"><pre>    <span class="k">return</span>
+</pre></td></tr><tr id="line-48" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>48</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-49" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>49</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-50" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>50</pre></td><td class="rouge-code"><pre>  <span class="n">parse_from</span><span class="p">(</span><span class="n">offset</span> <span class="o">+</span> <span class="n">index</span><span class="p">)</span> <span class="k">do</span>
+</pre></td></tr><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre>    <span class="n">raw</span> <span class="o">=</span> <span class="n">io</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>    <span class="n">number_of_contours</span> <span class="o">=</span> <span class="n">to_signed</span><span class="p">(</span><span class="n">raw</span><span class="p">.</span><span class="nf">unpack1</span><span class="p">(</span><span class="s1">'n'</span><span class="p">))</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-54" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>54</pre></td><td class="rouge-code"><pre>    <span class="vi">@cache</span><span class="p">[</span><span class="n">glyph_id</span><span class="p">]</span> <span class="o">=</span>
+</pre></td></tr><tr id="line-55" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>55</pre></td><td class="rouge-code"><pre>      <span class="k">if</span> <span class="n">number_of_contours</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span>
+</pre></td></tr><tr id="line-56" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>56</pre></td><td class="rouge-code"><pre>        <span class="no">Compound</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">,</span> <span class="n">raw</span><span class="p">)</span>
+</pre></td></tr><tr id="line-57" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>57</pre></td><td class="rouge-code"><pre>      <span class="k">else</span>
+</pre></td></tr><tr id="line-58" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>58</pre></td><td class="rouge-code"><pre>        <span class="no">Simple</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">glyph_id</span><span class="p">,</span> <span class="n">raw</span><span class="p">)</span>
+</pre></td></tr><tr id="line-59" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>59</pre></td><td class="rouge-code"><pre>      <span class="k">end</span>
+</pre></td></tr><tr id="line-60" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>60</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-61" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>61</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb 29 20:15:15 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

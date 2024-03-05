@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Module: TTFunk::Table::Cff::Charsets
+  
+    &mdash; Documentation by YARD 0.9.35
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "TTFunk::Table::Cff::Charsets";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../TTFunk.html" title="TTFunk (module)">TTFunk</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Table.html" title="TTFunk::Table (class)">Table</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Cff.html" title="TTFunk::Table::Cff (class)">Cff</a></span></span>
+     &raquo; 
+    <span class="title">Charsets</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Module: TTFunk::Table::Cff::Charsets
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/ttfunk/table/cff/charsets.rb<span class="defines">,<br />
+  lib/ttfunk/table/cff/charsets/expert.rb,<br /> lib/ttfunk/table/cff/charsets/iso_adobe.rb,<br /> lib/ttfunk/table/cff/charsets/expert_subset.rb,<br /> lib/ttfunk/table/cff/charsets/standard_strings.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Predefined CFF data</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+  
+    <section id="constant-summary-3e7bzy">
+      <h2>
+        Constant Summary
+        <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+      </h2>
+
+      <dl class="constants">
+        
+          <dt id="EXPERT-constant" class="">EXPERT =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Predefinde CFF Expert charset</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">OneBasedArray</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+  <span class="p">[</span>
+    <span class="s1">'space'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">11</span><span class="p">,</span>
+    <span class="s1">'comma'</span><span class="p">,</span>
+    <span class="s1">'hyphen'</span><span class="p">,</span>
+    <span class="s1">'period'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">11</span><span class="p">,</span>
+    <span class="s1">'colon'</span><span class="p">,</span>
+    <span class="s1">'semicolon'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="s1">'fraction'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="s1">'fi'</span><span class="p">,</span>
+    <span class="s1">'fl'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">39</span><span class="p">,</span>
+    <span class="s1">'onesuperior'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">'onehalf'</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="s1">'onequarter'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">'threequarters'</span><span class="p">,</span>
+    <span class="s1">'twosuperior'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">'threesuperior'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">59</span><span class="p">,</span>
+    <span class="s1">'exclamsmall'</span><span class="p">,</span>
+    <span class="s1">'Hungarumlautsmall'</span><span class="p">,</span>
+    <span class="s1">'dollaroldstyle'</span><span class="p">,</span>
+    <span class="s1">'dollarsuperior'</span><span class="p">,</span>
+    <span class="s1">'ampersandsmall'</span><span class="p">,</span>
+    <span class="s1">'Acutesmall'</span><span class="p">,</span>
+    <span class="s1">'parenleftsuperior'</span><span class="p">,</span>
+    <span class="s1">'parenrightsuperior'</span><span class="p">,</span>
+    <span class="s1">'twodotenleader'</span><span class="p">,</span>
+    <span class="s1">'onedotenleader'</span><span class="p">,</span>
+    <span class="s1">'zerooldstyle'</span><span class="p">,</span>
+    <span class="s1">'oneoldstyle'</span><span class="p">,</span>
+    <span class="s1">'twooldstyle'</span><span class="p">,</span>
+    <span class="s1">'threeoldstyle'</span><span class="p">,</span>
+    <span class="s1">'fouroldstyle'</span><span class="p">,</span>
+    <span class="s1">'fiveoldstyle'</span><span class="p">,</span>
+    <span class="s1">'sixoldstyle'</span><span class="p">,</span>
+    <span class="s1">'sevenoldstyle'</span><span class="p">,</span>
+    <span class="s1">'eightoldstyle'</span><span class="p">,</span>
+    <span class="s1">'nineoldstyle'</span><span class="p">,</span>
+    <span class="s1">'commasuperior'</span><span class="p">,</span>
+    <span class="s1">'threequartersemdash'</span><span class="p">,</span>
+    <span class="s1">'periodsuperior'</span><span class="p">,</span>
+    <span class="s1">'questionsmall'</span><span class="p">,</span>
+    <span class="s1">'asuperior'</span><span class="p">,</span>
+    <span class="s1">'bsuperior'</span><span class="p">,</span>
+    <span class="s1">'centsuperior'</span><span class="p">,</span>
+    <span class="s1">'dsuperior'</span><span class="p">,</span>
+    <span class="s1">'esuperior'</span><span class="p">,</span>
+    <span class="s1">'isuperior'</span><span class="p">,</span>
+    <span class="s1">'lsuperior'</span><span class="p">,</span>
+    <span class="s1">'msuperior'</span><span class="p">,</span>
+    <span class="s1">'nsuperior'</span><span class="p">,</span>
+    <span class="s1">'osuperior'</span><span class="p">,</span>
+    <span class="s1">'rsuperior'</span><span class="p">,</span>
+    <span class="s1">'ssuperior'</span><span class="p">,</span>
+    <span class="s1">'tsuperior'</span><span class="p">,</span>
+    <span class="s1">'ff'</span><span class="p">,</span>
+    <span class="s1">'ffi'</span><span class="p">,</span>
+    <span class="s1">'ffl'</span><span class="p">,</span>
+    <span class="s1">'parenleftinferior'</span><span class="p">,</span>
+    <span class="s1">'parenrightinferior'</span><span class="p">,</span>
+    <span class="s1">'Circumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'hyphensuperior'</span><span class="p">,</span>
+    <span class="s1">'Gravesmall'</span><span class="p">,</span>
+    <span class="s1">'Asmall'</span><span class="p">,</span>
+    <span class="s1">'Bsmall'</span><span class="p">,</span>
+    <span class="s1">'Csmall'</span><span class="p">,</span>
+    <span class="s1">'Dsmall'</span><span class="p">,</span>
+    <span class="s1">'Esmall'</span><span class="p">,</span>
+    <span class="s1">'Fsmall'</span><span class="p">,</span>
+    <span class="s1">'Gsmall'</span><span class="p">,</span>
+    <span class="s1">'Hsmall'</span><span class="p">,</span>
+    <span class="s1">'Ismall'</span><span class="p">,</span>
+    <span class="s1">'Jsmall'</span><span class="p">,</span>
+    <span class="s1">'Ksmall'</span><span class="p">,</span>
+    <span class="s1">'Lsmall'</span><span class="p">,</span>
+    <span class="s1">'Msmall'</span><span class="p">,</span>
+    <span class="s1">'Nsmall'</span><span class="p">,</span>
+    <span class="s1">'Osmall'</span><span class="p">,</span>
+    <span class="s1">'Psmall'</span><span class="p">,</span>
+    <span class="s1">'Qsmall'</span><span class="p">,</span>
+    <span class="s1">'Rsmall'</span><span class="p">,</span>
+    <span class="s1">'Ssmall'</span><span class="p">,</span>
+    <span class="s1">'Tsmall'</span><span class="p">,</span>
+    <span class="s1">'Usmall'</span><span class="p">,</span>
+    <span class="s1">'Vsmall'</span><span class="p">,</span>
+    <span class="s1">'Wsmall'</span><span class="p">,</span>
+    <span class="s1">'Xsmall'</span><span class="p">,</span>
+    <span class="s1">'Ysmall'</span><span class="p">,</span>
+    <span class="s1">'Zsmall'</span><span class="p">,</span>
+    <span class="s1">'colonmonetary'</span><span class="p">,</span>
+    <span class="s1">'onefitted'</span><span class="p">,</span>
+    <span class="s1">'rupiah'</span><span class="p">,</span>
+    <span class="s1">'Tildesmall'</span><span class="p">,</span>
+    <span class="s1">'exclamdownsmall'</span><span class="p">,</span>
+    <span class="s1">'centoldstyle'</span><span class="p">,</span>
+    <span class="s1">'Lslashsmall'</span><span class="p">,</span>
+    <span class="s1">'Scaronsmall'</span><span class="p">,</span>
+    <span class="s1">'Zcaronsmall'</span><span class="p">,</span>
+    <span class="s1">'Dieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Brevesmall'</span><span class="p">,</span>
+    <span class="s1">'Caronsmall'</span><span class="p">,</span>
+    <span class="s1">'Dotaccentsmall'</span><span class="p">,</span>
+    <span class="s1">'Macronsmall'</span><span class="p">,</span>
+    <span class="s1">'figuredash'</span><span class="p">,</span>
+    <span class="s1">'hypheninferior'</span><span class="p">,</span>
+    <span class="s1">'Ogoneksmall'</span><span class="p">,</span>
+    <span class="s1">'Ringsmall'</span><span class="p">,</span>
+    <span class="s1">'Cedillasmall'</span><span class="p">,</span>
+    <span class="s1">'questiondownsmall'</span><span class="p">,</span>
+    <span class="s1">'oneeighth'</span><span class="p">,</span>
+    <span class="s1">'threeeighths'</span><span class="p">,</span>
+    <span class="s1">'fiveeighths'</span><span class="p">,</span>
+    <span class="s1">'seveneighths'</span><span class="p">,</span>
+    <span class="s1">'onethird'</span><span class="p">,</span>
+    <span class="s1">'twothirds'</span><span class="p">,</span>
+    <span class="s1">'zerosuperior'</span><span class="p">,</span>
+    <span class="s1">'foursuperior'</span><span class="p">,</span>
+    <span class="s1">'fivesuperior'</span><span class="p">,</span>
+    <span class="s1">'sixsuperior'</span><span class="p">,</span>
+    <span class="s1">'sevensuperior'</span><span class="p">,</span>
+    <span class="s1">'eightsuperior'</span><span class="p">,</span>
+    <span class="s1">'ninesuperior'</span><span class="p">,</span>
+    <span class="s1">'zeroinferior'</span><span class="p">,</span>
+    <span class="s1">'oneinferior'</span><span class="p">,</span>
+    <span class="s1">'twoinferior'</span><span class="p">,</span>
+    <span class="s1">'threeinferior'</span><span class="p">,</span>
+    <span class="s1">'fourinferior'</span><span class="p">,</span>
+    <span class="s1">'fiveinferior'</span><span class="p">,</span>
+    <span class="s1">'sixinferior'</span><span class="p">,</span>
+    <span class="s1">'seveninferior'</span><span class="p">,</span>
+    <span class="s1">'eightinferior'</span><span class="p">,</span>
+    <span class="s1">'nineinferior'</span><span class="p">,</span>
+    <span class="s1">'centinferior'</span><span class="p">,</span>
+    <span class="s1">'dollarinferior'</span><span class="p">,</span>
+    <span class="s1">'periodinferior'</span><span class="p">,</span>
+    <span class="s1">'commainferior'</span><span class="p">,</span>
+    <span class="s1">'Agravesmall'</span><span class="p">,</span>
+    <span class="s1">'Aacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Acircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Atildesmall'</span><span class="p">,</span>
+    <span class="s1">'Adieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Aringsmall'</span><span class="p">,</span>
+    <span class="s1">'AEsmall'</span><span class="p">,</span>
+    <span class="s1">'Ccedillasmall'</span><span class="p">,</span>
+    <span class="s1">'Egravesmall'</span><span class="p">,</span>
+    <span class="s1">'Eacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Ecircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Edieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Igravesmall'</span><span class="p">,</span>
+    <span class="s1">'Iacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Icircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Idieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Ethsmall'</span><span class="p">,</span>
+    <span class="s1">'Ntildesmall'</span><span class="p">,</span>
+    <span class="s1">'Ogravesmall'</span><span class="p">,</span>
+    <span class="s1">'Oacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Ocircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Otildesmall'</span><span class="p">,</span>
+    <span class="s1">'Odieresissmall'</span><span class="p">,</span>
+    <span class="s1">'OEsmall'</span><span class="p">,</span>
+    <span class="s1">'Oslashsmall'</span><span class="p">,</span>
+    <span class="s1">'Ugravesmall'</span><span class="p">,</span>
+    <span class="s1">'Uacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Ucircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Udieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Yacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Thornsmall'</span><span class="p">,</span>
+  <span class="p">],</span>
+<span class="p">).</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="ISO_ADOBE-constant" class="">ISO_ADOBE =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Predefined CFF ISOAdobe charset</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">OneBasedArray</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+  <span class="p">[</span>
+    <span class="s1">'space'</span><span class="p">,</span>
+    <span class="s1">'exclam'</span><span class="p">,</span>
+    <span class="s1">'quotedbl'</span><span class="p">,</span>
+    <span class="s1">'numbersign'</span><span class="p">,</span>
+    <span class="s1">'dollar'</span><span class="p">,</span>
+    <span class="s1">'percent'</span><span class="p">,</span>
+    <span class="s1">'ampersand'</span><span class="p">,</span>
+    <span class="s1">'quoteright'</span><span class="p">,</span>
+    <span class="s1">'parenleft'</span><span class="p">,</span>
+    <span class="s1">'parenright'</span><span class="p">,</span>
+    <span class="s1">'asterisk'</span><span class="p">,</span>
+    <span class="s1">'plus'</span><span class="p">,</span>
+    <span class="s1">'comma'</span><span class="p">,</span>
+    <span class="s1">'hyphen'</span><span class="p">,</span>
+    <span class="s1">'period'</span><span class="p">,</span>
+    <span class="s1">'slash'</span><span class="p">,</span>
+    <span class="s1">'zero'</span><span class="p">,</span>
+    <span class="s1">'one'</span><span class="p">,</span>
+    <span class="s1">'two'</span><span class="p">,</span>
+    <span class="s1">'three'</span><span class="p">,</span>
+    <span class="s1">'four'</span><span class="p">,</span>
+    <span class="s1">'five'</span><span class="p">,</span>
+    <span class="s1">'six'</span><span class="p">,</span>
+    <span class="s1">'seven'</span><span class="p">,</span>
+    <span class="s1">'eight'</span><span class="p">,</span>
+    <span class="s1">'nine'</span><span class="p">,</span>
+    <span class="s1">'colon'</span><span class="p">,</span>
+    <span class="s1">'semicolon'</span><span class="p">,</span>
+    <span class="s1">'less'</span><span class="p">,</span>
+    <span class="s1">'equal'</span><span class="p">,</span>
+    <span class="s1">'greater'</span><span class="p">,</span>
+    <span class="s1">'question'</span><span class="p">,</span>
+    <span class="s1">'at'</span><span class="p">,</span>
+    <span class="s1">'A'</span><span class="p">,</span>
+    <span class="s1">'B'</span><span class="p">,</span>
+    <span class="s1">'C'</span><span class="p">,</span>
+    <span class="s1">'D'</span><span class="p">,</span>
+    <span class="s1">'E'</span><span class="p">,</span>
+    <span class="s1">'F'</span><span class="p">,</span>
+    <span class="s1">'G'</span><span class="p">,</span>
+    <span class="s1">'H'</span><span class="p">,</span>
+    <span class="s1">'I'</span><span class="p">,</span>
+    <span class="s1">'J'</span><span class="p">,</span>
+    <span class="s1">'K'</span><span class="p">,</span>
+    <span class="s1">'L'</span><span class="p">,</span>
+    <span class="s1">'M'</span><span class="p">,</span>
+    <span class="s1">'N'</span><span class="p">,</span>
+    <span class="s1">'O'</span><span class="p">,</span>
+    <span class="s1">'P'</span><span class="p">,</span>
+    <span class="s1">'Q'</span><span class="p">,</span>
+    <span class="s1">'R'</span><span class="p">,</span>
+    <span class="s1">'S'</span><span class="p">,</span>
+    <span class="s1">'T'</span><span class="p">,</span>
+    <span class="s1">'U'</span><span class="p">,</span>
+    <span class="s1">'V'</span><span class="p">,</span>
+    <span class="s1">'W'</span><span class="p">,</span>
+    <span class="s1">'X'</span><span class="p">,</span>
+    <span class="s1">'Y'</span><span class="p">,</span>
+    <span class="s1">'Z'</span><span class="p">,</span>
+    <span class="s1">'bracketleft'</span><span class="p">,</span>
+    <span class="s1">'backslash'</span><span class="p">,</span>
+    <span class="s1">'bracketright'</span><span class="p">,</span>
+    <span class="s1">'asciicircum'</span><span class="p">,</span>
+    <span class="s1">'underscore'</span><span class="p">,</span>
+    <span class="s1">'quoteleft'</span><span class="p">,</span>
+    <span class="s1">'a'</span><span class="p">,</span>
+    <span class="s1">'b'</span><span class="p">,</span>
+    <span class="s1">'c'</span><span class="p">,</span>
+    <span class="s1">'d'</span><span class="p">,</span>
+    <span class="s1">'e'</span><span class="p">,</span>
+    <span class="s1">'f'</span><span class="p">,</span>
+    <span class="s1">'g'</span><span class="p">,</span>
+    <span class="s1">'h'</span><span class="p">,</span>
+    <span class="s1">'i'</span><span class="p">,</span>
+    <span class="s1">'j'</span><span class="p">,</span>
+    <span class="s1">'k'</span><span class="p">,</span>
+    <span class="s1">'l'</span><span class="p">,</span>
+    <span class="s1">'m'</span><span class="p">,</span>
+    <span class="s1">'n'</span><span class="p">,</span>
+    <span class="s1">'o'</span><span class="p">,</span>
+    <span class="s1">'p'</span><span class="p">,</span>
+    <span class="s1">'q'</span><span class="p">,</span>
+    <span class="s1">'r'</span><span class="p">,</span>
+    <span class="s1">'s'</span><span class="p">,</span>
+    <span class="s1">'t'</span><span class="p">,</span>
+    <span class="s1">'u'</span><span class="p">,</span>
+    <span class="s1">'v'</span><span class="p">,</span>
+    <span class="s1">'w'</span><span class="p">,</span>
+    <span class="s1">'x'</span><span class="p">,</span>
+    <span class="s1">'y'</span><span class="p">,</span>
+    <span class="s1">'z'</span><span class="p">,</span>
+    <span class="s1">'braceleft'</span><span class="p">,</span>
+    <span class="s1">'bar'</span><span class="p">,</span>
+    <span class="s1">'braceright'</span><span class="p">,</span>
+    <span class="s1">'asciitilde'</span><span class="p">,</span>
+    <span class="s1">'exclamdown 97 cent'</span><span class="p">,</span>
+    <span class="s1">'sterling'</span><span class="p">,</span>
+    <span class="s1">'fraction'</span><span class="p">,</span>
+    <span class="s1">'yen'</span><span class="p">,</span>
+    <span class="s1">'florin'</span><span class="p">,</span>
+    <span class="s1">'section'</span><span class="p">,</span>
+    <span class="s1">'currency'</span><span class="p">,</span>
+    <span class="s1">'quotesingle'</span><span class="p">,</span>
+    <span class="s1">'quotedblleft'</span><span class="p">,</span>
+    <span class="s1">'guillemotleft'</span><span class="p">,</span>
+    <span class="s1">'guilsinglleft'</span><span class="p">,</span>
+    <span class="s1">'guilsinglright'</span><span class="p">,</span>
+    <span class="s1">'fi'</span><span class="p">,</span>
+    <span class="s1">'fl'</span><span class="p">,</span>
+    <span class="s1">'endash'</span><span class="p">,</span>
+    <span class="s1">'dagger'</span><span class="p">,</span>
+    <span class="s1">'daggerdbl'</span><span class="p">,</span>
+    <span class="s1">'periodcentered'</span><span class="p">,</span>
+    <span class="s1">'paragraph'</span><span class="p">,</span>
+    <span class="s1">'bullet'</span><span class="p">,</span>
+    <span class="s1">'quotesinglbase'</span><span class="p">,</span>
+    <span class="s1">'quotedblbase'</span><span class="p">,</span>
+    <span class="s1">'quotedblright'</span><span class="p">,</span>
+    <span class="s1">'guillemotright'</span><span class="p">,</span>
+    <span class="s1">'ellipsis'</span><span class="p">,</span>
+    <span class="s1">'perthousand'</span><span class="p">,</span>
+    <span class="s1">'questiondown'</span><span class="p">,</span>
+    <span class="s1">'grave'</span><span class="p">,</span>
+    <span class="s1">'acute'</span><span class="p">,</span>
+    <span class="s1">'circumflex'</span><span class="p">,</span>
+    <span class="s1">'tilde'</span><span class="p">,</span>
+    <span class="s1">'macron'</span><span class="p">,</span>
+    <span class="s1">'breve'</span><span class="p">,</span>
+    <span class="s1">'dotaccent'</span><span class="p">,</span>
+    <span class="s1">'dieresis'</span><span class="p">,</span>
+    <span class="s1">'ring'</span><span class="p">,</span>
+    <span class="s1">'cedilla'</span><span class="p">,</span>
+    <span class="s1">'hungarumlaut'</span><span class="p">,</span>
+    <span class="s1">'ogonek'</span><span class="p">,</span>
+    <span class="s1">'caron'</span><span class="p">,</span>
+    <span class="s1">'emdash'</span><span class="p">,</span>
+    <span class="s1">'AE'</span><span class="p">,</span>
+    <span class="s1">'ordfeminine'</span><span class="p">,</span>
+    <span class="s1">'Lslash'</span><span class="p">,</span>
+    <span class="s1">'Oslash'</span><span class="p">,</span>
+    <span class="s1">'OE'</span><span class="p">,</span>
+    <span class="s1">'ordmasculine'</span><span class="p">,</span>
+    <span class="s1">'ae'</span><span class="p">,</span>
+    <span class="s1">'dotlessi'</span><span class="p">,</span>
+    <span class="s1">'lslash'</span><span class="p">,</span>
+    <span class="s1">'oslash'</span><span class="p">,</span>
+    <span class="s1">'oe'</span><span class="p">,</span>
+    <span class="s1">'germandbls'</span><span class="p">,</span>
+    <span class="s1">'onesuperior'</span><span class="p">,</span>
+    <span class="s1">'logicalnot'</span><span class="p">,</span>
+    <span class="s1">'mu'</span><span class="p">,</span>
+    <span class="s1">'trademark'</span><span class="p">,</span>
+    <span class="s1">'Eth'</span><span class="p">,</span>
+    <span class="s1">'onehalf'</span><span class="p">,</span>
+    <span class="s1">'plusminus'</span><span class="p">,</span>
+    <span class="s1">'Thorn'</span><span class="p">,</span>
+    <span class="s1">'onequarter'</span><span class="p">,</span>
+    <span class="s1">'divide'</span><span class="p">,</span>
+    <span class="s1">'brokenbar'</span><span class="p">,</span>
+    <span class="s1">'degree'</span><span class="p">,</span>
+    <span class="s1">'thorn'</span><span class="p">,</span>
+    <span class="s1">'threequarters'</span><span class="p">,</span>
+    <span class="s1">'twosuperior'</span><span class="p">,</span>
+    <span class="s1">'registered'</span><span class="p">,</span>
+    <span class="s1">'minus'</span><span class="p">,</span>
+    <span class="s1">'eth'</span><span class="p">,</span>
+    <span class="s1">'multiply'</span><span class="p">,</span>
+    <span class="s1">'threesuperior'</span><span class="p">,</span>
+    <span class="s1">'copyright'</span><span class="p">,</span>
+    <span class="s1">'Aacute'</span><span class="p">,</span>
+    <span class="s1">'Acircumflex'</span><span class="p">,</span>
+    <span class="s1">'Adieresis'</span><span class="p">,</span>
+    <span class="s1">'Agrave'</span><span class="p">,</span>
+    <span class="s1">'Aring'</span><span class="p">,</span>
+    <span class="s1">'Atilde'</span><span class="p">,</span>
+    <span class="s1">'Ccedilla'</span><span class="p">,</span>
+    <span class="s1">'Eacute'</span><span class="p">,</span>
+    <span class="s1">'Ecircumflex'</span><span class="p">,</span>
+    <span class="s1">'Edieresis'</span><span class="p">,</span>
+    <span class="s1">'Egrave'</span><span class="p">,</span>
+    <span class="s1">'Iacute'</span><span class="p">,</span>
+    <span class="s1">'Icircumflex'</span><span class="p">,</span>
+    <span class="s1">'Idieresis'</span><span class="p">,</span>
+    <span class="s1">'Igrave'</span><span class="p">,</span>
+    <span class="s1">'Ntilde'</span><span class="p">,</span>
+    <span class="s1">'Oacute'</span><span class="p">,</span>
+    <span class="s1">'Ocircumflex'</span><span class="p">,</span>
+    <span class="s1">'Odieresis'</span><span class="p">,</span>
+    <span class="s1">'Ograve'</span><span class="p">,</span>
+    <span class="s1">'Otilde'</span><span class="p">,</span>
+    <span class="s1">'Scaron'</span><span class="p">,</span>
+    <span class="s1">'Uacute'</span><span class="p">,</span>
+    <span class="s1">'Ucircumflex'</span><span class="p">,</span>
+    <span class="s1">'Udieresis'</span><span class="p">,</span>
+    <span class="s1">'Ugrave'</span><span class="p">,</span>
+    <span class="s1">'Yacute'</span><span class="p">,</span>
+    <span class="s1">'Ydieresis'</span><span class="p">,</span>
+    <span class="s1">'Zcaron'</span><span class="p">,</span>
+    <span class="s1">'aacute'</span><span class="p">,</span>
+    <span class="s1">'acircumflex'</span><span class="p">,</span>
+    <span class="s1">'adieresis'</span><span class="p">,</span>
+    <span class="s1">'agrave'</span><span class="p">,</span>
+    <span class="s1">'aring'</span><span class="p">,</span>
+    <span class="s1">'atilde'</span><span class="p">,</span>
+    <span class="s1">'ccedilla'</span><span class="p">,</span>
+    <span class="s1">'eacute'</span><span class="p">,</span>
+    <span class="s1">'ecircumflex'</span><span class="p">,</span>
+    <span class="s1">'edieresis'</span><span class="p">,</span>
+    <span class="s1">'egrave'</span><span class="p">,</span>
+    <span class="s1">'iacute'</span><span class="p">,</span>
+    <span class="s1">'icircumflex'</span><span class="p">,</span>
+    <span class="s1">'idieresis'</span><span class="p">,</span>
+    <span class="s1">'igrave'</span><span class="p">,</span>
+    <span class="s1">'ntilde'</span><span class="p">,</span>
+    <span class="s1">'oacute'</span><span class="p">,</span>
+    <span class="s1">'ocircumflex'</span><span class="p">,</span>
+    <span class="s1">'odieresis'</span><span class="p">,</span>
+    <span class="s1">'ograve'</span><span class="p">,</span>
+    <span class="s1">'otilde'</span><span class="p">,</span>
+    <span class="s1">'scaron'</span><span class="p">,</span>
+    <span class="s1">'uacute'</span><span class="p">,</span>
+    <span class="s1">'ucircumflex'</span><span class="p">,</span>
+    <span class="s1">'udieresis'</span><span class="p">,</span>
+    <span class="s1">'ugrave'</span><span class="p">,</span>
+    <span class="s1">'yacute'</span><span class="p">,</span>
+    <span class="s1">'ydieresis'</span><span class="p">,</span>
+    <span class="s1">'zcaron'</span><span class="p">,</span>
+  <span class="p">],</span>
+<span class="p">).</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="EXPERT_SUBSET-constant" class="">EXPERT_SUBSET =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Predefined CFF Expert Subset charset</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">OneBasedArray</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+  <span class="p">[</span>
+    <span class="s1">'space'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">11</span><span class="p">,</span>
+    <span class="s1">'comma'</span><span class="p">,</span>
+    <span class="s1">'hyphen'</span><span class="p">,</span>
+    <span class="s1">'period'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">11</span><span class="p">,</span>
+    <span class="s1">'colon'</span><span class="p">,</span>
+    <span class="s1">'semicolon'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">70</span><span class="p">,</span>
+    <span class="s1">'fraction'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="s1">'fi'</span><span class="p">,</span>
+    <span class="s1">'fl'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">39</span><span class="p">,</span>
+    <span class="s1">'onesuperior'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">'onehalf'</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="s1">'onequarter'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">'threequarters'</span><span class="p">,</span>
+    <span class="s1">'twosuperior'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">'threesuperior'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">61</span><span class="p">,</span>
+    <span class="s1">'dollaroldstyle'</span><span class="p">,</span>
+    <span class="s1">'dollarsuperior'</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="s1">'parenleftsuperior'</span><span class="p">,</span>
+    <span class="s1">'parenrightsuperior'</span><span class="p">,</span>
+    <span class="s1">'twodotenleader'</span><span class="p">,</span>
+    <span class="s1">'onedotenleader'</span><span class="p">,</span>
+    <span class="s1">'zerooldstyle'</span><span class="p">,</span>
+    <span class="s1">'oneoldstyle'</span><span class="p">,</span>
+    <span class="s1">'twooldstyle'</span><span class="p">,</span>
+    <span class="s1">'threeoldstyle'</span><span class="p">,</span>
+    <span class="s1">'fouroldstyle'</span><span class="p">,</span>
+    <span class="s1">'fiveoldstyle'</span><span class="p">,</span>
+    <span class="s1">'sixoldstyle'</span><span class="p">,</span>
+    <span class="s1">'sevenoldstyle'</span><span class="p">,</span>
+    <span class="s1">'eightoldstyle'</span><span class="p">,</span>
+    <span class="s1">'nineoldstyle'</span><span class="p">,</span>
+    <span class="s1">'commasuperior'</span><span class="p">,</span>
+    <span class="s1">'threequartersemdash'</span><span class="p">,</span>
+    <span class="s1">'periodsuperior'</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="s1">'asuperior'</span><span class="p">,</span>
+    <span class="s1">'bsuperior'</span><span class="p">,</span>
+    <span class="s1">'centsuperior'</span><span class="p">,</span>
+    <span class="s1">'dsuperior'</span><span class="p">,</span>
+    <span class="s1">'esuperior'</span><span class="p">,</span>
+    <span class="s1">'isuperior'</span><span class="p">,</span>
+    <span class="s1">'lsuperior'</span><span class="p">,</span>
+    <span class="s1">'msuperior'</span><span class="p">,</span>
+    <span class="s1">'nsuperior'</span><span class="p">,</span>
+    <span class="s1">'osuperior'</span><span class="p">,</span>
+    <span class="s1">'rsuperior'</span><span class="p">,</span>
+    <span class="s1">'ssuperior'</span><span class="p">,</span>
+    <span class="s1">'tsuperior'</span><span class="p">,</span>
+    <span class="s1">'ff'</span><span class="p">,</span>
+    <span class="s1">'ffi'</span><span class="p">,</span>
+    <span class="s1">'ffl'</span><span class="p">,</span>
+    <span class="s1">'parenleftinferior'</span><span class="p">,</span>
+    <span class="s1">'parenrightinferior'</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="s1">'hyphensuperior'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">27</span><span class="p">,</span>
+    <span class="s1">'colonmonetary'</span><span class="p">,</span>
+    <span class="s1">'onefitted'</span><span class="p">,</span>
+    <span class="s1">'rupiah'</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="kp">nil</span><span class="p">,</span>
+    <span class="s1">'centoldstyle'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">'figuredash'</span><span class="p">,</span>
+    <span class="s1">'hypheninferior'</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">[</span><span class="kp">nil</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">'oneeighth'</span><span class="p">,</span>
+    <span class="s1">'threeeighths'</span><span class="p">,</span>
+    <span class="s1">'fiveeighths'</span><span class="p">,</span>
+    <span class="s1">'seveneighths'</span><span class="p">,</span>
+    <span class="s1">'onethird'</span><span class="p">,</span>
+    <span class="s1">'twothirds'</span><span class="p">,</span>
+    <span class="s1">'zerosuperior'</span><span class="p">,</span>
+    <span class="s1">'foursuperior'</span><span class="p">,</span>
+    <span class="s1">'fivesuperior'</span><span class="p">,</span>
+    <span class="s1">'sixsuperior'</span><span class="p">,</span>
+    <span class="s1">'sevensuperior'</span><span class="p">,</span>
+    <span class="s1">'eightsuperior'</span><span class="p">,</span>
+    <span class="s1">'ninesuperior'</span><span class="p">,</span>
+    <span class="s1">'zeroinferior'</span><span class="p">,</span>
+    <span class="s1">'oneinferior'</span><span class="p">,</span>
+    <span class="s1">'twoinferior'</span><span class="p">,</span>
+    <span class="s1">'threeinferior'</span><span class="p">,</span>
+    <span class="s1">'fourinferior'</span><span class="p">,</span>
+    <span class="s1">'fiveinferior'</span><span class="p">,</span>
+    <span class="s1">'sixinferior'</span><span class="p">,</span>
+    <span class="s1">'seveninferior'</span><span class="p">,</span>
+    <span class="s1">'eightinferior'</span><span class="p">,</span>
+    <span class="s1">'nineinferior'</span><span class="p">,</span>
+    <span class="s1">'centinferior'</span><span class="p">,</span>
+    <span class="s1">'dollarinferior'</span><span class="p">,</span>
+    <span class="s1">'periodinferior'</span><span class="p">,</span>
+  <span class="p">],</span>
+<span class="p">).</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+          <dt id="STANDARD_STRINGS-constant" class="">STANDARD_STRINGS =
+            <div class="docstring">
+  <div class="discussion">
+    <p>Standard CFF strings</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+          </dt>
+          <dd><pre class="code"><div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="no">OneBasedArray</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span>
+  <span class="p">[</span>
+    <span class="s1">'space'</span><span class="p">,</span>
+    <span class="s1">'exclam'</span><span class="p">,</span>
+    <span class="s1">'quotedbl'</span><span class="p">,</span>
+    <span class="s1">'numbersign'</span><span class="p">,</span>
+    <span class="s1">'dollar'</span><span class="p">,</span>
+    <span class="s1">'percent'</span><span class="p">,</span>
+    <span class="s1">'ampersand'</span><span class="p">,</span>
+    <span class="s1">'quoteright'</span><span class="p">,</span>
+    <span class="s1">'parenleft'</span><span class="p">,</span>
+    <span class="s1">'parenright'</span><span class="p">,</span>
+    <span class="s1">'asterisk'</span><span class="p">,</span>
+    <span class="s1">'plus'</span><span class="p">,</span>
+    <span class="s1">'comma'</span><span class="p">,</span>
+    <span class="s1">'hyphen'</span><span class="p">,</span>
+    <span class="s1">'period'</span><span class="p">,</span>
+    <span class="s1">'slash'</span><span class="p">,</span>
+    <span class="s1">'zero'</span><span class="p">,</span>
+    <span class="s1">'one'</span><span class="p">,</span>
+    <span class="s1">'two'</span><span class="p">,</span>
+    <span class="s1">'three'</span><span class="p">,</span>
+    <span class="s1">'four'</span><span class="p">,</span>
+    <span class="s1">'five'</span><span class="p">,</span>
+    <span class="s1">'six'</span><span class="p">,</span>
+    <span class="s1">'seven'</span><span class="p">,</span>
+    <span class="s1">'eight'</span><span class="p">,</span>
+    <span class="s1">'nine'</span><span class="p">,</span>
+    <span class="s1">'colon'</span><span class="p">,</span>
+    <span class="s1">'semicolon'</span><span class="p">,</span>
+    <span class="s1">'less'</span><span class="p">,</span>
+    <span class="s1">'equal'</span><span class="p">,</span>
+    <span class="s1">'greater'</span><span class="p">,</span>
+    <span class="s1">'question'</span><span class="p">,</span>
+    <span class="s1">'at'</span><span class="p">,</span>
+    <span class="s1">'A'</span><span class="p">,</span>
+    <span class="s1">'B'</span><span class="p">,</span>
+    <span class="s1">'C'</span><span class="p">,</span>
+    <span class="s1">'D'</span><span class="p">,</span>
+    <span class="s1">'E'</span><span class="p">,</span>
+    <span class="s1">'F'</span><span class="p">,</span>
+    <span class="s1">'G'</span><span class="p">,</span>
+    <span class="s1">'H'</span><span class="p">,</span>
+    <span class="s1">'I'</span><span class="p">,</span>
+    <span class="s1">'J'</span><span class="p">,</span>
+    <span class="s1">'K'</span><span class="p">,</span>
+    <span class="s1">'L'</span><span class="p">,</span>
+    <span class="s1">'M'</span><span class="p">,</span>
+    <span class="s1">'N'</span><span class="p">,</span>
+    <span class="s1">'O'</span><span class="p">,</span>
+    <span class="s1">'P'</span><span class="p">,</span>
+    <span class="s1">'Q'</span><span class="p">,</span>
+    <span class="s1">'R'</span><span class="p">,</span>
+    <span class="s1">'S'</span><span class="p">,</span>
+    <span class="s1">'T'</span><span class="p">,</span>
+    <span class="s1">'U'</span><span class="p">,</span>
+    <span class="s1">'V'</span><span class="p">,</span>
+    <span class="s1">'W'</span><span class="p">,</span>
+    <span class="s1">'X'</span><span class="p">,</span>
+    <span class="s1">'Y'</span><span class="p">,</span>
+    <span class="s1">'Z'</span><span class="p">,</span>
+    <span class="s1">'bracketleft'</span><span class="p">,</span>
+    <span class="s1">'backslash'</span><span class="p">,</span>
+    <span class="s1">'bracketright'</span><span class="p">,</span>
+    <span class="s1">'asciicircum'</span><span class="p">,</span>
+    <span class="s1">'underscore'</span><span class="p">,</span>
+    <span class="s1">'quoteleft'</span><span class="p">,</span>
+    <span class="s1">'a'</span><span class="p">,</span>
+    <span class="s1">'b'</span><span class="p">,</span>
+    <span class="s1">'c'</span><span class="p">,</span>
+    <span class="s1">'d'</span><span class="p">,</span>
+    <span class="s1">'e'</span><span class="p">,</span>
+    <span class="s1">'f'</span><span class="p">,</span>
+    <span class="s1">'g'</span><span class="p">,</span>
+    <span class="s1">'h'</span><span class="p">,</span>
+    <span class="s1">'i'</span><span class="p">,</span>
+    <span class="s1">'j'</span><span class="p">,</span>
+    <span class="s1">'k'</span><span class="p">,</span>
+    <span class="s1">'l'</span><span class="p">,</span>
+    <span class="s1">'m'</span><span class="p">,</span>
+    <span class="s1">'n'</span><span class="p">,</span>
+    <span class="s1">'o'</span><span class="p">,</span>
+    <span class="s1">'p'</span><span class="p">,</span>
+    <span class="s1">'q'</span><span class="p">,</span>
+    <span class="s1">'r'</span><span class="p">,</span>
+    <span class="s1">'s'</span><span class="p">,</span>
+    <span class="s1">'t'</span><span class="p">,</span>
+    <span class="s1">'u'</span><span class="p">,</span>
+    <span class="s1">'v'</span><span class="p">,</span>
+    <span class="s1">'w'</span><span class="p">,</span>
+    <span class="s1">'x'</span><span class="p">,</span>
+    <span class="s1">'y'</span><span class="p">,</span>
+    <span class="s1">'z'</span><span class="p">,</span>
+    <span class="s1">'braceleft'</span><span class="p">,</span>
+    <span class="s1">'bar'</span><span class="p">,</span>
+    <span class="s1">'braceright'</span><span class="p">,</span>
+    <span class="s1">'asciitilde'</span><span class="p">,</span>
+    <span class="s1">'exclamdown'</span><span class="p">,</span>
+    <span class="s1">'cent'</span><span class="p">,</span>
+    <span class="s1">'sterling'</span><span class="p">,</span>
+    <span class="s1">'fraction'</span><span class="p">,</span>
+    <span class="s1">'yen'</span><span class="p">,</span>
+    <span class="s1">'florin'</span><span class="p">,</span>
+    <span class="s1">'section'</span><span class="p">,</span>
+    <span class="s1">'currency'</span><span class="p">,</span>
+    <span class="s1">'quotesingle'</span><span class="p">,</span>
+    <span class="s1">'quotedblleft'</span><span class="p">,</span>
+    <span class="s1">'guillemotleft'</span><span class="p">,</span>
+    <span class="s1">'guilsinglleft'</span><span class="p">,</span>
+    <span class="s1">'guilsinglright'</span><span class="p">,</span>
+    <span class="s1">'fi'</span><span class="p">,</span>
+    <span class="s1">'fl'</span><span class="p">,</span>
+    <span class="s1">'endash'</span><span class="p">,</span>
+    <span class="s1">'dagger'</span><span class="p">,</span>
+    <span class="s1">'daggerdbl'</span><span class="p">,</span>
+    <span class="s1">'periodcentered'</span><span class="p">,</span>
+    <span class="s1">'paragraph'</span><span class="p">,</span>
+    <span class="s1">'bullet'</span><span class="p">,</span>
+    <span class="s1">'quotesinglbase'</span><span class="p">,</span>
+    <span class="s1">'quotedblbase'</span><span class="p">,</span>
+    <span class="s1">'quotedblright'</span><span class="p">,</span>
+    <span class="s1">'guillemotright'</span><span class="p">,</span>
+    <span class="s1">'ellipsis'</span><span class="p">,</span>
+    <span class="s1">'perthousand'</span><span class="p">,</span>
+    <span class="s1">'questiondown'</span><span class="p">,</span>
+    <span class="s1">'grave'</span><span class="p">,</span>
+    <span class="s1">'acute'</span><span class="p">,</span>
+    <span class="s1">'circumflex'</span><span class="p">,</span>
+    <span class="s1">'tilde'</span><span class="p">,</span>
+    <span class="s1">'macron'</span><span class="p">,</span>
+    <span class="s1">'breve'</span><span class="p">,</span>
+    <span class="s1">'dotaccent'</span><span class="p">,</span>
+    <span class="s1">'dieresis'</span><span class="p">,</span>
+    <span class="s1">'ring'</span><span class="p">,</span>
+    <span class="s1">'cedilla'</span><span class="p">,</span>
+    <span class="s1">'hungarumlaut'</span><span class="p">,</span>
+    <span class="s1">'ogonek'</span><span class="p">,</span>
+    <span class="s1">'caron'</span><span class="p">,</span>
+    <span class="s1">'emdash'</span><span class="p">,</span>
+    <span class="s1">'AE'</span><span class="p">,</span>
+    <span class="s1">'ordfeminine'</span><span class="p">,</span>
+    <span class="s1">'Lslash'</span><span class="p">,</span>
+    <span class="s1">'Oslash'</span><span class="p">,</span>
+    <span class="s1">'OE'</span><span class="p">,</span>
+    <span class="s1">'ordmasculine'</span><span class="p">,</span>
+    <span class="s1">'ae'</span><span class="p">,</span>
+    <span class="s1">'dotlessi'</span><span class="p">,</span>
+    <span class="s1">'lslash'</span><span class="p">,</span>
+    <span class="s1">'oslash'</span><span class="p">,</span>
+    <span class="s1">'oe'</span><span class="p">,</span>
+    <span class="s1">'germandbls'</span><span class="p">,</span>
+    <span class="s1">'onesuperior'</span><span class="p">,</span>
+    <span class="s1">'logicalnot'</span><span class="p">,</span>
+    <span class="s1">'mu'</span><span class="p">,</span>
+    <span class="s1">'trademark'</span><span class="p">,</span>
+    <span class="s1">'Eth'</span><span class="p">,</span>
+    <span class="s1">'onehalf'</span><span class="p">,</span>
+    <span class="s1">'plusminus'</span><span class="p">,</span>
+    <span class="s1">'Thorn'</span><span class="p">,</span>
+    <span class="s1">'onequarter'</span><span class="p">,</span>
+    <span class="s1">'divide'</span><span class="p">,</span>
+    <span class="s1">'brokenbar'</span><span class="p">,</span>
+    <span class="s1">'degree'</span><span class="p">,</span>
+    <span class="s1">'thorn'</span><span class="p">,</span>
+    <span class="s1">'threequarters'</span><span class="p">,</span>
+    <span class="s1">'twosuperior'</span><span class="p">,</span>
+    <span class="s1">'registered'</span><span class="p">,</span>
+    <span class="s1">'minus'</span><span class="p">,</span>
+    <span class="s1">'eth'</span><span class="p">,</span>
+    <span class="s1">'multiply'</span><span class="p">,</span>
+    <span class="s1">'threesuperior'</span><span class="p">,</span>
+    <span class="s1">'copyright'</span><span class="p">,</span>
+    <span class="s1">'Aacute'</span><span class="p">,</span>
+    <span class="s1">'Acircumflex'</span><span class="p">,</span>
+    <span class="s1">'Adieresis'</span><span class="p">,</span>
+    <span class="s1">'Agrave'</span><span class="p">,</span>
+    <span class="s1">'Aring'</span><span class="p">,</span>
+    <span class="s1">'Atilde'</span><span class="p">,</span>
+    <span class="s1">'Ccedilla'</span><span class="p">,</span>
+    <span class="s1">'Eacute'</span><span class="p">,</span>
+    <span class="s1">'Ecircumflex'</span><span class="p">,</span>
+    <span class="s1">'Edieresis'</span><span class="p">,</span>
+    <span class="s1">'Egrave'</span><span class="p">,</span>
+    <span class="s1">'Iacute'</span><span class="p">,</span>
+    <span class="s1">'Icircumflex'</span><span class="p">,</span>
+    <span class="s1">'Idieresis'</span><span class="p">,</span>
+    <span class="s1">'Igrave'</span><span class="p">,</span>
+    <span class="s1">'Ntilde'</span><span class="p">,</span>
+    <span class="s1">'Oacute'</span><span class="p">,</span>
+    <span class="s1">'Ocircumflex'</span><span class="p">,</span>
+    <span class="s1">'Odieresis'</span><span class="p">,</span>
+    <span class="s1">'Ograve'</span><span class="p">,</span>
+    <span class="s1">'Otilde'</span><span class="p">,</span>
+    <span class="s1">'Scaron'</span><span class="p">,</span>
+    <span class="s1">'Uacute'</span><span class="p">,</span>
+    <span class="s1">'Ucircumflex'</span><span class="p">,</span>
+    <span class="s1">'Udieresis'</span><span class="p">,</span>
+    <span class="s1">'Ugrave'</span><span class="p">,</span>
+    <span class="s1">'Yacute'</span><span class="p">,</span>
+    <span class="s1">'Ydieresis'</span><span class="p">,</span>
+    <span class="s1">'Zcaron'</span><span class="p">,</span>
+    <span class="s1">'aacute'</span><span class="p">,</span>
+    <span class="s1">'acircumflex'</span><span class="p">,</span>
+    <span class="s1">'adieresis'</span><span class="p">,</span>
+    <span class="s1">'agrave'</span><span class="p">,</span>
+    <span class="s1">'aring'</span><span class="p">,</span>
+    <span class="s1">'atilde'</span><span class="p">,</span>
+    <span class="s1">'ccedilla'</span><span class="p">,</span>
+    <span class="s1">'eacute'</span><span class="p">,</span>
+    <span class="s1">'ecircumflex'</span><span class="p">,</span>
+    <span class="s1">'edieresis'</span><span class="p">,</span>
+    <span class="s1">'egrave'</span><span class="p">,</span>
+    <span class="s1">'iacute'</span><span class="p">,</span>
+    <span class="s1">'icircumflex'</span><span class="p">,</span>
+    <span class="s1">'idieresis'</span><span class="p">,</span>
+    <span class="s1">'igrave'</span><span class="p">,</span>
+    <span class="s1">'ntilde'</span><span class="p">,</span>
+    <span class="s1">'oacute'</span><span class="p">,</span>
+    <span class="s1">'ocircumflex'</span><span class="p">,</span>
+    <span class="s1">'odieresis'</span><span class="p">,</span>
+    <span class="s1">'ograve'</span><span class="p">,</span>
+    <span class="s1">'otilde'</span><span class="p">,</span>
+    <span class="s1">'scaron'</span><span class="p">,</span>
+    <span class="s1">'uacute'</span><span class="p">,</span>
+    <span class="s1">'ucircumflex'</span><span class="p">,</span>
+    <span class="s1">'udieresis'</span><span class="p">,</span>
+    <span class="s1">'ugrave'</span><span class="p">,</span>
+    <span class="s1">'yacute'</span><span class="p">,</span>
+    <span class="s1">'ydieresis'</span><span class="p">,</span>
+    <span class="s1">'zcaron'</span><span class="p">,</span>
+    <span class="s1">'exclamsmall'</span><span class="p">,</span>
+    <span class="s1">'Hungarumlautsmall'</span><span class="p">,</span>
+    <span class="s1">'dollaroldstyle'</span><span class="p">,</span>
+    <span class="s1">'dollarsuperior'</span><span class="p">,</span>
+    <span class="s1">'ampersandsmall'</span><span class="p">,</span>
+    <span class="s1">'Acutesmall'</span><span class="p">,</span>
+    <span class="s1">'parenleftsuperior'</span><span class="p">,</span>
+    <span class="s1">'parenrightsuperior'</span><span class="p">,</span>
+    <span class="s1">'266 ff'</span><span class="p">,</span>
+    <span class="s1">'onedotenleader'</span><span class="p">,</span>
+    <span class="s1">'zerooldstyle'</span><span class="p">,</span>
+    <span class="s1">'oneoldstyle'</span><span class="p">,</span>
+    <span class="s1">'twooldstyle'</span><span class="p">,</span>
+    <span class="s1">'threeoldstyle'</span><span class="p">,</span>
+    <span class="s1">'fouroldstyle'</span><span class="p">,</span>
+    <span class="s1">'fiveoldstyle'</span><span class="p">,</span>
+    <span class="s1">'sixoldstyle'</span><span class="p">,</span>
+    <span class="s1">'sevenoldstyle'</span><span class="p">,</span>
+    <span class="s1">'eightoldstyle'</span><span class="p">,</span>
+    <span class="s1">'nineoldstyle'</span><span class="p">,</span>
+    <span class="s1">'commasuperior'</span><span class="p">,</span>
+    <span class="s1">'threequartersemdash'</span><span class="p">,</span>
+    <span class="s1">'periodsuperior'</span><span class="p">,</span>
+    <span class="s1">'questionsmall'</span><span class="p">,</span>
+    <span class="s1">'asuperior'</span><span class="p">,</span>
+    <span class="s1">'bsuperior'</span><span class="p">,</span>
+    <span class="s1">'centsuperior'</span><span class="p">,</span>
+    <span class="s1">'dsuperior'</span><span class="p">,</span>
+    <span class="s1">'esuperior'</span><span class="p">,</span>
+    <span class="s1">'isuperior'</span><span class="p">,</span>
+    <span class="s1">'lsuperior'</span><span class="p">,</span>
+    <span class="s1">'msuperior'</span><span class="p">,</span>
+    <span class="s1">'nsuperior'</span><span class="p">,</span>
+    <span class="s1">'osuperior'</span><span class="p">,</span>
+    <span class="s1">'rsuperior'</span><span class="p">,</span>
+    <span class="s1">'ssuperior'</span><span class="p">,</span>
+    <span class="s1">'tsuperior'</span><span class="p">,</span>
+    <span class="s1">'ff'</span><span class="p">,</span>
+    <span class="s1">'ffi'</span><span class="p">,</span>
+    <span class="s1">'ffl'</span><span class="p">,</span>
+    <span class="s1">'parenleftinferior'</span><span class="p">,</span>
+    <span class="s1">'parenrightinferior'</span><span class="p">,</span>
+    <span class="s1">'Circumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'hyphensuperior'</span><span class="p">,</span>
+    <span class="s1">'Gravesmall'</span><span class="p">,</span>
+    <span class="s1">'Asmall'</span><span class="p">,</span>
+    <span class="s1">'Bsmall'</span><span class="p">,</span>
+    <span class="s1">'Csmall'</span><span class="p">,</span>
+    <span class="s1">'Dsmall'</span><span class="p">,</span>
+    <span class="s1">'Esmall'</span><span class="p">,</span>
+    <span class="s1">'Fsmall'</span><span class="p">,</span>
+    <span class="s1">'Gsmall'</span><span class="p">,</span>
+    <span class="s1">'Hsmall'</span><span class="p">,</span>
+    <span class="s1">'Ismall'</span><span class="p">,</span>
+    <span class="s1">'Jsmall'</span><span class="p">,</span>
+    <span class="s1">'Ksmall'</span><span class="p">,</span>
+    <span class="s1">'Lsmall'</span><span class="p">,</span>
+    <span class="s1">'Msmall'</span><span class="p">,</span>
+    <span class="s1">'Nsmall'</span><span class="p">,</span>
+    <span class="s1">'Osmall'</span><span class="p">,</span>
+    <span class="s1">'Psmall'</span><span class="p">,</span>
+    <span class="s1">'Qsmall'</span><span class="p">,</span>
+    <span class="s1">'Rsmall'</span><span class="p">,</span>
+    <span class="s1">'Ssmall'</span><span class="p">,</span>
+    <span class="s1">'Tsmall'</span><span class="p">,</span>
+    <span class="s1">'Usmall'</span><span class="p">,</span>
+    <span class="s1">'Vsmall'</span><span class="p">,</span>
+    <span class="s1">'Wsmall'</span><span class="p">,</span>
+    <span class="s1">'Xsmall'</span><span class="p">,</span>
+    <span class="s1">'Ysmall'</span><span class="p">,</span>
+    <span class="s1">'Zsmall'</span><span class="p">,</span>
+    <span class="s1">'colonmonetary'</span><span class="p">,</span>
+    <span class="s1">'onefitted'</span><span class="p">,</span>
+    <span class="s1">'rupiah'</span><span class="p">,</span>
+    <span class="s1">'Tildesmall'</span><span class="p">,</span>
+    <span class="s1">'exclamdownsmall'</span><span class="p">,</span>
+    <span class="s1">'centoldstyle'</span><span class="p">,</span>
+    <span class="s1">'Lslashsmall'</span><span class="p">,</span>
+    <span class="s1">'Scaronsmall'</span><span class="p">,</span>
+    <span class="s1">'Zcaronsmall'</span><span class="p">,</span>
+    <span class="s1">'Dieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Brevesmall'</span><span class="p">,</span>
+    <span class="s1">'Caronsmall'</span><span class="p">,</span>
+    <span class="s1">'Dotaccentsmall'</span><span class="p">,</span>
+    <span class="s1">'Macronsmall'</span><span class="p">,</span>
+    <span class="s1">'figuredash'</span><span class="p">,</span>
+    <span class="s1">'hypheninferior'</span><span class="p">,</span>
+    <span class="s1">'Ogoneksmall'</span><span class="p">,</span>
+    <span class="s1">'Ringsmall'</span><span class="p">,</span>
+    <span class="s1">'Cedillasmall'</span><span class="p">,</span>
+    <span class="s1">'questiondownsmall'</span><span class="p">,</span>
+    <span class="s1">'oneeighth'</span><span class="p">,</span>
+    <span class="s1">'threeeighths'</span><span class="p">,</span>
+    <span class="s1">'fiveeighths'</span><span class="p">,</span>
+    <span class="s1">'seveneighths'</span><span class="p">,</span>
+    <span class="s1">'onethird'</span><span class="p">,</span>
+    <span class="s1">'twothirds'</span><span class="p">,</span>
+    <span class="s1">'zerosuperior'</span><span class="p">,</span>
+    <span class="s1">'foursuperior'</span><span class="p">,</span>
+    <span class="s1">'fivesuperior'</span><span class="p">,</span>
+    <span class="s1">'sixsuperior'</span><span class="p">,</span>
+    <span class="s1">'sevensuperior'</span><span class="p">,</span>
+    <span class="s1">'eightsuperior'</span><span class="p">,</span>
+    <span class="s1">'ninesuperior'</span><span class="p">,</span>
+    <span class="s1">'zeroinferior'</span><span class="p">,</span>
+    <span class="s1">'oneinferior'</span><span class="p">,</span>
+    <span class="s1">'twoinferior'</span><span class="p">,</span>
+    <span class="s1">'threeinferior'</span><span class="p">,</span>
+    <span class="s1">'fourinferior'</span><span class="p">,</span>
+    <span class="s1">'fiveinferior'</span><span class="p">,</span>
+    <span class="s1">'sixinferior'</span><span class="p">,</span>
+    <span class="s1">'seveninferior'</span><span class="p">,</span>
+    <span class="s1">'eightinferior'</span><span class="p">,</span>
+    <span class="s1">'nineinferior'</span><span class="p">,</span>
+    <span class="s1">'centinferior'</span><span class="p">,</span>
+    <span class="s1">'dollarinferior'</span><span class="p">,</span>
+    <span class="s1">'periodinferior'</span><span class="p">,</span>
+    <span class="s1">'commainferior'</span><span class="p">,</span>
+    <span class="s1">'Agravesmall'</span><span class="p">,</span>
+    <span class="s1">'Aacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Acircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Atildesmall'</span><span class="p">,</span>
+    <span class="s1">'Adieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Aringsmall'</span><span class="p">,</span>
+    <span class="s1">'AEsmall'</span><span class="p">,</span>
+    <span class="s1">'Ccedillasmall'</span><span class="p">,</span>
+    <span class="s1">'Egravesmall'</span><span class="p">,</span>
+    <span class="s1">'Eacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Ecircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Edieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Igravesmall'</span><span class="p">,</span>
+    <span class="s1">'Iacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Icircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Idieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Ethsmall'</span><span class="p">,</span>
+    <span class="s1">'Ntildesmall'</span><span class="p">,</span>
+    <span class="s1">'Ogravesmall'</span><span class="p">,</span>
+    <span class="s1">'Oacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Ocircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Otildesmall'</span><span class="p">,</span>
+    <span class="s1">'Odieresissmall'</span><span class="p">,</span>
+    <span class="s1">'OEsmall'</span><span class="p">,</span>
+    <span class="s1">'Oslashsmall'</span><span class="p">,</span>
+    <span class="s1">'Ugravesmall'</span><span class="p">,</span>
+    <span class="s1">'Uacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Ucircumflexsmall'</span><span class="p">,</span>
+    <span class="s1">'Udieresissmall'</span><span class="p">,</span>
+    <span class="s1">'Yacutesmall'</span><span class="p">,</span>
+    <span class="s1">'Thornsmall'</span><span class="p">,</span>
+    <span class="s1">'Ydieresissmall'</span><span class="p">,</span>
+    <span class="s1">'001.000'</span><span class="p">,</span>
+    <span class="s1">'001.001'</span><span class="p">,</span>
+    <span class="s1">'001.002'</span><span class="p">,</span>
+    <span class="s1">'001.003'</span><span class="p">,</span>
+    <span class="s1">'Black'</span><span class="p">,</span>
+    <span class="s1">'Bold'</span><span class="p">,</span>
+    <span class="s1">'Book'</span><span class="p">,</span>
+    <span class="s1">'Light'</span><span class="p">,</span>
+    <span class="s1">'Medium'</span><span class="p">,</span>
+    <span class="s1">'Regular'</span><span class="p">,</span>
+    <span class="s1">'Roman'</span><span class="p">,</span>
+    <span class="s1">'Semibold'</span><span class="p">,</span>
+  <span class="p">],</span>
+<span class="p">).</span><span class="nf">freeze</span></code></pre></div>
+</pre></dd>
+        
+      </dl>
+    </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Feb 29 20:15:14 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.35 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>

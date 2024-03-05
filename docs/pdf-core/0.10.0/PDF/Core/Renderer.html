@@ -1,0 +1,2351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: PDF::Core::Renderer
+  
+    &mdash; Documentation by YARD 0.9.36
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/syntax-highlight.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "PDF::Core::Renderer";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../PDF.html" title="PDF (module)">PDF</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Core.html" title="PDF::Core (module)">Core</a></span></span>
+     &raquo; 
+    <span class="title">Renderer</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: PDF::Core::Renderer
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">PDF::Core::Renderer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/pdf/core/renderer.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Document renderer serializes document into its binary representation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+
+
+
+
+  <section id="attribute-summary-71smhr">
+    <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state-instance_method" title="#state (instance method)">#<strong>state</strong>  &#x21d2; PDF::Core::DocumentState </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Document state.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  </section>
+
+
+
+
+
+  
+    <section id="method-summary-vp4sfi">
+      <h2>
+        Instance Method Summary
+        <small><a href="#" class="summary_toggle">collapse</a></small>
+      </h2>
+
+      <ul class="summary">
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_content-instance_method" title="#add_content (instance method)">#<strong>add_content</strong>(str)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Appends a raw string to the current page content.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#before_render-instance_method" title="#before_render (instance method)">#<strong>before_render</strong> {|document_state| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a block to be called just before the document is rendered.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#close_graphics_state-instance_method" title="#close_graphics_state (instance method)">#<strong>close_graphics_state</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Close current graphic state (restore previous) in the content stream.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#compression_enabled%3F-instance_method" title="#compression_enabled? (instance method)">#<strong>compression_enabled?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if content streams will be compressed before rendering, false otherwise.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deref-instance_method" title="#deref (instance method)">#<strong>deref</strong>(obj)  &#x21d2; any </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>At any stage in the object tree an object can be replaced with an indirect reference.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#finalize_all_page_contents-instance_method" title="#finalize_all_page_contents (instance method)">#<strong>finalize_all_page_contents</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Finalize all pages.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#go_to_page-instance_method" title="#go_to_page (instance method)">#<strong>go_to_page</strong>(page_number)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Re-opens the page with the given (1-based) page number so that you can draw on it.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#graphic_stack-instance_method" title="#graphic_stack (instance method)">#<strong>graphic_stack</strong>  &#x21d2; PDF::Core::GraphicStateStack </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Graphic state stack of the current document.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#graphic_state-instance_method" title="#graphic_state (instance method)">#<strong>graphic_state</strong>  &#x21d2; PDF::Core::GraphicState </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Current graphic state.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(state)  &#x21d2; Renderer </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Renderer.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#min_version-instance_method" title="#min_version (instance method)">#<strong>min_version</strong>(min)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Raise the PDF version of the file we’re going to generate.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#names-instance_method" title="#names (instance method)">#<strong>names</strong>  &#x21d2; PDF::Core::Reference&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>The Name dictionary for this document.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#names%3F-instance_method" title="#names? (instance method)">#<strong>names?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns true if the Names dictionary is in use for this document.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_page_create-instance_method" title="#on_page_create (instance method)">#<strong>on_page_create</strong> {|document_state| ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Defines a block to be called just before a new page is started.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#open_graphics_state-instance_method" title="#open_graphics_state (instance method)">#<strong>open_graphics_state</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Open (save) current graphic state in the content stream.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#page_count-instance_method" title="#page_count (instance method)">#<strong>page_count</strong>  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Number of pages in the document.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ref-instance_method" title="#ref (instance method)">#<strong>ref</strong>(data)  &#x21d2; Integer </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Creates a new Reference and adds it to the Document’s object list.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ref!-instance_method" title="#ref! (instance method)">#<strong>ref!</strong>(data)  &#x21d2; PDF::Core::Reference </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Like <span class='object_link'><a href="#ref-instance_method" title="PDF::Core::Renderer#ref (method)">#ref</a></span>, but returns the actual reference instead of its identifier.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render-instance_method" title="#render (instance method)">#<strong>render</strong>(output = nil)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Renders the PDF document to string.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render_body-instance_method" title="#render_body (instance method)">#<strong>render_body</strong>(output)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Write out the PDF Body, as per spec 3.4.2.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render_file-instance_method" title="#render_file (instance method)">#<strong>render_file</strong>(filename)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Renders the PDF document to file.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render_header-instance_method" title="#render_header (instance method)">#<strong>render_header</strong>(output)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Write out the PDF Header, as per spec 3.4.1.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render_trailer-instance_method" title="#render_trailer (instance method)">#<strong>render_trailer</strong>(output)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Write out the PDF Trailer, as per spec 3.4.4.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render_xref-instance_method" title="#render_xref (instance method)">#<strong>render_xref</strong>(output)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  <span class="private note title">private</span>
+
+  
+    <span class="summary_desc"><div class='inline'><p>Write out the PDF Cross Reference Table, as per spec 3.4.3.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#restore_graphics_state-instance_method" title="#restore_graphics_state (instance method)">#<strong>restore_graphics_state</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Pops the last saved graphics state off the graphics state stack and restores the state to those values.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_graphics_state-instance_method" title="#save_graphics_state (instance method)">#<strong>save_graphics_state</strong>(graphic_state = nil) { ... } &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Save surrent graphic state both in the graphic state stack and in the page content stream.</p>
+</div></span>
+  
+</li>
+
+        
+          <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_new_page-instance_method" title="#start_new_page (instance method)">#<strong>start_new_page</strong>(options = {})  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Create a new page and set it current.</p>
+</div></span>
+  
+</li>
+
+        
+      </ul>
+    </section>
+  
+
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(state)  &#x21d2; <tt><span class='object_link'><a href="" title="PDF::Core::Renderer (class)">Renderer</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a new instance of Renderer.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>state</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DocumentState.html" title="PDF::Core::DocumentState (class)">PDF::Core::DocumentState</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 10</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-10" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>10</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+</pre></td></tr><tr id="line-11" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>11</pre></td><td class="rouge-code"><pre>  <span class="vi">@state</span> <span class="o">=</span> <span class="n">state</span>
+</pre></td></tr><tr id="line-12" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>12</pre></td><td class="rouge-code"><pre>  <span class="vi">@state</span><span class="p">.</span><span class="nf">populate_pages_from_store</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+</pre></td></tr><tr id="line-13" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>13</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-14" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>14</pre></td><td class="rouge-code"><pre>  <span class="n">min_version</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">min_version</span><span class="p">)</span> <span class="k">if</span> <span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">min_version</span>
+</pre></td></tr><tr id="line-15" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>15</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-16" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>16</pre></td><td class="rouge-code"><pre>  <span class="vi">@page_number</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></td></tr><tr id="line-17" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>17</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="state-instance_method">
+  
+    #<strong>state</strong>  &#x21d2; <tt><span class='object_link'><a href="DocumentState.html" title="PDF::Core::DocumentState (class)">PDF::Core::DocumentState</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Document state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DocumentState.html" title="PDF::Core::DocumentState (class)">PDF::Core::DocumentState</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 21</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-21" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>21</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">state</span>
+</pre></td></tr><tr id="line-22" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>22</pre></td><td class="rouge-code"><pre>  <span class="vi">@state</span>
+</pre></td></tr><tr id="line-23" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>23</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_content-instance_method">
+  
+    #<strong>add_content</strong>(str)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Appends a raw string to the current page content.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>Raw line drawing example</p>
+</div></p>
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">550</span>
+
+<span class="n">pdf</span><span class="p">.</span><span class="nf">add_content</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">real_params</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">])</span><span class="si">}</span><span class="s2"> m"</span><span class="p">)</span>   <span class="c1"># move</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">add_content</span><span class="p">(</span><span class="s2">"</span><span class="si">#{</span><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">real_params</span><span class="p">([</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="p">])</span><span class="si">}</span><span class="s2"> l"</span><span class="p">)</span> <span class="c1"># draw path</span>
+<span class="n">pdf</span><span class="p">.</span><span class="nf">add_content</span><span class="p">(</span><span class="s1">'S'</span><span class="p">)</span> <span class="c1"># stroke</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>str</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 66</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-66" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>66</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">add_content</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+</pre></td></tr><tr id="line-67" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>67</pre></td><td class="rouge-code"><pre>  <span class="n">save_graphics_state</span> <span class="k">if</span> <span class="n">graphic_state</span><span class="p">.</span><span class="nf">nil?</span>
+</pre></td></tr><tr id="line-68" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>68</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">page</span><span class="p">.</span><span class="nf">content</span> <span class="o">&lt;&lt;</span> <span class="n">str</span> <span class="o">&lt;&lt;</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-69" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>69</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="before_render-instance_method">
+  
+    #<strong>before_render</strong> {|document_state| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Defines a block to be called just before the document is rendered.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>document_state</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DocumentState.html" title="PDF::Core::DocumentState (class)">PDF::Core::DocumentState</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 92</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-92" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>92</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">before_render</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-93" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>93</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">before_render_callbacks</span> <span class="o">&lt;&lt;</span> <span class="n">block</span>
+</pre></td></tr><tr id="line-94" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>94</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="close_graphics_state-instance_method">
+  
+    #<strong>close_graphics_state</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Close current graphic state (restore previous) in the content stream.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 290</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-290" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>290</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">close_graphics_state</span>
+</pre></td></tr><tr id="line-291" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>291</pre></td><td class="rouge-code"><pre>  <span class="n">add_content</span><span class="p">(</span><span class="s1">'Q'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-292" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>292</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="compression_enabled?-instance_method">
+  
+    #<strong>compression_enabled?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns true if content streams will be compressed before rendering,
+false otherwise</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 316</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-316" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>316</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">compression_enabled?</span>
+</pre></td></tr><tr id="line-317" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>317</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">compress</span>
+</pre></td></tr><tr id="line-318" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>318</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="deref-instance_method">
+  
+    #<strong>deref</strong>(obj)  &#x21d2; <tt>any</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>At any stage in the object tree an object can be replaced with an
+indirect reference. To get access to the object safely, regardless
+of if it’s hidden behind a <span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span>, wrap it in <code class="language-ruby highlighter-rouge"><span class="n">deref</span><span class="p">()</span></code>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>obj</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span></tt>, <tt>any</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>any</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 51</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-51" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>51</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">deref</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+</pre></td></tr><tr id="line-52" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>52</pre></td><td class="rouge-code"><pre>  <span class="n">obj</span><span class="p">.</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Reference</span><span class="p">)</span> <span class="p">?</span> <span class="n">obj</span><span class="p">.</span><span class="nf">data</span> <span class="p">:</span> <span class="n">obj</span>
+</pre></td></tr><tr id="line-53" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>53</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="finalize_all_page_contents-instance_method">
+  
+    #<strong>finalize_all_page_contents</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Finalize all pages</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 166</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-166" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>166</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">finalize_all_page_contents</span>
+</pre></td></tr><tr id="line-167" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>167</pre></td><td class="rouge-code"><pre>  <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="n">page_count</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+</pre></td></tr><tr id="line-168" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>168</pre></td><td class="rouge-code"><pre>    <span class="n">go_to_page</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></td></tr><tr id="line-169" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>169</pre></td><td class="rouge-code"><pre>    <span class="k">while</span> <span class="n">graphic_stack</span><span class="p">.</span><span class="nf">present?</span>
+</pre></td></tr><tr id="line-170" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>170</pre></td><td class="rouge-code"><pre>      <span class="n">restore_graphics_state</span>
+</pre></td></tr><tr id="line-171" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>171</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-172" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>172</pre></td><td class="rouge-code"><pre>    <span class="n">state</span><span class="p">.</span><span class="nf">page</span><span class="p">.</span><span class="nf">finalize</span>
+</pre></td></tr><tr id="line-173" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>173</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-174" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>174</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="go_to_page-instance_method">
+  
+    #<strong>go_to_page</strong>(page_number)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Re-opens the page with the given (1-based) page number so that you can
+draw on it.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>page_number</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Prawn::Document#number_pages for a sample usage of this capability.</li>
+    
+  </ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 157</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-157" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>157</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">go_to_page</span><span class="p">(</span><span class="n">page_number</span><span class="p">)</span>
+</pre></td></tr><tr id="line-158" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>158</pre></td><td class="rouge-code"><pre>  <span class="vi">@page_number</span> <span class="o">=</span> <span class="n">page_number</span>
+</pre></td></tr><tr id="line-159" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>159</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">page</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="nf">pages</span><span class="p">[</span><span class="n">page_number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+</pre></td></tr><tr id="line-160" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>160</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="graphic_stack-instance_method">
+  
+    #<strong>graphic_stack</strong>  &#x21d2; <tt><span class='object_link'><a href="GraphicStateStack.html" title="PDF::Core::GraphicStateStack (class)">PDF::Core::GraphicStateStack</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Graphic state stack of the current document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="GraphicStateStack.html" title="PDF::Core::GraphicStateStack (class)">PDF::Core::GraphicStateStack</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 336</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-336" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>336</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">graphic_stack</span>
+</pre></td></tr><tr id="line-337" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>337</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">page</span><span class="p">.</span><span class="nf">stack</span>
+</pre></td></tr><tr id="line-338" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>338</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="graphic_state-instance_method">
+  
+    #<strong>graphic_state</strong>  &#x21d2; <tt><span class='object_link'><a href="GraphicState.html" title="PDF::Core::GraphicState (class)">PDF::Core::GraphicState</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Current graphic state</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="GraphicState.html" title="PDF::Core::GraphicState (class)">PDF::Core::GraphicState</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 343</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-343" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>343</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">graphic_state</span>
+</pre></td></tr><tr id="line-344" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>344</pre></td><td class="rouge-code"><pre>  <span class="n">save_graphics_state</span> <span class="k">unless</span> <span class="n">graphic_stack</span><span class="p">.</span><span class="nf">current_state</span>
+</pre></td></tr><tr id="line-345" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>345</pre></td><td class="rouge-code"><pre>  <span class="n">graphic_stack</span><span class="p">.</span><span class="nf">current_state</span>
+</pre></td></tr><tr id="line-346" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>346</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="min_version-instance_method">
+  
+    #<strong>min_version</strong>(min)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Raise the PDF version of the file we’re going to generate.
+A private method, designed for internal use when the user adds a feature
+to their document that requires a particular version.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>min</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 183</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-183" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>183</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">min_version</span><span class="p">(</span><span class="n">min</span><span class="p">)</span>
+</pre></td></tr><tr id="line-184" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>184</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">version</span> <span class="o">=</span> <span class="n">min</span> <span class="k">if</span> <span class="n">min</span> <span class="o">&gt;</span> <span class="n">state</span><span class="p">.</span><span class="nf">version</span>
+</pre></td></tr><tr id="line-185" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>185</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="names-instance_method">
+  
+    #<strong>names</strong>  &#x21d2; <tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span>&lt;Hash&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>The Name dictionary for this document. It is lazily initialized, so that
+documents that do not need a name dictionary do not incur the additional
+overhead.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span>&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>PDF 1.7 spec, section 3.6.3 Name Dictionary</li>
+    
+  </ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 77</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-77" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>77</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">names</span>
+</pre></td></tr><tr id="line-78" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>78</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">root</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="ss">:Names</span><span class="p">]</span> <span class="o">||=</span> <span class="n">ref!</span><span class="p">(</span><span class="no">Type</span><span class="p">:</span> <span class="ss">:Names</span><span class="p">)</span>
+</pre></td></tr><tr id="line-79" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>79</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="names?-instance_method">
+  
+    #<strong>names?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns true if the Names dictionary is in use for this document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 84</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-84" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>84</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">names?</span>
+</pre></td></tr><tr id="line-85" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>85</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">root</span><span class="p">.</span><span class="nf">data</span><span class="p">.</span><span class="nf">key?</span><span class="p">(</span><span class="ss">:Names</span><span class="p">)</span>
+</pre></td></tr><tr id="line-86" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>86</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="on_page_create-instance_method">
+  
+    #<strong>on_page_create</strong> {|document_state| ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Defines a block to be called just before a new page is started.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>document_state</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="DocumentState.html" title="PDF::Core::DocumentState (class)">PDF::Core::DocumentState</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 100</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-100" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>100</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">on_page_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</pre></td></tr><tr id="line-101" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>101</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">on_page_create_callback</span> <span class="o">=</span> <span class="n">block</span>
+</pre></td></tr><tr id="line-102" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>102</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="open_graphics_state-instance_method">
+  
+    #<strong>open_graphics_state</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Open (save) current graphic state in the content stream.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 283</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-283" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>283</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">open_graphics_state</span>
+</pre></td></tr><tr id="line-284" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>284</pre></td><td class="rouge-code"><pre>  <span class="n">add_content</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span>
+</pre></td></tr><tr id="line-285" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>285</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="page_count-instance_method">
+  
+    #<strong>page_count</strong>  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Number of pages in the document.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 147</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-147" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>147</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">page_count</span>
+</pre></td></tr><tr id="line-148" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>148</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">page_count</span>
+</pre></td></tr><tr id="line-149" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>149</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ref-instance_method">
+  
+    #<strong>ref</strong>(data)  &#x21d2; <tt>Integer</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Creates a new Reference and adds it to the Document’s object list.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>any</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>anything that <span class='object_link'><a href="../Core.html#pdf_object-class_method" title="PDF::Core.pdf_object (method)">PDF::Core.pdf_object</a></span> can convert.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the identifier of the reference</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 27</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-27" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>27</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">ref</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></td></tr><tr id="line-28" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>28</pre></td><td class="rouge-code"><pre>  <span class="n">ref!</span><span class="p">(</span><span class="n">data</span><span class="p">).</span><span class="nf">identifier</span>
+</pre></td></tr><tr id="line-29" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>29</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ref!-instance_method">
+  
+    #<strong>ref!</strong>(data)  &#x21d2; <tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Like <span class='object_link'><a href="#ref-instance_method" title="PDF::Core::Renderer#ref (method)">#ref</a></span>, but returns the actual reference instead of its identifier.</p>
+
+<p>While you can use this to build up nested references within the object
+tree, it is recommended to persist only identifiers, and then provide
+helper methods to look up the actual references in the <span class='object_link'><a href="ObjectStore.html" title="PDF::Core::ObjectStore (class)">ObjectStore</a></span> if
+needed. If you take this approach, <code class="language-ruby highlighter-rouge"><span class="no">Document</span><span class="o">::</span><span class="no">Snapshot</span></code> will probably
+work with your extension.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data</span>
+      
+      
+        <span class='type'>(<tt>any</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>anything that <span class='object_link'><a href="../Core.html#pdf_object-class_method" title="PDF::Core.pdf_object (method)">PDF::Core.pdf_object</a></span> can convert.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Reference.html" title="PDF::Core::Reference (class)">PDF::Core::Reference</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 41</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-41" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>41</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">ref!</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></td></tr><tr id="line-42" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>42</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">ref</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></td></tr><tr id="line-43" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>43</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render-instance_method">
+  
+    #<strong>render</strong>(output = nil)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Renders the PDF document to string.
+Pass an open file descriptor to render to file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>output</span>
+      
+      
+        <span class='type'>(<tt>#&lt;&lt;</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 192</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-192" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>192</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">output</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+</pre></td></tr><tr id="line-193" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>193</pre></td><td class="rouge-code"><pre>  <span class="n">buffer</span> <span class="o">=</span> <span class="no">StringIO</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">binmode</span>
+</pre></td></tr><tr id="line-194" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>194</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-195" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>195</pre></td><td class="rouge-code"><pre>  <span class="n">finalize_all_page_contents</span>
+</pre></td></tr><tr id="line-196" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>196</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-197" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>197</pre></td><td class="rouge-code"><pre>  <span class="n">render_header</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+</pre></td></tr><tr id="line-198" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>198</pre></td><td class="rouge-code"><pre>  <span class="n">render_body</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+</pre></td></tr><tr id="line-199" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>199</pre></td><td class="rouge-code"><pre>  <span class="n">render_xref</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+</pre></td></tr><tr id="line-200" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>200</pre></td><td class="rouge-code"><pre>  <span class="n">render_trailer</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span>
+</pre></td></tr><tr id="line-201" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>201</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-202" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>202</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">output</span><span class="p">.</span><span class="nf">respond_to?</span><span class="p">(</span><span class="ss">:&lt;&lt;</span><span class="p">)</span>
+</pre></td></tr><tr id="line-203" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>203</pre></td><td class="rouge-code"><pre>    <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="n">buffer</span><span class="p">.</span><span class="nf">string</span>
+</pre></td></tr><tr id="line-204" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>204</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-205" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>205</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-206" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>206</pre></td><td class="rouge-code"><pre>  <span class="n">buffer</span><span class="p">.</span><span class="nf">string</span>
+</pre></td></tr><tr id="line-207" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>207</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render_body-instance_method">
+  
+    #<strong>render_body</strong>(output)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Write out the PDF Body, as per spec 3.4.2</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>output</span>
+      
+      
+        <span class='type'>(<tt>(#&lt;&lt;, #size)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 240</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-240" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>240</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">render_body</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></td></tr><tr id="line-241" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>241</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">render_body</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></td></tr><tr id="line-242" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>242</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render_file-instance_method">
+  
+    #<strong>render_file</strong>(filename)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Renders the PDF document to file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <div lang="ruby" class="language-ruby highlighter-rouge"><pre><code><span class="n">pdf</span><span class="p">.</span><span class="nf">render_file</span> <span class="s1">'foo.pdf'</span></code></pre></div>
+
+    
+  </div>
+
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>filename</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>#to_path</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 216</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-216" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>216</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">render_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></td></tr><tr id="line-217" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>217</pre></td><td class="rouge-code"><pre>  <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">render</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">}</span>
+</pre></td></tr><tr id="line-218" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>218</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render_header-instance_method">
+  
+    #<strong>render_header</strong>(output)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Write out the PDF Header, as per spec 3.4.1</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>output</span>
+      
+      
+        <span class='type'>(<tt>#&lt;&lt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 225</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-225" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>225</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">render_header</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></td></tr><tr id="line-226" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>226</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">before_render_actions</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+</pre></td></tr><tr id="line-227" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>227</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-228" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>228</pre></td><td class="rouge-code"><pre>  <span class="c1"># pdf version</span>
+</pre></td></tr><tr id="line-229" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>229</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">"%PDF-</span><span class="si">#{</span><span class="n">state</span><span class="p">.</span><span class="nf">version</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-230" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>230</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-231" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>231</pre></td><td class="rouge-code"><pre>  <span class="c1"># 4 binary chars, as recommended by the spec</span>
+</pre></td></tr><tr id="line-232" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>232</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">"%</span><span class="se">\xFF\xFF\xFF\xFF\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-233" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>233</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render_trailer-instance_method">
+  
+    #<strong>render_trailer</strong>(output)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Write out the PDF Trailer, as per spec 3.4.4</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>output</span>
+      
+      
+        <span class='type'>(<tt>#&lt;&lt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 265</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-265" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>265</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">render_trailer</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></td></tr><tr id="line-266" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>266</pre></td><td class="rouge-code"><pre>  <span class="n">trailer_hash</span> <span class="o">=</span> <span class="p">{</span>
+</pre></td></tr><tr id="line-267" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>267</pre></td><td class="rouge-code"><pre>    <span class="no">Size</span><span class="p">:</span> <span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</pre></td></tr><tr id="line-268" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>268</pre></td><td class="rouge-code"><pre>    <span class="no">Root</span><span class="p">:</span> <span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">root</span><span class="p">,</span>
+</pre></td></tr><tr id="line-269" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>269</pre></td><td class="rouge-code"><pre>    <span class="no">Info</span><span class="p">:</span> <span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">info</span><span class="p">,</span>
+</pre></td></tr><tr id="line-270" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>270</pre></td><td class="rouge-code"><pre>  <span class="p">}</span>
+</pre></td></tr><tr id="line-271" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>271</pre></td><td class="rouge-code"><pre>  <span class="n">trailer_hash</span><span class="p">.</span><span class="nf">merge!</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="nf">trailer</span><span class="p">)</span> <span class="k">if</span> <span class="n">state</span><span class="p">.</span><span class="nf">trailer</span>
+</pre></td></tr><tr id="line-272" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>272</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-273" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>273</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">"trailer</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-274" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>274</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="p">.</span><span class="nf">pdf_object</span><span class="p">(</span><span class="n">trailer_hash</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-275" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>275</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">"startxref</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-276" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>276</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="vi">@xref_offset</span> <span class="o">&lt;&lt;</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-277" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>277</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s1">'%%EOF'</span> <span class="o">&lt;&lt;</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-278" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>278</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="render_xref-instance_method">
+  
+    #<strong>render_xref</strong>(output)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note private">
+  <strong>This method is part of a private API.</strong>
+  You should avoid using this method if possible, as it may be removed or be changed in the future.
+</p>
+<p class="note returns_void">This method returns an undefined value.</p><p>Write out the PDF Cross Reference Table, as per spec 3.4.3</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>output</span>
+      
+      
+        <span class='type'>(<tt>(#&lt;&lt;, #size)</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 249</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-249" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>249</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">render_xref</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></td></tr><tr id="line-250" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>250</pre></td><td class="rouge-code"><pre>  <span class="vi">@xref_offset</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="nf">size</span>
+</pre></td></tr><tr id="line-251" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>251</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">"xref</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-252" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>252</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">"0 </span><span class="si">#{</span><span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">size</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-253" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>253</pre></td><td class="rouge-code"><pre>  <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">"0000000000 65535 f </span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-254" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>254</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">store</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">ref</span><span class="o">|</span>
+</pre></td></tr><tr id="line-255" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>255</pre></td><td class="rouge-code"><pre>    <span class="n">output</span><span class="p">.</span><span class="nf">printf</span><span class="p">(</span><span class="s1">'%&lt;offset&gt;010d'</span><span class="p">,</span> <span class="ss">offset: </span><span class="n">ref</span><span class="p">.</span><span class="nf">offset</span><span class="p">)</span>
+</pre></td></tr><tr id="line-256" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>256</pre></td><td class="rouge-code"><pre>    <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="s2">" 00000 n </span><span class="se">\n</span><span class="s2">"</span>
+</pre></td></tr><tr id="line-257" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>257</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-258" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>258</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="restore_graphics_state-instance_method">
+  
+    #<strong>restore_graphics_state</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Pops the last saved graphics state off the graphics state stack and
+restores the state to those values</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 324</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-324" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>324</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">restore_graphics_state</span>
+</pre></td></tr><tr id="line-325" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>325</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">graphic_stack</span><span class="p">.</span><span class="nf">empty?</span>
+</pre></td></tr><tr id="line-326" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>326</pre></td><td class="rouge-code"><pre>    <span class="k">raise</span> <span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Errors</span><span class="o">::</span><span class="no">EmptyGraphicStateStack</span><span class="p">,</span>
+</pre></td></tr><tr id="line-327" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>327</pre></td><td class="rouge-code"><pre>      <span class="s2">"</span><span class="se">\n</span><span class="s2"> You have reached the end of the graphic state stack"</span>
+</pre></td></tr><tr id="line-328" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>328</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-329" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>329</pre></td><td class="rouge-code"><pre>  <span class="n">close_graphics_state</span>
+</pre></td></tr><tr id="line-330" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>330</pre></td><td class="rouge-code"><pre>  <span class="n">graphic_stack</span><span class="p">.</span><span class="nf">restore_graphic_state</span>
+</pre></td></tr><tr id="line-331" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>331</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_graphics_state-instance_method">
+  
+    #<strong>save_graphics_state</strong>(graphic_state = nil) { ... } &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Save surrent graphic state both in the graphic state stack and in the
+page content stream.</p>
+
+<p>If a block is given graphic state is automatically restored after the
+block execution.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>graphic_state</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="GraphicState.html" title="PDF::Core::GraphicState (class)">PDF::Core::GraphicState</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 303</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-303" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>303</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">save_graphics_state</span><span class="p">(</span><span class="n">graphic_state</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
+</pre></td></tr><tr id="line-304" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>304</pre></td><td class="rouge-code"><pre>  <span class="n">graphic_stack</span><span class="p">.</span><span class="nf">save_graphic_state</span><span class="p">(</span><span class="n">graphic_state</span><span class="p">)</span>
+</pre></td></tr><tr id="line-305" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>305</pre></td><td class="rouge-code"><pre>  <span class="n">open_graphics_state</span>
+</pre></td></tr><tr id="line-306" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>306</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="nb">block_given?</span>
+</pre></td></tr><tr id="line-307" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>307</pre></td><td class="rouge-code"><pre>    <span class="k">yield</span>
+</pre></td></tr><tr id="line-308" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>308</pre></td><td class="rouge-code"><pre>    <span class="n">restore_graphics_state</span>
+</pre></td></tr><tr id="line-309" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>309</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-310" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>310</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_new_page-instance_method">
+  
+    #<strong>start_new_page</strong>(options = {})  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Create a new page and set it current.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:size</span>
+          <span class="type">(<tt>String</tt>, <tt>Array&lt;Numeric&gt;</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+        <li>
+          <span class="name">:layout</span>
+          <span class="type">(<tt>:portrait</tt>, <tt>:landscape</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div>
+<details class="source-code">
+  <summary><span>Source Code</span></summary>
+  <div class="info file">lib/pdf/core/renderer.rb, line 110</div>
+  <table class="highlight highlighter-rouge"><tbody><tr id="line-110" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>110</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">start_new_page</span><span class="p">(</span><span class="n">options</span> <span class="o">=</span> <span class="p">{})</span>
+</pre></td></tr><tr id="line-111" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>111</pre></td><td class="rouge-code"><pre>  <span class="n">last_page</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="nf">page</span>
+</pre></td></tr><tr id="line-112" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>112</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">last_page</span>
+</pre></td></tr><tr id="line-113" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>113</pre></td><td class="rouge-code"><pre>    <span class="n">last_page_size</span> <span class="o">=</span> <span class="n">last_page</span><span class="p">.</span><span class="nf">size</span>
+</pre></td></tr><tr id="line-114" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>114</pre></td><td class="rouge-code"><pre>    <span class="n">last_page_layout</span> <span class="o">=</span> <span class="n">last_page</span><span class="p">.</span><span class="nf">layout</span>
+</pre></td></tr><tr id="line-115" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>115</pre></td><td class="rouge-code"><pre>    <span class="n">last_page_margins</span> <span class="o">=</span> <span class="n">last_page</span><span class="p">.</span><span class="nf">margins</span>
+</pre></td></tr><tr id="line-116" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>116</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-117" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>117</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-118" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>118</pre></td><td class="rouge-code"><pre>  <span class="n">page_options</span> <span class="o">=</span> <span class="p">{</span>
+</pre></td></tr><tr id="line-119" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>119</pre></td><td class="rouge-code"><pre>    <span class="ss">size: </span><span class="n">options</span><span class="p">[</span><span class="ss">:size</span><span class="p">]</span> <span class="o">||</span> <span class="n">last_page_size</span><span class="p">,</span>
+</pre></td></tr><tr id="line-120" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>120</pre></td><td class="rouge-code"><pre>    <span class="ss">layout: </span><span class="n">options</span><span class="p">[</span><span class="ss">:layout</span><span class="p">]</span> <span class="o">||</span> <span class="n">last_page_layout</span><span class="p">,</span>
+</pre></td></tr><tr id="line-121" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>121</pre></td><td class="rouge-code"><pre>    <span class="ss">margins: </span><span class="n">last_page_margins</span><span class="p">,</span>
+</pre></td></tr><tr id="line-122" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>122</pre></td><td class="rouge-code"><pre>  <span class="p">}</span>
+</pre></td></tr><tr id="line-123" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>123</pre></td><td class="rouge-code"><pre>  <span class="k">if</span> <span class="n">last_page</span>
+</pre></td></tr><tr id="line-124" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>124</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">last_page</span><span class="p">.</span><span class="nf">graphic_state</span>
+</pre></td></tr><tr id="line-125" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>125</pre></td><td class="rouge-code"><pre>      <span class="n">new_graphic_state</span> <span class="o">=</span> <span class="n">last_page</span><span class="p">.</span><span class="nf">graphic_state</span><span class="p">.</span><span class="nf">dup</span>
+</pre></td></tr><tr id="line-126" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>126</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-127" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>127</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-128" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>128</pre></td><td class="rouge-code"><pre>    <span class="c1"># Erase the color space so that it gets reset on new page for fussy</span>
+</pre></td></tr><tr id="line-129" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>129</pre></td><td class="rouge-code"><pre>    <span class="c1"># pdf-readers</span>
+</pre></td></tr><tr id="line-130" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>130</pre></td><td class="rouge-code"><pre>    <span class="k">if</span> <span class="n">new_graphic_state</span>
+</pre></td></tr><tr id="line-131" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>131</pre></td><td class="rouge-code"><pre>      <span class="n">new_graphic_state</span><span class="p">.</span><span class="nf">color_space</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></td></tr><tr id="line-132" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>132</pre></td><td class="rouge-code"><pre>    <span class="k">end</span>
+</pre></td></tr><tr id="line-133" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>133</pre></td><td class="rouge-code"><pre>    <span class="n">page_options</span><span class="p">[</span><span class="ss">:graphic_state</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_graphic_state</span>
+</pre></td></tr><tr id="line-134" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>134</pre></td><td class="rouge-code"><pre>  <span class="k">end</span>
+</pre></td></tr><tr id="line-135" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>135</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-136" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>136</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">page</span> <span class="o">=</span> <span class="no">PDF</span><span class="o">::</span><span class="no">Core</span><span class="o">::</span><span class="no">Page</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">page_options</span><span class="p">)</span>
+</pre></td></tr><tr id="line-137" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>137</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-138" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>138</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">insert_page</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="nf">page</span><span class="p">,</span> <span class="vi">@page_number</span><span class="p">)</span>
+</pre></td></tr><tr id="line-139" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>139</pre></td><td class="rouge-code"><pre>  <span class="vi">@page_number</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></td></tr><tr id="line-140" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>140</pre></td><td class="rouge-code"><pre>
+</pre></td></tr><tr id="line-141" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>141</pre></td><td class="rouge-code"><pre>  <span class="n">state</span><span class="p">.</span><span class="nf">on_page_create_action</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+</pre></td></tr><tr id="line-142" class="lineno"><td class="rouge-gutter gl" style="-moz-user-select: none;-ms-user-select: none;-webkit-user-select: none;user-select: none;"><pre>142</pre></td><td class="rouge-code"><pre><span class="k">end</span>
+</pre></td></tr></tbody></table>
+</details>
+
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Mon Mar  4 20:54:14 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.0).
+</div>
+
+    </div>
+  </body>
+</html>
